@@ -1,0 +1,66 @@
+site_name: Ctrip Docs
+theme:
+  name: readthedocs
+
+plugins:
+  - search
+  - mermaid2
+
+nav:
+  - Getting Started: index.md
+  - Project Overview:
+      - Overview: project-overview/project-overview.md
+      - Introduction and Purpose: project-overview/introduction-and-purpose.md
+      - Key Features: project-overview/key-features-and-capabilities.md
+      - Tech Stack: project-overview/technology-stack-and-architecture.md
+      - Use Cases: project-overview/use-cases-and-benefits.md
+  - API Reference:
+      - Overview: api-reference/api-reference.md
+      - Health Check: api-reference/health-check-endpoint.md
+      - Payment: api-reference/payment-endpoints.md
+  - Configuration Management:
+      - Overview: configuration-management/configuration-management.md
+      - Environment Variables: configuration-management/environment-variables.md
+      - Database: configuration-management/database-configuration.md
+      - Chains: configuration-management/chains-configuration.md
+      - Security: configuration-management/security-configuration.md
+  - Core Services:
+      - Overview: core-services/core-services.md
+      - Blockchain Scanner: core-services/blockchain-scanner-service.md
+      - Sweeper: core-services/sweeper-service.md
+      - Webhook: core-services/webhook-service.md
+      - Crypto Utilities: core-services/crypto-utilities.md
+  - Background Processing:
+      - Overview: background-processing/background-processing.md
+      - Worker Architecture: background-processing/worker-architecture.md
+      - Listener Worker: background-processing/listener-worker.md
+      - Sweeper Worker: background-processing/sweeper-worker.md
+      - Webhook Worker: background-processing/webhook-worker.md
+  - Blockchain Integration:
+      - Overview: blockchain-integration/blockchain-integration.md
+      - Architecture: blockchain-integration/architecture-overview.md
+      - HD Wallet: blockchain-integration/hd-wallet-management.md
+      - Ethereum: blockchain-integration/ethereum-implementation.md
+      - BSC: blockchain-integration/bsc-implementation.md
+      - Anvil: blockchain-integration/anvil-local-network.md
+  - Security Considerations:
+      - Overview: security-considerations/security-considerations.md
+      - Network: security-considerations/network-security.md
+      - Database: security-considerations/database-security.md
+      - HD Wallet: security-considerations/hd-wallet-security.md
+      - Webhook: security-considerations/webhook-security.md
+      - Configuration: security-considerations/configuration-security.md
+  - Advanced Topics:
+      - Overview: advanced-topics/advanced-topics.md
+      - Patterns: advanced-topics/architectural-patterns-and-design-principles.md
+      - Custom Chains: advanced-topics/custom-chain-implementation.md
+      - Monitoring: advanced-topics/monitoring-and-observability.md
+      - Optimization: advanced-topics/performance-optimization.md
+      - Troubleshooting: advanced-topics/troubleshooting-guide.md
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
