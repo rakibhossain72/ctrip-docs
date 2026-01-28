@@ -1,4 +1,6 @@
 site_name: Ctrip Docs
+site_author: Rakib Hossain
+copyright: Copyright &copy; 2024 Rakib Hossain
 theme:
   name: readthedocs
 
