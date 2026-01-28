@@ -120,7 +120,7 @@ CFG --> SWS
 - BlockchainBase provides gas estimation, EIP-1559 fee calculation, transaction building, signing, and broadcast capabilities. It caches gas prices and supports POA middleware for specific chains.
 - ScannerService advances payments from pending/detected to confirmed by scanning blocks and validating confirmations, enabling the sweeper to operate on finalized funds.
 - HDWalletManager manages mnemonic-based HD derivation for Ethereum addresses using BIP-44 and exposes methods to derive addresses and retrieve mnemonics.
-- Configuration Settings centralizes chain configuration, RPC endpoints, secrets, and webhook settings used by both sweeper and scanner.
+- Configuration Settings centralizes chain configuration, secrets, and webhook settings used by both sweeper and scanner.
 
 **Section sources**
 - [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L11-L54)
@@ -490,7 +490,6 @@ The Sweeper Service is designed to periodically extract confirmed funds from mer
 - Settings:
   - private_key: Required admin private key.
   - mnemonic: HD wallet mnemonic for deriving payment addresses.
-  - rpc_url: Default RPC endpoint.
   - webhook_url/webhook_secret: Optional notification settings.
 
 **Section sources**

@@ -137,7 +137,7 @@ CFG --> W
   - See [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134), [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L11-L54), [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L45).
 
 - Configuration and models
-  - Settings provide Redis URL, chains, webhook endpoints, secrets, and RPC configuration.
+  - Settings provide Redis URL, chains, webhook endpoints, and secrets.
   - Payment, ChainState, and Token models define persistence for payment lifecycle and chain state.
   - See [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126), [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74), [app/db/models/chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17), [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15).
 
@@ -519,7 +519,6 @@ The cTrip Payment Gateway employs a robust, scalable background processing syste
   - webhook_url: Global webhook endpoint
   - webhook_secret: HMAC secret for signing
   - private_key: Admin account private key
-  - rpc_url: Blockchain RPC endpoint
   - See [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L34-L77).
 
 - Chains configuration

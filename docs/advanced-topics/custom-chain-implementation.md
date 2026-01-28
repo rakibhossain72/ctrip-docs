@@ -241,7 +241,7 @@ NewSpec --> Register["Add to registry"]
 NewBase --> Register
 Skip --> Iterate
 Iterate --> Done{"Registry empty?"}
-Done --> |Yes| Fallback["Add AnvilBlockchain(rpc_url)"]
+Done --> |Yes| Fallback["Registry remains empty"]
 Done --> |No| End(["Ready"])
 Fallback --> End
 ```

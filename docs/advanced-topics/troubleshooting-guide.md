@@ -119,7 +119,7 @@ ENG --> BASE
 - [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L1-L56)
 
 ## Core Components
-- Settings and configuration: centralizes environment, RPC, Redis, chains, secrets, and database URLs.
+- Settings and configuration: centralizes environment, Redis, chains, secrets, and database URLs.
 - Database engine and models: async/sync engines, Base declarative, and ORM models for payments, transactions, tokens, and chain states.
 - Blockchain manager and provider: dynamic chain selection and Web3 provider retrieval.
 - Services: ScannerService for detecting and confirming payments; SweeperService for settling confirmed payments.
@@ -187,7 +187,7 @@ WH-->>Svc : "Delivery result"
 
 Common failure modes:
 - RPC endpoint unreachable or rate-limited
-- Incorrect chain configuration or missing RPC URL
+- Incorrect chain configuration or missing rpc_url in chains.yaml
 - Empty or stale ChainState leading to no-op scans
 - Insufficient confirmations threshold misconfiguration
 
@@ -371,7 +371,7 @@ Symptoms:
 - RPC timeouts or rate limits
 
 Checklist:
-- Verify RPC_URL and chain name mapping
+- Verify chain configuration and name mapping
 - Test RPC endpoint with curl or web3 client
 - Confirm firewall and network policies
 - Check for chain-specific RPC quotas

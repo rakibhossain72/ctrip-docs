@@ -46,7 +46,7 @@ end
 subgraph "External Systems"
 DB["PostgreSQL / SQLite<br/>app/db/engine.py"]
 R["Redis<br/>Docker compose"]
-BC["EVM RPCs<br/>chains.yaml + settings.rpc_url"]
+BC["EVM RPCs<br/>chains.yaml"]
 end
 S --> C
 W --> C
@@ -77,7 +77,6 @@ This section enumerates all environment variables recognized by the application,
   - PRIVATE_KEY: Ethereum private key used for signing transactions. Required in production.
   - DATABASE_URL: Full database URL for the running environment. Production uses the production URL; development uses the dev URL. The compose file sets this for containers.
   - REDIS_URL: Redis connection URL for background workers.
-  - RPC_URL: EVM RPC endpoint used when chains.yaml does not define chains or when fallback is needed.
 
 - Optional variables
   - ENV: Application environment selector ("development", "production", "testing"). Defaults to "development".
@@ -110,8 +109,8 @@ Env-->>DotEnv : "Compose/runtime sets variables"
 DotEnv-->>Settings : "Loaded via env_file"
 Settings-->>App : "Expose validated fields"
 Settings-->>Worker : "Expose validated fields"
-App->>Settings : "Access env, database_url, rpc_url, mnemonic"
-Worker->>Settings : "Access env, database_url, rpc_url, mnemonic"
+App->>Settings : "Access env, database_url, mnemonic"
+Worker->>Settings : "Access env, database_url, mnemonic"
 ```
 
 **Diagram sources**
@@ -169,7 +168,6 @@ class Settings {
 +env
 +database_url_prod
 +database_url_dev
-+rpc_url
 +redis_url
 +chains_yaml_path
 +mnemonic
@@ -342,7 +340,7 @@ Common issues and resolutions:
 
 - Blockchain connectivity errors
   - Symptom: Failure to connect to RPC endpoints.
-  - Resolution: Confirm RPC_URL is reachable and valid; check chains.yaml entries; ensure fallback RPC_URL is set if chains.yaml is empty.
+  - Resolution: Confirm rpc_url in chains.yaml is reachable and valid.
 
 - Redis connectivity errors for workers
   - Symptom: Workers cannot connect to Redis.
@@ -371,7 +369,6 @@ The cTrip Payment Gateway centralizes configuration through a validated settings
 - PRIVATE_KEY: Ethereum private key (required in production)
 - DATABASE_URL: Database URL for app and workers
 - REDIS_URL: Redis connection URL for workers
-- RPC_URL: Default EVM RPC endpoint
 - ENV: Environment mode ("development", "production", "testing")
 - MNEMONIC: HD wallet mnemonic phrase
 - CHAINS_YAML_PATH: Path to chain configuration YAML
@@ -398,15 +395,15 @@ E --> F["Settings ready"]
 
 ### Example Scenarios
 - Development with local services
-  - Use compose defaults for DATABASE_URL, REDIS_URL, RPC_URL, PRIVATE_KEY, and MNEMONIC.
+  - Use compose defaults for DATABASE_URL, REDIS_URL, PRIVATE_KEY, and MNEMONIC.
   - Keep ENV=development to select the dev database URL.
 
 - Production with managed services
-  - Provide DATABASE_URL pointing to PostgreSQL, REDIS_URL to Redis, RPC_URL to a reliable endpoint, PRIVATE_KEY, SECRET_KEY, and a secure MNEMONIC.
+  - Provide DATABASE_URL pointing to PostgreSQL, REDIS_URL to Redis, PRIVATE_KEY, SECRET_KEY, and a secure MNEMONIC.
   - Set ENV=production to enforce secret key validation and select the production database URL.
 
 - Multi-chain configuration
-  - Define chains in chains.yaml with names and RPC URLs; if empty, the manager falls back to RPC_URL.
+  - Define chains in chains.yaml with names and RPC URLs.
 
 **Section sources**
 - [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L26-L50)

@@ -117,7 +117,6 @@ Set these variables in your `.env` file:
 - `DATABASE_URL` - Production database connection string
 - `DATABASE_URL_DEV` - Development database connection string (defaults to SQLite)
 - `REDIS_URL` - Redis connection URL for background tasks
-- `RPC_URL` - Ethereum RPC endpoint URL
 - `PRIVATE_KEY` - Ethereum private key for wallet operations
 - `MNEMONIC` - HD Wallet mnemonic phrase (defaults to test phrase)
 - `WEBHOOK_URL` - Global webhook URL for payment notifications

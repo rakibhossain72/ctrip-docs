@@ -79,7 +79,7 @@ srv --> deps
 - [app/api/dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L5-L14)
 
 ## Core Components
-- Settings model encapsulates environment, database URLs, RPC endpoints, Redis, chains YAML path, mnemonic, webhook URL/secret, private key, and application secret. It validates Ethereum private keys and enforces production secret key changes.
+- Settings model encapsulates environment, database URLs, Redis, chains YAML path, mnemonic, webhook URL/secret, private key, and application secret. It validates Ethereum private keys and enforces production secret key changes.
 - chains.yaml defines supported chains and their RPC endpoints and tokens. The settings loader reads and parses this file safely.
 - Blockchain manager constructs blockchain clients from settings-derived configuration, with a fallback to a default RPC if configuration is missing.
 - Database engine selects production or development URLs based on environment and creates synchronous and asynchronous engines.
@@ -135,7 +135,7 @@ Life-->>App : Blockchains ready
 - Sensitive fields: private_key and secret_key are SecretStr. Validators enforce:
   - Private key must represent a valid Ethereum key.
   - In production, secret_key must not match default values.
-- Defaults: Non-sensitive defaults are provided for database URLs, RPC, Redis, mnemonic, webhook URL/secret. Sensitive defaults include a test mnemonic and a placeholder application secret.
+- Defaults: Non-sensitive defaults are provided for database URLs, Redis, mnemonic, webhook URL/secret. Sensitive defaults include a test mnemonic and a placeholder application secret.
 - Access control: No explicit ACLs are present; secrets are typed and validated to reduce accidental exposure.
 
 Mitigations and best practices:
@@ -361,7 +361,7 @@ Common configuration issues and mitigations:
   - Mitigation: Fix YAML syntax and ensure file readability; verify path via settings.chains_yaml_path.
 - Missing RPC URL:
   - Symptom: Blockchain client skipped or fallback used.
-  - Mitigation: Provide rpc_url in chains.yaml or configure settings.rpc_url.
+  - Mitigation: Provide rpc_url in chains.yaml.
 
 **Section sources**
 - [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L94-L112)
@@ -375,9 +375,9 @@ The cTrip Payment Gateway employs a robust configuration model with environment-
 
 ### Appendix A: Configuration Reference
 - Environment variables:
-  - DATABASE_URL, REDIS_URL, RPC_URL, PRIVATE_KEY, MNEMONIC, ENV
+  - DATABASE_URL, REDIS_URL, PRIVATE_KEY, MNEMONIC, ENV
 - Settings fields:
-  - env, database_url_prod, database_url_dev, rpc_url, redis_url, chains_yaml_path, mnemonic, webhook_url, webhook_secret, private_key, secret_key
+  - env, database_url_prod, database_url_dev, redis_url, chains_yaml_path, mnemonic, webhook_url, webhook_secret, private_key, secret_key
 - Chains YAML:
   - name, rpc_url, tokens (symbol, address, decimals)
 

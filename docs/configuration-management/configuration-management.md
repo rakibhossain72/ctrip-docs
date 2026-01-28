@@ -111,9 +111,9 @@ LIFE --> DEPS
 - [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L1-L15)
 
 ## Core Components
-- Settings model encapsulates environment, database URLs, RPC endpoints, Redis, chains YAML path, mnemonic, optional webhook settings, and secrets. It dynamically selects the active database URL based on environment and validates private and secret keys.
+- Settings model encapsulates environment, database URLs, Redis, chains YAML path, mnemonic, optional webhook settings, and secrets. It dynamically selects the active database URL based on environment and validates private and secret keys.
 - Chains YAML defines blockchain networks with name and RPC URL, and optionally token metadata per chain.
-- Blockchain manager constructs chain-specific clients from settings.chains or falls back to a default RPC URL.
+- Blockchain manager constructs chain-specific clients from settings.chains.
 - Database engines and sessions are derived from settings and transformed to async variants for PostgreSQL/SQLite.
 - FastAPI lifespan initializes blockchain clients and HD wallet manager, and seeds chain states.
 
@@ -165,7 +165,6 @@ App->>Settings : "Access mnemonic/private_key"
 - Behavior:
   - Loaded by the settings.chains property
   - Manager iterates entries to construct chain clients
-  - Falls back to a default RPC URL if no chains are configured
 
 ```mermaid
 flowchart TD
@@ -192,7 +191,7 @@ Valid --> |Yes| ReturnCfg["Return chain configs"]
   - database_url_prod and database_url_dev are read from environment variables
   - database_url dynamically resolves to the appropriate URL based on env
 - Infrastructure:
-  - rpc_url, redis_url, chains_yaml_path, mnemonic, webhook_url, webhook_secret
+  - redis_url, chains_yaml_path, mnemonic, webhook_url, webhook_secret
 - Secrets:
   - private_key is required and validated as a valid Ethereum private key
   - secret_key must be changed from default in production
@@ -206,7 +205,6 @@ class Settings {
 +string env
 +string database_url_prod
 +string database_url_dev
-+string rpc_url
 +string redis_url
 +string chains_yaml_path
 +string mnemonic
@@ -308,7 +306,6 @@ U2 --> E
   - Anvil: sets chain ID 31337, adds mining and impersonation utilities
 - Manager:
   - Iterates settings.chains to instantiate appropriate clients
-  - Falls back to default RPC URL if none configured
 
 ```mermaid
 classDiagram
@@ -392,8 +389,8 @@ class HDWalletManager {
 
 ### Environment-Specific Defaults and Docker Compose
 - Docker Compose:
-  - Defines default DATABASE_URL, REDIS_URL, ENV, RPC_URL, PRIVATE_KEY, and MNEMONIC
-  - Uses variable substitution with defaults for RPC_URL and MNEMONIC
+  - Defines default DATABASE_URL, REDIS_URL, ENV, PRIVATE_KEY, and MNEMONIC
+  - Uses variable substitution with defaults for MNEMONIC
   - Exposes db and redis services for local development
 - Pyproject dependencies:
   - Includes pydantic, pydantic-settings, pyyaml, web3, eth-account, redis, python-dotenv, and others
@@ -456,7 +453,6 @@ Common configuration issues and resolutions:
   - Symptom: Validation error indicating default secret key must be changed
   - Resolution: Override secret_key in environment before deploying to production
 - Empty chains.yaml:
-  - Symptom: Blockchain manager falls back to default RPC URL
   - Resolution: Provide a valid chains.yaml with at least one chain entry
 - Database URL mismatch:
   - Symptom: Engine creation errors or connection failures
@@ -484,7 +480,6 @@ cTrip Payment Gateway centralizes configuration through a robust Pydantic settin
 - env: Selects environment (development, testing, production)
 - DATABASE_URL: Production database URL
 - DATABASE_URL_DEV: Development database URL (defaults to SQLite)
-- RPC_URL: Default RPC endpoint used when chains.yaml is empty
 - REDIS_URL: Redis connection URL
 - CHAINS_YAML_PATH: Path to chains.yaml
 - MNEMONIC: HD wallet mnemonic phrase

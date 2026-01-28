@@ -499,7 +499,6 @@ The cTrip Payment Gateway employs environment-aware database configuration, robu
 - DATABASE_URL_DEV: Development SQLite file path
 - REDIS_URL: Redis connection URL
 - ENV: Application environment (development/production/testing)
-- RPC_URL: Ethereum RPC endpoint
 - PRIVATE_KEY: Required for production
 - SECRET_KEY: Must be changed in production
 
