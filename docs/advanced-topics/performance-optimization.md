@@ -2,22 +2,22 @@
 
 <cite>
 **Referenced Files in This Document**
-- [app/db/engine.py](file://app/db/engine.py)
-- [app/db/session.py](file://app/db/session.py)
-- [app/db/async_session.py](file://app/db/async_session.py)
-- [app/db/models/payment.py](file://app/db/models/payment.py)
-- [app/db/models/chain.py](file://app/db/models/chain.py)
-- [app/blockchain/base.py](file://app/blockchain/base.py)
-- [app/blockchain/w3.py](file://app/blockchain/w3.py)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py)
-- [app/workers/listener.py](file://app/workers/listener.py)
-- [app/workers/webhook.py](file://app/workers/webhook.py)
-- [app/services/webhook.py](file://app/services/webhook.py)
-- [app/api/v1/payments.py](file://app/api/v1/payments.py)
-- [app/core/config.py](file://app/core/config.py)
-- [requirements.txt](file://requirements.txt)
-- [alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py](file://alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py)
+- [app/db/session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py)
+- [app/db/async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py)
+- [app/db/models/chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py)
+- [app/blockchain/w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt)
+- [alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py)
 </cite>
 
 ## Table of Contents
@@ -85,34 +85,34 @@ Base --> AsyncEngine
 ```
 
 **Diagram sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L1-L62)
-- [app/workers/listener.py](file://app/workers/listener.py#L1-L46)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py#L1-L40)
-- [app/workers/webhook.py](file://app/workers/webhook.py#L1-L37)
-- [app/services/webhook.py](file://app/services/webhook.py#L1-L45)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L1-L134)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L1-L33)
-- [app/blockchain/w3.py](file://app/blockchain/w3.py#L1-L9)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L1-L133)
-- [app/db/engine.py](file://app/db/engine.py#L1-L32)
-- [app/db/async_session.py](file://app/db/async_session.py#L1-L15)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L1-L74)
-- [app/db/models/chain.py](file://app/db/models/chain.py#L1-L17)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L1-L62)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L1-L46)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L1-L40)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L1-L37)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L1-L45)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L1-L134)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [app/blockchain/w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L133)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [app/db/async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L1-L15)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L1-L74)
+- [app/db/models/chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L1-L17)
 
 **Section sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L1-L62)
-- [app/workers/listener.py](file://app/workers/listener.py#L1-L46)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py#L1-L40)
-- [app/workers/webhook.py](file://app/workers/webhook.py#L1-L37)
-- [app/services/webhook.py](file://app/services/webhook.py#L1-L45)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L1-L134)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L1-L33)
-- [app/blockchain/w3.py](file://app/blockchain/w3.py#L1-L9)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L1-L133)
-- [app/db/engine.py](file://app/db/engine.py#L1-L32)
-- [app/db/async_session.py](file://app/db/async_session.py#L1-L15)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L1-L74)
-- [app/db/models/chain.py](file://app/db/models/chain.py#L1-L17)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L1-L62)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L1-L46)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L1-L40)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L1-L37)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L1-L45)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L1-L134)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [app/blockchain/w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L133)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [app/db/async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L1-L15)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L1-L74)
+- [app/db/models/chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L1-L17)
 
 ## Core Components
 - Database connection pooling: synchronous and asynchronous engines configured with pre-ping and tuned pool sizes
@@ -124,16 +124,16 @@ Base --> AsyncEngine
 - Async/await best practices: structured concurrency with proper event loops and timeouts
 
 **Section sources**
-- [app/db/engine.py](file://app/db/engine.py#L1-L32)
-- [app/db/session.py](file://app/db/session.py#L1-L17)
-- [app/db/async_session.py](file://app/db/async_session.py#L1-L15)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L65-L80)
-- [app/blockchain/w3.py](file://app/blockchain/w3.py#L1-L9)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L1-L33)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L1-L134)
-- [app/workers/listener.py](file://app/workers/listener.py#L1-L46)
-- [app/workers/webhook.py](file://app/workers/webhook.py#L1-L37)
-- [app/services/webhook.py](file://app/services/webhook.py#L1-L45)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [app/db/session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L1-L17)
+- [app/db/async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L1-L15)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L65-L80)
+- [app/blockchain/w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L1-L134)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L1-L46)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L1-L37)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L1-L45)
 
 ## Architecture Overview
 The system integrates FastAPI endpoints, Dramatiq workers, and blockchain providers with a robust database layer. The key performance levers are:
@@ -160,9 +160,9 @@ API-->>Client : "PaymentCreated"
 ```
 
 **Diagram sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L18-L54)
-- [app/db/session.py](file://app/db/session.py#L11-L16)
-- [app/blockchain/w3.py](file://app/blockchain/w3.py#L6-L9)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L18-L54)
+- [app/db/session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L11-L16)
+- [app/blockchain/w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L6-L9)
 
 ## Detailed Component Analysis
 
@@ -182,13 +182,13 @@ Release --> End(["Task Ends"])
 ```
 
 **Diagram sources**
-- [app/db/async_session.py](file://app/db/async_session.py#L12-L15)
-- [app/db/session.py](file://app/db/session.py#L11-L16)
+- [app/db/async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L12-L15)
+- [app/db/session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L11-L16)
 
 **Section sources**
-- [app/db/engine.py](file://app/db/engine.py#L22-L31)
-- [app/db/session.py](file://app/db/session.py#L5-L16)
-- [app/db/async_session.py](file://app/db/async_session.py#L6-L15)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L22-L31)
+- [app/db/session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L5-L16)
+- [app/db/async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L6-L15)
 
 ### Async Operation Optimization for Blockchain Interactions
 - BlockchainBase caches gas price with a short TTL to minimize RPC calls
@@ -221,14 +221,14 @@ ScannerService --> BlockchainBase : "uses via get_w3()"
 ```
 
 **Diagram sources**
-- [app/blockchain/base.py](file://app/blockchain/base.py#L41-L80)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L14-L96)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L41-L80)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L96)
 
 **Section sources**
-- [app/blockchain/base.py](file://app/blockchain/base.py#L65-L80)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L116-L133)
-- [app/blockchain/w3.py](file://app/blockchain/w3.py#L6-L9)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L20-L96)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L65-L80)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L116-L133)
+- [app/blockchain/w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L6-L9)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L20-L96)
 
 ### Memory Management Techniques
 - Avoid building large intermediate lists unnecessarily; process logs and transactions iteratively
@@ -237,9 +237,9 @@ ScannerService --> BlockchainBase : "uses via get_w3()"
 - Close sessions promptly after use to free resources
 
 **Section sources**
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L41-L50)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L72-L92)
-- [app/db/async_session.py](file://app/db/async_session.py#L12-L15)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L41-L50)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L72-L92)
+- [app/db/async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L12-L15)
 
 ### Query Optimization Strategies for SQLAlchemy Models
 - Use targeted selects with filters to avoid full-table scans
@@ -258,14 +258,14 @@ E --> G["Compare Amount vs Tx Value"]
 ```
 
 **Diagram sources**
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L41-L92)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L41-L57)
-- [app/db/models/token.py](file://app/db/models/token.py#L1-L74)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L41-L92)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L57)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L1-L74)
 
 **Section sources**
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L24-L32)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L41-L50)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L41-L57)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L24-L32)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L41-L50)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L57)
 
 ### Caching Mechanisms for Gas Price and Blockchain Data
 - Gas price cache with a 10-second TTL reduces frequent RPC calls
@@ -291,10 +291,10 @@ Base-->>Svc : "Gas Price"
 ```
 
 **Diagram sources**
-- [app/blockchain/base.py](file://app/blockchain/base.py#L65-L80)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L65-L80)
 
 **Section sources**
-- [app/blockchain/base.py](file://app/blockchain/base.py#L41-L80)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L41-L80)
 
 ### Async/Await Best Practices Throughout the Application
 - Workers use asyncio.run within actors to execute async tasks
@@ -316,14 +316,14 @@ Runner-->>Actor : "Complete"
 ```
 
 **Diagram sources**
-- [app/workers/listener.py](file://app/workers/listener.py#L29-L40)
-- [app/workers/webhook.py](file://app/workers/webhook.py#L24-L36)
-- [app/services/webhook.py](file://app/services/webhook.py#L33-L36)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L29-L40)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L24-L36)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L33-L36)
 
 **Section sources**
-- [app/workers/listener.py](file://app/workers/listener.py#L18-L46)
-- [app/workers/webhook.py](file://app/workers/webhook.py#L9-L37)
-- [app/services/webhook.py](file://app/services/webhook.py#L33-L36)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L18-L46)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L9-L37)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L33-L36)
 
 ### Efficient Blockchain Polling Strategies
 - Batch scanning by configurable block_batch_size to limit per-cycle RPC calls
@@ -347,12 +347,12 @@ SaveState --> End
 ```
 
 **Diagram sources**
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L20-L96)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L20-L96)
 
 **Section sources**
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L14-L18)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L34-L39)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L72-L92)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L18)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L34-L39)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L72-L92)
 
 ## Dependency Analysis
 External dependencies relevant to performance:
@@ -378,10 +378,10 @@ UvLoop --> Web3
 ```
 
 **Diagram sources**
-- [requirements.txt](file://requirements.txt#L89-L106)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt#L89-L106)
 
 **Section sources**
-- [requirements.txt](file://requirements.txt#L89-L106)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt#L89-L106)
 
 ## Performance Considerations
 - Connection pooling
@@ -424,10 +424,10 @@ UvLoop --> Web3
   - Review webhook service error handling
 
 **Section sources**
-- [app/db/engine.py](file://app/db/engine.py#L22-L31)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L45-L50)
-- [app/workers/webhook.py](file://app/workers/webhook.py#L32-L36)
-- [app/services/webhook.py](file://app/services/webhook.py#L39-L44)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L22-L31)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L45-L50)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L32-L36)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L39-L44)
 
 ## Conclusion
 By combining efficient database pooling, structured async workflows, targeted query patterns, and strategic caching, the cTrip Payment Gateway can achieve high throughput while maintaining reliability. The provided patterns—connection reuse, gas price caching, and batched blockchain polling—are grounded in the existing codebase and can be tuned further based on production metrics and scaling needs.
@@ -474,7 +474,7 @@ PAYMENTS }o--o| CHAIN_STATES : "chain"
 ```
 
 **Diagram sources**
-- [alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py](file://alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py#L58-L82)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L41-L57)
-- [app/db/models/token.py](file://app/db/models/token.py#L1-L74)
-- [app/db/models/chain.py](file://app/db/models/chain.py#L9-L17)
+- [alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py#L58-L82)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L57)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L1-L74)
+- [app/db/models/chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)

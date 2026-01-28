@@ -2,21 +2,21 @@
 
 <cite>
 **Referenced Files in This Document**
-- [manager.py](file://app/blockchain/manager.py)
-- [base.py](file://app/blockchain/base.py)
-- [w3.py](file://app/blockchain/w3.py)
-- [ethereum.py](file://app/blockchain/ethereum.py)
-- [bsc.py](file://app/blockchain/bsc.py)
-- [anvil.py](file://app/blockchain/anvil.py)
-- [config.py](file://app/core/config.py)
-- [chains.yaml](file://chains.yaml)
-- [scanner.py](file://app/services/blockchain/scanner.py)
-- [sweeper.py](file://app/services/blockchain/sweeper.py)
-- [listener.py](file://app/workers/listener.py)
-- [chain.py](file://app/db/models/chain.py)
-- [payment.py](file://app/db/models/payment.py)
-- [token.py](file://app/db/models/token.py)
-- [ERC20.json](file://app/blockchain/ABI/ERC20.json)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py)
+- [anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py)
+- [chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py)
+- [token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py)
+- [ERC20.json](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ABI/ERC20.json)
 </cite>
 
 ## Table of Contents
@@ -84,25 +84,25 @@ SWP --> TOK
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L44-L56)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [manager.py](file://app/blockchain/manager.py#L8-L32)
-- [w3.py](file://app/blockchain/w3.py#L4-L9)
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [ethereum.py](file://app/blockchain/ethereum.py#L3-L7)
-- [bsc.py](file://app/blockchain/bsc.py#L3-L7)
-- [anvil.py](file://app/blockchain/anvil.py#L8-L57)
-- [scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
-- [sweeper.py](file://app/services/blockchain/sweeper.py#L11-L54)
-- [listener.py](file://app/workers/listener.py#L21-L46)
-- [chain.py](file://app/db/models/chain.py#L9-L17)
-- [payment.py](file://app/db/models/payment.py#L41-L74)
-- [token.py](file://app/db/models/token.py#L6-L15)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L56)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L4-L9)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L3-L7)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L3-L7)
+- [anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L8-L57)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L11-L54)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
+- [token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15)
 
 **Section sources**
-- [manager.py](file://app/blockchain/manager.py#L1-L33)
-- [config.py](file://app/core/config.py#L44-L56)
-- [chains.yaml](file://chains.yaml#L1-L24)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L56)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
 
 ## Core Components
 - Blockchain Manager Factory: Builds a dictionary of chain instances keyed by chain name, selecting implementations based on configuration and falling back to a default chain when none are configured.
@@ -112,15 +112,15 @@ SWP --> TOK
 - Services: ScannerService scans blocks and confirms payments; SweeperService settles confirmed payments; Listener schedules scanning cycles.
 
 **Section sources**
-- [manager.py](file://app/blockchain/manager.py#L8-L32)
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [ethereum.py](file://app/blockchain/ethereum.py#L3-L7)
-- [bsc.py](file://app/blockchain/bsc.py#L3-L7)
-- [anvil.py](file://app/blockchain/anvil.py#L8-L57)
-- [w3.py](file://app/blockchain/w3.py#L4-L9)
-- [scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
-- [sweeper.py](file://app/services/blockchain/sweeper.py#L11-L54)
-- [listener.py](file://app/workers/listener.py#L21-L46)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L3-L7)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L3-L7)
+- [anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L8-L57)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L4-L9)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L11-L54)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
 
 ## Architecture Overview
 The integration layer follows a factory-driven composition:
@@ -146,11 +146,11 @@ Svc->>Svc : Scan blocks, detect payments, confirm
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L44-L56)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [manager.py](file://app/blockchain/manager.py#L8-L32)
-- [w3.py](file://app/blockchain/w3.py#L4-L9)
-- [scanner.py](file://app/services/blockchain/scanner.py#L20-L96)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L56)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L4-L9)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L20-L96)
 
 ## Detailed Component Analysis
 
@@ -184,10 +184,10 @@ Fallback --> Return
 ```
 
 **Diagram sources**
-- [manager.py](file://app/blockchain/manager.py#L8-L32)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
 
 **Section sources**
-- [manager.py](file://app/blockchain/manager.py#L8-L32)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
 
 ### Base Blockchain Interface: Shared Functionality
 - Initializes AsyncWeb3 with a timeout and optional POA middleware injection.
@@ -214,10 +214,10 @@ class BlockchainBase {
 ```
 
 **Diagram sources**
-- [base.py](file://app/blockchain/base.py#L22-L146)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
 
 **Section sources**
-- [base.py](file://app/blockchain/base.py#L22-L146)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
 
 ### Chain-Specific Implementations
 - EthereumBlockchain: Sets chain_id to 1 and disables POA middleware.
@@ -239,15 +239,15 @@ AnvilBlockchain : +reset(forking_url, block_number)
 ```
 
 **Diagram sources**
-- [ethereum.py](file://app/blockchain/ethereum.py#L3-L7)
-- [bsc.py](file://app/blockchain/bsc.py#L3-L7)
-- [anvil.py](file://app/blockchain/anvil.py#L8-L57)
-- [base.py](file://app/blockchain/base.py#L22-L146)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L3-L7)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L3-L7)
+- [anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L8-L57)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
 
 **Section sources**
-- [ethereum.py](file://app/blockchain/ethereum.py#L3-L7)
-- [bsc.py](file://app/blockchain/bsc.py#L3-L7)
-- [anvil.py](file://app/blockchain/anvil.py#L8-L57)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L3-L7)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L3-L7)
+- [anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L8-L57)
 
 ### Web3 Provider Management and Accessor
 - get_blockchains() constructs a singleton-like cache of chain instances.
@@ -270,12 +270,12 @@ W3-->>Caller : AsyncWeb3 client
 ```
 
 **Diagram sources**
-- [w3.py](file://app/blockchain/w3.py#L4-L9)
-- [manager.py](file://app/blockchain/manager.py#L8-L32)
-- [base.py](file://app/blockchain/base.py#L34-L36)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L4-L9)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L34-L36)
 
 **Section sources**
-- [w3.py](file://app/blockchain/w3.py#L4-L9)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L4-L9)
 
 ### Relationship Between Configuration and Instantiation
 - settings.chains loads chain entries from chains.yaml.
@@ -301,14 +301,14 @@ M --> L
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L44-L56)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [manager.py](file://app/blockchain/manager.py#L12-L32)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L56)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L12-L32)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L44-L56)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [manager.py](file://app/blockchain/manager.py#L12-L32)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L56)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L12-L32)
 
 ### Error Handling Patterns and Fallback Mechanisms
 - Connection checks wrap AsyncWeb3 connectivity in a guarded method returning a boolean and logging errors.
@@ -335,13 +335,13 @@ Receipt --> End(["Done"])
 ```
 
 **Diagram sources**
-- [base.py](file://app/blockchain/base.py#L86-L133)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L86-L133)
 
 **Section sources**
-- [base.py](file://app/blockchain/base.py#L45-L50)
-- [base.py](file://app/blockchain/base.py#L87-L92)
-- [base.py](file://app/blockchain/base.py#L116-L133)
-- [manager.py](file://app/blockchain/manager.py#L28-L31)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L45-L50)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L87-L92)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L116-L133)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L28-L31)
 
 ### Chain Availability Monitoring and Health Checks
 - is_connected() performs a basic connectivity probe via AsyncWeb3 and logs failures.
@@ -360,14 +360,14 @@ Note over Svc,Prov : Connectivity assumed via successful RPC response
 ```
 
 **Diagram sources**
-- [scanner.py](file://app/services/blockchain/scanner.py#L34-L36)
-- [w3.py](file://app/blockchain/w3.py#L6-L9)
-- [base.py](file://app/blockchain/base.py#L45-L50)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L34-L36)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L6-L9)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L45-L50)
 
 **Section sources**
-- [base.py](file://app/blockchain/base.py#L45-L50)
-- [scanner.py](file://app/services/blockchain/scanner.py#L34-L36)
-- [listener.py](file://app/workers/listener.py#L29-L46)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L45-L50)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L34-L36)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L29-L46)
 
 ### Data Models and Service Interactions
 - ChainState tracks the last scanned block per chain.
@@ -408,16 +408,16 @@ TOKEN ||--o{ PAYMENT : "token reference"
 ```
 
 **Diagram sources**
-- [chain.py](file://app/db/models/chain.py#L9-L17)
-- [token.py](file://app/db/models/token.py#L6-L15)
-- [payment.py](file://app/db/models/payment.py#L41-L74)
+- [chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
+- [token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
 
 **Section sources**
-- [chain.py](file://app/db/models/chain.py#L9-L17)
-- [token.py](file://app/db/models/token.py#L6-L15)
-- [payment.py](file://app/db/models/payment.py#L41-L74)
-- [scanner.py](file://app/services/blockchain/scanner.py#L20-L134)
-- [sweeper.py](file://app/services/blockchain/sweeper.py#L16-L54)
+- [chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
+- [token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L20-L134)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L16-L54)
 
 ## Dependency Analysis
 - Configuration drives instantiation: settings.chains feeds the factory, which depends on chains.yaml.
@@ -442,22 +442,22 @@ SWP --> DB
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L44-L56)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [manager.py](file://app/blockchain/manager.py#L8-L32)
-- [w3.py](file://app/blockchain/w3.py#L4-L9)
-- [scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
-- [sweeper.py](file://app/services/blockchain/sweeper.py#L11-L54)
-- [chain.py](file://app/db/models/chain.py#L9-L17)
-- [payment.py](file://app/db/models/payment.py#L41-L74)
-- [token.py](file://app/db/models/token.py#L6-L15)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L56)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L4-L9)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L11-L54)
+- [chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
+- [token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L44-L56)
-- [manager.py](file://app/blockchain/manager.py#L8-L32)
-- [w3.py](file://app/blockchain/w3.py#L4-L9)
-- [scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
-- [sweeper.py](file://app/services/blockchain/sweeper.py#L11-L54)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L56)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L4-L9)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L11-L54)
 
 ## Performance Considerations
 - Gas price caching reduces repeated RPC calls for fee estimation.
@@ -476,11 +476,11 @@ Common issues and resolutions:
 - Scanning skips chains: If no ChainState exists for a chain, scanning is skipped; create ChainState records before scanning.
 
 **Section sources**
-- [manager.py](file://app/blockchain/manager.py#L28-L31)
-- [base.py](file://app/blockchain/base.py#L45-L50)
-- [base.py](file://app/blockchain/base.py#L87-L92)
-- [w3.py](file://app/blockchain/w3.py#L7-L9)
-- [scanner.py](file://app/services/blockchain/scanner.py#L30-L33)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L28-L31)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L45-L50)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L87-L92)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L7-L9)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L30-L33)
 
 ## Conclusion
 The blockchain integration layer cleanly separates configuration, instantiation, and runtime operations:

@@ -2,21 +2,21 @@
 
 <cite>
 **Referenced Files in This Document**
-- [server.py](file://server.py)
-- [app/core/config.py](file://app/core/config.py)
-- [app/db/engine.py](file://app/db/engine.py)
-- [app/db/async_session.py](file://app/db/async_session.py)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py)
-- [app/blockchain/base.py](file://app/blockchain/base.py)
-- [app/api/v1/payments.py](file://app/api/v1/payments.py)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py)
-- [app/workers/listener.py](file://app/workers/listener.py)
-- [docker-compose.yml](file://docker-compose.yml)
-- [requirements.txt](file://requirements.txt)
-- [pyproject.toml](file://pyproject.toml)
-- [alembic.ini](file://alembic.ini)
-- [app/db/models/payment.py](file://app/db/models/payment.py)
-- [app/utils/crypto.py](file://app/utils/crypto.py)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py)
+- [app/db/async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt)
+- [pyproject.toml](https://github.com/rakibhossain72/ctrip/blob/main/pyproject.toml)
+- [alembic.ini](https://github.com/rakibhossain72/ctrip/blob/main/alembic.ini)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py)
 </cite>
 
 ## Table of Contents
@@ -68,15 +68,15 @@ DB --> Postgres
 ```
 
 **Diagram sources**
-- [server.py](file://server.py#L45-L56)
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L12-L62)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
-- [app/db/engine.py](file://app/db/engine.py#L19-L32)
-- [docker-compose.yml](file://docker-compose.yml#L1-L54)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L45-L56)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L12-L62)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L19-L32)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L1-L54)
 
 **Section sources**
-- [server.py](file://server.py#L1-L56)
-- [docker-compose.yml](file://docker-compose.yml#L1-L54)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L1-L56)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L1-L54)
 
 ## Core Components
 - Web Framework: FastAPI with lifespan for startup initialization and router composition
@@ -88,14 +88,14 @@ DB --> Postgres
 - Containerization: Docker Compose for local development with Postgres, Redis, and worker processes
 
 **Section sources**
-- [server.py](file://server.py#L21-L47)
-- [app/core/config.py](file://app/core/config.py#L10-L126)
-- [app/db/engine.py](file://app/db/engine.py#L1-L32)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L22-L146)
-- [docker-compose.yml](file://docker-compose.yml#L1-L54)
-- [requirements.txt](file://requirements.txt#L1-L106)
-- [pyproject.toml](file://pyproject.toml#L14-L32)
-- [alembic.ini](file://alembic.ini#L86-L90)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L1-L54)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt#L1-L106)
+- [pyproject.toml](https://github.com/rakibhossain72/ctrip/blob/main/pyproject.toml#L14-L32)
+- [alembic.ini](https://github.com/rakibhossain72/ctrip/blob/main/alembic.ini#L86-L90)
 
 ## Architecture Overview
 The system follows a layered architecture:
@@ -132,14 +132,14 @@ DBEngine --> Postgres
 ```
 
 **Diagram sources**
-- [server.py](file://server.py#L45-L56)
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L12-L62)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
-- [app/db/engine.py](file://app/db/engine.py#L19-L32)
-- [app/db/async_session.py](file://app/db/async_session.py#L6-L15)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L33)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L22-L146)
-- [app/workers/listener.py](file://app/workers/listener.py#L21-L46)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L45-L56)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L12-L62)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L19-L32)
+- [app/db/async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L6-L15)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
 
 ## Detailed Component Analysis
 
@@ -168,12 +168,12 @@ App-->>Proc : Ready
 ```
 
 **Diagram sources**
-- [server.py](file://server.py#L21-L47)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L33)
-- [app/utils/crypto.py](file://app/utils/crypto.py#L5-L47)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L47)
 
 **Section sources**
-- [server.py](file://server.py#L21-L47)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
 
 ### Configuration Management
 - Centralized settings with environment detection and dynamic database URL selection
@@ -195,12 +195,12 @@ Secrets --> End(["Settings Ready"])
 ```
 
 **Diagram sources**
-- [app/core/config.py](file://app/core/config.py#L86-L92)
-- [app/core/config.py](file://app/core/config.py#L44-L57)
-- [app/core/config.py](file://app/core/config.py#L94-L112)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L86-L92)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L57)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L94-L112)
 
 **Section sources**
-- [app/core/config.py](file://app/core/config.py#L10-L126)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
 
 ### Database Layer and Async ORM
 - Dynamic URL construction switching between PostgreSQL and SQLite based on environment
@@ -220,12 +220,12 @@ EngineFactory <.. AsyncSessionLocal : "bind async_engine"
 ```
 
 **Diagram sources**
-- [app/db/engine.py](file://app/db/engine.py#L5-L32)
-- [app/db/async_session.py](file://app/db/async_session.py#L6-L15)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L5-L32)
+- [app/db/async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L6-L15)
 
 **Section sources**
-- [app/db/engine.py](file://app/db/engine.py#L1-L32)
-- [app/db/async_session.py](file://app/db/async_session.py#L1-L15)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [app/db/async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L1-L15)
 
 ### Blockchain Abstraction and Chain Management
 - BlockchainBase encapsulates async Web3 operations, gas estimation, and transaction building
@@ -255,12 +255,12 @@ Manager --> BlockchainBase : "instantiates per chain"
 ```
 
 **Diagram sources**
-- [app/blockchain/base.py](file://app/blockchain/base.py#L22-L146)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L33)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
 
 **Section sources**
-- [app/blockchain/base.py](file://app/blockchain/base.py#L1-L146)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L1-L33)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L146)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
 
 ### API Layer: Payment Creation Workflow
 - Endpoint validates chain and optional token, derives a new payment address via HD wallet, persists the record, and returns the created entity
@@ -282,12 +282,12 @@ API-->>Client : 201 PaymentRead
 ```
 
 **Diagram sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L18-L54)
-- [app/utils/crypto.py](file://app/utils/crypto.py#L27-L47)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L18-L54)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L27-L47)
 
 **Section sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L1-L62)
-- [app/utils/crypto.py](file://app/utils/crypto.py#L1-L90)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L1-L62)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L90)
 
 ### Service Layer: Blockchain Scanning and Confirmation
 - ScannerService scans blocks for native and ERC20 transfers matching pending payments
@@ -314,10 +314,10 @@ Commit --> End(["Complete"])
 ```
 
 **Diagram sources**
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L20-L134)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L20-L134)
 
 **Section sources**
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L1-L134)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L1-L134)
 
 ### Background Workers: Dramatiq Actors
 - Worker actors run continuously, scanning chains and confirming payments at intervals
@@ -343,12 +343,12 @@ Listener->>Scheduler : Schedule next run (5s)
 ```
 
 **Diagram sources**
-- [app/workers/listener.py](file://app/workers/listener.py#L21-L46)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
-- [app/db/async_session.py](file://app/db/async_session.py#L12-L15)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
+- [app/db/async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L12-L15)
 
 **Section sources**
-- [app/workers/listener.py](file://app/workers/listener.py#L1-L46)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L1-L46)
 
 ### Data Model: Payments and Related Entities
 - Payment entity tracks chain, address, amount, status, confirmations, and expiry
@@ -382,10 +382,10 @@ PAYMENTS }o--|| TOKENS : "optional token reference"
 ```
 
 **Diagram sources**
-- [app/db/models/payment.py](file://app/db/models/payment.py#L41-L58)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L58)
 
 **Section sources**
-- [app/db/models/payment.py](file://app/db/models/payment.py#L1-L74)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L1-L74)
 
 ## Dependency Analysis
 - Runtime dependencies include FastAPI, SQLAlchemy 2.0, Web3.py, Dramatiq, Redis, Alembic, and Pydantic settings
@@ -412,13 +412,13 @@ SlowAPI["slowapi>=0.1.9"] --> App
 ```
 
 **Diagram sources**
-- [requirements.txt](file://requirements.txt#L36-L106)
-- [pyproject.toml](file://pyproject.toml#L14-L32)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt#L36-L106)
+- [pyproject.toml](https://github.com/rakibhossain72/ctrip/blob/main/pyproject.toml#L14-L32)
 
 **Section sources**
-- [requirements.txt](file://requirements.txt#L1-L106)
-- [pyproject.toml](file://pyproject.toml#L1-L59)
-- [alembic.ini](file://alembic.ini#L86-L90)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt#L1-L106)
+- [pyproject.toml](https://github.com/rakibhossain72/ctrip/blob/main/pyproject.toml#L1-L59)
+- [alembic.ini](https://github.com/rakibhossain72/ctrip/blob/main/alembic.ini#L86-L90)
 
 ## Performance Considerations
 - Async ORM and engines reduce blocking I/O and improve throughput under concurrent loads
@@ -435,10 +435,10 @@ SlowAPI["slowapi>=0.1.9"] --> App
 - Secrets: Ensure private keys and secret keys meet validation criteria for production environments
 
 **Section sources**
-- [server.py](file://server.py#L52-L56)
-- [alembic.ini](file://alembic.ini#L86-L90)
-- [docker-compose.yml](file://docker-compose.yml#L37-L50)
-- [app/core/config.py](file://app/core/config.py#L94-L112)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L52-L56)
+- [alembic.ini](https://github.com/rakibhossain72/ctrip/blob/main/alembic.ini#L86-L90)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L37-L50)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L94-L112)
 
 ## Conclusion
 cTrip’s architecture leverages modern asynchronous technologies to deliver a scalable, maintainable payment infrastructure across multiple blockchains. FastAPI and SQLAlchemy 2.0 provide a responsive API and robust ORM, while Web3.py and Dramatiq enable efficient blockchain interactions and background processing. Alembic ensures safe schema evolution, and Docker facilitates reproducible deployments. The layered design and microservice-like workers promote separation of concerns and operational flexibility.

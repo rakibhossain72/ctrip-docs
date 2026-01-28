@@ -2,20 +2,20 @@
 
 <cite>
 **Referenced Files in This Document**
-- [anvil.py](file://app/blockchain/anvil.py)
-- [base.py](file://app/blockchain/base.py)
-- [manager.py](file://app/blockchain/manager.py)
-- [w3.py](file://app/blockchain/w3.py)
-- [ethereum.py](file://app/blockchain/ethereum.py)
-- [bsc.py](file://app/blockchain/bsc.py)
-- [config.py](file://app/core/config.py)
-- [chains.yaml](file://chains.yaml)
-- [docker-compose.yml](file://docker-compose.yml)
-- [crypto.py](file://app/utils/crypto.py)
-- [dependencies.py](file://app/api/dependencies.py)
-- [scanner.py](file://app/services/blockchain/scanner.py)
-- [requirements.txt](file://requirements.txt)
-- [README.md](file://README.md)
+- [anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt)
+- [README.md](https://github.com/rakibhossain72/ctrip/blob/main/README.md)
 </cite>
 
 ## Table of Contents
@@ -70,25 +70,25 @@ DEPS --> CRYPTO
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L10-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [manager.py](file://app/blockchain/manager.py#L8-L33)
-- [anvil.py](file://app/blockchain/anvil.py#L8-L57)
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [ethereum.py](file://app/blockchain/ethereum.py#L3-L7)
-- [bsc.py](file://app/blockchain/bsc.py#L3-L7)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
-- [dependencies.py](file://app/api/dependencies.py#L5-L15)
-- [scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
-- [crypto.py](file://app/utils/crypto.py#L5-L90)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L8-L57)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L3-L7)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L3-L7)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L5-L15)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L90)
 
 **Section sources**
-- [README.md](file://README.md#L1-L87)
-- [config.py](file://app/core/config.py#L10-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [manager.py](file://app/blockchain/manager.py#L8-L33)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
-- [dependencies.py](file://app/api/dependencies.py#L5-L15)
+- [README.md](https://github.com/rakibhossain72/ctrip/blob/main/README.md#L1-L87)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L5-L15)
 
 ## Core Components
 - AnvilBlockchain: Specialized EVM client for local development with Anvil, exposing mining, balance manipulation, impersonation, and reset controls.
@@ -103,12 +103,12 @@ Key advantages for testing:
 - Easy reset and fork control for repeatable tests.
 
 **Section sources**
-- [anvil.py](file://app/blockchain/anvil.py#L8-L57)
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [manager.py](file://app/blockchain/manager.py#L8-L33)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
-- [crypto.py](file://app/utils/crypto.py#L5-L90)
-- [scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
+- [anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L8-L57)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L90)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
 
 ## Architecture Overview
 The system initializes blockchain clients from configuration, exposes them via a registry, and allows services to scan and react to on-chain activity. Anvil is treated as a first-class chain with specialized RPC methods for rapid iteration.
@@ -130,10 +130,10 @@ Chain->>Web3 : Provider RPC calls
 ```
 
 **Diagram sources**
-- [manager.py](file://app/blockchain/manager.py#L8-L33)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
-- [anvil.py](file://app/blockchain/anvil.py#L8-L57)
-- [base.py](file://app/blockchain/base.py#L34-L36)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L8-L57)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L34-L36)
 
 ## Detailed Component Analysis
 
@@ -180,12 +180,12 @@ BlockchainBase <|-- AnvilBlockchain
 ```
 
 **Diagram sources**
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [anvil.py](file://app/blockchain/anvil.py#L8-L57)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L8-L57)
 
 **Section sources**
-- [anvil.py](file://app/blockchain/anvil.py#L8-L57)
-- [base.py](file://app/blockchain/base.py#L22-L146)
+- [anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L8-L57)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
 
 ### BlockchainBase Utilities
 Purpose:
@@ -211,10 +211,10 @@ Buffer --> Done(["Return tx dict"])
 ```
 
 **Diagram sources**
-- [base.py](file://app/blockchain/base.py#L93-L133)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L93-L133)
 
 **Section sources**
-- [base.py](file://app/blockchain/base.py#L22-L146)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
 
 ### Chain Registry and Access
 Purpose:
@@ -239,16 +239,16 @@ Reg-->>Access : AsyncWeb3 instance
 ```
 
 **Diagram sources**
-- [manager.py](file://app/blockchain/manager.py#L8-L33)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
-- [config.py](file://app/core/config.py#L44-L56)
-- [chains.yaml](file://chains.yaml#L1-L24)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L56)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
 
 **Section sources**
-- [manager.py](file://app/blockchain/manager.py#L8-L33)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
-- [config.py](file://app/core/config.py#L44-L56)
-- [chains.yaml](file://chains.yaml#L1-L24)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L56)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
 
 ### HD Wallet and Private Key Management
 Purpose:
@@ -274,11 +274,11 @@ class HDWalletManager {
 ```
 
 **Diagram sources**
-- [crypto.py](file://app/utils/crypto.py#L5-L90)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L90)
 
 **Section sources**
-- [crypto.py](file://app/utils/crypto.py#L5-L90)
-- [config.py](file://app/core/config.py#L58-L102)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L90)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L58-L102)
 
 ### Payment Scanning and Confirmation
 Purpose:
@@ -308,12 +308,12 @@ end
 ```
 
 **Diagram sources**
-- [scanner.py](file://app/services/blockchain/scanner.py#L20-L96)
-- [w3.py](file://app/blockchain/w3.py#L6-L9)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L20-L96)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L6-L9)
 
 **Section sources**
-- [scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
 
 ## Dependency Analysis
 External dependencies relevant to Anvil and blockchain operations:
@@ -339,22 +339,22 @@ CRYPTO["crypto.py"] --> ETHACC
 ```
 
 **Diagram sources**
-- [requirements.txt](file://requirements.txt#L27-L102)
-- [config.py](file://app/core/config.py#L1-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [manager.py](file://app/blockchain/manager.py#L1-L33)
-- [anvil.py](file://app/blockchain/anvil.py#L1-L57)
-- [base.py](file://app/blockchain/base.py#L1-L146)
-- [crypto.py](file://app/utils/crypto.py#L1-L90)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt#L27-L102)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L1-L57)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L146)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L90)
 
 **Section sources**
-- [requirements.txt](file://requirements.txt#L1-L106)
-- [config.py](file://app/core/config.py#L1-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [manager.py](file://app/blockchain/manager.py#L1-L33)
-- [anvil.py](file://app/blockchain/anvil.py#L1-L57)
-- [base.py](file://app/blockchain/base.py#L1-L146)
-- [crypto.py](file://app/utils/crypto.py#L1-L90)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt#L1-L106)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L1-L57)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L146)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L90)
 
 ## Performance Considerations
 - Mining control: Use mining APIs to advance blocks instantly during tests, avoiding long waits.
@@ -373,11 +373,11 @@ Common issues and resolutions:
 - Scanner not finding payments: Verify target addresses, token addresses, and that the chain is properly registered.
 
 **Section sources**
-- [base.py](file://app/blockchain/base.py#L45-L50)
-- [manager.py](file://app/blockchain/manager.py#L28-L32)
-- [config.py](file://app/core/config.py#L94-L102)
-- [crypto.py](file://app/utils/crypto.py#L64-L66)
-- [scanner.py](file://app/services/blockchain/scanner.py#L20-L32)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L45-L50)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L28-L32)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L94-L102)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L64-L66)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L20-L32)
 
 ## Conclusion
 Anvil is integrated as a first-class local chain with powerful developer controls for rapid iteration. By combining AnvilBlockchain’s specialized methods with BlockchainBase utilities and HD wallet management, the system enables deterministic, fast, and repeatable testing of payment gateway flows. The registry pattern and configuration-driven chain selection keep the system flexible and maintainable across environments.
@@ -396,10 +396,10 @@ Practical steps:
 - Optionally fork from a mainnet endpoint for realistic testing.
 
 **Section sources**
-- [config.py](file://app/core/config.py#L28-L32)
-- [chains.yaml](file://chains.yaml#L19-L24)
-- [docker-compose.yml](file://docker-compose.yml#L30-L31)
-- [base.py](file://app/blockchain/base.py#L45-L50)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L28-L32)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L19-L24)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L30-L31)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L45-L50)
 
 ### B. Network Configuration and Chain Selection
 - Configure chains in chains.yaml and load them via settings.
@@ -407,9 +407,9 @@ Practical steps:
 - Fallback ensures Anvil is available even if configuration is empty.
 
 **Section sources**
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [config.py](file://app/core/config.py#L44-L56)
-- [manager.py](file://app/blockchain/manager.py#L8-L33)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L56)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
 
 ### C. Private Key Management for Local Development
 - Private key is validated by settings and used by BlockchainBase to sign transactions.
@@ -417,9 +417,9 @@ Practical steps:
 - Keep mnemonics and private keys secure; use environment variables and secrets management.
 
 **Section sources**
-- [config.py](file://app/core/config.py#L74-L102)
-- [crypto.py](file://app/utils/crypto.py#L5-L90)
-- [base.py](file://app/blockchain/base.py#L135-L139)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L74-L102)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L90)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L135-L139)
 
 ### D. Advantages for Testing Payment Gateways
 - Fast transaction speeds: Mine blocks instantly to simulate confirmations.
@@ -427,8 +427,8 @@ Practical steps:
 - Easy state management: Reset/fork to known states between test runs.
 
 **Section sources**
-- [anvil.py](file://app/blockchain/anvil.py#L13-L56)
-- [base.py](file://app/blockchain/base.py#L65-L91)
+- [anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L13-L56)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L65-L91)
 
 ### E. Integration with Development Workflows
 - API endpoints depend on the chain registry to validate and route requests.
@@ -436,22 +436,22 @@ Practical steps:
 - Use the registry to access AsyncWeb3 for chain-specific operations.
 
 **Section sources**
-- [dependencies.py](file://app/api/dependencies.py#L5-L15)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
-- [scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L5-L15)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
 
 ### F. Practical Examples and Best Practices
 - Example operations:
-  - Mine blocks to advance time: [mine_blocks](file://app/blockchain/anvil.py#L13-L18)
-  - Set balances for test accounts: [set_balance](file://app/blockchain/anvil.py#L20-L28)
-  - Impersonate accounts for signing: [impersonate_account](file://app/blockchain/anvil.py#L30-L35)
-  - Reset/fork to clean state: [reset](file://app/blockchain/anvil.py#L44-L56)
+  - Mine blocks to advance time: [mine_blocks](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L13-L18)
+  - Set balances for test accounts: [set_balance](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L20-L28)
+  - Impersonate accounts for signing: [impersonate_account](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L30-L35)
+  - Reset/fork to clean state: [reset](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L44-L56)
 - Best practices:
   - Use separate test mnemonics and private keys.
   - Keep chains.yaml minimal and environment overrides for local dev.
   - Use reset/fork between test suites to avoid cross-test contamination.
 
 **Section sources**
-- [anvil.py](file://app/blockchain/anvil.py#L13-L56)
-- [config.py](file://app/core/config.py#L28-L32)
-- [chains.yaml](file://chains.yaml#L19-L24)
+- [anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L13-L56)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L28-L32)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L19-L24)

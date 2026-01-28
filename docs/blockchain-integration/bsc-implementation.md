@@ -2,19 +2,19 @@
 
 <cite>
 **Referenced Files in This Document**
-- [app/blockchain/bsc.py](file://app/blockchain/bsc.py)
-- [app/blockchain/base.py](file://app/blockchain/base.py)
-- [app/blockchain/ethereum.py](file://app/blockchain/ethereum.py)
-- [app/blockchain/anvil.py](file://app/blockchain/anvil.py)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py)
-- [app/blockchain/w3.py](file://app/blockchain/w3.py)
-- [app/blockchain/ABI/ERC20.json](file://app/blockchain/ABI/ERC20.json)
-- [chains.yaml](file://chains.yaml)
-- [app/core/config.py](file://app/core/config.py)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py)
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py)
-- [app/db/models/chain.py](file://app/db/models/chain.py)
-- [app/db/models/token.py](file://app/db/models/token.py)
+- [app/blockchain/bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py)
+- [app/blockchain/ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py)
+- [app/blockchain/anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py)
+- [app/blockchain/w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py)
+- [app/blockchain/ABI/ERC20.json](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ABI/ERC20.json)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py)
+- [app/db/models/chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py)
 </cite>
 
 ## Table of Contents
@@ -70,26 +70,26 @@ Sweeper --> Token
 ```
 
 **Diagram sources**
-- [app/blockchain/base.py](file://app/blockchain/base.py#L22-L146)
-- [app/blockchain/bsc.py](file://app/blockchain/bsc.py#L1-L7)
-- [app/blockchain/ethereum.py](file://app/blockchain/ethereum.py#L1-L7)
-- [app/blockchain/anvil.py](file://app/blockchain/anvil.py#L1-L57)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L33)
-- [app/blockchain/w3.py](file://app/blockchain/w3.py#L1-L9)
-- [app/core/config.py](file://app/core/config.py#L44-L57)
-- [chains.yaml](file://chains.yaml#L12-L18)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py#L11-L54)
-- [app/db/models/chain.py](file://app/db/models/chain.py#L9-L17)
-- [app/db/models/token.py](file://app/db/models/token.py#L6-L15)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [app/blockchain/bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L1-L7)
+- [app/blockchain/ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L1-L7)
+- [app/blockchain/anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L1-L57)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [app/blockchain/w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L57)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L12-L18)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L11-L54)
+- [app/db/models/chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15)
 
 **Section sources**
-- [app/blockchain/bsc.py](file://app/blockchain/bsc.py#L1-L7)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L22-L146)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L33)
-- [app/blockchain/w3.py](file://app/blockchain/w3.py#L1-L9)
-- [app/core/config.py](file://app/core/config.py#L44-L57)
-- [chains.yaml](file://chains.yaml#L12-L18)
+- [app/blockchain/bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L1-L7)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [app/blockchain/w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L57)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L12-L18)
 
 ## Core Components
 - BSCBlockchain: Specializes the base blockchain client for BSC mainnet with chain ID 56 and Proof-of-Authority middleware enabled.
@@ -105,14 +105,14 @@ Key BSC specifics:
 - ERC-20 support via shared ABI and log-based detection.
 
 **Section sources**
-- [app/blockchain/bsc.py](file://app/blockchain/bsc.py#L3-L6)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L22-L146)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L33)
-- [app/blockchain/w3.py](file://app/blockchain/w3.py#L6-L9)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py#L11-L54)
-- [app/db/models/chain.py](file://app/db/models/chain.py#L9-L17)
-- [app/db/models/token.py](file://app/db/models/token.py#L6-L15)
+- [app/blockchain/bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L3-L6)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [app/blockchain/w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L6-L9)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L11-L54)
+- [app/db/models/chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15)
 
 ## Architecture Overview
 The BSC implementation follows a layered design:
@@ -139,12 +139,12 @@ Scanner->>Scanner : Scan blocks, detect payments
 ```
 
 **Diagram sources**
-- [app/core/config.py](file://app/core/config.py#L44-L57)
-- [chains.yaml](file://chains.yaml#L12-L18)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L33)
-- [app/blockchain/bsc.py](file://app/blockchain/bsc.py#L3-L6)
-- [app/blockchain/w3.py](file://app/blockchain/w3.py#L6-L9)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L20-L96)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L57)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L12-L18)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [app/blockchain/bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L3-L6)
+- [app/blockchain/w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L6-L9)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L20-L96)
 
 ## Detailed Component Analysis
 
@@ -178,12 +178,12 @@ BlockchainBase <|-- BSCBlockchain
 ```
 
 **Diagram sources**
-- [app/blockchain/base.py](file://app/blockchain/base.py#L22-L146)
-- [app/blockchain/bsc.py](file://app/blockchain/bsc.py#L3-L6)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [app/blockchain/bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L3-L6)
 
 **Section sources**
-- [app/blockchain/bsc.py](file://app/blockchain/bsc.py#L3-L6)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L22-L146)
+- [app/blockchain/bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L3-L6)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
 
 ### Transaction Building and Gas Optimization
 The base class implements EIP-1559 fee calculation using fee history and falls back to legacy gas pricing. It caches gas prices and adds a small buffer to gas estimates.
@@ -203,11 +203,11 @@ AddBuffer --> ReturnTx["Return tx"]
 ```
 
 **Diagram sources**
-- [app/blockchain/base.py](file://app/blockchain/base.py#L93-L133)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L65-L81)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L93-L133)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L65-L81)
 
 **Section sources**
-- [app/blockchain/base.py](file://app/blockchain/base.py#L65-L133)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L65-L133)
 
 ### Transaction Monitoring and Confirmation
 The ScannerService scans blocks for native and ERC-20 transfers, marks detections, and confirms after a configurable number of confirmations. Confirmations trigger optional webhooks.
@@ -234,15 +234,15 @@ Conf->>DB : Update confirmed + optional webhook
 ```
 
 **Diagram sources**
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L20-L96)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L97-L134)
-- [app/db/models/chain.py](file://app/db/models/chain.py#L9-L17)
-- [app/db/models/token.py](file://app/db/models/token.py#L6-L15)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L20-L96)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L97-L134)
+- [app/db/models/chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15)
 
 **Section sources**
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
-- [app/db/models/chain.py](file://app/db/models/chain.py#L9-L17)
-- [app/db/models/token.py](file://app/db/models/token.py#L6-L15)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
+- [app/db/models/chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15)
 
 ### Settlement Workflow
 The SweeperService identifies confirmed payments and prepares settlement logic. In this codebase, settlement is a placeholder; production systems would sign and submit transactions here.
@@ -260,10 +260,10 @@ End
 ```
 
 **Diagram sources**
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py#L16-L54)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L16-L54)
 
 **Section sources**
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py#L11-L54)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L11-L54)
 
 ### Configuration and Integration Patterns
 - Chains are defined in chains.yaml with name, RPC URL, and token metadata.
@@ -281,16 +281,16 @@ W3 --> ACCESS["get_w3(chain_name)"]
 ```
 
 **Diagram sources**
-- [chains.yaml](file://chains.yaml#L12-L18)
-- [app/core/config.py](file://app/core/config.py#L44-L57)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L33)
-- [app/blockchain/w3.py](file://app/blockchain/w3.py#L6-L9)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L12-L18)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L57)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [app/blockchain/w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L6-L9)
 
 **Section sources**
-- [chains.yaml](file://chains.yaml#L12-L18)
-- [app/core/config.py](file://app/core/config.py#L44-L57)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L33)
-- [app/blockchain/w3.py](file://app/blockchain/w3.py#L6-L9)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L12-L18)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L57)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [app/blockchain/w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L6-L9)
 
 ## Dependency Analysis
 - BSCBlockchain depends on BlockchainBase for RPC, gas, and transaction primitives.
@@ -309,20 +309,20 @@ Scanner --> ABI["ERC20 ABI"]
 ```
 
 **Diagram sources**
-- [app/blockchain/bsc.py](file://app/blockchain/bsc.py#L3-L6)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L22-L146)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L33)
-- [app/blockchain/w3.py](file://app/blockchain/w3.py#L6-L9)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L12)
-- [app/blockchain/ABI/ERC20.json](file://app/blockchain/ABI/ERC20.json#L1-L1)
+- [app/blockchain/bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L3-L6)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [app/blockchain/w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L6-L9)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L12)
+- [app/blockchain/ABI/ERC20.json](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ABI/ERC20.json#L1-L1)
 
 **Section sources**
-- [app/blockchain/bsc.py](file://app/blockchain/bsc.py#L3-L6)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L22-L146)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L33)
-- [app/blockchain/w3.py](file://app/blockchain/w3.py#L6-L9)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L12)
-- [app/blockchain/ABI/ERC20.json](file://app/blockchain/ABI/ERC20.json#L1-L1)
+- [app/blockchain/bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L3-L6)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [app/blockchain/w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L6-L9)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L12)
+- [app/blockchain/ABI/ERC20.json](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ABI/ERC20.json#L1-L1)
 
 ## Performance Considerations
 - Gas optimization:
@@ -354,11 +354,11 @@ Common issues and remedies:
   - Confirm token addresses and decimals match chains.yaml; ERC-20 topics must match the ABI.
 
 **Section sources**
-- [app/blockchain/base.py](file://app/blockchain/base.py#L45-L50)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L86-L92)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L28-L32)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L34-L96)
-- [chains.yaml](file://chains.yaml#L12-L18)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L45-L50)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L86-L92)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L28-L32)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L34-L96)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L12-L18)
 
 ## Conclusion
 The BSC implementation leverages a shared base class for RPC, gas, and transaction primitives while specializing BSC with chain ID 56 and POA middleware. Configuration-driven instantiation and a centralized Web3 accessor enable clean integration. The scanner and sweeper services provide robust monitoring and settlement foundations, with room for production enhancements such as dynamic gas buffers, improved error handling, and token-native sweeping logic.
@@ -376,7 +376,7 @@ The BSC implementation leverages a shared base class for RPC, gas, and transacti
   - Not explicitly configured in the provided chains.yaml; add a new entry with a testnet RPC URL and token addresses if needed.
 
 **Section sources**
-- [chains.yaml](file://chains.yaml#L12-L18)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L12-L18)
 
 ### Token Standard Support
 - ERC-20:
@@ -384,8 +384,8 @@ The BSC implementation leverages a shared base class for RPC, gas, and transacti
   - ScannerService filters ERC-20 Transfer events by topic and verifies token address and amount.
 
 **Section sources**
-- [app/blockchain/ABI/ERC20.json](file://app/blockchain/ABI/ERC20.json#L1-L1)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L71-L92)
+- [app/blockchain/ABI/ERC20.json](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ABI/ERC20.json#L1-L1)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L71-L92)
 
 ### Practical Configuration Examples
 - Define BSC chain in chains.yaml with rpc_url and tokens.
@@ -393,7 +393,7 @@ The BSC implementation leverages a shared base class for RPC, gas, and transacti
 - Use get_w3("bsc") to access AsyncWeb3 for BSC operations.
 
 **Section sources**
-- [chains.yaml](file://chains.yaml#L12-L18)
-- [app/core/config.py](file://app/core/config.py#L44-L57)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L33)
-- [app/blockchain/w3.py](file://app/blockchain/w3.py#L6-L9)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L12-L18)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L57)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [app/blockchain/w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L6-L9)

@@ -2,22 +2,22 @@
 
 <cite>
 **Referenced Files in This Document**
-- [chains.yaml](file://chains.yaml)
-- [config.py](file://app/core/config.py)
-- [dependencies.py](file://app/api/dependencies.py)
-- [docker-compose.yml](file://docker-compose.yml)
-- [pyproject.toml](file://pyproject.toml)
-- [engine.py](file://app/db/engine.py)
-- [session.py](file://app/db/session.py)
-- [async_session.py](file://app/db/async_session.py)
-- [manager.py](file://app/blockchain/manager.py)
-- [base.py](file://app/blockchain/base.py)
-- [anvil.py](file://app/blockchain/anvil.py)
-- [ethereum.py](file://app/blockchain/ethereum.py)
-- [bsc.py](file://app/blockchain/bsc.py)
-- [crypto.py](file://app/utils/crypto.py)
-- [server.py](file://server.py)
-- [requirements.txt](file://requirements.txt)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml)
+- [pyproject.toml](https://github.com/rakibhossain72/ctrip/blob/main/pyproject.toml)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py)
+- [session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py)
+- [async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py)
+- [anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt)
 </cite>
 
 ## Table of Contents
@@ -86,29 +86,29 @@ LIFE --> DEPS
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L10-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [manager.py](file://app/blockchain/manager.py#L8-L33)
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [ethereum.py](file://app/blockchain/ethereum.py#L1-L7)
-- [bsc.py](file://app/blockchain/bsc.py#L1-L7)
-- [anvil.py](file://app/blockchain/anvil.py#L8-L57)
-- [engine.py](file://app/db/engine.py#L1-L32)
-- [session.py](file://app/db/session.py#L1-L17)
-- [async_session.py](file://app/db/async_session.py#L1-L15)
-- [server.py](file://server.py#L21-L47)
-- [dependencies.py](file://app/api/dependencies.py#L1-L15)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L1-L7)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L1-L7)
+- [anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L8-L57)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L1-L17)
+- [async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L1-L15)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L1-L15)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L10-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [engine.py](file://app/db/engine.py#L1-L32)
-- [session.py](file://app/db/session.py#L1-L17)
-- [async_session.py](file://app/db/async_session.py#L1-L15)
-- [manager.py](file://app/blockchain/manager.py#L8-L33)
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [server.py](file://server.py#L21-L47)
-- [dependencies.py](file://app/api/dependencies.py#L1-L15)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L1-L17)
+- [async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L1-L15)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L1-L15)
 
 ## Core Components
 - Settings model encapsulates environment, database URLs, RPC endpoints, Redis, chains YAML path, mnemonic, optional webhook settings, and secrets. It dynamically selects the active database URL based on environment and validates private and secret keys.
@@ -118,13 +118,13 @@ LIFE --> DEPS
 - FastAPI lifespan initializes blockchain clients and HD wallet manager, and seeds chain states.
 
 **Section sources**
-- [config.py](file://app/core/config.py#L10-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [manager.py](file://app/blockchain/manager.py#L8-L33)
-- [engine.py](file://app/db/engine.py#L5-L32)
-- [session.py](file://app/db/session.py#L5-L17)
-- [async_session.py](file://app/db/async_session.py#L6-L15)
-- [server.py](file://server.py#L21-L47)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L5-L32)
+- [session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L5-L17)
+- [async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L6-L15)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
 
 ## Architecture Overview
 The configuration pipeline connects environment variables, settings, YAML, and runtime initialization.
@@ -148,11 +148,11 @@ App->>Settings : "Access mnemonic/private_key"
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L115-L122)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [manager.py](file://app/blockchain/manager.py#L8-L33)
-- [base.py](file://app/blockchain/base.py#L22-L44)
-- [server.py](file://server.py#L21-L47)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L115-L122)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L44)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
 
 ## Detailed Component Analysis
 
@@ -178,13 +178,13 @@ Valid --> |Yes| ReturnCfg["Return chain configs"]
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L44-L57)
-- [manager.py](file://app/blockchain/manager.py#L13-L17)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L57)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L13-L17)
 
 **Section sources**
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [config.py](file://app/core/config.py#L44-L57)
-- [manager.py](file://app/blockchain/manager.py#L8-L33)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L57)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
 
 ### Environment Variable Configuration
 - Environment selection: env controls production vs development/other behavior.
@@ -220,10 +220,10 @@ class Settings {
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L10-L126)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L10-L126)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
 
 ### FastAPI Dependency Injection Patterns
 - Lifespan initialization:
@@ -250,16 +250,16 @@ Lifespan->>App : "Attach blockchains and hdwallet to app.state"
 ```
 
 **Diagram sources**
-- [server.py](file://server.py#L21-L47)
-- [dependencies.py](file://app/api/dependencies.py#L5-L15)
-- [manager.py](file://app/blockchain/manager.py#L8-L33)
-- [config.py](file://app/core/config.py#L58-L61)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L5-L15)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L58-L61)
 
 **Section sources**
-- [server.py](file://server.py#L21-L47)
-- [dependencies.py](file://app/api/dependencies.py#L1-L15)
-- [manager.py](file://app/blockchain/manager.py#L8-L33)
-- [config.py](file://app/core/config.py#L58-L61)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L1-L15)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L58-L61)
 
 ### Database Configuration Options
 - URL resolution:
@@ -286,17 +286,17 @@ U2 --> E
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L84-L92)
-- [engine.py](file://app/db/engine.py#L5-L32)
-- [session.py](file://app/db/session.py#L5-L17)
-- [async_session.py](file://app/db/async_session.py#L6-L15)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L84-L92)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L5-L32)
+- [session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L5-L17)
+- [async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L6-L15)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L18-L26)
-- [config.py](file://app/core/config.py#L84-L92)
-- [engine.py](file://app/db/engine.py#L5-L32)
-- [session.py](file://app/db/session.py#L1-L17)
-- [async_session.py](file://app/db/async_session.py#L1-L15)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L18-L26)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L84-L92)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L5-L32)
+- [session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L1-L17)
+- [async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L1-L15)
 
 ### Blockchain Clients and Chain IDs
 - Base client:
@@ -348,17 +348,17 @@ AnvilBlockchain --|> BlockchainBase
 ```
 
 **Diagram sources**
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [ethereum.py](file://app/blockchain/ethereum.py#L1-L7)
-- [bsc.py](file://app/blockchain/bsc.py#L1-L7)
-- [anvil.py](file://app/blockchain/anvil.py#L8-L57)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L1-L7)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L1-L7)
+- [anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L8-L57)
 
 **Section sources**
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [ethereum.py](file://app/blockchain/ethereum.py#L1-L7)
-- [bsc.py](file://app/blockchain/bsc.py#L1-L7)
-- [anvil.py](file://app/blockchain/anvil.py#L8-L57)
-- [manager.py](file://app/blockchain/manager.py#L8-L33)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L1-L7)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L1-L7)
+- [anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L8-L57)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
 
 ### HD Wallet Mnemonic and Private Keys
 - HDWalletManager:
@@ -383,12 +383,12 @@ class HDWalletManager {
 ```
 
 **Diagram sources**
-- [crypto.py](file://app/utils/crypto.py#L5-L90)
-- [config.py](file://app/core/config.py#L58-L82)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L90)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L58-L82)
 
 **Section sources**
-- [crypto.py](file://app/utils/crypto.py#L5-L90)
-- [config.py](file://app/core/config.py#L58-L82)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L90)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L58-L82)
 
 ### Environment-Specific Defaults and Docker Compose
 - Docker Compose:
@@ -399,10 +399,10 @@ class HDWalletManager {
   - Includes pydantic, pydantic-settings, pyyaml, web3, eth-account, redis, python-dotenv, and others
 
 **Section sources**
-- [docker-compose.yml](file://docker-compose.yml#L26-L32)
-- [docker-compose.yml](file://docker-compose.yml#L42-L47)
-- [pyproject.toml](file://pyproject.toml#L14-L32)
-- [requirements.txt](file://requirements.txt#L16-L32)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L26-L32)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L42-L47)
+- [pyproject.toml](https://github.com/rakibhossain72/ctrip/blob/main/pyproject.toml#L14-L32)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt#L16-L32)
 
 ## Dependency Analysis
 Configuration dependencies span settings, YAML, blockchain manager, engines, and FastAPI lifecycle.
@@ -420,21 +420,21 @@ Lifespan --> Deps["Dependencies (dependencies.py)"]
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L10-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [manager.py](file://app/blockchain/manager.py#L8-L33)
-- [base.py](file://app/blockchain/base.py#L22-L44)
-- [engine.py](file://app/db/engine.py#L1-L32)
-- [session.py](file://app/db/session.py#L1-L17)
-- [async_session.py](file://app/db/async_session.py#L1-L15)
-- [server.py](file://server.py#L21-L47)
-- [dependencies.py](file://app/api/dependencies.py#L1-L15)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L44)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L1-L17)
+- [async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L1-L15)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L1-L15)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L10-L126)
-- [engine.py](file://app/db/engine.py#L1-L32)
-- [manager.py](file://app/blockchain/manager.py#L8-L33)
-- [server.py](file://server.py#L21-L47)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
 
 ## Performance Considerations
 - Gas caching: BlockchainBase caches gas price for a short duration to reduce RPC calls
@@ -443,9 +443,9 @@ Lifespan --> Deps["Dependencies (dependencies.py)"]
 - Timeout configuration: Web3 provider requests use a configurable timeout to avoid hanging calls
 
 **Section sources**
-- [base.py](file://app/blockchain/base.py#L65-L80)
-- [engine.py](file://app/db/engine.py#L22-L31)
-- [engine.py](file://app/db/engine.py#L12-L17)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L65-L80)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L22-L31)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L12-L17)
 
 ## Troubleshooting Guide
 Common configuration issues and resolutions:
@@ -469,11 +469,11 @@ Common configuration issues and resolutions:
   - Resolution: Set env to development, testing, or production as appropriate; verify dynamic database_url behavior
 
 **Section sources**
-- [config.py](file://app/core/config.py#L94-L112)
-- [config.py](file://app/core/config.py#L84-L92)
-- [manager.py](file://app/blockchain/manager.py#L28-L31)
-- [engine.py](file://app/db/engine.py#L12-L17)
-- [docker-compose.yml](file://docker-compose.yml#L26-L32)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L94-L112)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L84-L92)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L28-L31)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L12-L17)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L26-L32)
 
 ## Conclusion
 cTrip Payment Gateway centralizes configuration through a robust Pydantic settings model, environment variables, and a chains YAML file. FastAPI’s lifespan ensures blockchain clients and HD wallets are initialized early, while database engines and sessions adapt to environment needs. By following the security and operational guidance herein, teams can deploy reliably across development, staging, and production environments.
@@ -494,9 +494,9 @@ cTrip Payment Gateway centralizes configuration through a robust Pydantic settin
 - SECRET_KEY: Application secret key (must change in production)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L12-L82)
-- [docker-compose.yml](file://docker-compose.yml#L26-L32)
-- [docker-compose.yml](file://docker-compose.yml#L42-L47)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L12-L82)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L26-L32)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L42-L47)
 
 ### B. Chains YAML Example Scenarios
 - Minimal Ethereum mainnet with Infura
@@ -505,7 +505,7 @@ cTrip Payment Gateway centralizes configuration through a robust Pydantic settin
 - Mixed tokens per chain (symbol, address, decimals)
 
 **Section sources**
-- [chains.yaml](file://chains.yaml#L1-L24)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
 
 ### C. Database URL Transformation Rules
 - PostgreSQL: Convert to async driver variant
@@ -513,4 +513,4 @@ cTrip Payment Gateway centralizes configuration through a robust Pydantic settin
 - Other schemes: Returned unchanged
 
 **Section sources**
-- [engine.py](file://app/db/engine.py#L12-L17)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L12-L17)

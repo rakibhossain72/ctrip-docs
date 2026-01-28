@@ -2,21 +2,21 @@
 
 <cite>
 **Referenced Files in This Document**
-- [sweeper.py](file://app/workers/sweeper.py)
-- [sweeper_service.py](file://app/services/blockchain/sweeper.py)
-- [config.py](file://app/core/config.py)
-- [w3.py](file://app/blockchain/w3.py)
-- [manager.py](file://app/blockchain/manager.py)
-- [base.py](file://app/blockchain/base.py)
-- [ethereum.py](file://app/blockchain/ethereum.py)
-- [bsc.py](file://app/blockchain/bsc.py)
-- [anvil.py](file://app/blockchain/anvil.py)
-- [crypto.py](file://app/utils/crypto.py)
-- [payment_model.py](file://app/db/models/payment.py)
-- [transaction_model.py](file://app/db/models/transaction.py)
-- [token_model.py](file://app/db/models/token.py)
-- [chains.yaml](file://chains.yaml)
-- [workers_init.py](file://app/workers/__init__.py)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py)
+- [sweeper_service.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py)
+- [anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py)
+- [payment_model.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py)
+- [transaction_model.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py)
+- [token_model.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml)
+- [workers_init.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/__init__.py)
 </cite>
 
 ## Table of Contents
@@ -84,33 +84,33 @@ C1 --> Y1
 ```
 
 **Diagram sources**
-- [sweeper.py](file://app/workers/sweeper.py#L1-L40)
-- [sweeper_service.py](file://app/services/blockchain/sweeper.py#L1-L54)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
-- [manager.py](file://app/blockchain/manager.py#L1-L33)
-- [base.py](file://app/blockchain/base.py#L1-L146)
-- [ethereum.py](file://app/blockchain/ethereum.py#L1-L7)
-- [bsc.py](file://app/blockchain/bsc.py#L1-L7)
-- [anvil.py](file://app/blockchain/anvil.py#L1-L57)
-- [config.py](file://app/core/config.py#L1-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [token_model.py](file://app/db/models/token.py#L1-L15)
-- [payment_model.py](file://app/db/models/payment.py#L1-L74)
-- [transaction_model.py](file://app/db/models/transaction.py#L1-L40)
-- [crypto.py](file://app/utils/crypto.py#L1-L90)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L1-L40)
+- [sweeper_service.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L1-L54)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L146)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L1-L7)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L1-L7)
+- [anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L1-L57)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [token_model.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L1-L15)
+- [payment_model.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L1-L74)
+- [transaction_model.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py#L1-L40)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L90)
 
 **Section sources**
-- [sweeper.py](file://app/workers/sweeper.py#L1-L40)
-- [sweeper_service.py](file://app/services/blockchain/sweeper.py#L1-L54)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
-- [manager.py](file://app/blockchain/manager.py#L1-L33)
-- [base.py](file://app/blockchain/base.py#L1-L146)
-- [config.py](file://app/core/config.py#L1-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [payment_model.py](file://app/db/models/payment.py#L1-L74)
-- [transaction_model.py](file://app/db/models/transaction.py#L1-L40)
-- [token_model.py](file://app/db/models/token.py#L1-L15)
-- [crypto.py](file://app/utils/crypto.py#L1-L90)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L1-L40)
+- [sweeper_service.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L1-L54)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L146)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [payment_model.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L1-L74)
+- [transaction_model.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py#L1-L40)
+- [token_model.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L1-L15)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L90)
 
 ## Core Components
 - Sweeper Worker Actor: A scheduled Dramatiq actor that triggers sweeping cycles, initializes sessions, and iterates chains to settle confirmed payments.
@@ -128,13 +128,13 @@ Key responsibilities:
 - Persisting settlement outcomes
 
 **Section sources**
-- [sweeper.py](file://app/workers/sweeper.py#L19-L40)
-- [sweeper_service.py](file://app/services/blockchain/sweeper.py#L11-L54)
-- [base.py](file://app/blockchain/base.py#L65-L146)
-- [config.py](file://app/core/config.py#L44-L102)
-- [payment_model.py](file://app/db/models/payment.py#L21-L58)
-- [transaction_model.py](file://app/db/models/transaction.py#L17-L40)
-- [crypto.py](file://app/utils/crypto.py#L5-L67)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L19-L40)
+- [sweeper_service.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L11-L54)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L65-L146)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L102)
+- [payment_model.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L21-L58)
+- [transaction_model.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py#L17-L40)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L67)
 
 ## Architecture Overview
 The sweeper follows a modular architecture:
@@ -173,12 +173,12 @@ Scheduler->>Scheduler : "Schedule next run (30s)"
 ```
 
 **Diagram sources**
-- [sweeper.py](file://app/workers/sweeper.py#L19-L40)
-- [sweeper_service.py](file://app/services/blockchain/sweeper.py#L16-L54)
-- [w3.py](file://app/blockchain/w3.py#L6-L9)
-- [base.py](file://app/blockchain/base.py#L93-L146)
-- [payment_model.py](file://app/db/models/payment.py#L21-L58)
-- [transaction_model.py](file://app/db/models/transaction.py#L17-L40)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L19-L40)
+- [sweeper_service.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L16-L54)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L6-L9)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L93-L146)
+- [payment_model.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L21-L58)
+- [transaction_model.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py#L17-L40)
 
 ## Detailed Component Analysis
 
@@ -193,9 +193,9 @@ Operational notes:
 - Chains are derived from settings.chains, with a fallback to a local chain if none are configured.
 
 **Section sources**
-- [sweeper.py](file://app/workers/sweeper.py#L19-L40)
-- [workers_init.py](file://app/workers/__init__.py#L1-L8)
-- [config.py](file://app/core/config.py#L44-L57)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L19-L40)
+- [workers_init.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/__init__.py#L1-L8)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L57)
 
 ### SweeperService
 - Responsibilities:
@@ -213,9 +213,9 @@ Operational notes:
   - Payments move from confirmed to settled upon successful completion.
 
 **Section sources**
-- [sweeper_service.py](file://app/services/blockchain/sweeper.py#L11-L54)
-- [config.py](file://app/core/config.py#L74-L102)
-- [payment_model.py](file://app/db/models/payment.py#L21-L58)
+- [sweeper_service.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L11-L54)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L74-L102)
+- [payment_model.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L21-L58)
 
 ### Blockchain Integration and Gas Optimization
 - Chain selection and clients:
@@ -237,12 +237,12 @@ Operational notes:
   - BSC uses POA middleware injection for compatibility.
 
 **Section sources**
-- [manager.py](file://app/blockchain/manager.py#L8-L33)
-- [w3.py](file://app/blockchain/w3.py#L4-L9)
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [ethereum.py](file://app/blockchain/ethereum.py#L3-L7)
-- [bsc.py](file://app/blockchain/bsc.py#L3-L7)
-- [anvil.py](file://app/blockchain/anvil.py#L8-L57)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L4-L9)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L3-L7)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L3-L7)
+- [anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L8-L57)
 
 ### Wallet Management and Keys
 - HDWalletManager supports BIP-44 derivation for Ethereum-compatible addresses.
@@ -252,9 +252,9 @@ Operational notes:
 Note: The sweeper’s current placeholder logic does not derive per-payment private keys; this is intended for future implementation.
 
 **Section sources**
-- [crypto.py](file://app/utils/crypto.py#L5-L67)
-- [config.py](file://app/core/config.py#L58-L82)
-- [sweeper_service.py](file://app/services/blockchain/sweeper.py#L21-L22)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L67)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L58-L82)
+- [sweeper_service.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L21-L22)
 
 ### Database Models and Batch Processing
 - Payment model:
@@ -272,8 +272,8 @@ Note: The sweeper’s current placeholder logic does not derive per-payment priv
   - Payments are selected based on status=confirmed; no additional block confirmations are enforced in the sweeper.
 
 **Section sources**
-- [payment_model.py](file://app/db/models/payment.py#L21-L58)
-- [transaction_model.py](file://app/db/models/transaction.py#L17-L40)
+- [payment_model.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L21-L58)
+- [transaction_model.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py#L17-L40)
 
 ### Sweep Triggers, Scheduling, and Retry Policies
 - Trigger: The Dramatiq actor is invoked periodically with a fixed delay between runs.
@@ -285,8 +285,8 @@ Recommendations:
 - Consider idempotency checks to prevent duplicate settlements.
 
 **Section sources**
-- [sweeper.py](file://app/workers/sweeper.py#L19-L40)
-- [workers_init.py](file://app/workers/__init__.py#L1-L8)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L19-L40)
+- [workers_init.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/__init__.py#L1-L8)
 
 ### Transaction Broadcasting and Settlement Flow
 ```mermaid
@@ -304,8 +304,8 @@ Commit --> End
 ```
 
 **Diagram sources**
-- [sweeper_service.py](file://app/services/blockchain/sweeper.py#L16-L54)
-- [base.py](file://app/blockchain/base.py#L93-L146)
+- [sweeper_service.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L16-L54)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L93-L146)
 
 ## Dependency Analysis
 - Worker-to-Service: The actor constructs SweeperService with a database session and HDWalletManager.
@@ -326,31 +326,31 @@ B --> I["HDWalletManager<br/>crypto.py"]
 ```
 
 **Diagram sources**
-- [sweeper.py](file://app/workers/sweeper.py#L19-L40)
-- [sweeper_service.py](file://app/services/blockchain/sweeper.py#L11-L54)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
-- [manager.py](file://app/blockchain/manager.py#L1-L33)
-- [base.py](file://app/blockchain/base.py#L1-L146)
-- [ethereum.py](file://app/blockchain/ethereum.py#L1-L7)
-- [bsc.py](file://app/blockchain/bsc.py#L1-L7)
-- [anvil.py](file://app/blockchain/anvil.py#L1-L57)
-- [config.py](file://app/core/config.py#L1-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [payment_model.py](file://app/db/models/payment.py#L1-L74)
-- [transaction_model.py](file://app/db/models/transaction.py#L1-L40)
-- [crypto.py](file://app/utils/crypto.py#L1-L90)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L19-L40)
+- [sweeper_service.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L11-L54)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L146)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L1-L7)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L1-L7)
+- [anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L1-L57)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [payment_model.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L1-L74)
+- [transaction_model.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py#L1-L40)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L90)
 
 **Section sources**
-- [sweeper.py](file://app/workers/sweeper.py#L19-L40)
-- [sweeper_service.py](file://app/services/blockchain/sweeper.py#L11-L54)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
-- [manager.py](file://app/blockchain/manager.py#L1-L33)
-- [base.py](file://app/blockchain/base.py#L1-L146)
-- [config.py](file://app/core/config.py#L1-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [payment_model.py](file://app/db/models/payment.py#L1-L74)
-- [transaction_model.py](file://app/db/models/transaction.py#L1-L40)
-- [crypto.py](file://app/utils/crypto.py#L1-L90)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L19-L40)
+- [sweeper_service.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L11-L54)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L146)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [payment_model.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L1-L74)
+- [transaction_model.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py#L1-L40)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L90)
 
 ## Performance Considerations
 - Gas caching: The blockchain base caches gas price for a short duration to reduce RPC overhead.
@@ -381,11 +381,11 @@ Manual intervention:
 - Adjust chain configurations and RPC endpoints as needed.
 
 **Section sources**
-- [config.py](file://app/core/config.py#L44-L102)
-- [base.py](file://app/blockchain/base.py#L45-L50)
-- [base.py](file://app/blockchain/base.py#L86-L92)
-- [sweeper.py](file://app/workers/sweeper.py#L37-L40)
-- [sweeper_service.py](file://app/services/blockchain/sweeper.py#L50-L54)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L102)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L45-L50)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L86-L92)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L37-L40)
+- [sweeper_service.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L50-L54)
 
 ## Conclusion
 The Sweeper Worker provides a robust foundation for automated fund collection and settlement. It integrates cleanly with blockchain clients, leverages configuration-driven chain management, and implements gas optimization strategies. While the current implementation marks payments as settled without broadcasting, the architecture is ready to incorporate full transaction building, signing, and broadcasting with minimal changes. Operational improvements such as retries, idempotency, and monitoring can further enhance reliability and observability.
@@ -403,9 +403,9 @@ The Sweeper Worker provides a robust foundation for automated fund collection an
   - Mnemonic is available for HD wallet management.
 
 **Section sources**
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [config.py](file://app/core/config.py#L44-L102)
-- [manager.py](file://app/blockchain/manager.py#L8-L33)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L102)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
 
 ### Monitoring and Metrics
 - Logging:
@@ -419,6 +419,6 @@ The Sweeper Worker provides a robust foundation for automated fund collection an
   - Track logs and integrate with external monitoring systems for alerts and dashboards.
 
 **Section sources**
-- [sweeper.py](file://app/workers/sweeper.py#L21-L40)
-- [sweeper_service.py](file://app/services/blockchain/sweeper.py#L16-L54)
-- [base.py](file://app/blockchain/base.py#L65-L92)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L21-L40)
+- [sweeper_service.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L16-L54)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L65-L92)

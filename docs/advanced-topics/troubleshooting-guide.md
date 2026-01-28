@@ -2,26 +2,26 @@
 
 <cite>
 **Referenced Files in This Document**
-- [README.md](file://README.md)
-- [server.py](file://server.py)
-- [app/core/config.py](file://app/core/config.py)
-- [app/core/logger.py](file://app/core/logger.py)
-- [app/db/engine.py](file://app/db/engine.py)
-- [app/db/base.py](file://app/db/base.py)
-- [app/db/models/payment.py](file://app/db/models/payment.py)
-- [app/db/models/transaction.py](file://app/db/models/transaction.py)
-- [app/db/models/token.py](file://app/db/models/token.py)
-- [app/db/models/chain.py](file://app/db/models/chain.py)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py)
-- [app/blockchain/w3.py](file://app/blockchain/w3.py)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py)
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py)
-- [app/workers/listener.py](file://app/workers/listener.py)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py)
-- [app/workers/webhook.py](file://app/workers/webhook.py)
-- [app/services/webhook.py](file://app/services/webhook.py)
-- [migrate.py](file://migrate.py)
-- [MIGRATIONS.md](file://MIGRATIONS.md)
+- [README.md](https://github.com/rakibhossain72/ctrip/blob/main/README.md)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py)
+- [app/core/logger.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/logger.py)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py)
+- [app/db/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/base.py)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py)
+- [app/db/models/transaction.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py)
+- [app/db/models/chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py)
+- [app/blockchain/w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py)
+- [migrate.py](https://github.com/rakibhossain72/ctrip/blob/main/migrate.py)
+- [MIGRATIONS.md](https://github.com/rakibhossain72/ctrip/blob/main/MIGRATIONS.md)
 </cite>
 
 ## Table of Contents
@@ -97,26 +97,26 @@ ENG --> BASE
 ```
 
 **Diagram sources**
-- [server.py](file://server.py#L21-L47)
-- [app/core/config.py](file://app/core/config.py#L10-L126)
-- [app/core/logger.py](file://app/core/logger.py#L1-L4)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L33)
-- [app/blockchain/w3.py](file://app/blockchain/w3.py)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py#L11-L54)
-- [app/workers/listener.py](file://app/workers/listener.py#L21-L46)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py#L19-L40)
-- [app/workers/webhook.py](file://app/workers/webhook.py#L13-L37)
-- [app/db/engine.py](file://app/db/engine.py#L1-L32)
-- [app/db/base.py](file://app/db/base.py#L1-L5)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L41-L74)
-- [app/db/models/transaction.py](file://app/db/models/transaction.py#L29-L40)
-- [app/db/models/token.py](file://app/db/models/token.py#L6-L15)
-- [app/db/models/chain.py](file://app/db/models/chain.py#L9-L17)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [app/core/logger.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/logger.py#L1-L4)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [app/blockchain/w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L11-L54)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L19-L40)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [app/db/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/base.py#L1-L5)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
+- [app/db/models/transaction.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py#L29-L40)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15)
+- [app/db/models/chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
 
 **Section sources**
-- [README.md](file://README.md#L1-L87)
-- [server.py](file://server.py#L1-L56)
+- [README.md](https://github.com/rakibhossain72/ctrip/blob/main/README.md#L1-L87)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L1-L56)
 
 ## Core Components
 - Settings and configuration: centralizes environment, RPC, Redis, chains, secrets, and database URLs.
@@ -134,18 +134,18 @@ Key responsibilities and failure points:
 - Webhook delivery reliability and signature verification
 
 **Section sources**
-- [app/core/config.py](file://app/core/config.py#L10-L126)
-- [app/db/engine.py](file://app/db/engine.py#L1-L32)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L41-L74)
-- [app/db/models/transaction.py](file://app/db/models/transaction.py#L29-L40)
-- [app/db/models/token.py](file://app/db/models/token.py#L6-L15)
-- [app/db/models/chain.py](file://app/db/models/chain.py#L9-L17)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L33)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py#L11-L54)
-- [app/workers/listener.py](file://app/workers/listener.py#L21-L46)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py#L19-L40)
-- [app/workers/webhook.py](file://app/workers/webhook.py#L13-L37)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
+- [app/db/models/transaction.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py#L29-L40)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15)
+- [app/db/models/chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L11-L54)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L19-L40)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
 
 ## Architecture Overview
 High-level runtime flow:
@@ -173,11 +173,11 @@ WH-->>Svc : "Delivery result"
 ```
 
 **Diagram sources**
-- [server.py](file://server.py#L21-L47)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L33)
-- [app/workers/listener.py](file://app/workers/listener.py#L21-L46)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L20-L134)
-- [app/workers/webhook.py](file://app/workers/webhook.py#L13-L37)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L20-L134)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
 
 ## Detailed Component Analysis
 
@@ -197,9 +197,9 @@ Operational checks:
 - Validate transfer topics and token addresses for ERC20 detection
 
 **Section sources**
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L33)
-- [app/db/models/chain.py](file://app/db/models/chain.py#L9-L17)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [app/db/models/chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
 
 ### Payment Status Lifecycle and Confirmation Logic
 - Payments progress through pending → detected → confirmed → settled.
@@ -212,8 +212,8 @@ Failure scenarios:
 - Webhook delivery failures and retries
 
 **Section sources**
-- [app/db/models/payment.py](file://app/db/models/payment.py#L21-L58)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L97-L134)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L21-L58)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L97-L134)
 
 ### Sweeper and Settlement
 - Sweeper identifies confirmed payments and marks them as settled.
@@ -225,8 +225,8 @@ Failure scenarios:
 - Private key or account derivation issues
 
 **Section sources**
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py#L11-L54)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L21-L58)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L11-L54)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L21-L58)
 
 ### Webhook Delivery
 - WebhookService sends notifications asynchronously; Dramatiq actor handles retries and error logging.
@@ -238,8 +238,8 @@ Failure scenarios:
 - Dramatiq retry exhaustion
 
 **Section sources**
-- [app/workers/webhook.py](file://app/workers/webhook.py#L13-L37)
-- [app/services/webhook.py](file://app/services/webhook.py)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py)
 
 ### Database Models and Synchronization
 - Payments, Transactions, Tokens, and ChainStates define the core domain.
@@ -251,12 +251,12 @@ Failure scenarios:
 - SQLite-specific limitations requiring batch operations
 
 **Section sources**
-- [app/db/models/payment.py](file://app/db/models/payment.py#L41-L74)
-- [app/db/models/transaction.py](file://app/db/models/transaction.py#L29-L40)
-- [app/db/models/token.py](file://app/db/models/token.py#L6-L15)
-- [app/db/models/chain.py](file://app/db/models/chain.py#L9-L17)
-- [migrate.py](file://migrate.py#L1-L112)
-- [MIGRATIONS.md](file://MIGRATIONS.md#L172-L216)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
+- [app/db/models/transaction.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py#L29-L40)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15)
+- [app/db/models/chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
+- [migrate.py](https://github.com/rakibhossain72/ctrip/blob/main/migrate.py#L1-L112)
+- [MIGRATIONS.md](https://github.com/rakibhossain72/ctrip/blob/main/MIGRATIONS.md#L172-L216)
 
 ## Dependency Analysis
 ```mermaid
@@ -277,23 +277,23 @@ ENG --> CS
 ```
 
 **Diagram sources**
-- [app/core/config.py](file://app/core/config.py#L10-L126)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L33)
-- [app/blockchain/w3.py](file://app/blockchain/w3.py)
-- [app/workers/listener.py](file://app/workers/listener.py#L21-L46)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py#L11-L54)
-- [app/workers/webhook.py](file://app/workers/webhook.py#L13-L37)
-- [app/db/engine.py](file://app/db/engine.py#L1-L32)
-- [app/db/base.py](file://app/db/base.py#L1-L5)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L41-L74)
-- [app/db/models/transaction.py](file://app/db/models/transaction.py#L29-L40)
-- [app/db/models/token.py](file://app/db/models/token.py#L6-L15)
-- [app/db/models/chain.py](file://app/db/models/chain.py#L9-L17)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [app/blockchain/w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L11-L54)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [app/db/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/base.py#L1-L5)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
+- [app/db/models/transaction.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py#L29-L40)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15)
+- [app/db/models/chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
 
 **Section sources**
-- [app/core/config.py](file://app/core/config.py#L10-L126)
-- [app/db/engine.py](file://app/db/engine.py#L1-L32)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
 
 ## Performance Considerations
 - Event loop isolation in workers: ensure each actor uses its own loop to avoid conflicts.
@@ -323,9 +323,9 @@ Remediation:
 - Restart listener actor to re-scan recent blocks
 
 **Section sources**
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L20-L96)
-- [app/db/models/chain.py](file://app/db/models/chain.py#L9-L17)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L33)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L20-L96)
+- [app/db/models/chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
 
 ### Confirmation Delays and Threshold Issues
 Symptoms:
@@ -343,7 +343,7 @@ Remediation:
 - Monitor latest block number and network health
 
 **Section sources**
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L97-L134)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L97-L134)
 
 ### Webhook Delivery Issues
 Symptoms:
@@ -362,8 +362,8 @@ Remediation:
 - Add circuit breaker or dead-letter handling
 
 **Section sources**
-- [app/workers/webhook.py](file://app/workers/webhook.py#L13-L37)
-- [app/core/config.py](file://app/core/config.py#L63-L71)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L63-L71)
 
 ### Blockchain Connectivity Problems
 Symptoms:
@@ -382,9 +382,9 @@ Remediation:
 - Use fallback providers for redundancy
 
 **Section sources**
-- [app/core/config.py](file://app/core/config.py#L28-L32)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L33)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L20-L96)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L28-L32)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L20-L96)
 
 ### Database Synchronization and Migration Issues
 Symptoms:
@@ -403,8 +403,8 @@ Remediation:
 - Backup DB before applying migrations in production
 
 **Section sources**
-- [migrate.py](file://migrate.py#L1-L112)
-- [MIGRATIONS.md](file://MIGRATIONS.md#L172-L216)
+- [migrate.py](https://github.com/rakibhossain72/ctrip/blob/main/migrate.py#L1-L112)
+- [MIGRATIONS.md](https://github.com/rakibhossain72/ctrip/blob/main/MIGRATIONS.md#L172-L216)
 
 ### Background Worker Malfunctions
 Symptoms:
@@ -423,9 +423,9 @@ Remediation:
 - Add health checks for worker liveness
 
 **Section sources**
-- [app/workers/listener.py](file://app/workers/listener.py#L21-L46)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py#L19-L40)
-- [MIGRATIONS.md](file://MIGRATIONS.md#L174-L176)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L19-L40)
+- [MIGRATIONS.md](https://github.com/rakibhossain72/ctrip/blob/main/MIGRATIONS.md#L174-L176)
 
 ### Transaction Submission Failures and Gas Estimation Errors
 Note: The sweeper currently marks payments as settled without broadcasting transactions. If implementing transaction submission:
@@ -460,10 +460,10 @@ Remediation:
 - Track database commit points and error boundaries
 
 **Section sources**
-- [app/workers/listener.py](file://app/workers/listener.py#L21-L46)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py#L19-L40)
-- [app/workers/webhook.py](file://app/workers/webhook.py#L13-L37)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L20-L134)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L19-L40)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L20-L134)
 
 ### Escalation Procedures for Critical Failures
 - Isolate failing subsystem (disable webhooks, pause sweeping, or reduce scan frequency)
@@ -480,10 +480,10 @@ Remediation:
 - Blockchain health: query latest block number and estimate gas
 
 **Section sources**
-- [README.md](file://README.md#L45-L69)
-- [migrate.py](file://migrate.py#L1-L112)
-- [app/workers/listener.py](file://app/workers/listener.py#L21-L46)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py#L19-L40)
+- [README.md](https://github.com/rakibhossain72/ctrip/blob/main/README.md#L45-L69)
+- [migrate.py](https://github.com/rakibhossain72/ctrip/blob/main/migrate.py#L1-L112)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L19-L40)
 
 ### Recovery Procedures
 - Payment detection recovery: reset ChainState last_scanned_block to a recent block and trigger listener
@@ -492,10 +492,10 @@ Remediation:
 - Worker recovery: restart actors and verify Redis connectivity
 
 **Section sources**
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L20-L96)
-- [app/workers/webhook.py](file://app/workers/webhook.py#L13-L37)
-- [migrate.py](file://migrate.py#L1-L112)
-- [MIGRATIONS.md](file://MIGRATIONS.md#L189-L194)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L20-L96)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
+- [migrate.py](https://github.com/rakibhossain72/ctrip/blob/main/migrate.py#L1-L112)
+- [MIGRATIONS.md](https://github.com/rakibhossain72/ctrip/blob/main/MIGRATIONS.md#L189-L194)
 
 ### Performance Troubleshooting, Memory Leaks, and Resource Exhaustion
 - Monitor worker CPU and memory usage; reduce concurrency if needed
@@ -525,9 +525,9 @@ Confirmed --> Failed : "Settlement error"
 ```
 
 **Diagram sources**
-- [app/db/models/payment.py](file://app/db/models/payment.py#L21-L58)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L97-L134)
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py#L16-L54)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L21-L58)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L97-L134)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L16-L54)
 
 ### B. Worker Execution Sequence
 ```mermaid
@@ -545,6 +545,6 @@ L->>L : "Schedule next run"
 ```
 
 **Diagram sources**
-- [app/workers/listener.py](file://app/workers/listener.py#L21-L46)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L20-L134)
-- [app/workers/webhook.py](file://app/workers/webhook.py#L13-L37)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L20-L134)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)

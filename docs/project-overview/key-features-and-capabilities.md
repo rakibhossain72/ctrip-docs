@@ -2,37 +2,37 @@
 
 <cite>
 **Referenced Files in This Document**
-- [README.md](file://README.md)
-- [server.py](file://server.py)
-- [app/core/config.py](file://app/core/config.py)
-- [chains.yaml](file://chains.yaml)
-- [docker-compose.yml](file://docker-compose.yml)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py)
-- [app/blockchain/base.py](file://app/blockchain/base.py)
-- [app/blockchain/bsc.py](file://app/blockchain/bsc.py)
-- [app/blockchain/ethereum.py](file://app/blockchain/ethereum.py)
-- [app/blockchain/anvil.py](file://app/blockchain/anvil.py)
-- [app/db/models/payment.py](file://app/db/models/payment.py)
-- [app/db/models/transaction.py](file://app/db/models/transaction.py)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py)
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py)
-- [app/utils/crypto.py](file://app/utils/crypto.py)
-- [app/api/v1/payments.py](file://app/api/v1/payments.py)
-- [app/api/health.py](file://app/api/health.py)
-- [app/api/dependencies.py](file://app/api/dependencies.py)
-- [app/workers/listener.py](file://app/workers/listener.py)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py)
-- [app/workers/webhook.py](file://app/workers/webhook.py)
-- [app/services/webhook.py](file://app/services/webhook.py)
-- [app/db/async_session.py](file://app/db/async_session.py)
-- [app/db/engine.py](file://app/db/engine.py)
-- [app/db/session.py](file://app/db/session.py)
-- [app/db/base.py](file://app/db/base.py)
-- [app/db/seed.py](file://app/db/seed.py)
-- [migrate.py](file://migrate.py)
-- [alembic/env.py](file://alembic/env.py)
-- [alembic/script.py.mako](file://alembic/script.py.mako)
-- [alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py](file://alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py)
+- [README.md](https://github.com/rakibhossain72/ctrip/blob/main/README.md)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py)
+- [app/blockchain/bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py)
+- [app/blockchain/ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py)
+- [app/blockchain/anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py)
+- [app/db/models/transaction.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py)
+- [app/api/health.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/health.py)
+- [app/api/dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py)
+- [app/db/async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py)
+- [app/db/session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py)
+- [app/db/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/base.py)
+- [app/db/seed.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/seed.py)
+- [migrate.py](https://github.com/rakibhossain72/ctrip/blob/main/migrate.py)
+- [alembic/env.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/env.py)
+- [alembic/script.py.mako](https://github.com/rakibhossain72/ctrip/blob/main/alembic/script.py.mako)
+- [alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py)
 </cite>
 
 ## Table of Contents
@@ -125,34 +125,34 @@ M2 --> M4
 ```
 
 **Diagram sources**
-- [server.py](file://server.py#L1-L56)
-- [app/core/config.py](file://app/core/config.py#L1-L126)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L1-L33)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L1-L146)
-- [app/blockchain/bsc.py](file://app/blockchain/bsc.py#L1-L7)
-- [app/blockchain/ethereum.py](file://app/blockchain/ethereum.py#L1-L7)
-- [app/blockchain/anvil.py](file://app/blockchain/anvil.py#L1-L57)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L1-L134)
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py#L1-L54)
-- [app/workers/listener.py](file://app/workers/listener.py)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py)
-- [app/workers/webhook.py](file://app/workers/webhook.py)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L1-L74)
-- [app/db/models/transaction.py](file://app/db/models/transaction.py#L1-L40)
-- [app/db/async_session.py](file://app/db/async_session.py)
-- [app/db/engine.py](file://app/db/engine.py)
-- [app/db/session.py](file://app/db/session.py)
-- [app/db/base.py](file://app/db/base.py)
-- [app/db/seed.py](file://app/db/seed.py)
-- [migrate.py](file://migrate.py)
-- [alembic/env.py](file://alembic/env.py)
-- [alembic/script.py.mako](file://alembic/script.py.mako)
-- [alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py](file://alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L1-L56)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L146)
+- [app/blockchain/bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L1-L7)
+- [app/blockchain/ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L1-L7)
+- [app/blockchain/anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L1-L57)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L1-L134)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L1-L54)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L1-L74)
+- [app/db/models/transaction.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py#L1-L40)
+- [app/db/async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py)
+- [app/db/session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py)
+- [app/db/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/base.py)
+- [app/db/seed.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/seed.py)
+- [migrate.py](https://github.com/rakibhossain72/ctrip/blob/main/migrate.py)
+- [alembic/env.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/env.py)
+- [alembic/script.py.mako](https://github.com/rakibhossain72/ctrip/blob/main/alembic/script.py.mako)
+- [alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py)
 
 **Section sources**
-- [README.md](file://README.md#L1-L87)
-- [server.py](file://server.py#L1-L56)
-- [docker-compose.yml](file://docker-compose.yml#L1-L54)
+- [README.md](https://github.com/rakibhossain72/ctrip/blob/main/README.md#L1-L87)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L1-L56)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L1-L54)
 
 ## Core Components
 - Multi-chain support across BSC, Ethereum, and Anvil test networks
@@ -164,14 +164,14 @@ M2 --> M4
 - Alembic-based database migrations
 
 **Section sources**
-- [README.md](file://README.md#L5-L13)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L1-L33)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L1-L146)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L1-L134)
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py#L1-L54)
-- [app/utils/crypto.py](file://app/utils/crypto.py#L1-L90)
-- [app/services/webhook.py](file://app/services/webhook.py)
-- [migrate.py](file://migrate.py)
+- [README.md](https://github.com/rakibhossain72/ctrip/blob/main/README.md#L5-L13)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L146)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L1-L134)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L1-L54)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L90)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py)
+- [migrate.py](https://github.com/rakibhossain72/ctrip/blob/main/migrate.py)
 
 ## Architecture Overview
 cTrip runs an async FastAPI application that loads configured blockchains at startup, initializes an HD wallet, seeds chain states, and triggers background workers. The scanner service periodically scans blocks for incoming payments, while the sweeper service consolidates funds after confirmation. Webhooks notify external systems upon status changes.
@@ -199,13 +199,13 @@ Swp->>Swp : settle confirmed payments
 ```
 
 **Diagram sources**
-- [server.py](file://server.py#L21-L47)
-- [app/core/config.py](file://app/core/config.py#L1-L126)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L1-L33)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L1-L134)
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py#L1-L54)
-- [app/workers/listener.py](file://app/workers/listener.py)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L1-L134)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L1-L54)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py)
 
 ## Detailed Component Analysis
 
@@ -253,10 +253,10 @@ BlockchainBase <|-- AnvilBlockchain
 ```
 
 **Diagram sources**
-- [app/blockchain/base.py](file://app/blockchain/base.py#L22-L146)
-- [app/blockchain/bsc.py](file://app/blockchain/bsc.py#L1-L7)
-- [app/blockchain/ethereum.py](file://app/blockchain/ethereum.py#L1-L7)
-- [app/blockchain/anvil.py](file://app/blockchain/anvil.py#L8-L57)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [app/blockchain/bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L1-L7)
+- [app/blockchain/ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L1-L7)
+- [app/blockchain/anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L8-L57)
 
 Practical example:
 - Configure chains in the YAML file and ensure the manager creates instances for each chain.
@@ -270,12 +270,12 @@ Integration pattern:
 - Resolve a Web3 client per chain and pass it to services that operate on that chain.
 
 **Section sources**
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L1-L33)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L1-L146)
-- [app/blockchain/bsc.py](file://app/blockchain/bsc.py#L1-L7)
-- [app/blockchain/ethereum.py](file://app/blockchain/ethereum.py#L1-L7)
-- [app/blockchain/anvil.py](file://app/blockchain/anvil.py#L1-L57)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L146)
+- [app/blockchain/bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L1-L7)
+- [app/blockchain/ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L1-L7)
+- [app/blockchain/anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L1-L57)
 
 ### Automated Payment Detection and Confirmation Monitoring
 - Detection: Scans blocks within a batch window, matches native transfers and ERC20 logs to pending payments, and marks them as detected.
@@ -307,7 +307,7 @@ SkipHook --> End
 ```
 
 **Diagram sources**
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L20-L134)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L20-L134)
 
 Operational example:
 - Start the API and workers; the listener will schedule scanning and sweeping tasks.
@@ -322,9 +322,9 @@ Integration pattern:
 - Use the same session for database reads/writes within a single task.
 
 **Section sources**
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L1-L134)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L41-L74)
-- [app/db/models/transaction.py](file://app/db/models/transaction.py#L29-L40)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L1-L134)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
+- [app/db/models/transaction.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py#L29-L40)
 
 ### Async Architecture (SQLAlchemy and FastAPI)
 - FastAPI routes are async; the lifespan hook initializes blockchains, HD wallet, and seeds chain states.
@@ -347,17 +347,17 @@ DB2-->>Scan : commit/rollback
 ```
 
 **Diagram sources**
-- [server.py](file://server.py#L21-L47)
-- [app/db/async_session.py](file://app/db/async_session.py)
-- [app/db/engine.py](file://app/db/engine.py)
-- [app/db/session.py](file://app/db/session.py)
-- [app/db/base.py](file://app/db/base.py)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L1-L134)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
+- [app/db/async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py)
+- [app/db/session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py)
+- [app/db/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/base.py)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L1-L134)
 
 **Section sources**
-- [server.py](file://server.py#L1-L56)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L41-L74)
-- [app/db/models/transaction.py](file://app/db/models/transaction.py#L29-L40)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L1-L56)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
+- [app/db/models/transaction.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py#L29-L40)
 
 ### Background Worker System (Dramatiq + Redis)
 - Dramatiq actors handle listening for payments, sweeping confirmed payments, and sending webhooks.
@@ -379,11 +379,11 @@ note over LActor,SActor : Workers consume tasks and execute
 ```
 
 **Diagram sources**
-- [server.py](file://server.py#L36-L40)
-- [docker-compose.yml](file://docker-compose.yml#L37-L50)
-- [app/workers/listener.py](file://app/workers/listener.py)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py)
-- [app/workers/webhook.py](file://app/workers/webhook.py)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L36-L40)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L37-L50)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py)
 
 Operational example:
 - Run the worker container; it will start consuming tasks from Redis and execute background jobs.
@@ -393,8 +393,8 @@ Configuration requirements:
 - Ensure the worker command includes the three actors.
 
 **Section sources**
-- [docker-compose.yml](file://docker-compose.yml#L37-L50)
-- [server.py](file://server.py#L36-L40)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L37-L50)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L36-L40)
 
 ### Secure HD Wallet Integration
 - Generates unique payment addresses using BIP-44 derivation from a mnemonic.
@@ -412,7 +412,7 @@ class HDWalletManager {
 ```
 
 **Diagram sources**
-- [app/utils/crypto.py](file://app/utils/crypto.py#L5-L90)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L90)
 
 Operational example:
 - Initialize the HD wallet manager with a mnemonic; derive addresses for each payment.
@@ -423,8 +423,8 @@ Configuration requirements:
 - Seed chain states and ensure address uniqueness per payment.
 
 **Section sources**
-- [app/utils/crypto.py](file://app/utils/crypto.py#L1-L90)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L65-L74)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L90)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L65-L74)
 
 ### Webhook Notification System
 - On confirmation, the scanner service can dispatch a webhook task if configured.
@@ -443,9 +443,9 @@ Ext-->>WK : 2xx/4xx response
 ```
 
 **Diagram sources**
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L117-L131)
-- [app/services/webhook.py](file://app/services/webhook.py)
-- [app/workers/webhook.py](file://app/workers/webhook.py)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L117-L131)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py)
 
 Operational example:
 - Configure the global webhook URL and secret; on confirmed payments, a task is enqueued and delivered asynchronously.
@@ -455,8 +455,8 @@ Configuration requirements:
 - Implement signature verification on the receiving end.
 
 **Section sources**
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L117-L131)
-- [app/core/config.py](file://app/core/config.py#L63-L71)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L117-L131)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L63-L71)
 
 ### Robust Migration System (Alembic)
 - Alembic manages database schema evolution; a helper script wraps migration commands.
@@ -472,10 +472,10 @@ Apply --> End(["Schema updated"])
 ```
 
 **Diagram sources**
-- [migrate.py](file://migrate.py)
-- [alembic/env.py](file://alembic/env.py)
-- [alembic/script.py.mako](file://alembic/script.py.mako)
-- [alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py](file://alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py)
+- [migrate.py](https://github.com/rakibhossain72/ctrip/blob/main/migrate.py)
+- [alembic/env.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/env.py)
+- [alembic/script.py.mako](https://github.com/rakibhossain72/ctrip/blob/main/alembic/script.py.mako)
+- [alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py)
 
 Operational example:
 - Run the migration helper to upgrade/downgrade schema as needed.
@@ -485,10 +485,10 @@ Configuration requirements:
 - Keep migrations versioned and review changes before applying.
 
 **Section sources**
-- [migrate.py](file://migrate.py)
-- [alembic/env.py](file://alembic/env.py)
-- [alembic/script.py.mako](file://alembic/script.py.mako)
-- [alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py](file://alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py)
+- [migrate.py](https://github.com/rakibhossain72/ctrip/blob/main/migrate.py)
+- [alembic/env.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/env.py)
+- [alembic/script.py.mako](https://github.com/rakibhossain72/ctrip/blob/main/alembic/script.py.mako)
+- [alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py)
 
 ## Dependency Analysis
 - API depends on services and workers; services depend on blockchain clients and database sessions.
@@ -508,29 +508,29 @@ API --> CFG
 ```
 
 **Diagram sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py)
-- [app/api/health.py](file://app/api/health.py)
-- [app/api/dependencies.py](file://app/api/dependencies.py)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L1-L134)
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py#L1-L54)
-- [app/workers/listener.py](file://app/workers/listener.py)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py)
-- [app/workers/webhook.py](file://app/workers/webhook.py)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L41-L74)
-- [app/db/models/transaction.py](file://app/db/models/transaction.py#L29-L40)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L1-L33)
-- [app/core/config.py](file://app/core/config.py#L1-L126)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py)
+- [app/api/health.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/health.py)
+- [app/api/dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L1-L134)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L1-L54)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
+- [app/db/models/transaction.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py#L29-L40)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
 
 **Section sources**
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L1-L33)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L1-L134)
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py#L1-L54)
-- [app/workers/listener.py](file://app/workers/listener.py)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py)
-- [app/workers/webhook.py](file://app/workers/webhook.py)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L41-L74)
-- [app/db/models/transaction.py](file://app/db/models/transaction.py#L29-L40)
-- [app/core/config.py](file://app/core/config.py#L1-L126)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L1-L134)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L1-L54)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
+- [app/db/models/transaction.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py#L29-L40)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
 
 ## Performance Considerations
 - Block scanning batch size controls throughput versus latency; tune based on chain throughput and worker capacity.
@@ -549,11 +549,11 @@ API --> CFG
 - Addresses: Regenerate addresses from the HD wallet if collisions occur.
 
 **Section sources**
-- [app/blockchain/base.py](file://app/blockchain/base.py#L45-L50)
-- [migrate.py](file://migrate.py)
-- [docker-compose.yml](file://docker-compose.yml#L37-L50)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L117-L131)
-- [app/utils/crypto.py](file://app/utils/crypto.py#L1-L90)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L45-L50)
+- [migrate.py](https://github.com/rakibhossain72/ctrip/blob/main/migrate.py)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L37-L50)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L117-L131)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L90)
 
 ## Conclusion
 cTrip delivers a robust, scalable payment infrastructure with multi-chain support, automated detection and confirmation, async processing, distributed workers, secure HD wallets, webhooks, and migrations. By tuning configuration parameters and leveraging the modular architecture, teams can achieve high reliability and performance across production and test environments.
@@ -568,6 +568,6 @@ cTrip delivers a robust, scalable payment infrastructure with multi-chain suppor
 - Docker Compose: services for app, worker, db, and redis.
 
 **Section sources**
-- [app/core/config.py](file://app/core/config.py#L18-L82)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [docker-compose.yml](file://docker-compose.yml#L26-L47)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L18-L82)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L26-L47)

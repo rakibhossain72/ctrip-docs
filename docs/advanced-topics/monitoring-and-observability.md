@@ -2,20 +2,20 @@
 
 <cite>
 **Referenced Files in This Document**
-- [server.py](file://server.py)
-- [app/api/health.py](file://app/api/health.py)
-- [app/api/v1/payments.py](file://app/api/v1/payments.py)
-- [app/core/config.py](file://app/core/config.py)
-- [app/core/logger.py](file://app/core/logger.py)
-- [app/db/engine.py](file://app/db/engine.py)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py)
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py)
-- [app/services/webhook.py](file://app/services/webhook.py)
-- [app/workers/listener.py](file://app/workers/listener.py)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py)
-- [docker-compose.yml](file://docker-compose.yml)
-- [requirements.txt](file://requirements.txt)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py)
+- [app/api/health.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/health.py)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py)
+- [app/core/logger.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/logger.py)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt)
 </cite>
 
 ## Table of Contents
@@ -87,32 +87,32 @@ WS --> LOG
 ```
 
 **Diagram sources**
-- [server.py](file://server.py#L45-L47)
-- [app/api/health.py](file://app/api/health.py#L4-L7)
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L12-L54)
-- [app/core/config.py](file://app/core/config.py#L10-L126)
-- [app/core/logger.py](file://app/core/logger.py#L1-L4)
-- [app/db/engine.py](file://app/db/engine.py#L1-L32)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L32)
-- [app/workers/listener.py](file://app/workers/listener.py#L21-L46)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py#L19-L40)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py#L11-L54)
-- [app/services/webhook.py](file://app/services/webhook.py#L10-L45)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L45-L47)
+- [app/api/health.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/health.py#L4-L7)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L12-L54)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [app/core/logger.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/logger.py#L1-L4)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L19-L40)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L11-L54)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L45)
 
 **Section sources**
-- [server.py](file://server.py#L1-L56)
-- [app/api/health.py](file://app/api/health.py#L1-L7)
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L1-L62)
-- [app/core/config.py](file://app/core/config.py#L1-L126)
-- [app/core/logger.py](file://app/core/logger.py#L1-L4)
-- [app/db/engine.py](file://app/db/engine.py#L1-L32)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L1-L33)
-- [app/workers/listener.py](file://app/workers/listener.py#L1-L46)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py#L1-L40)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L1-L134)
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py#L1-L54)
-- [app/services/webhook.py](file://app/services/webhook.py#L1-L45)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L1-L56)
+- [app/api/health.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/health.py#L1-L7)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L1-L62)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [app/core/logger.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/logger.py#L1-L4)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L1-L46)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L1-L40)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L1-L134)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L1-L54)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L1-L45)
 
 ## Core Components
 - Logging: Centralized logger factory and per-module loggers are used across services and workers.
@@ -124,14 +124,14 @@ WS --> LOG
 - Webhook Service: Asynchronous webhook sender with HMAC signing support.
 
 **Section sources**
-- [app/core/logger.py](file://app/core/logger.py#L1-L4)
-- [app/core/config.py](file://app/core/config.py#L10-L126)
-- [app/api/health.py](file://app/api/health.py#L4-L7)
-- [app/db/engine.py](file://app/db/engine.py#L1-L32)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L32)
-- [app/workers/listener.py](file://app/workers/listener.py#L9-L13)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py#L10-L14)
-- [app/services/webhook.py](file://app/services/webhook.py#L10-L45)
+- [app/core/logger.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/logger.py#L1-L4)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [app/api/health.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/health.py#L4-L7)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L9-L13)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L10-L14)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L45)
 
 ## Architecture Overview
 The cTrip Payment Gateway integrates FastAPI, SQLAlchemy, Web3, Dramatiq, Redis, PostgreSQL, and optional external webhooks. The runtime spans:
@@ -164,14 +164,14 @@ Scan->>Hook : "Send webhook (optional)"
 ```
 
 **Diagram sources**
-- [server.py](file://server.py#L45-L47)
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L18-L54)
-- [app/db/engine.py](file://app/db/engine.py#L19-L31)
-- [app/core/config.py](file://app/core/config.py#L44-L91)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L32)
-- [app/workers/listener.py](file://app/workers/listener.py#L21-L46)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L20-L96)
-- [app/services/webhook.py](file://app/services/webhook.py#L12-L44)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L45-L47)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L18-L54)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L19-L31)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L91)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L20-L96)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L12-L44)
 
 ## Detailed Component Analysis
 
@@ -185,12 +185,12 @@ Scan->>Hook : "Send webhook (optional)"
   - Ship structured logs to centralized logging (e.g., ELK, Loki) for aggregation.
 
 **Section sources**
-- [app/core/logger.py](file://app/core/logger.py#L1-L4)
-- [app/workers/listener.py](file://app/workers/listener.py#L9-L13)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py#L10-L14)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L10-L10)
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py#L9-L9)
-- [app/services/webhook.py](file://app/services/webhook.py#L8-L8)
+- [app/core/logger.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/logger.py#L1-L4)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L9-L13)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L10-L14)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L10-L10)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L9-L9)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L8-L8)
 
 ### Health Check Endpoint
 - Endpoint: GET /health returns a minimal JSON payload indicating service availability.
@@ -207,12 +207,12 @@ Health-->>Probe : "{ \"status\" : \"ok\" }"
 ```
 
 **Diagram sources**
-- [server.py](file://server.py#L45-L47)
-- [app/api/health.py](file://app/api/health.py#L5-L7)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L45-L47)
+- [app/api/health.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/health.py#L5-L7)
 
 **Section sources**
-- [app/api/health.py](file://app/api/health.py#L4-L7)
-- [server.py](file://server.py#L45-L47)
+- [app/api/health.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/health.py#L4-L7)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L45-L47)
 
 ### Database Performance Monitoring
 - Engines:
@@ -237,10 +237,10 @@ AQueries --> End
 ```
 
 **Diagram sources**
-- [app/db/engine.py](file://app/db/engine.py#L19-L31)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L19-L31)
 
 **Section sources**
-- [app/db/engine.py](file://app/db/engine.py#L1-L32)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
 
 ### Blockchain Interaction Observability
 - Chain Registry: Dynamically constructs blockchain clients from configuration.
@@ -273,15 +273,15 @@ Scanner->>DB : "Commit confirmations"
 ```
 
 **Diagram sources**
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L32)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L20-L96)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L97-L134)
-- [app/services/webhook.py](file://app/services/webhook.py#L12-L44)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L20-L96)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L97-L134)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L12-L44)
 
 **Section sources**
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L32)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py#L11-L54)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L11-L54)
 
 ### Background Worker Health Tracking
 - Listener Actor:
@@ -306,12 +306,12 @@ Run2 --> Next2["Schedule Next Run (30s)"]
 ```
 
 **Diagram sources**
-- [app/workers/listener.py](file://app/workers/listener.py#L21-L46)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py#L19-L40)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L19-L40)
 
 **Section sources**
-- [app/workers/listener.py](file://app/workers/listener.py#L1-L46)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py#L1-L40)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L1-L46)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L1-L40)
 
 ### Webhook Delivery Tracking
 - WebhookService:
@@ -334,12 +334,12 @@ WH-->>Scanner : "Success/Failure"
 ```
 
 **Diagram sources**
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L117-L131)
-- [app/services/webhook.py](file://app/services/webhook.py#L12-L44)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L117-L131)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L12-L44)
 
 **Section sources**
-- [app/services/webhook.py](file://app/services/webhook.py#L10-L45)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L117-L131)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L45)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L117-L131)
 
 ### Payment Creation Endpoint Observability
 - Endpoint: POST /api/v1/payments/
@@ -367,10 +367,10 @@ API-->>Client : "201 Created"
 ```
 
 **Diagram sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L18-L54)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L18-L54)
 
 **Section sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L1-L62)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L1-L62)
 
 ## Dependency Analysis
 External dependencies relevant to observability:
@@ -390,10 +390,10 @@ App --> Web3["web3"]
 ```
 
 **Diagram sources**
-- [requirements.txt](file://requirements.txt#L85-L91)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt#L85-L91)
 
 **Section sources**
-- [requirements.txt](file://requirements.txt#L1-L106)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt#L1-L106)
 
 ## Performance Considerations
 - Database:
@@ -429,12 +429,12 @@ Common operational issues and diagnostics:
   - Review HTTP client timeouts and status codes.
 
 **Section sources**
-- [app/api/health.py](file://app/api/health.py#L5-L7)
-- [app/db/engine.py](file://app/db/engine.py#L19-L31)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L32)
-- [app/workers/listener.py](file://app/workers/listener.py#L21-L46)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py#L19-L40)
-- [app/services/webhook.py](file://app/services/webhook.py#L12-L44)
+- [app/api/health.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/health.py#L5-L7)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L19-L31)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L19-L40)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L12-L44)
 
 ## Conclusion
 The cTrip Payment Gateway establishes a solid foundation for observability through health checks, structured logging, configurable settings, and background workers. To mature the monitoring posture, integrate structured logging, add metrics instrumentation, enable distributed tracing, and wire up alerting for critical payment operations. Align these improvements with the existing architecture to maintain reliability and operational visibility.

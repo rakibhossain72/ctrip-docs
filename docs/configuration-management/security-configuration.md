@@ -2,19 +2,19 @@
 
 <cite>
 **Referenced Files in This Document**
-- [config.py](file://app/core/config.py)
-- [crypto.py](file://app/utils/crypto.py)
-- [server.py](file://server.py)
-- [docker-compose.yml](file://docker-compose.yml)
-- [chains.yaml](file://chains.yaml)
-- [payments.py](file://app/api/v1/payments.py)
-- [dependencies.py](file://app/api/dependencies.py)
-- [manager.py](file://app/blockchain/manager.py)
-- [base.py](file://app/blockchain/base.py)
-- [payment.py](file://app/db/models/payment.py)
-- [webhook.py](file://app/services/webhook.py)
-- [webhook_worker.py](file://app/workers/webhook.py)
-- [requirements.txt](file://requirements.txt)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py)
+- [webhook_worker.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt)
 </cite>
 
 ## Table of Contents
@@ -68,28 +68,28 @@ S --> C
 ```
 
 **Diagram sources**
-- [server.py](file://server.py#L1-L56)
-- [config.py](file://app/core/config.py#L1-L126)
-- [dependencies.py](file://app/api/dependencies.py#L1-L15)
-- [payments.py](file://app/api/v1/payments.py#L1-L62)
-- [manager.py](file://app/blockchain/manager.py#L1-L33)
-- [base.py](file://app/blockchain/base.py#L1-L146)
-- [crypto.py](file://app/utils/crypto.py#L1-L90)
-- [payment.py](file://app/db/models/payment.py#L1-L74)
-- [webhook.py](file://app/services/webhook.py#L1-L45)
-- [webhook_worker.py](file://app/workers/webhook.py#L1-L37)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L1-L56)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L1-L15)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L1-L62)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L146)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L90)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L1-L74)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L1-L45)
+- [webhook_worker.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L1-L37)
 
 **Section sources**
-- [server.py](file://server.py#L1-L56)
-- [config.py](file://app/core/config.py#L1-L126)
-- [dependencies.py](file://app/api/dependencies.py#L1-L15)
-- [payments.py](file://app/api/v1/payments.py#L1-L62)
-- [manager.py](file://app/blockchain/manager.py#L1-L33)
-- [base.py](file://app/blockchain/base.py#L1-L146)
-- [crypto.py](file://app/utils/crypto.py#L1-L90)
-- [payment.py](file://app/db/models/payment.py#L1-L74)
-- [webhook.py](file://app/services/webhook.py#L1-L45)
-- [webhook_worker.py](file://app/workers/webhook.py#L1-L37)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L1-L56)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L1-L15)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L1-L62)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L146)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L90)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L1-L74)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L1-L45)
+- [webhook_worker.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L1-L37)
 
 ## Core Components
 - Settings and Secrets Management
@@ -107,11 +107,11 @@ S --> C
   - Dramatiq actors for background webhook delivery with retry logic.
 
 **Section sources**
-- [config.py](file://app/core/config.py#L1-L126)
-- [crypto.py](file://app/utils/crypto.py#L1-L90)
-- [base.py](file://app/blockchain/base.py#L1-L146)
-- [webhook.py](file://app/services/webhook.py#L1-L45)
-- [webhook_worker.py](file://app/workers/webhook.py#L1-L37)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L90)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L146)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L1-L45)
+- [webhook_worker.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L1-L37)
 
 ## Architecture Overview
 The security-critical flow involves:
@@ -144,11 +144,11 @@ WK-->>Client : "Webhook delivered"
 ```
 
 **Diagram sources**
-- [payments.py](file://app/api/v1/payments.py#L1-L62)
-- [dependencies.py](file://app/api/dependencies.py#L1-L15)
-- [crypto.py](file://app/utils/crypto.py#L1-L90)
-- [payment.py](file://app/db/models/payment.py#L1-L74)
-- [webhook_worker.py](file://app/workers/webhook.py#L1-L37)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L1-L62)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L1-L15)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L90)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L1-L74)
+- [webhook_worker.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L1-L37)
 
 ## Detailed Component Analysis
 
@@ -167,7 +167,7 @@ Security recommendations:
 - Rotate secrets regularly and maintain audit trails.
 
 **Section sources**
-- [config.py](file://app/core/config.py#L1-L126)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
 
 ### HD Wallet Mnemonics and Private Key Management
 - Mnemonic-based HD derivation using BIP-44 path for Ethereum.
@@ -181,8 +181,8 @@ Security recommendations:
 - Implement key splitting and multi-signature schemes for high-value operations.
 
 **Section sources**
-- [crypto.py](file://app/utils/crypto.py#L1-L90)
-- [base.py](file://app/blockchain/base.py#L135-L139)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L90)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L135-L139)
 
 ### Blockchain Provider Integration and Transaction Signing
 - AsyncWeb3 provider with configurable timeouts and optional POA middleware.
@@ -196,8 +196,8 @@ Security recommendations:
 - Sign transactions offline when possible and use transaction builders with strict validation.
 
 **Section sources**
-- [base.py](file://app/blockchain/base.py#L1-L146)
-- [manager.py](file://app/blockchain/manager.py#L1-L33)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L146)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
 
 ### Webhook Delivery and Payload Integrity
 - Optional HMAC-SHA256 signing using a shared secret header.
@@ -210,8 +210,8 @@ Security recommendations:
 - Implement idempotency to prevent duplicate processing.
 
 **Section sources**
-- [webhook.py](file://app/services/webhook.py#L1-L45)
-- [webhook_worker.py](file://app/workers/webhook.py#L1-L37)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L1-L45)
+- [webhook_worker.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L1-L37)
 
 ### Database Models and Sensitive Data Handling
 - Payment and HD wallet address models persist derived addresses and metadata.
@@ -223,7 +223,7 @@ Security recommendations:
 - Sanitize logs to avoid capturing sensitive fields.
 
 **Section sources**
-- [payment.py](file://app/db/models/payment.py#L1-L74)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L1-L74)
 
 ### API Security Configuration
 Current state:
@@ -251,8 +251,8 @@ Recommendations:
 - Restrict outbound traffic to trusted domains only.
 
 **Section sources**
-- [base.py](file://app/blockchain/base.py#L34-L36)
-- [webhook.py](file://app/services/webhook.py#L33-L35)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L34-L36)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L33-L35)
 
 ### Environment Variable Security Practices
 - Environment variables are loaded from a dotenv file with case-insensitive keys.
@@ -264,8 +264,8 @@ Recommendations:
 - Scan for secrets in CI/CD pipelines and remove from logs.
 
 **Section sources**
-- [config.py](file://app/core/config.py#L115-L122)
-- [docker-compose.yml](file://docker-compose.yml#L26-L50)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L115-L122)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L26-L50)
 
 ### Configuration Encryption and Credential Protection
 - Sensitive fields are typed as SecretStr to reduce accidental exposure.
@@ -277,8 +277,8 @@ Recommendations:
 - Protect chains.yaml similarly if it contains sensitive RPC credentials.
 
 **Section sources**
-- [config.py](file://app/core/config.py#L1-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
 
 ### Production Deployment Best Practices
 - Run as non-root user with minimal privileges.
@@ -296,7 +296,7 @@ Recommendations:
 - Implement distributed tracing and correlation for security events.
 
 **Section sources**
-- [requirements.txt](file://requirements.txt#L1-L106)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt#L1-L106)
 
 ### Secure Configuration Patterns
 - Load secrets from environment variables or secret managers.
@@ -346,26 +346,26 @@ WHS --> WHW["Webhook Worker<br/>app/workers/webhook.py"]
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L1-L126)
-- [crypto.py](file://app/utils/crypto.py#L1-L90)
-- [base.py](file://app/blockchain/base.py#L1-L146)
-- [payment.py](file://app/db/models/payment.py#L1-L74)
-- [webhook.py](file://app/services/webhook.py#L1-L45)
-- [webhook_worker.py](file://app/workers/webhook.py#L1-L37)
-- [payments.py](file://app/api/v1/payments.py#L1-L62)
-- [dependencies.py](file://app/api/dependencies.py#L1-L15)
-- [manager.py](file://app/blockchain/manager.py#L1-L33)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L90)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L146)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L1-L74)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L1-L45)
+- [webhook_worker.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L1-L37)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L1-L62)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L1-L15)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L1-L126)
-- [crypto.py](file://app/utils/crypto.py#L1-L90)
-- [base.py](file://app/blockchain/base.py#L1-L146)
-- [payment.py](file://app/db/models/payment.py#L1-L74)
-- [webhook.py](file://app/services/webhook.py#L1-L45)
-- [webhook_worker.py](file://app/workers/webhook.py#L1-L37)
-- [payments.py](file://app/api/v1/payments.py#L1-L62)
-- [dependencies.py](file://app/api/dependencies.py#L1-L15)
-- [manager.py](file://app/blockchain/manager.py#L1-L33)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L90)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L146)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L1-L74)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L1-L45)
+- [webhook_worker.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L1-L37)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L1-L62)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L1-L15)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
 
 ## Performance Considerations
 - Gas price caching reduces RPC calls; tune cache duration based on network volatility.
@@ -386,10 +386,10 @@ Common security-related issues and resolutions:
   - Verify production database URL and credentials; restrict access to internal networks.
 
 **Section sources**
-- [config.py](file://app/core/config.py#L94-L112)
-- [base.py](file://app/blockchain/base.py#L135-L139)
-- [dependencies.py](file://app/api/dependencies.py#L5-L15)
-- [webhook.py](file://app/services/webhook.py#L25-L31)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L94-L112)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L135-L139)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L5-L15)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L25-L31)
 
 ## Conclusion
 The cTrip Payment Gateway integrates several security-critical components around cryptographic keys, HD wallet management, blockchain interactions, and webhook delivery. While the codebase includes foundational validations and secret typing, production readiness requires hardened environment management, transport security, access controls, and continuous monitoring. Implementing the recommendations in this document will significantly strengthen the system’s security posture and align with industry best practices.
@@ -400,6 +400,6 @@ The cTrip Payment Gateway integrates several security-critical components around
   - Chains configuration is loaded from a YAML file.
 
 **Section sources**
-- [config.py](file://app/core/config.py#L115-L122)
-- [docker-compose.yml](file://docker-compose.yml#L26-L50)
-- [chains.yaml](file://chains.yaml#L1-L24)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L115-L122)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L26-L50)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)

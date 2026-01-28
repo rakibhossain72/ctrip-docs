@@ -2,21 +2,21 @@
 
 <cite>
 **Referenced Files in This Document**
-- [server.py](file://server.py)
-- [app/api/v1/payments.py](file://app/api/v1/payments.py)
-- [app/api/health.py](file://app/api/health.py)
-- [app/api/dependencies.py](file://app/api/dependencies.py)
-- [app/schemas/payment.py](file://app/schemas/payment.py)
-- [app/schemas/base.py](file://app/schemas/base.py)
-- [app/db/models/payment.py](file://app/db/models/payment.py)
-- [app/db/models/token.py](file://app/db/models/token.py)
-- [app/utils/crypto.py](file://app/utils/crypto.py)
-- [app/services/webhook.py](file://app/services/webhook.py)
-- [app/workers/webhook.py](file://app/workers/webhook.py)
-- [app/workers/listener.py](file://app/workers/listener.py)
-- [app/blockchain/base.py](file://app/blockchain/base.py)
-- [app/core/config.py](file://app/core/config.py)
-- [chains.yaml](file://chains.yaml)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py)
+- [app/api/health.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/health.py)
+- [app/api/dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py)
+- [app/schemas/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/schemas/payment.py)
+- [app/schemas/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/schemas/base.py)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml)
 </cite>
 
 ## Table of Contents
@@ -92,34 +92,34 @@ LST --> PM
 ```
 
 **Diagram sources**
-- [server.py](file://server.py#L45-L47)
-- [app/api/health.py](file://app/api/health.py#L4-L7)
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L12-L62)
-- [app/schemas/payment.py](file://app/schemas/payment.py#L12-L62)
-- [app/schemas/base.py](file://app/schemas/base.py#L4-L10)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L41-L58)
-- [app/db/models/token.py](file://app/db/models/token.py#L6-L15)
-- [app/utils/crypto.py](file://app/utils/crypto.py#L5-L46)
-- [app/services/webhook.py](file://app/services/webhook.py#L10-L45)
-- [app/workers/webhook.py](file://app/workers/webhook.py#L13-L37)
-- [app/workers/listener.py](file://app/workers/listener.py#L21-L46)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L22-L146)
-- [app/core/config.py](file://app/core/config.py#L10-L126)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L45-L47)
+- [app/api/health.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/health.py#L4-L7)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L12-L62)
+- [app/schemas/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/schemas/payment.py#L12-L62)
+- [app/schemas/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/schemas/base.py#L4-L10)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L58)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L46)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L45)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
 
 **Section sources**
-- [server.py](file://server.py#L45-L47)
-- [app/api/health.py](file://app/api/health.py#L4-L7)
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L12-L62)
-- [app/schemas/payment.py](file://app/schemas/payment.py#L12-L62)
-- [app/schemas/base.py](file://app/schemas/base.py#L4-L10)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L41-L58)
-- [app/db/models/token.py](file://app/db/models/token.py#L6-L15)
-- [app/utils/crypto.py](file://app/utils/crypto.py#L5-L46)
-- [app/services/webhook.py](file://app/services/webhook.py#L10-L45)
-- [app/workers/webhook.py](file://app/workers/webhook.py#L13-L37)
-- [app/workers/listener.py](file://app/workers/listener.py#L21-L46)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L22-L146)
-- [app/core/config.py](file://app/core/config.py#L10-L126)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L45-L47)
+- [app/api/health.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/health.py#L4-L7)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L12-L62)
+- [app/schemas/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/schemas/payment.py#L12-L62)
+- [app/schemas/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/schemas/base.py#L4-L10)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L58)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L46)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L45)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
 
 ## Core Components
 - Health check endpoint: GET /health
@@ -135,10 +135,10 @@ Operational settings:
 - Chain configurations are loaded from a YAML file and injected into the application state during startup.
 
 **Section sources**
-- [app/api/health.py](file://app/api/health.py#L4-L7)
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L12-L62)
-- [server.py](file://server.py#L21-L42)
-- [chains.yaml](file://chains.yaml#L1-L24)
+- [app/api/health.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/health.py#L4-L7)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L12-L62)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L42)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
 
 ## Architecture Overview
 High-level API flow:
@@ -169,11 +169,11 @@ WHS-->>C : "Webhook notification"
 ```
 
 **Diagram sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L18-L54)
-- [app/utils/crypto.py](file://app/utils/crypto.py#L27-L46)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L41-L58)
-- [app/workers/listener.py](file://app/workers/listener.py#L21-L46)
-- [app/services/webhook.py](file://app/services/webhook.py#L10-L45)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L18-L54)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L27-L46)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L58)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L45)
 
 ## Detailed Component Analysis
 
@@ -195,7 +195,7 @@ Notes:
 - Intended for monitoring systems and load balancers
 
 **Section sources**
-- [app/api/health.py](file://app/api/health.py#L4-L7)
+- [app/api/health.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/health.py#L4-L7)
 
 ### Payment Creation Endpoint
 - Method: POST
@@ -266,13 +266,13 @@ Notes:
 - Expiration: Fixed 30-minute TTL from creation time
 
 **Section sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L18-L62)
-- [app/schemas/payment.py](file://app/schemas/payment.py#L20-L24)
-- [app/schemas/payment.py](file://app/schemas/payment.py#L35-L41)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L21-L39)
-- [app/db/models/token.py](file://app/db/models/token.py#L6-L15)
-- [app/api/dependencies.py](file://app/api/dependencies.py#L5-L15)
-- [app/utils/crypto.py](file://app/utils/crypto.py#L27-L46)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L18-L62)
+- [app/schemas/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/schemas/payment.py#L20-L24)
+- [app/schemas/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/schemas/payment.py#L35-L41)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L21-L39)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15)
+- [app/api/dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L5-L15)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L27-L46)
 
 ### Payment Lifecycle and Status Transitions
 Status enumeration:
@@ -302,10 +302,10 @@ Expired --> Failed : "No payment"
 ```
 
 **Diagram sources**
-- [app/db/models/payment.py](file://app/db/models/payment.py#L21-L39)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L21-L39)
 
 **Section sources**
-- [app/db/models/payment.py](file://app/db/models/payment.py#L21-L39)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L21-L39)
 
 ### Webhook Integration Patterns
 Webhook delivery:
@@ -337,15 +337,15 @@ WHS-->>WHA : "Success"
 ```
 
 **Diagram sources**
-- [app/workers/listener.py](file://app/workers/listener.py#L21-L46)
-- [app/workers/webhook.py](file://app/workers/webhook.py#L13-L37)
-- [app/services/webhook.py](file://app/services/webhook.py#L10-L45)
-- [app/core/config.py](file://app/core/config.py#L63-L71)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L45)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L63-L71)
 
 **Section sources**
-- [app/services/webhook.py](file://app/services/webhook.py#L10-L45)
-- [app/workers/webhook.py](file://app/workers/webhook.py#L13-L37)
-- [app/core/config.py](file://app/core/config.py#L63-L71)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L45)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L63-L71)
 
 ### Blockchain and Chain Support
 Chain configuration:
@@ -357,9 +357,9 @@ RPC interactions:
 - POA support and caching of gas prices are included
 
 **Section sources**
-- [chains.yaml](file://chains.yaml#L12-L24)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L22-L146)
-- [server.py](file://server.py#L21-L34)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L12-L24)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L34)
 
 ## Dependency Analysis
 Key dependencies and relationships:
@@ -384,32 +384,32 @@ APP --> HLT["api/health.py"]
 ```
 
 **Diagram sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L1-L11)
-- [app/schemas/payment.py](file://app/schemas/payment.py#L1-L10)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L1-L10)
-- [app/db/models/token.py](file://app/db/models/token.py#L1-L5)
-- [app/api/dependencies.py](file://app/api/dependencies.py#L1-L15)
-- [app/utils/crypto.py](file://app/utils/crypto.py#L1-L10)
-- [app/workers/listener.py](file://app/workers/listener.py#L1-L16)
-- [app/core/config.py](file://app/core/config.py#L1-L20)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L1-L20)
-- [app/services/webhook.py](file://app/services/webhook.py#L1-L10)
-- [app/workers/webhook.py](file://app/workers/webhook.py#L1-L10)
-- [server.py](file://server.py#L1-L20)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L1-L11)
+- [app/schemas/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/schemas/payment.py#L1-L10)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L1-L10)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L1-L5)
+- [app/api/dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L1-L15)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L10)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L1-L16)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L20)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L20)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L1-L10)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L1-L10)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L1-L20)
 
 **Section sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L1-L11)
-- [app/schemas/payment.py](file://app/schemas/payment.py#L1-L10)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L1-L10)
-- [app/db/models/token.py](file://app/db/models/token.py#L1-L5)
-- [app/api/dependencies.py](file://app/api/dependencies.py#L1-L15)
-- [app/utils/crypto.py](file://app/utils/crypto.py#L1-L10)
-- [app/workers/listener.py](file://app/workers/listener.py#L1-L16)
-- [app/core/config.py](file://app/core/config.py#L1-L20)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L1-L20)
-- [app/services/webhook.py](file://app/services/webhook.py#L1-L10)
-- [app/workers/webhook.py](file://app/workers/webhook.py#L1-L10)
-- [server.py](file://server.py#L1-L20)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L1-L11)
+- [app/schemas/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/schemas/payment.py#L1-L10)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L1-L10)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L1-L5)
+- [app/api/dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L1-L15)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L10)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L1-L16)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L20)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L20)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L1-L10)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L1-L10)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L1-L20)
 
 ## Performance Considerations
 - Gas price caching: The blockchain base class caches gas price updates for a short duration to reduce RPC calls
@@ -421,9 +421,9 @@ APP --> HLT["api/health.py"]
   - Scale workers horizontally if throughput increases
 
 **Section sources**
-- [app/blockchain/base.py](file://app/blockchain/base.py#L65-L80)
-- [app/workers/listener.py](file://app/workers/listener.py#L15-L16)
-- [app/services/webhook.py](file://app/services/webhook.py#L33-L36)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L65-L80)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L15-L16)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L33-L36)
 
 ## Troubleshooting Guide
 Common issues and resolutions:
@@ -439,10 +439,10 @@ Debugging steps:
 - Configuration: Validate chains.yaml and environment settings
 
 **Section sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L25-L34)
-- [app/workers/webhook.py](file://app/workers/webhook.py#L24-L36)
-- [app/workers/listener.py](file://app/workers/listener.py#L21-L46)
-- [app/api/health.py](file://app/api/health.py#L4-L7)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L25-L34)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L24-L36)
+- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [app/api/health.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/health.py#L4-L7)
 
 ## Conclusion
 The cTrip Payment Gateway exposes a clean REST interface for payment creation and system health checks, backed by robust schema validation, asynchronous processing, and webhook notifications. Clients should implement authentication and rate limiting at the ingress layer, ensure proper chain and token configuration, and integrate with webhooks for real-time updates. Operational monitoring and worker health are essential for reliable payment lifecycle management.
@@ -469,10 +469,10 @@ The cTrip Payment Gateway exposes a clean REST interface for payment creation an
   - Errors: 400 Bad Request with {"detail": "..."} on validation or processing failure
 
 **Section sources**
-- [app/api/health.py](file://app/api/health.py#L4-L7)
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L18-L62)
-- [app/schemas/payment.py](file://app/schemas/payment.py#L20-L24)
-- [app/schemas/payment.py](file://app/schemas/payment.py#L35-L41)
+- [app/api/health.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/health.py#L4-L7)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L18-L62)
+- [app/schemas/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/schemas/payment.py#L20-L24)
+- [app/schemas/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/schemas/payment.py#L35-L41)
 
 ### Data Models
 
@@ -502,8 +502,8 @@ PAYMENTS }o--|| TOKENS : "optional token binding"
 ```
 
 **Diagram sources**
-- [app/db/models/payment.py](file://app/db/models/payment.py#L41-L58)
-- [app/db/models/token.py](file://app/db/models/token.py#L6-L15)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L58)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15)
 
 ### Client Implementation Guidelines
 - Authentication: Enforce at reverse proxy or API gateway; do not rely on application-layer auth

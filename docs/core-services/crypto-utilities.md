@@ -2,19 +2,19 @@
 
 <cite>
 **Referenced Files in This Document**
-- [crypto.py](file://app/utils/crypto.py)
-- [config.py](file://app/core/config.py)
-- [dependencies.py](file://app/api/dependencies.py)
-- [manager.py](file://app/blockchain/manager.py)
-- [base.py](file://app/blockchain/base.py)
-- [ethereum.py](file://app/blockchain/ethereum.py)
-- [bsc.py](file://app/blockchain/bsc.py)
-- [anvil.py](file://app/blockchain/anvil.py)
-- [w3.py](file://app/blockchain/w3.py)
-- [chains.yaml](file://chains.yaml)
-- [requirements.txt](file://requirements.txt)
-- [payment.py](file://app/db/models/payment.py)
-- [webhook.py](file://app/services/webhook.py)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py)
+- [anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py)
 </cite>
 
 ## Table of Contents
@@ -65,26 +65,26 @@ WH --> CFG
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L58-L82)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [crypto.py](file://app/utils/crypto.py#L5-L66)
-- [manager.py](file://app/blockchain/manager.py#L8-L32)
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [ethereum.py](file://app/blockchain/ethereum.py#L3-L7)
-- [bsc.py](file://app/blockchain/bsc.py#L3-L7)
-- [anvil.py](file://app/blockchain/anvil.py#L8-L57)
-- [w3.py](file://app/blockchain/w3.py#L4-L9)
-- [dependencies.py](file://app/api/dependencies.py#L11-L15)
-- [webhook.py](file://app/services/webhook.py#L10-L44)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L58-L82)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L66)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L3-L7)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L3-L7)
+- [anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L8-L57)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L4-L9)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L11-L15)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L44)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L58-L82)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [crypto.py](file://app/utils/crypto.py#L5-L66)
-- [manager.py](file://app/blockchain/manager.py#L8-L32)
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [dependencies.py](file://app/api/dependencies.py#L11-L15)
-- [webhook.py](file://app/services/webhook.py#L10-L44)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L58-L82)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L66)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L11-L15)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L44)
 
 ## Core Components
 - HDWalletManager: Generates mnemonics, derives seeds, and produces Ethereum addresses using BIP-44 derivation path m/44'/60'/0'/0/{index}. It exposes methods to retrieve a single address, a batch of sequential addresses, and the mnemonic phrase.
@@ -94,13 +94,13 @@ WH --> CFG
 - Webhook service: Implements HMAC-SHA256 signing for outbound webhooks using a configurable secret.
 
 **Section sources**
-- [crypto.py](file://app/utils/crypto.py#L5-L66)
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [ethereum.py](file://app/blockchain/ethereum.py#L3-L7)
-- [bsc.py](file://app/blockchain/bsc.py#L3-L7)
-- [config.py](file://app/core/config.py#L58-L102)
-- [dependencies.py](file://app/api/dependencies.py#L11-L15)
-- [webhook.py](file://app/services/webhook.py#L10-L44)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L66)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L3-L7)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L3-L7)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L58-L102)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L11-L15)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L44)
 
 ## Architecture Overview
 The cryptographic stack integrates HD wallet derivation with blockchain operations and secure configuration management. The sequence below illustrates how a payment address is derived and how a transaction is built and signed.
@@ -132,10 +132,10 @@ API-->>Client : "tx_hash"
 ```
 
 **Diagram sources**
-- [dependencies.py](file://app/api/dependencies.py#L11-L15)
-- [crypto.py](file://app/utils/crypto.py#L27-L46)
-- [base.py](file://app/blockchain/base.py#L93-L139)
-- [config.py](file://app/core/config.py#L74-L102)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L11-L15)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L27-L46)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L93-L139)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L74-L102)
 
 ## Detailed Component Analysis
 
@@ -162,7 +162,7 @@ class HDWalletManager {
 ```
 
 **Diagram sources**
-- [crypto.py](file://app/utils/crypto.py#L5-L66)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L66)
 
 Operational notes:
 - The manager does not implement explicit mnemonic validation; it relies on the underlying library’s validation during seed derivation.
@@ -175,7 +175,7 @@ Best practices:
 - Rotate derivation indices carefully to prevent address reuse.
 
 **Section sources**
-- [crypto.py](file://app/utils/crypto.py#L5-L66)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L66)
 
 ### Blockchain Integration and Transaction Signing
 BlockchainBase provides a unified interface for interacting with EVM-compatible chains. It handles connection checks, balance queries, gas estimation, transaction building, signing, and sending. Chain-specific subclasses set appropriate chain IDs and consensus parameters.
@@ -218,10 +218,10 @@ AnvilBlockchain --|> BlockchainBase
 ```
 
 **Diagram sources**
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [ethereum.py](file://app/blockchain/ethereum.py#L3-L7)
-- [bsc.py](file://app/blockchain/bsc.py#L3-L7)
-- [anvil.py](file://app/blockchain/anvil.py#L8-L57)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L3-L7)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L3-L7)
+- [anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L8-L57)
 
 Transaction signing and sending flow:
 ```mermaid
@@ -241,13 +241,13 @@ BB-->>API : "tx_hash"
 ```
 
 **Diagram sources**
-- [base.py](file://app/blockchain/base.py#L135-L139)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L135-L139)
 
 **Section sources**
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [ethereum.py](file://app/blockchain/ethereum.py#L3-L7)
-- [bsc.py](file://app/blockchain/bsc.py#L3-L7)
-- [anvil.py](file://app/blockchain/anvil.py#L8-L57)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L3-L7)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L3-L7)
+- [anvil.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/anvil.py#L8-L57)
 
 ### Configuration and Secrets
 Settings centralize cryptographic and operational configuration:
@@ -268,12 +268,12 @@ ValidateSK --> |Yes| Ready(["Settings ready"])
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L58-L102)
-- [chains.yaml](file://chains.yaml#L1-L24)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L58-L102)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L58-L102)
-- [chains.yaml](file://chains.yaml#L1-L24)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L58-L102)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
 
 ### API Dependencies and Access Patterns
 The API exposes dependency functions to retrieve blockchain instances and the HD wallet manager. These functions ensure initialization occurs during application lifespan and provide safe access to shared resources.
@@ -293,11 +293,11 @@ API-->>Client : "Response"
 ```
 
 **Diagram sources**
-- [dependencies.py](file://app/api/dependencies.py#L11-L15)
-- [crypto.py](file://app/utils/crypto.py#L27-L46)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L11-L15)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L27-L46)
 
 **Section sources**
-- [dependencies.py](file://app/api/dependencies.py#L11-L15)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L11-L15)
 
 ### Webhook Security
 The WebhookService signs outbound payloads using HMAC-SHA256 when a secret is configured. This ensures message integrity and authenticity for payment notifications.
@@ -314,12 +314,12 @@ SendSigned --> End
 ```
 
 **Diagram sources**
-- [webhook.py](file://app/services/webhook.py#L10-L44)
-- [config.py](file://app/core/config.py#L68-L71)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L44)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L68-L71)
 
 **Section sources**
-- [webhook.py](file://app/services/webhook.py#L10-L44)
-- [config.py](file://app/core/config.py#L68-L71)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L44)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L68-L71)
 
 ## Dependency Analysis
 External libraries underpinning cryptographic operations:
@@ -344,10 +344,10 @@ REQ --> RD
 ```
 
 **Diagram sources**
-- [requirements.txt](file://requirements.txt#L27-L106)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt#L27-L106)
 
 **Section sources**
-- [requirements.txt](file://requirements.txt#L27-L106)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt#L27-L106)
 
 ## Performance Considerations
 - Gas estimation and caching: BlockchainBase caches gas price for a short duration to reduce RPC calls.
@@ -365,10 +365,10 @@ Common issues and resolutions:
 - Webhook signature failures: Verify webhook_secret is set and matches the receiver’s expectations.
 
 **Section sources**
-- [config.py](file://app/core/config.py#L94-L102)
-- [dependencies.py](file://app/api/dependencies.py#L11-L15)
-- [manager.py](file://app/blockchain/manager.py#L28-L32)
-- [webhook.py](file://app/services/webhook.py#L10-L44)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L94-L102)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L11-L15)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L28-L32)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L44)
 
 ## Conclusion
 The Crypto Utilities module provides a focused set of cryptographic capabilities for HD wallet management, address derivation, and transaction signing. It integrates cleanly with configuration, blockchain adapters, and API dependencies while leveraging established libraries for security-critical operations. Adhering to the best practices outlined here will help maintain robustness, security, and compliance in production deployments.
@@ -385,14 +385,14 @@ The Crypto Utilities module provides a focused set of cryptographic capabilities
 - Audit and rotate keys regularly; track key usage for compliance.
 
 **Section sources**
-- [config.py](file://app/core/config.py#L74-L112)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L74-L112)
 
 ### Entropy Sources and Secure Randomness
 - Mnemonic generation uses a cryptographically secure random number generator via the underlying library.
 - Avoid using predictable sources for entropy; rely on OS-provided randomness.
 
 **Section sources**
-- [crypto.py](file://app/utils/crypto.py#L18-L22)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L18-L22)
 
 ### Compliance and Audit Considerations
 - Maintain audit logs for cryptographic operations (address derivation, signing, sending).
@@ -401,12 +401,12 @@ The Crypto Utilities module provides a focused set of cryptographic capabilities
 - Ensure webhook signatures are enabled and consistently applied for payment notifications.
 
 **Section sources**
-- [config.py](file://app/core/config.py#L94-L102)
-- [webhook.py](file://app/services/webhook.py#L10-L44)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L94-L102)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L44)
 
 ### Database Model Notes for HD Wallet Addresses
 - The HDWalletAddress model stores derived addresses and their indices for tracking and auditing.
 - Consider adding constraints to prevent duplicate indices and ensure data integrity.
 
 **Section sources**
-- [payment.py](file://app/db/models/payment.py#L65-L74)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L65-L74)

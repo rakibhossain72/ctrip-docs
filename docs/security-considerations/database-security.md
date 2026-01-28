@@ -2,18 +2,18 @@
 
 <cite>
 **Referenced Files in This Document**
-- [engine.py](file://app/db/engine.py)
-- [session.py](file://app/db/session.py)
-- [async_session.py](file://app/db/async_session.py)
-- [config.py](file://app/core/config.py)
-- [payments.py](file://app/api/v1/payments.py)
-- [payment.py](file://app/db/models/payment.py)
-- [dependencies.py](file://app/api/dependencies.py)
-- [crypto.py](file://app/utils/crypto.py)
-- [env.py](file://alembic/env.py)
-- [alembic.ini](file://alembic.ini)
-- [MIGRATIONS.md](file://MIGRATIONS.md)
-- [requirements.txt](file://requirements.txt)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py)
+- [session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py)
+- [async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py)
+- [env.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/env.py)
+- [alembic.ini](https://github.com/rakibhossain72/ctrip/blob/main/alembic.ini)
+- [MIGRATIONS.md](https://github.com/rakibhossain72/ctrip/blob/main/MIGRATIONS.md)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt)
 </cite>
 
 ## Table of Contents
@@ -64,26 +64,26 @@ MIGDOCS --> AENV
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L10-L126)
-- [engine.py](file://app/db/engine.py#L1-L32)
-- [session.py](file://app/db/session.py#L1-L17)
-- [async_session.py](file://app/db/async_session.py#L1-L15)
-- [payments.py](file://app/api/v1/payments.py#L1-L62)
-- [payment.py](file://app/db/models/payment.py#L1-L74)
-- [dependencies.py](file://app/api/dependencies.py#L1-L15)
-- [crypto.py](file://app/utils/crypto.py#L1-L90)
-- [env.py](file://alembic/env.py#L1-L142)
-- [alembic.ini](file://alembic.ini#L1-L151)
-- [MIGRATIONS.md](file://MIGRATIONS.md#L70-L124)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L1-L17)
+- [async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L1-L15)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L1-L62)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L1-L74)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L1-L15)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L90)
+- [env.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/env.py#L1-L142)
+- [alembic.ini](https://github.com/rakibhossain72/ctrip/blob/main/alembic.ini#L1-L151)
+- [MIGRATIONS.md](https://github.com/rakibhossain72/ctrip/blob/main/MIGRATIONS.md#L70-L124)
 
 **Section sources**
-- [engine.py](file://app/db/engine.py#L1-L32)
-- [session.py](file://app/db/session.py#L1-L17)
-- [async_session.py](file://app/db/async_session.py#L1-L15)
-- [config.py](file://app/core/config.py#L10-L126)
-- [env.py](file://alembic/env.py#L1-L142)
-- [alembic.ini](file://alembic.ini#L1-L151)
-- [MIGRATIONS.md](file://MIGRATIONS.md#L70-L124)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L1-L17)
+- [async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L1-L15)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [env.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/env.py#L1-L142)
+- [alembic.ini](https://github.com/rakibhossain72/ctrip/blob/main/alembic.ini#L1-L151)
+- [MIGRATIONS.md](https://github.com/rakibhossain72/ctrip/blob/main/MIGRATIONS.md#L70-L124)
 
 ## Core Components
 - Database configuration and environment selection are centralized in settings, which expose production and development URLs and dynamically select the active URL per environment.
@@ -91,19 +91,19 @@ MIGDOCS --> AENV
 - Alembic manages schema migrations with environment-specific overrides and logging configuration.
 
 Key implementation references:
-- Settings and dynamic URL selection: [config.py](file://app/core/config.py#L10-L126)
-- Engine and async engine creation with pooling: [engine.py](file://app/db/engine.py#L19-L32)
-- Sync session factory and dependency: [session.py](file://app/db/session.py#L1-L17)
-- Async session factory and dependency: [async_session.py](file://app/db/async_session.py#L1-L15)
-- Alembic environment override and logging: [env.py](file://alembic/env.py#L20-L27), [alembic.ini](file://alembic.ini#L116-L151)
+- Settings and dynamic URL selection: [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- Engine and async engine creation with pooling: [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L19-L32)
+- Sync session factory and dependency: [session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L1-L17)
+- Async session factory and dependency: [async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L1-L15)
+- Alembic environment override and logging: [env.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/env.py#L20-L27), [alembic.ini](https://github.com/rakibhossain72/ctrip/blob/main/alembic.ini#L116-L151)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L10-L126)
-- [engine.py](file://app/db/engine.py#L19-L32)
-- [session.py](file://app/db/session.py#L1-L17)
-- [async_session.py](file://app/db/async_session.py#L1-L15)
-- [env.py](file://alembic/env.py#L20-L27)
-- [alembic.ini](file://alembic.ini#L116-L151)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L19-L32)
+- [session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L1-L17)
+- [async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L1-L15)
+- [env.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/env.py#L20-L27)
+- [alembic.ini](https://github.com/rakibhossain72/ctrip/blob/main/alembic.ini#L116-L151)
 
 ## Architecture Overview
 The database security architecture integrates environment-driven configuration, robust connection pooling, and strict input validation at the API boundary. Alembic enforces schema changes safely, while logging and migration practices support auditability.
@@ -129,11 +129,11 @@ API-->>Client : "201 PaymentRead"
 ```
 
 **Diagram sources**
-- [payments.py](file://app/api/v1/payments.py#L13-L54)
-- [dependencies.py](file://app/api/dependencies.py#L5-L15)
-- [crypto.py](file://app/utils/crypto.py#L27-L46)
-- [session.py](file://app/db/session.py#L11-L16)
-- [payment.py](file://app/db/models/payment.py#L41-L58)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L13-L54)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L5-L15)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L27-L46)
+- [session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L11-L16)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L58)
 
 ## Detailed Component Analysis
 
@@ -145,8 +145,8 @@ API-->>Client : "201 PaymentRead"
   - Validate TLS handshake failures and configure appropriate error handling.
 
 Implementation references:
-- URL selection and transformation: [engine.py](file://app/db/engine.py#L5-L20)
-- Settings exposing production and development URLs: [config.py](file://app/core/config.py#L17-L26)
+- URL selection and transformation: [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L5-L20)
+- Settings exposing production and development URLs: [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L17-L26)
 
 Security recommendations:
 - Enforce sslmode=require or stricter modes in production URLs.
@@ -154,8 +154,8 @@ Security recommendations:
 - Monitor TLS handshake errors and configure retry/backoff policies.
 
 **Section sources**
-- [engine.py](file://app/db/engine.py#L5-L20)
-- [config.py](file://app/core/config.py#L17-L26)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L5-L20)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L17-L26)
 
 ### Secure Connection Pooling
 - Connection pooling is enabled with pool_pre_ping=True and fixed pool size for synchronous engines.
@@ -166,11 +166,11 @@ Recommendations:
 - Use NullPool only for offline/CLI operations (as seen in Alembic); avoid for runtime.
 
 Implementation references:
-- Synchronous engine pooling: [engine.py](file://app/db/engine.py#L22-L26)
-- Asynchronous engine creation: [engine.py](file://app/db/engine.py#L28-L31)
+- Synchronous engine pooling: [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L22-L26)
+- Asynchronous engine creation: [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L28-L31)
 
 **Section sources**
-- [engine.py](file://app/db/engine.py#L22-L31)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L22-L31)
 
 ### Access Control, Role-Based Permissions, and Privilege Management
 - The codebase does not define database roles or RBAC logic. Privileges are typically managed at the database level.
@@ -187,8 +187,8 @@ Implementation references:
 - Pydantic schemas enforce field constraints (min/max lengths, numeric bounds, types) before reaching the database layer.
 
 Implementation references:
-- API handler with validation and ORM query: [payments.py](file://app/api/v1/payments.py#L25-L34)
-- Pydantic schema constraints: [schemas/payment.py](file://app/schemas/payment.py#L12-L27)
+- API handler with validation and ORM query: [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L25-L34)
+- Pydantic schema constraints: [schemas/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/schemas/payment.py#L12-L27)
 
 Additional recommendations:
 - Avoid dynamic SQL or raw SQL concatenation.
@@ -196,8 +196,8 @@ Additional recommendations:
 - Sanitize and validate all external inputs at the API boundary.
 
 **Section sources**
-- [payments.py](file://app/api/v1/payments.py#L25-L34)
-- [payment.py](file://app/db/models/payment.py#L41-L58)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L25-L34)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L58)
 
 ### Audit Logging, Data Access Monitoring, and Security Event Tracking
 - Alembic logging configuration exists and can be extended to capture migration events.
@@ -208,12 +208,12 @@ Additional recommendations:
   - Database connection errors and retries
 
 Implementation references:
-- Alembic logging configuration: [alembic.ini](file://alembic.ini#L116-L151)
-- Alembic environment logging setup: [env.py](file://alembic/env.py#L25-L27)
+- Alembic logging configuration: [alembic.ini](https://github.com/rakibhossain72/ctrip/blob/main/alembic.ini#L116-L151)
+- Alembic environment logging setup: [env.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/env.py#L25-L27)
 
 **Section sources**
-- [alembic.ini](file://alembic.ini#L116-L151)
-- [env.py](file://alembic/env.py#L25-L27)
+- [alembic.ini](https://github.com/rakibhossain72/ctrip/blob/main/alembic.ini#L116-L151)
+- [env.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/env.py#L25-L27)
 
 ### Database Backup Encryption, Secure Retention, and Deletion
 - Alembic migration documentation advises backing up the database before applying migrations in production.
@@ -225,7 +225,7 @@ Recommendations:
 - Implement secure deletion procedures for sensitive data (e.g., GDPR right to erasure) using soft deletes or anonymization.
 
 **Section sources**
-- [MIGRATIONS.md](file://MIGRATIONS.md#L88-L95)
+- [MIGRATIONS.md](https://github.com/rakibhossain72/ctrip/blob/main/MIGRATIONS.md#L88-L95)
 
 ### Database Hardening, Vulnerability Assessment, and Penetration Testing
 - Hardening checklist:
@@ -244,8 +244,8 @@ Recommendations:
 - Monitor slow queries and resource usage to prevent abuse.
 
 **Section sources**
-- [MIGRATIONS.md](file://MIGRATIONS.md#L70-L116)
-- [env.py](file://alembic/env.py#L120-L142)
+- [MIGRATIONS.md](https://github.com/rakibhossain72/ctrip/blob/main/MIGRATIONS.md#L70-L116)
+- [env.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/env.py#L120-L142)
 
 ## Dependency Analysis
 The database layer depends on configuration for URLs, SQLAlchemy engines for connections, and session factories for transactions. Alembic depends on the environment to set the database URL and on logging configuration.
@@ -262,24 +262,24 @@ AINI["Alembic Ini<br/>alembic.ini"] --> AENV
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L10-L126)
-- [engine.py](file://app/db/engine.py#L1-L32)
-- [session.py](file://app/db/session.py#L1-L17)
-- [async_session.py](file://app/db/async_session.py#L1-L15)
-- [payments.py](file://app/api/v1/payments.py#L1-L62)
-- [payment.py](file://app/db/models/payment.py#L1-L74)
-- [env.py](file://alembic/env.py#L1-L142)
-- [alembic.ini](file://alembic.ini#L1-L151)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L1-L17)
+- [async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L1-L15)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L1-L62)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L1-L74)
+- [env.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/env.py#L1-L142)
+- [alembic.ini](https://github.com/rakibhossain72/ctrip/blob/main/alembic.ini#L1-L151)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L10-L126)
-- [engine.py](file://app/db/engine.py#L1-L32)
-- [session.py](file://app/db/session.py#L1-L17)
-- [async_session.py](file://app/db/async_session.py#L1-L15)
-- [payments.py](file://app/api/v1/payments.py#L1-L62)
-- [payment.py](file://app/db/models/payment.py#L1-L74)
-- [env.py](file://alembic/env.py#L1-L142)
-- [alembic.ini](file://alembic.ini#L1-L151)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L1-L17)
+- [async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L1-L15)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L1-L62)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L1-L74)
+- [env.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/env.py#L1-L142)
+- [alembic.ini](https://github.com/rakibhossain72/ctrip/blob/main/alembic.ini#L1-L151)
 
 ## Performance Considerations
 - Connection pooling reduces overhead and improves throughput under load.
@@ -296,12 +296,12 @@ Common areas to investigate:
 - Slow queries: Profile ORM queries and add appropriate indexes.
 
 References:
-- Alembic environment URL override: [env.py](file://alembic/env.py#L20-L21)
-- Alembic logging configuration: [alembic.ini](file://alembic.ini#L116-L151)
+- Alembic environment URL override: [env.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/env.py#L20-L21)
+- Alembic logging configuration: [alembic.ini](https://github.com/rakibhossain72/ctrip/blob/main/alembic.ini#L116-L151)
 
 **Section sources**
-- [env.py](file://alembic/env.py#L20-L21)
-- [alembic.ini](file://alembic.ini#L116-L151)
+- [env.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/env.py#L20-L21)
+- [alembic.ini](https://github.com/rakibhossain72/ctrip/blob/main/alembic.ini#L116-L151)
 
 ## Conclusion
 The cTrip Payment Gateway employs environment-driven database configuration and Alembic-based migrations. To achieve robust database security, integrate TLS enforcement, strengthen connection pooling, implement least-privilege database roles, enforce strict input validation, augment audit logging, and adopt secure backup and deletion practices. Perform regular hardening, assessments, and adhere to secure administration procedures.
@@ -316,8 +316,8 @@ The cTrip Payment Gateway employs environment-driven database configuration and 
 - Validate TLS handshake outcomes and configure error handling.
 
 **Section sources**
-- [config.py](file://app/core/config.py#L17-L26)
-- [engine.py](file://app/db/engine.py#L5-L20)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L17-L26)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L5-L20)
 
 ### Appendix B: Alembic Migration Security Checklist
 - Back up the database before applying migrations in production.
@@ -325,5 +325,5 @@ The cTrip Payment Gateway employs environment-driven database configuration and 
 - Use descriptive migration messages and keep migrations reversible when possible.
 
 **Section sources**
-- [MIGRATIONS.md](file://MIGRATIONS.md#L70-L116)
-- [env.py](file://alembic/env.py#L120-L142)
+- [MIGRATIONS.md](https://github.com/rakibhossain72/ctrip/blob/main/MIGRATIONS.md#L70-L116)
+- [env.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/env.py#L120-L142)

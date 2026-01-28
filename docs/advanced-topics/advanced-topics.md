@@ -2,21 +2,21 @@
 
 <cite>
 **Referenced Files in This Document**
-- [server.py](file://server.py)
-- [manager.py](file://app/blockchain/manager.py)
-- [base.py](file://app/blockchain/base.py)
-- [ethereum.py](file://app/blockchain/ethereum.py)
-- [bsc.py](file://app/blockchain/bsc.py)
-- [config.py](file://app/core/config.py)
-- [chains.yaml](file://chains.yaml)
-- [engine.py](file://app/db/engine.py)
-- [chain.py](file://app/db/models/chain.py)
-- [payment.py](file://app/db/models/payment.py)
-- [scanner.py](file://app/services/blockchain/scanner.py)
-- [listener.py](file://app/workers/listener.py)
-- [crypto.py](file://app/utils/crypto.py)
-- [payments.py](file://app/api/v1/payments.py)
-- [logger.py](file://app/core/logger.py)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py)
+- [chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py)
+- [logger.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/logger.py)
 </cite>
 
 ## Table of Contents
@@ -85,26 +85,26 @@ U2 --> U3
 ```
 
 **Diagram sources**
-- [server.py](file://server.py#L45-L47)
-- [manager.py](file://app/blockchain/manager.py#L8-L32)
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [ethereum.py](file://app/blockchain/ethereum.py#L3-L6)
-- [bsc.py](file://app/blockchain/bsc.py#L3-L6)
-- [engine.py](file://app/db/engine.py#L19-L31)
-- [chain.py](file://app/db/models/chain.py#L9-L17)
-- [payment.py](file://app/db/models/payment.py#L41-L74)
-- [listener.py](file://app/workers/listener.py#L21-L46)
-- [scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
-- [crypto.py](file://app/utils/crypto.py#L5-L90)
-- [config.py](file://app/core/config.py#L44-L56)
-- [chains.yaml](file://chains.yaml#L12-L23)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L45-L47)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L3-L6)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L3-L6)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L19-L31)
+- [chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L90)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L56)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L12-L23)
 
 **Section sources**
-- [server.py](file://server.py#L1-L56)
-- [manager.py](file://app/blockchain/manager.py#L1-L33)
-- [engine.py](file://app/db/engine.py#L1-L32)
-- [config.py](file://app/core/config.py#L1-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L1-L56)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
 
 ## Core Components
 - Application lifecycle and startup orchestration
@@ -122,11 +122,11 @@ Key implementation highlights:
 - Payments API validates chain/token compatibility and creates payment records
 
 **Section sources**
-- [server.py](file://server.py#L21-L42)
-- [manager.py](file://app/blockchain/manager.py#L8-L32)
-- [engine.py](file://app/db/engine.py#L19-L31)
-- [payments.py](file://app/api/v1/payments.py#L18-L54)
-- [scanner.py](file://app/services/blockchain/scanner.py#L20-L96)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L42)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L19-L31)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L18-L54)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L20-L96)
 
 ## Architecture Overview
 The system follows a layered architecture with clear separation of concerns:
@@ -158,15 +158,15 @@ DB-->>Scan : "Committed"
 ```
 
 **Diagram sources**
-- [payments.py](file://app/api/v1/payments.py#L18-L54)
-- [crypto.py](file://app/utils/crypto.py#L27-L46)
-- [scanner.py](file://app/services/blockchain/scanner.py#L20-L96)
-- [chain.py](file://app/db/models/chain.py#L9-L17)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L18-L54)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L27-L46)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L20-L96)
+- [chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
 
 **Section sources**
-- [payments.py](file://app/api/v1/payments.py#L1-L62)
-- [scanner.py](file://app/services/blockchain/scanner.py#L1-L134)
-- [chain.py](file://app/db/models/chain.py#L1-L17)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L1-L62)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L1-L134)
+- [chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L1-L17)
 
 ## Detailed Component Analysis
 
@@ -207,18 +207,18 @@ BlockchainBase <|-- BSCBlockchain
   - Optionally define token metadata for supported assets
 
 **Diagram sources**
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [ethereum.py](file://app/blockchain/ethereum.py#L3-L6)
-- [bsc.py](file://app/blockchain/bsc.py#L3-L6)
-- [manager.py](file://app/blockchain/manager.py#L8-L32)
-- [chains.yaml](file://chains.yaml#L12-L23)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L3-L6)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L3-L6)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L12-L23)
 
 **Section sources**
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [ethereum.py](file://app/blockchain/ethereum.py#L1-L7)
-- [bsc.py](file://app/blockchain/bsc.py#L1-L7)
-- [manager.py](file://app/blockchain/manager.py#L8-L32)
-- [chains.yaml](file://chains.yaml#L1-L24)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L1-L7)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L1-L7)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
 
 ### Performance Optimization Techniques
 - Connection pooling and async engines:
@@ -252,14 +252,14 @@ UpdateDetected --> SaveLast
 ```
 
 **Diagram sources**
-- [scanner.py](file://app/services/blockchain/scanner.py#L20-L96)
-- [engine.py](file://app/db/engine.py#L22-L31)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L20-L96)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L22-L31)
 
 **Section sources**
-- [engine.py](file://app/db/engine.py#L19-L31)
-- [base.py](file://app/blockchain/base.py#L65-L81)
-- [scanner.py](file://app/services/blockchain/scanner.py#L14-L96)
-- [listener.py](file://app/workers/listener.py#L21-L46)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L19-L31)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L65-L81)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L96)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
 
 ### Error Handling Strategies, Circuit Breaker Patterns, and Graceful Degradation
 - Connectivity checks:
@@ -279,10 +279,10 @@ Recommended enhancements:
 - Health checks and degraded mode when critical subsystems fail
 
 **Section sources**
-- [base.py](file://app/blockchain/base.py#L45-L50)
-- [base.py](file://app/blockchain/base.py#L86-L92)
-- [payments.py](file://app/api/v1/payments.py#L56-L62)
-- [listener.py](file://app/workers/listener.py#L43-L46)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L45-L50)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L86-L92)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L56-L62)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L43-L46)
 
 ### Monitoring and Observability
 - Logging:
@@ -301,9 +301,9 @@ Recommended enhancements:
     - Worker actor executions
 
 **Section sources**
-- [logger.py](file://app/core/logger.py#L1-L4)
-- [listener.py](file://app/workers/listener.py#L9-L13)
-- [scanner.py](file://app/services/blockchain/scanner.py#L1-L10)
+- [logger.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/logger.py#L1-L4)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L9-L13)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L1-L10)
 
 ### Advanced Database Optimization
 - Connection management:
@@ -348,14 +348,14 @@ CHAIN_STATES ||--o{ PAYMENTS : "per-chain scanning"
 ```
 
 **Diagram sources**
-- [chain.py](file://app/db/models/chain.py#L9-L17)
-- [payment.py](file://app/db/models/payment.py#L41-L74)
+- [chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
 
 **Section sources**
-- [engine.py](file://app/db/engine.py#L22-L31)
-- [chain.py](file://app/db/models/chain.py#L1-L17)
-- [payment.py](file://app/db/models/payment.py#L1-L74)
-- [scanner.py](file://app/services/blockchain/scanner.py#L24-L49)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L22-L31)
+- [chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L1-L17)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L1-L74)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L24-L49)
 
 ### Troubleshooting Methodologies
 - Multi-component issues:
@@ -372,10 +372,10 @@ CHAIN_STATES ||--o{ PAYMENTS : "per-chain scanning"
   - Add targeted retries for transient RPC errors
 
 **Section sources**
-- [manager.py](file://app/blockchain/manager.py#L8-L32)
-- [config.py](file://app/core/config.py#L44-L56)
-- [listener.py](file://app/workers/listener.py#L21-L46)
-- [scanner.py](file://app/services/blockchain/scanner.py#L20-L96)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L56)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L20-L96)
 
 ### Architectural Decision Records, Design Patterns, and Anti-patterns
 - Decisions:
@@ -392,11 +392,11 @@ CHAIN_STATES ||--o{ PAYMENTS : "per-chain scanning"
   - Performing expensive operations in hot paths without caching or batching
 
 **Section sources**
-- [base.py](file://app/blockchain/base.py#L34-L39)
-- [config.py](file://app/core/config.py#L10-L122)
-- [manager.py](file://app/blockchain/manager.py#L8-L32)
-- [listener.py](file://app/workers/listener.py#L21-L46)
-- [scanner.py](file://app/services/blockchain/scanner.py#L14-L96)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L34-L39)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L122)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L96)
 
 ## Dependency Analysis
 The system exhibits low coupling and high cohesion:
@@ -420,23 +420,23 @@ SCNR --> BC
 ```
 
 **Diagram sources**
-- [payments.py](file://app/api/v1/payments.py#L1-L62)
-- [config.py](file://app/core/config.py#L1-L126)
-- [engine.py](file://app/db/engine.py#L1-L32)
-- [crypto.py](file://app/utils/crypto.py#L1-L90)
-- [manager.py](file://app/blockchain/manager.py#L1-L33)
-- [base.py](file://app/blockchain/base.py#L1-L146)
-- [ethereum.py](file://app/blockchain/ethereum.py#L1-L7)
-- [bsc.py](file://app/blockchain/bsc.py#L1-L7)
-- [listener.py](file://app/workers/listener.py#L1-L46)
-- [scanner.py](file://app/services/blockchain/scanner.py#L1-L134)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L1-L62)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L90)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L146)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L1-L7)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L1-L7)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L1-L46)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L1-L134)
 
 **Section sources**
-- [payments.py](file://app/api/v1/payments.py#L1-L62)
-- [manager.py](file://app/blockchain/manager.py#L1-L33)
-- [engine.py](file://app/db/engine.py#L1-L32)
-- [listener.py](file://app/workers/listener.py#L1-L46)
-- [scanner.py](file://app/services/blockchain/scanner.py#L1-L134)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L1-L62)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L1-L46)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L1-L134)
 
 ## Performance Considerations
 - Network I/O:
@@ -467,10 +467,10 @@ SCNR --> BC
   - Rotate to alternate RPC endpoints
 
 **Section sources**
-- [scanner.py](file://app/services/blockchain/scanner.py#L97-L134)
-- [chain.py](file://app/db/models/chain.py#L9-L17)
-- [listener.py](file://app/workers/listener.py#L21-L46)
-- [base.py](file://app/blockchain/base.py#L86-L92)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L97-L134)
+- [chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L86-L92)
 
 ## Conclusion
 The cTrip Payment Gateway demonstrates a robust foundation for multi-chain payments with strong separation of concerns, async-first design, and configuration-driven extensibility. By applying the optimization strategies, resilience patterns, and observability practices outlined here, architects and senior developers can scale the system while maintaining reliability and performance across complex distributed environments.
@@ -482,5 +482,5 @@ The cTrip Payment Gateway demonstrates a robust foundation for multi-chain payme
 - Chain configurations are loaded from a YAML file and merged into the runtime settings
 
 **Section sources**
-- [config.py](file://app/core/config.py#L10-L122)
-- [chains.yaml](file://chains.yaml#L1-L24)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L122)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)

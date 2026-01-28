@@ -2,19 +2,19 @@
 
 <cite>
 **Referenced Files in This Document**
-- [config.py](file://app/core/config.py)
-- [crypto.py](file://app/utils/crypto.py)
-- [manager.py](file://app/blockchain/manager.py)
-- [base.py](file://app/blockchain/base.py)
-- [w3.py](file://app/blockchain/w3.py)
-- [chains.yaml](file://chains.yaml)
-- [payments.py](file://app/api/v1/payments.py)
-- [dependencies.py](file://app/api/dependencies.py)
-- [engine.py](file://app/db/engine.py)
-- [server.py](file://server.py)
-- [docker-compose.yml](file://docker-compose.yml)
-- [Dockerfile](file://Dockerfile)
-- [webhook.py](file://app/services/webhook.py)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml)
+- [Dockerfile](https://github.com/rakibhossain72/ctrip/blob/main/Dockerfile)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py)
 </cite>
 
 ## Table of Contents
@@ -71,22 +71,22 @@ Workers --> Cfg
 ```
 
 **Diagram sources**
-- [server.py](file://server.py#L21-L47)
-- [config.py](file://app/core/config.py#L10-L126)
-- [crypto.py](file://app/utils/crypto.py#L5-L67)
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
-- [engine.py](file://app/db/engine.py#L1-L32)
-- [chains.yaml](file://chains.yaml#L1-L24)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L67)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
 
 **Section sources**
-- [server.py](file://server.py#L1-L56)
-- [config.py](file://app/core/config.py#L1-L126)
-- [crypto.py](file://app/utils/crypto.py#L1-L90)
-- [base.py](file://app/blockchain/base.py#L1-L146)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
-- [engine.py](file://app/db/engine.py#L1-L32)
-- [chains.yaml](file://chains.yaml#L1-L24)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L1-L56)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L90)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L146)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
 
 ## Core Components
 - Settings and secrets: centralizes environment-driven configuration, validates private keys, and enforces production secret key changes.
@@ -104,12 +104,12 @@ Key security-relevant responsibilities:
 - Outbound webhook signing
 
 **Section sources**
-- [config.py](file://app/core/config.py#L10-L126)
-- [crypto.py](file://app/utils/crypto.py#L5-L67)
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [engine.py](file://app/db/engine.py#L1-L32)
-- [dependencies.py](file://app/api/dependencies.py#L1-L15)
-- [webhook.py](file://app/services/webhook.py#L10-L45)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L67)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L1-L15)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L45)
 
 ## Architecture Overview
 The system initializes blockchain providers and HD wallet during application lifespan. Requests derive payment addresses using the HD wallet, while background workers interact with the database and blockchain networks.
@@ -132,10 +132,10 @@ API-->>Client : "201 Created Payment"
 ```
 
 **Diagram sources**
-- [payments.py](file://app/api/v1/payments.py#L13-L54)
-- [dependencies.py](file://app/api/dependencies.py#L11-L15)
-- [crypto.py](file://app/utils/crypto.py#L27-L46)
-- [engine.py](file://app/db/engine.py#L22-L31)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L13-L54)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L11-L15)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L27-L46)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L22-L31)
 
 ## Detailed Component Analysis
 
@@ -168,12 +168,12 @@ HDWalletManager <-- Settings : "uses mnemonic"
 ```
 
 **Diagram sources**
-- [crypto.py](file://app/utils/crypto.py#L5-L67)
-- [config.py](file://app/core/config.py#L58-L112)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L67)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L58-L112)
 
 **Section sources**
-- [crypto.py](file://app/utils/crypto.py#L5-L67)
-- [config.py](file://app/core/config.py#L58-L112)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L67)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L58-L112)
 
 ### Environment Variables, Configuration Encryption, and Secrets Management
 - Environment detection and dynamic database URL selection.
@@ -199,12 +199,12 @@ Chains --> End(["Ready"])
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L86-L122)
-- [chains.yaml](file://chains.yaml#L1-L24)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L86-L122)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L10-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
 
 ### Blockchain RPC Endpoint Security, Rate Limiting, and DDoS Protection
 - RPC endpoints are configured per-chain and fall back to a local Anvil instance if none configured.
@@ -236,14 +236,14 @@ BlockchainBase <-- Settings : "reads chains"
 ```
 
 **Diagram sources**
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [manager.py](file://app/blockchain/manager.py#L8-L32)
-- [config.py](file://app/core/config.py#L39-L42)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L39-L42)
 
 **Section sources**
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [manager.py](file://app/blockchain/manager.py#L8-L32)
-- [chains.yaml](file://chains.yaml#L1-L24)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
 
 ### Webhook Security (Outbound)
 - Optional HMAC-SHA256 signature header for outbound webhooks.
@@ -268,10 +268,10 @@ Service->>Service : "Log outcome"
 ```
 
 **Diagram sources**
-- [webhook.py](file://app/services/webhook.py#L12-L44)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L12-L44)
 
 **Section sources**
-- [webhook.py](file://app/services/webhook.py#L10-L45)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L45)
 
 ### Database Security
 - Asynchronous and synchronous engines with connection pooling and pre-ping enabled.
@@ -296,10 +296,10 @@ D --> SE["create_engine()"]
 ```
 
 **Diagram sources**
-- [engine.py](file://app/db/engine.py#L5-L31)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L5-L31)
 
 **Section sources**
-- [engine.py](file://app/db/engine.py#L1-L32)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
 
 ### Network Security, Firewall Configuration, and Secure Deployment
 - Application exposes port 8000; Redis and PostgreSQL are internal services.
@@ -326,12 +326,12 @@ App --> R
 ```
 
 **Diagram sources**
-- [docker-compose.yml](file://docker-compose.yml#L20-L50)
-- [Dockerfile](file://Dockerfile#L24-L32)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L20-L50)
+- [Dockerfile](https://github.com/rakibhossain72/ctrip/blob/main/Dockerfile#L24-L32)
 
 **Section sources**
-- [docker-compose.yml](file://docker-compose.yml#L1-L54)
-- [Dockerfile](file://Dockerfile#L1-L33)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L1-L54)
+- [Dockerfile](https://github.com/rakibhossain72/ctrip/blob/main/Dockerfile#L1-L33)
 
 ### Production Best Practices, Vulnerability Assessment, and Incident Response
 - Environment separation and secret management.
@@ -366,18 +366,18 @@ Server --> DBEng["engine.py"]
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L10-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [server.py](file://server.py#L21-L47)
-- [crypto.py](file://app/utils/crypto.py#L5-L67)
-- [manager.py](file://app/blockchain/manager.py#L8-L32)
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [engine.py](file://app/db/engine.py#L1-L32)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L67)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
 
 **Section sources**
-- [server.py](file://server.py#L21-L47)
-- [config.py](file://app/core/config.py#L10-L126)
-- [manager.py](file://app/blockchain/manager.py#L8-L32)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
 
 ## Performance Considerations
 - Gas price caching reduces RPC load.
@@ -399,10 +399,10 @@ Common issues and mitigations:
 - Webhook delivery failures: inspect logs for HTTP status codes and signature mismatches.
 
 **Section sources**
-- [config.py](file://app/core/config.py#L94-L112)
-- [manager.py](file://app/blockchain/manager.py#L8-L32)
-- [engine.py](file://app/db/engine.py#L22-L31)
-- [webhook.py](file://app/services/webhook.py#L39-L44)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L94-L112)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L22-L31)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L39-L44)
 
 ## Conclusion
 The cTrip Payment Gateway integrates HD wallet management, blockchain connectivity, and secure configuration through Pydantic settings. To achieve production-grade security, enforce strict secrets management, prefer HTTPS and rate limiting for RPC endpoints, implement robust webhook signing and replay protection, harden database and network configurations, and adopt continuous vulnerability assessment and incident response procedures.

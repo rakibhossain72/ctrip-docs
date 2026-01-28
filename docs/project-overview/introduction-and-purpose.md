@@ -2,20 +2,20 @@
 
 <cite>
 **Referenced Files in This Document**
-- [README.md](file://README.md)
-- [server.py](file://server.py)
-- [app/api/v1/payments.py](file://app/api/v1/payments.py)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py)
-- [app/db/models/payment.py](file://app/db/models/payment.py)
-- [app/utils/crypto.py](file://app/utils/crypto.py)
-- [app/core/config.py](file://app/core/config.py)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py)
-- [app/blockchain/base.py](file://app/blockchain/base.py)
-- [chains.yaml](file://chains.yaml)
-- [app/workers/webhook.py](file://app/workers/webhook.py)
-- [app/api/health.py](file://app/api/health.py)
-- [app/db/models/token.py](file://app/db/models/token.py)
+- [README.md](https://github.com/rakibhossain72/ctrip/blob/main/README.md)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py)
+- [app/api/health.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/health.py)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py)
 </cite>
 
 ## Table of Contents
@@ -104,22 +104,22 @@ D1 --> D2
 ```
 
 **Diagram sources**
-- [server.py](file://server.py#L21-L47)
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L12-L54)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L14-L95)
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py#L11-L53)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py#L19-L40)
-- [app/workers/webhook.py](file://app/workers/webhook.py#L13-L36)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L32)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L22-L145)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L41-L57)
-- [app/db/models/token.py](file://app/db/models/token.py#L6-L14)
-- [app/core/config.py](file://app/core/config.py#L10-L122)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L12-L54)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L95)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L11-L53)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L19-L40)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L36)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L145)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L57)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L14)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L122)
 
 **Section sources**
-- [README.md](file://README.md#L71-L78)
-- [server.py](file://server.py#L21-L47)
+- [README.md](https://github.com/rakibhossain72/ctrip/blob/main/README.md#L71-L78)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
 
 ## Core Components
 - Multi-chain configuration and discovery: Loads supported chains from configuration and instantiates appropriate blockchain providers.
@@ -131,14 +131,14 @@ D1 --> D2
 - Webhook delivery: Asynchronously dispatches payment status updates to merchant endpoints with optional signature verification.
 
 **Section sources**
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L32)
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L18-L54)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L20-L95)
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py#L16-L53)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py#L19-L40)
-- [app/workers/webhook.py](file://app/workers/webhook.py#L13-L36)
-- [app/utils/crypto.py](file://app/utils/crypto.py#L5-L66)
-- [app/core/config.py](file://app/core/config.py#L58-L71)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L18-L54)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L20-L95)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L16-L53)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L19-L40)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L36)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L66)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L58-L71)
 
 ## Architecture Overview
 cTrip’s runtime architecture integrates API requests, background workers, blockchain scanning, and settlement logic across multiple chains. The system initializes blockchain providers and HD wallet at startup, exposes REST endpoints for payment creation, and runs continuous background tasks to detect, confirm, and settle payments.
@@ -170,12 +170,12 @@ end
 ```
 
 **Diagram sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L18-L54)
-- [app/utils/crypto.py](file://app/utils/crypto.py#L27-L46)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L20-L95)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L97-L133)
-- [app/workers/webhook.py](file://app/workers/webhook.py#L14-L36)
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py#L16-L53)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L18-L54)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L27-L46)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L20-L95)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L97-L133)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L14-L36)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L16-L53)
 
 ## Detailed Component Analysis
 
@@ -201,14 +201,14 @@ Expiry --> Done(["Return Payment Details"])
 ```
 
 **Diagram sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L25-L54)
-- [app/utils/crypto.py](file://app/utils/crypto.py#L27-L46)
-- [app/db/models/token.py](file://app/db/models/token.py#L6-L14)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L25-L54)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L27-L46)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L14)
 
 **Section sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L18-L54)
-- [app/utils/crypto.py](file://app/utils/crypto.py#L5-L66)
-- [app/db/models/token.py](file://app/db/models/token.py#L6-L14)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L18-L54)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L66)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L14)
 
 ### Multi-Chain Support and Discovery
 - Reads chain configurations from a YAML file
@@ -239,13 +239,13 @@ AnvilBlockchain --> BlockchainBase : "inherits"
 ```
 
 **Diagram sources**
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L32)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L22-L145)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L145)
 
 **Section sources**
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L32)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L22-L145)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L145)
 
 ### Real-Time Payment Detection and Confirmation
 - Scans a bounded range of blocks per cycle
@@ -274,12 +274,12 @@ UpdateState --> ScanEnd
 ```
 
 **Diagram sources**
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L20-L95)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L97-L133)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L20-L95)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L97-L133)
 
 **Section sources**
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L14-L133)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L21-L38)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L133)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L21-L38)
 
 ### Fund Sweeping and Settlement Preparation
 - Selects confirmed payments eligible for settlement
@@ -299,12 +299,12 @@ Any --> |No more| SweepEnd
 ```
 
 **Diagram sources**
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py#L16-L53)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py#L19-L40)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L16-L53)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L19-L40)
 
 **Section sources**
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py#L11-L53)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py#L19-L40)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L11-L53)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L19-L40)
 
 ### Webhook Delivery Pipeline
 - On confirmation, the scanner enqueues a webhook task
@@ -328,12 +328,12 @@ end
 ```
 
 **Diagram sources**
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L117-L131)
-- [app/workers/webhook.py](file://app/workers/webhook.py#L14-L36)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L117-L131)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L14-L36)
 
 **Section sources**
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L117-L131)
-- [app/workers/webhook.py](file://app/workers/webhook.py#L13-L36)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L117-L131)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L36)
 
 ## Dependency Analysis
 - API depends on database models and configuration for validation and persistence
@@ -359,20 +359,20 @@ BM --> CH["chains.yaml"]
 ```
 
 **Diagram sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L18-L54)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L41-L57)
-- [app/utils/crypto.py](file://app/utils/crypto.py#L5-L66)
-- [app/services/blockchain/scanner.py](file://app/services/blockchain/scanner.py#L20-L95)
-- [app/services/blockchain/sweeper.py](file://app/services/blockchain/sweeper.py#L16-L53)
-- [app/workers/sweeper.py](file://app/workers/sweeper.py#L19-L40)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L32)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [app/core/config.py](file://app/core/config.py#L44-L56)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L18-L54)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L57)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L66)
+- [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L20-L95)
+- [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L16-L53)
+- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L19-L40)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L56)
 
 **Section sources**
-- [app/core/config.py](file://app/core/config.py#L44-L56)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L32)
-- [chains.yaml](file://chains.yaml#L1-L24)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L56)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
 
 ## Performance Considerations
 - Asynchronous design: FastAPI and async Web3 minimize blocking during I/O-heavy operations.
@@ -389,11 +389,11 @@ BM --> CH["chains.yaml"]
 - Database migrations: Use the migration helper script to apply schema changes.
 
 **Section sources**
-- [app/api/health.py](file://app/api/health.py#L5-L7)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [app/core/config.py](file://app/core/config.py#L94-L102)
-- [app/workers/webhook.py](file://app/workers/webhook.py#L33-L36)
-- [README.md](file://README.md#L56-L59)
+- [app/api/health.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/health.py#L5-L7)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L94-L102)
+- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L33-L36)
+- [README.md](https://github.com/rakibhossain72/ctrip/blob/main/README.md#L56-L59)
 
 ## Conclusion
 cTrip delivers a focused, high-performance solution for multi-chain crypto payments. By combining real-time detection, confirmation monitoring, webhook automation, and a clear path toward automated fund sweeping, it enables merchants and developers to integrate cryptocurrency payments efficiently. Its modular architecture, async-first design, and strong configuration model position it as a practical choice for production deployments across diverse blockchain ecosystems.

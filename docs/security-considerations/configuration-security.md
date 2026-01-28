@@ -2,18 +2,18 @@
 
 <cite>
 **Referenced Files in This Document**
-- [app/core/config.py](file://app/core/config.py)
-- [chains.yaml](file://chains.yaml)
-- [docker-compose.yml](file://docker-compose.yml)
-- [Dockerfile](file://Dockerfile)
-- [server.py](file://server.py)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py)
-- [app/blockchain/base.py](file://app/blockchain/base.py)
-- [app/utils/crypto.py](file://app/utils/crypto.py)
-- [app/db/engine.py](file://app/db/engine.py)
-- [app/api/dependencies.py](file://app/api/dependencies.py)
-- [app/services/webhook.py](file://app/services/webhook.py)
-- [requirements.txt](file://requirements.txt)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml)
+- [Dockerfile](https://github.com/rakibhossain72/ctrip/blob/main/Dockerfile)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py)
+- [app/api/dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt)
 </cite>
 
 ## Table of Contents
@@ -61,22 +61,22 @@ srv --> deps
 ```
 
 **Diagram sources**
-- [app/core/config.py](file://app/core/config.py#L10-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [server.py](file://server.py#L21-L47)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L32)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L22-L44)
-- [app/db/engine.py](file://app/db/engine.py#L5-L31)
-- [app/api/dependencies.py](file://app/api/dependencies.py#L5-L14)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L44)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L5-L31)
+- [app/api/dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L5-L14)
 
 **Section sources**
-- [app/core/config.py](file://app/core/config.py#L10-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [server.py](file://server.py#L21-L47)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L32)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L22-L44)
-- [app/db/engine.py](file://app/db/engine.py#L5-L31)
-- [app/api/dependencies.py](file://app/api/dependencies.py#L5-L14)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L44)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L5-L31)
+- [app/api/dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L5-L14)
 
 ## Core Components
 - Settings model encapsulates environment, database URLs, RPC endpoints, Redis, chains YAML path, mnemonic, webhook URL/secret, private key, and application secret. It validates Ethereum private keys and enforces production secret key changes.
@@ -93,11 +93,11 @@ Security-relevant behaviors:
 - Environment variables are bound to settings with case-insensitive lookup and ignored extras.
 
 **Section sources**
-- [app/core/config.py](file://app/core/config.py#L10-L126)
-- [chains.yaml](file://chains.yaml#L12-L24)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L32)
-- [app/db/engine.py](file://app/db/engine.py#L5-L31)
-- [app/api/dependencies.py](file://app/api/dependencies.py#L5-L14)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L12-L24)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L5-L31)
+- [app/api/dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L5-L14)
 
 ## Architecture Overview
 The configuration architecture integrates environment variables, static YAML, and runtime initialization. The FastAPI lifespan loads chain configurations, initializes HD wallet, seeds chain states, and starts background workers. Blockchain clients are created from settings and used by services.
@@ -123,10 +123,10 @@ Life-->>App : Blockchains ready
 ```
 
 **Diagram sources**
-- [app/core/config.py](file://app/core/config.py#L44-L56)
-- [chains.yaml](file://chains.yaml#L12-L24)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L32)
-- [server.py](file://server.py#L21-L47)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L56)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L12-L24)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
 
 ## Detailed Component Analysis
 
@@ -145,8 +145,8 @@ Mitigations and best practices:
 - Use secrets managers or vaults for dynamic rotation.
 
 **Section sources**
-- [app/core/config.py](file://app/core/config.py#L115-L122)
-- [app/core/config.py](file://app/core/config.py#L94-L112)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L115-L122)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L94-L112)
 
 ### Encryption at Rest
 - Database encryption: PostgreSQL supports transparent data encryption and TLS for connections. Configure database TLS and encryption-at-rest policies externally to the application.
@@ -159,8 +159,8 @@ Recommendations:
 - Avoid logging secrets; sanitize logs and disable verbose secrets output.
 
 **Section sources**
-- [app/core/config.py](file://app/core/config.py#L18-L26)
-- [app/db/engine.py](file://app/db/engine.py#L22-L31)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L18-L26)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L22-L31)
 
 ### Access Control Mechanisms
 - Network isolation: Database and Redis containers are isolated in Docker Compose. Restrict service exposure to internal networks.
@@ -173,9 +173,9 @@ Recommendations:
 - Enforce least privilege for database users and Redis access.
 
 **Section sources**
-- [docker-compose.yml](file://docker-compose.yml#L4-L18)
-- [docker-compose.yml](file://docker-compose.yml#L26-L32)
-- [Dockerfile](file://Dockerfile#L27-L32)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L4-L18)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L26-L32)
+- [Dockerfile](https://github.com/rakibhossain72/ctrip/blob/main/Dockerfile#L27-L32)
 
 ### Configuration File Security for chains.yaml
 - Validation: The settings property safely loads chains.yaml using safe YAML parsing. Errors are caught and logged, returning an empty list to prevent startup failures.
@@ -205,13 +205,13 @@ LogErr --> End
 ```
 
 **Diagram sources**
-- [app/core/config.py](file://app/core/config.py#L44-L56)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L12-L26)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L56)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L12-L26)
 
 **Section sources**
-- [app/core/config.py](file://app/core/config.py#L44-L56)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L12-L26)
-- [chains.yaml](file://chains.yaml#L12-L24)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L56)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L12-L26)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L12-L24)
 
 ### Secrets Management Strategies
 - API keys and RPC endpoints:
@@ -229,10 +229,10 @@ Recommendations:
 - Encrypt secrets at rest and in transit; enforce strict access controls.
 
 **Section sources**
-- [app/core/config.py](file://app/core/config.py#L28-L37)
-- [app/core/config.py](file://app/core/config.py#L74-L82)
-- [docker-compose.yml](file://docker-compose.yml#L27-L32)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L13-L26)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L28-L37)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L74-L82)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L27-L32)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L13-L26)
 
 ### Configuration Validation, Defaults, and Runtime Updates
 - Validation:
@@ -250,8 +250,8 @@ Recommendations:
 - Audit and log configuration changes at startup and on reload.
 
 **Section sources**
-- [app/core/config.py](file://app/core/config.py#L94-L112)
-- [app/core/config.py](file://app/core/config.py#L115-L122)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L94-L112)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L115-L122)
 
 ### Secure Deployment Patterns
 - Containerization:
@@ -268,8 +268,8 @@ Recommendations:
 - Store secrets outside containers; mount only read-only where possible.
 
 **Section sources**
-- [Dockerfile](file://Dockerfile#L27-L32)
-- [docker-compose.yml](file://docker-compose.yml#L20-L36)
+- [Dockerfile](https://github.com/rakibhossain72/ctrip/blob/main/Dockerfile#L27-L32)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L20-L36)
 
 ### Configuration Auditing and Change Management
 - Auditing:
@@ -284,8 +284,8 @@ Recommendations:
 - Require peer review for any configuration changes affecting security.
 
 **Section sources**
-- [app/core/config.py](file://app/core/config.py#L54-L56)
-- [server.py](file://server.py#L21-L47)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L54-L56)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
 
 ### Protecting Configuration Data in Transit and Storage
 - In transit:
@@ -300,8 +300,8 @@ Recommendations:
 - Use encrypted storage for backups and snapshots.
 
 **Section sources**
-- [app/blockchain/base.py](file://app/blockchain/base.py#L34-L36)
-- [app/services/webhook.py](file://app/services/webhook.py#L12-L36)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L34-L36)
+- [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L12-L36)
 
 ### Secure Backup Practices
 - Back up .env and chains.yaml separately from application binaries.
@@ -325,21 +325,21 @@ App --> Deps["Dependencies (app/api/dependencies.py)"]
 ```
 
 **Diagram sources**
-- [app/core/config.py](file://app/core/config.py#L115-L122)
-- [chains.yaml](file://chains.yaml#L12-L24)
-- [app/db/engine.py](file://app/db/engine.py#L5-L31)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L32)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L22-L44)
-- [server.py](file://server.py#L21-L47)
-- [app/api/dependencies.py](file://app/api/dependencies.py#L5-L14)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L115-L122)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L12-L24)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L5-L31)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L44)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
+- [app/api/dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L5-L14)
 
 **Section sources**
-- [app/core/config.py](file://app/core/config.py#L115-L122)
-- [app/db/engine.py](file://app/db/engine.py#L5-L31)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L32)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L22-L44)
-- [server.py](file://server.py#L21-L47)
-- [app/api/dependencies.py](file://app/api/dependencies.py#L5-L14)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L115-L122)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L5-L31)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L44)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
+- [app/api/dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L5-L14)
 
 ## Performance Considerations
 - YAML parsing is lightweight; caching parsed chains in memory avoids repeated disk I/O.
@@ -364,9 +364,9 @@ Common configuration issues and mitigations:
   - Mitigation: Provide rpc_url in chains.yaml or configure settings.rpc_url.
 
 **Section sources**
-- [app/core/config.py](file://app/core/config.py#L94-L112)
-- [app/core/config.py](file://app/core/config.py#L44-L56)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L12-L30)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L94-L112)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L56)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L12-L30)
 
 ## Conclusion
 The cTrip Payment Gateway employs a robust configuration model with environment-driven settings, safe YAML loading, and validators for sensitive data. To harden security further, adopt secrets managers, enforce encryption at rest and in transit, implement strict access controls, and establish auditing and change management processes. These steps will strengthen the overall configuration security posture while maintaining operational reliability.
@@ -382,6 +382,6 @@ The cTrip Payment Gateway employs a robust configuration model with environment-
   - name, rpc_url, tokens (symbol, address, decimals)
 
 **Section sources**
-- [docker-compose.yml](file://docker-compose.yml#L26-L32)
-- [app/core/config.py](file://app/core/config.py#L12-L82)
-- [chains.yaml](file://chains.yaml#L12-L24)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L26-L32)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L12-L82)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L12-L24)

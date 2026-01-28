@@ -2,18 +2,18 @@
 
 <cite>
 **Referenced Files in This Document**
-- [ethereum.py](file://app/blockchain/ethereum.py)
-- [base.py](file://app/blockchain/base.py)
-- [manager.py](file://app/blockchain/manager.py)
-- [w3.py](file://app/blockchain/w3.py)
-- [config.py](file://app/core/config.py)
-- [scanner.py](file://app/services/blockchain/scanner.py)
-- [listener.py](file://app/workers/listener.py)
-- [webhook.py](file://app/workers/webhook.py)
-- [payment.py](file://app/db/models/payment.py)
-- [chain.py](file://app/db/models/chain.py)
-- [token.py](file://app/db/models/token.py)
-- [chains.yaml](file://chains.yaml)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py)
+- [chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py)
+- [token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml)
 </cite>
 
 ## Table of Contents
@@ -69,32 +69,32 @@ SCANNER --> WEBHOOK_ACTOR
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L10-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [manager.py](file://app/blockchain/manager.py#L8-L33)
-- [ethereum.py](file://app/blockchain/ethereum.py#L3-L7)
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
-- [listener.py](file://app/workers/listener.py#L21-L46)
-- [scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
-- [webhook.py](file://app/workers/webhook.py#L13-L37)
-- [payment.py](file://app/db/models/payment.py#L41-L74)
-- [chain.py](file://app/db/models/chain.py#L9-L17)
-- [token.py](file://app/db/models/token.py#L6-L15)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L3-L7)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
+- [chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
+- [token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L10-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [manager.py](file://app/blockchain/manager.py#L8-L33)
-- [ethereum.py](file://app/blockchain/ethereum.py#L3-L7)
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
-- [listener.py](file://app/workers/listener.py#L21-L46)
-- [scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
-- [webhook.py](file://app/workers/webhook.py#L13-L37)
-- [payment.py](file://app/db/models/payment.py#L41-L74)
-- [chain.py](file://app/db/models/chain.py#L9-L17)
-- [token.py](file://app/db/models/token.py#L6-L15)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L3-L7)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
+- [chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
+- [token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15)
 
 ## Core Components
 - EthereumBlockchain: Extends the base class with Ethereum mainnet defaults (chain ID 1, no POA middleware).
@@ -107,16 +107,16 @@ SCANNER --> WEBHOOK_ACTOR
 - Models: Define payment lifecycle, chain state, and token metadata.
 
 **Section sources**
-- [ethereum.py](file://app/blockchain/ethereum.py#L3-L7)
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [manager.py](file://app/blockchain/manager.py#L8-L33)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
-- [scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
-- [listener.py](file://app/workers/listener.py#L21-L46)
-- [webhook.py](file://app/workers/webhook.py#L13-L37)
-- [payment.py](file://app/db/models/payment.py#L41-L74)
-- [chain.py](file://app/db/models/chain.py#L9-L17)
-- [token.py](file://app/db/models/token.py#L6-L15)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L3-L7)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
+- [chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
+- [token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15)
 
 ## Architecture Overview
 The system integrates configuration-driven blockchain instantiation, asynchronous scanning, and confirmation logic with optional webhook notifications.
@@ -141,13 +141,13 @@ W-->>S : Acknowledgement
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L10-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [manager.py](file://app/blockchain/manager.py#L8-L33)
-- [ethereum.py](file://app/blockchain/ethereum.py#L3-L7)
-- [scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
-- [listener.py](file://app/workers/listener.py#L21-L46)
-- [webhook.py](file://app/workers/webhook.py#L13-L37)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L3-L7)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
 
 ## Detailed Component Analysis
 
@@ -181,12 +181,12 @@ EthereumBlockchain --|> BlockchainBase : "inherits"
 ```
 
 **Diagram sources**
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [ethereum.py](file://app/blockchain/ethereum.py#L3-L7)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L3-L7)
 
 **Section sources**
-- [ethereum.py](file://app/blockchain/ethereum.py#L3-L7)
-- [base.py](file://app/blockchain/base.py#L22-L146)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L3-L7)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
 
 ### BlockchainBase: Gas Management and Transaction Building
 - Gas price caching: Stores last fetched gas price and timestamp, caches for a short duration.
@@ -211,10 +211,10 @@ ApplyBuffer --> ReturnTx["Return transaction dict"]
 ```
 
 **Diagram sources**
-- [base.py](file://app/blockchain/base.py#L93-L133)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L93-L133)
 
 **Section sources**
-- [base.py](file://app/blockchain/base.py#L65-L146)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L65-L146)
 
 ### Configuration and RPC Setup
 - Settings: Centralized configuration including RPC URL, chains YAML path, and private key validation.
@@ -235,17 +235,17 @@ W-->>C : Return E.w3
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L28-L56)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [manager.py](file://app/blockchain/manager.py#L8-L33)
-- [ethereum.py](file://app/blockchain/ethereum.py#L3-L7)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L28-L56)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L3-L7)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L28-L56)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [manager.py](file://app/blockchain/manager.py#L8-L33)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L28-L56)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
 
 ### Transaction Monitoring and Confirmation
 - ScannerService:
@@ -276,20 +276,20 @@ S->>WA : send_webhook_task(payload)
 ```
 
 **Diagram sources**
-- [listener.py](file://app/workers/listener.py#L21-L46)
-- [scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
-- [webhook.py](file://app/workers/webhook.py#L13-L37)
-- [payment.py](file://app/db/models/payment.py#L41-L74)
-- [chain.py](file://app/db/models/chain.py#L9-L17)
-- [token.py](file://app/db/models/token.py#L6-L15)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
+- [chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
+- [token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15)
 
 **Section sources**
-- [scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
-- [listener.py](file://app/workers/listener.py#L21-L46)
-- [webhook.py](file://app/workers/webhook.py#L13-L37)
-- [payment.py](file://app/db/models/payment.py#L41-L74)
-- [chain.py](file://app/db/models/chain.py#L9-L17)
-- [token.py](file://app/db/models/token.py#L6-L15)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
+- [chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
+- [token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15)
 
 ### Data Models for Payments and Chain State
 - Payment: Tracks chain, address, amount, status, confirmations, detection block, expiration, and timestamps.
@@ -328,14 +328,14 @@ CHAIN_STATE ||--o{ PAYMENT : "chain"
 ```
 
 **Diagram sources**
-- [payment.py](file://app/db/models/payment.py#L41-L74)
-- [token.py](file://app/db/models/token.py#L6-L15)
-- [chain.py](file://app/db/models/chain.py#L9-L17)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
+- [token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15)
+- [chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
 
 **Section sources**
-- [payment.py](file://app/db/models/payment.py#L41-L74)
-- [token.py](file://app/db/models/token.py#L6-L15)
-- [chain.py](file://app/db/models/chain.py#L9-L17)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
+- [token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15)
+- [chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
 
 ## Dependency Analysis
 - Manager depends on settings and chains YAML to instantiate EthereumBlockchain.
@@ -358,32 +358,32 @@ SCN --> DB["Models (payment.py, chain.py, token.py)"]
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L10-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [manager.py](file://app/blockchain/manager.py#L8-L33)
-- [ethereum.py](file://app/blockchain/ethereum.py#L3-L7)
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
-- [scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
-- [listener.py](file://app/workers/listener.py#L21-L46)
-- [webhook.py](file://app/workers/webhook.py#L13-L37)
-- [payment.py](file://app/db/models/payment.py#L41-L74)
-- [chain.py](file://app/db/models/chain.py#L9-L17)
-- [token.py](file://app/db/models/token.py#L6-L15)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L3-L7)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
+- [chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
+- [token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L10-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [manager.py](file://app/blockchain/manager.py#L8-L33)
-- [ethereum.py](file://app/blockchain/ethereum.py#L3-L7)
-- [base.py](file://app/blockchain/base.py#L22-L146)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
-- [scanner.py](file://app/services/blockchain/scanner.py#L14-L134)
-- [listener.py](file://app/workers/listener.py#L21-L46)
-- [webhook.py](file://app/workers/webhook.py#L13-L37)
-- [payment.py](file://app/db/models/payment.py#L41-L74)
-- [chain.py](file://app/db/models/chain.py#L9-L17)
-- [token.py](file://app/db/models/token.py#L6-L15)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L3-L7)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
+- [chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
+- [token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15)
 
 ## Performance Considerations
 - Gas price caching: Reduces repeated RPC calls for gas price by caching for a short duration.
@@ -406,12 +406,12 @@ SCN --> DB["Models (payment.py, chain.py, token.py)"]
 - Private key validation: Settings enforce valid Ethereum private keys; ensure private_key is set and correct.
 
 **Section sources**
-- [base.py](file://app/blockchain/base.py#L45-L50)
-- [base.py](file://app/blockchain/base.py#L86-L92)
-- [base.py](file://app/blockchain/base.py#L141-L142)
-- [config.py](file://app/core/config.py#L94-L102)
-- [webhook.py](file://app/workers/webhook.py#L13-L37)
-- [chain.py](file://app/db/models/chain.py#L9-L17)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L45-L50)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L86-L92)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L141-L142)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L94-L102)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
+- [chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
 
 ## Conclusion
 The Ethereum implementation leverages a robust base class for gas management, transaction building, and receipt handling, specialized for mainnet defaults. Configuration-driven instantiation, asynchronous scanning, and confirmation logic provide a scalable foundation for payment detection and settlement. Production deployments should focus on reliable RPC providers, appropriate confirmation thresholds, and secure configuration management.
@@ -428,9 +428,9 @@ The Ethereum implementation leverages a robust base class for gas management, tr
   - Set webhook_url and webhook_secret if notifications are required.
 
 **Section sources**
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [config.py](file://app/core/config.py#L58-L82)
-- [config.py](file://app/core/config.py#L94-L102)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L58-L82)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L94-L102)
 
 ### Best Practices for Production Deployments
 - Use high-availability RPC endpoints for mainnet.

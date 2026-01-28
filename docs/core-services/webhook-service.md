@@ -2,16 +2,16 @@
 
 <cite>
 **Referenced Files in This Document**
-- [webhook.py](file://app/services/webhook.py)
-- [webhook.py](file://app/workers/webhook.py)
-- [scanner.py](file://app/services/blockchain/scanner.py)
-- [sweeper.py](file://app/services/blockchain/sweeper.py)
-- [config.py](file://app/core/config.py)
-- [__init__.py](file://app/workers/__init__.py)
-- [payments.py](file://app/api/v1/payments.py)
-- [payment.py](file://app/db/models/payment.py)
-- [payment.py](file://app/schemas/payment.py)
-- [README.md](file://README.md)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py)
+- [__init__.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/__init__.py)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/schemas/payment.py)
+- [README.md](https://github.com/rakibhossain72/ctrip/blob/main/README.md)
 </cite>
 
 ## Table of Contents
@@ -61,18 +61,18 @@ SVC --> ENDPT
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L63-L71)
-- [__init__.py](file://app/workers/__init__.py#L1-L8)
-- [webhook.py](file://app/workers/webhook.py#L13-L36)
-- [webhook.py](file://app/services/webhook.py#L10-L44)
-- [scanner.py](file://app/services/blockchain/scanner.py#L97-L133)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L63-L71)
+- [__init__.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/__init__.py#L1-L8)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L36)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L44)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L97-L133)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L63-L71)
-- [__init__.py](file://app/workers/__init__.py#L1-L8)
-- [webhook.py](file://app/workers/webhook.py#L13-L36)
-- [webhook.py](file://app/services/webhook.py#L10-L44)
-- [scanner.py](file://app/services/blockchain/scanner.py#L97-L133)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L63-L71)
+- [__init__.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/__init__.py#L1-L8)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L36)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L44)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L97-L133)
 
 ## Core Components
 - WebhookService: Asynchronous HTTP client that sends JSON payloads and optional HMAC signatures.
@@ -87,10 +87,10 @@ Key responsibilities:
 - Trigger: Webhook emission occurs when a payment transitions to confirmed.
 
 **Section sources**
-- [webhook.py](file://app/services/webhook.py#L10-L44)
-- [webhook.py](file://app/workers/webhook.py#L13-L36)
-- [scanner.py](file://app/services/blockchain/scanner.py#L97-L133)
-- [config.py](file://app/core/config.py#L63-L71)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L44)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L36)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L97-L133)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L63-L71)
 
 ## Architecture Overview
 The webhook pipeline integrates blockchain scanning, internal state transitions, and asynchronous delivery via Dramatiq.
@@ -112,9 +112,9 @@ Actor-->>Scanner : "Task processed"
 ```
 
 **Diagram sources**
-- [scanner.py](file://app/services/blockchain/scanner.py#L97-L133)
-- [webhook.py](file://app/workers/webhook.py#L13-L36)
-- [webhook.py](file://app/services/webhook.py#L10-L44)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L97-L133)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L36)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L44)
 
 ## Detailed Component Analysis
 
@@ -150,10 +150,10 @@ LogEx --> End
 ```
 
 **Diagram sources**
-- [webhook.py](file://app/services/webhook.py#L10-L44)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L44)
 
 **Section sources**
-- [webhook.py](file://app/services/webhook.py#L10-L44)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L44)
 
 ### Dramatiq Actor: send_webhook_task
 Responsibilities:
@@ -185,11 +185,11 @@ end
 ```
 
 **Diagram sources**
-- [webhook.py](file://app/workers/webhook.py#L13-L36)
-- [webhook.py](file://app/services/webhook.py#L10-L44)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L36)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L44)
 
 **Section sources**
-- [webhook.py](file://app/workers/webhook.py#L13-L36)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L36)
 
 ### Webhook Triggering: ScannerService.confirm_payments
 Responsibilities:
@@ -221,12 +221,12 @@ Wait --> Done
 ```
 
 **Diagram sources**
-- [scanner.py](file://app/services/blockchain/scanner.py#L97-L133)
-- [config.py](file://app/core/config.py#L63-L71)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L97-L133)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L63-L71)
 
 **Section sources**
-- [scanner.py](file://app/services/blockchain/scanner.py#L97-L133)
-- [config.py](file://app/core/config.py#L63-L71)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L97-L133)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L63-L71)
 
 ### Payload Validation and Supported Events
 Supported event type:
@@ -245,8 +245,8 @@ Validation behavior:
 - The actor and service do not enforce strict schema checks; downstream consumers should validate.
 
 **Section sources**
-- [scanner.py](file://app/services/blockchain/scanner.py#L117-L131)
-- [payment.py](file://app/db/models/payment.py#L21-L38)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L117-L131)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L21-L38)
 
 ### Security Verification Using HMAC Signatures
 Signature computation:
@@ -263,8 +263,8 @@ Notes:
 - Consumers must independently manage and protect the shared secret.
 
 **Section sources**
-- [webhook.py](file://app/services/webhook.py#L25-L31)
-- [config.py](file://app/core/config.py#L68-L71)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L25-L31)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L68-L71)
 
 ### Webhook URL Configuration and Secret Management
 Configuration keys:
@@ -281,7 +281,7 @@ Operational guidance:
 - Keep secrets out of source control; use environment variables.
 
 **Section sources**
-- [config.py](file://app/core/config.py#L63-L71)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L63-L71)
 
 ### Integration with Dramatiq Workers
 Worker startup:
@@ -292,9 +292,9 @@ Actor configuration:
 - send_webhook_task is decorated with max_retries to enable automatic retries.
 
 **Section sources**
-- [__init__.py](file://app/workers/__init__.py#L1-L8)
-- [webhook.py](file://app/workers/webhook.py#L13-L36)
-- [README.md](file://README.md#L66-L69)
+- [__init__.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/__init__.py#L1-L8)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L36)
+- [README.md](https://github.com/rakibhossain72/ctrip/blob/main/README.md#L66-L69)
 
 ### Error Handling Strategies
 - HTTP errors: Logged with status code; returns failure.
@@ -307,8 +307,8 @@ Recommended improvements (not currently implemented):
 - Idempotency keys to prevent duplicate processing.
 
 **Section sources**
-- [webhook.py](file://app/services/webhook.py#L39-L44)
-- [webhook.py](file://app/workers/webhook.py#L26-L30)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L39-L44)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L26-L30)
 
 ### Payload Formatting and Event Types
 Event type:
@@ -327,8 +327,8 @@ Note:
 - Additional events (e.g., created, failed) are not emitted by the scanner.
 
 **Section sources**
-- [scanner.py](file://app/services/blockchain/scanner.py#L117-L131)
-- [payment.py](file://app/db/models/payment.py#L21-L38)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L117-L131)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L21-L38)
 
 ### Webhook Endpoint Testing Procedures
 Recommended testing steps:
@@ -342,8 +342,8 @@ Operational tips:
 - Monitor logs for HTTP errors and actor exceptions.
 
 **Section sources**
-- [README.md](file://README.md#L66-L69)
-- [webhook.py](file://app/services/webhook.py#L39-L44)
+- [README.md](https://github.com/rakibhossain72/ctrip/blob/main/README.md#L66-L69)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L39-L44)
 
 ## Dependency Analysis
 High-level dependencies:
@@ -364,18 +364,18 @@ Broker <- --> Actor
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L63-L71)
-- [scanner.py](file://app/services/blockchain/scanner.py#L97-L133)
-- [webhook.py](file://app/workers/webhook.py#L13-L36)
-- [webhook.py](file://app/services/webhook.py#L10-L44)
-- [__init__.py](file://app/workers/__init__.py#L1-L8)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L63-L71)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L97-L133)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L36)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L44)
+- [__init__.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/__init__.py#L1-L8)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L63-L71)
-- [scanner.py](file://app/services/blockchain/scanner.py#L97-L133)
-- [webhook.py](file://app/workers/webhook.py#L13-L36)
-- [webhook.py](file://app/services/webhook.py#L10-L44)
-- [__init__.py](file://app/workers/__init__.py#L1-L8)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L63-L71)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L97-L133)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L36)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L44)
+- [__init__.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/__init__.py#L1-L8)
 
 ## Performance Considerations
 - Async HTTP client reduces blocking overhead.
@@ -401,9 +401,9 @@ Common issues and resolutions:
   - Ensure payments reach the confirmed state.
 
 **Section sources**
-- [webhook.py](file://app/services/webhook.py#L39-L44)
-- [webhook.py](file://app/workers/webhook.py#L26-L30)
-- [config.py](file://app/core/config.py#L63-L71)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L39-L44)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L26-L30)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L63-L71)
 
 ## Conclusion
 The Webhook Service provides a focused, asynchronous notification mechanism for payment confirmations. It supports HMAC-signed payloads, integrates with Dramatiq for reliable delivery, and can be extended to support additional events and improved retry strategies. Proper configuration of webhook URL and secret, combined with consumer-side signature verification, ensures secure and reliable integrations.
@@ -417,18 +417,18 @@ The Webhook Service provides a focused, asynchronous notification mechanism for 
   - Fields: payment_id, status, address, amount, chain, token_id (optional)
 
 **Section sources**
-- [scanner.py](file://app/services/blockchain/scanner.py#L117-L131)
-- [payment.py](file://app/db/models/payment.py#L21-L38)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L117-L131)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L21-L38)
 
 ### Appendix B: Configuration Reference
 - webhook_url: Target endpoint URL for webhooks.
 - webhook_secret: Shared secret for HMAC signing.
 
 **Section sources**
-- [config.py](file://app/core/config.py#L63-L71)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L63-L71)
 
 ### Appendix C: Worker Startup and Commands
 - Start workers using the dramatiq command with the webhook module.
 
 **Section sources**
-- [README.md](file://README.md#L66-L69)
+- [README.md](https://github.com/rakibhossain72/ctrip/blob/main/README.md#L66-L69)

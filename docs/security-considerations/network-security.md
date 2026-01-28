@@ -2,22 +2,22 @@
 
 <cite>
 **Referenced Files in This Document**
-- [base.py](file://app/blockchain/base.py)
-- [manager.py](file://app/blockchain/manager.py)
-- [w3.py](file://app/blockchain/w3.py)
-- [config.py](file://app/core/config.py)
-- [server.py](file://server.py)
-- [ethereum.py](file://app/blockchain/ethereum.py)
-- [bsc.py](file://app/blockchain/bsc.py)
-- [chains.yaml](file://chains.yaml)
-- [requirements.txt](file://requirements.txt)
-- [docker-compose.yml](file://docker-compose.yml)
-- [payments.py](file://app/api/v1/payments.py)
-- [dependencies.py](file://app/api/dependencies.py)
-- [scanner.py](file://app/services/blockchain/scanner.py)
-- [sweeper.py](file://app/services/blockchain/sweeper.py)
-- [listener.py](file://app/workers/listener.py)
-- [sweeper_worker.py](file://app/workers/sweeper.py)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py)
+- [sweeper_worker.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py)
 </cite>
 
 ## Table of Contents
@@ -81,27 +81,27 @@ Compose --> Cfg
 ```
 
 **Diagram sources**
-- [server.py](file://server.py#L1-L56)
-- [payments.py](file://app/api/v1/payments.py#L1-L62)
-- [dependencies.py](file://app/api/dependencies.py#L1-L15)
-- [manager.py](file://app/blockchain/manager.py#L1-L33)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
-- [base.py](file://app/blockchain/base.py#L1-L146)
-- [ethereum.py](file://app/blockchain/ethereum.py#L1-L7)
-- [bsc.py](file://app/blockchain/bsc.py#L1-L7)
-- [listener.py](file://app/workers/listener.py#L1-L46)
-- [sweeper_worker.py](file://app/workers/sweeper.py#L1-L40)
-- [scanner.py](file://app/services/blockchain/scanner.py#L1-L134)
-- [sweeper.py](file://app/services/blockchain/sweeper.py#L1-L54)
-- [config.py](file://app/core/config.py#L1-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [docker-compose.yml](file://docker-compose.yml#L1-L54)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L1-L56)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L1-L62)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L1-L15)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L146)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L1-L7)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L1-L7)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L1-L46)
+- [sweeper_worker.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L1-L40)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L1-L134)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L1-L54)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L1-L54)
 
 **Section sources**
-- [server.py](file://server.py#L1-L56)
-- [config.py](file://app/core/config.py#L1-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [docker-compose.yml](file://docker-compose.yml#L1-L54)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L1-L56)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L1-L54)
 
 ## Core Components
 - BlockchainBase: Asynchronous Web3 provider wrapper with POA support, gas estimation, transaction building, signing, and receipt polling. It constructs an AsyncHTTPProvider with a configurable timeout.
@@ -116,15 +116,15 @@ Security-relevant observations:
 - Workers operate on scheduled intervals and perform batched blockchain queries.
 
 **Section sources**
-- [base.py](file://app/blockchain/base.py#L1-L146)
-- [ethereum.py](file://app/blockchain/ethereum.py#L1-L7)
-- [bsc.py](file://app/blockchain/bsc.py#L1-L7)
-- [manager.py](file://app/blockchain/manager.py#L1-L33)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
-- [config.py](file://app/core/config.py#L1-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [listener.py](file://app/workers/listener.py#L1-L46)
-- [sweeper_worker.py](file://app/workers/sweeper.py#L1-L40)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L146)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L1-L7)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L1-L7)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L1-L46)
+- [sweeper_worker.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L1-L40)
 
 ## Architecture Overview
 The system connects to external RPC endpoints via AsyncHTTPProvider. Requests traverse the API layer, resolve chain providers through the manager, and reach the blockchain layer. Workers periodically poll blockchains for payment confirmations and settle funds.
@@ -154,12 +154,12 @@ API-->>Client : "201 Created"
 ```
 
 **Diagram sources**
-- [server.py](file://server.py#L1-L56)
-- [payments.py](file://app/api/v1/payments.py#L1-L62)
-- [dependencies.py](file://app/api/dependencies.py#L1-L15)
-- [manager.py](file://app/blockchain/manager.py#L1-L33)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
-- [base.py](file://app/blockchain/base.py#L1-L146)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L1-L56)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L1-L62)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L1-L15)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L146)
 
 ## Detailed Component Analysis
 
@@ -175,9 +175,9 @@ Recommendations:
 - Introduce circuit breakers around RPC calls to prevent cascading failures.
 
 **Section sources**
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [docker-compose.yml](file://docker-compose.yml#L26-L32)
-- [base.py](file://app/blockchain/base.py#L23-L40)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L26-L32)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L23-L40)
 
 ### Rate Limiting, Throttling, and DDoS Protection
 Current code does not implement explicit rate limiting or throttling for RPC calls. To protect nodes and the gateway:
@@ -200,8 +200,8 @@ Operational controls:
 Note: The current configuration does not show explicit API key handling for RPC endpoints.
 
 **Section sources**
-- [config.py](file://app/core/config.py#L74-L82)
-- [chains.yaml](file://chains.yaml#L1-L24)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L74-L82)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
 
 ### Network Topology Security, Firewall Configuration, and Inter-Service Communication
 - Isolate services: Run database, Redis, and application in separate networks or containers with restricted ingress/egress.
@@ -209,7 +209,7 @@ Note: The current configuration does not show explicit API key handling for RPC 
 - Inter-service trust: Use internal networks and mutual TLS where applicable. Avoid exposing internal services to public networks.
 
 **Section sources**
-- [docker-compose.yml](file://docker-compose.yml#L1-L54)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L1-L54)
 
 ### SSL/TLS Configuration, Cipher Suites, and Certificate Management
 - TLS stack: Use modern TLS versions and strong cipher suites. Prefer ECDHE-based ciphers with AEAD modes.
@@ -224,9 +224,9 @@ Note: The current configuration does not show explicit API key handling for RPC 
 - Failover: Implement automatic fallback to secondary endpoints with health checks and circuit breakers.
 
 **Section sources**
-- [manager.py](file://app/blockchain/manager.py#L8-L32)
-- [w3.py](file://app/blockchain/w3.py#L6-L9)
-- [chains.yaml](file://chains.yaml#L1-L24)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L6-L9)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
 
 ### Network Monitoring, Intrusion Detection, and Incident Response
 - Observability: Instrument RPC calls with metrics (latency, errors, throughput) and traces.
@@ -256,22 +256,22 @@ Base --> Bsc
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L1-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [manager.py](file://app/blockchain/manager.py#L1-L33)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
-- [base.py](file://app/blockchain/base.py#L1-L146)
-- [ethereum.py](file://app/blockchain/ethereum.py#L1-L7)
-- [bsc.py](file://app/blockchain/bsc.py#L1-L7)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L146)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L1-L7)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L1-L7)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L1-L126)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [manager.py](file://app/blockchain/manager.py#L1-L33)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
-- [base.py](file://app/blockchain/base.py#L1-L146)
-- [ethereum.py](file://app/blockchain/ethereum.py#L1-L7)
-- [bsc.py](file://app/blockchain/bsc.py#L1-L7)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L146)
+- [ethereum.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/ethereum.py#L1-L7)
+- [bsc.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/bsc.py#L1-L7)
 
 ## Performance Considerations
 - Batch queries: The scanner processes blocks in batches to reduce load on nodes.
@@ -280,9 +280,9 @@ Base --> Bsc
 - Backoff and jitter: Apply exponential backoff for retries to prevent thundering herds.
 
 **Section sources**
-- [scanner.py](file://app/services/blockchain/scanner.py#L14-L96)
-- [base.py](file://app/blockchain/base.py#L65-L81)
-- [base.py](file://app/blockchain/base.py#L23-L40)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L96)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L65-L81)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L23-L40)
 
 ## Troubleshooting Guide
 Common issues and mitigations:
@@ -291,9 +291,9 @@ Common issues and mitigations:
 - Missing chain configuration: Confirm chains.yaml entries and that the manager initializes providers.
 
 **Section sources**
-- [base.py](file://app/blockchain/base.py#L45-L51)
-- [config.py](file://app/core/config.py#L94-L102)
-- [manager.py](file://app/blockchain/manager.py#L8-L32)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L45-L51)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L94-L102)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
 
 ## Conclusion
 The cTrip Payment Gateway currently uses HTTP RPC endpoints in development and lacks explicit rate limiting or DDoS protections. To achieve robust network security:

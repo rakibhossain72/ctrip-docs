@@ -2,21 +2,21 @@
 
 <cite>
 **Referenced Files in This Document**
-- [app/core/config.py](file://app/core/config.py)
-- [app/db/engine.py](file://app/db/engine.py)
-- [app/db/session.py](file://app/db/session.py)
-- [app/db/async_session.py](file://app/db/async_session.py)
-- [app/db/base.py](file://app/db/base.py)
-- [app/db/models/__init__.py](file://app/db/models/__init__.py)
-- [app/db/models/payment.py](file://app/db/models/payment.py)
-- [app/db/models/chain.py](file://app/db/models/chain.py)
-- [app/db/models/token.py](file://app/db/models/token.py)
-- [app/db/models/transaction.py](file://app/db/models/transaction.py)
-- [alembic/env.py](file://alembic/env.py)
-- [alembic.ini](file://alembic.ini)
-- [migrate.py](file://migrate.py)
-- [MIGRATIONS.md](file://MIGRATIONS.md)
-- [docker-compose.yml](file://docker-compose.yml)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py)
+- [app/db/session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py)
+- [app/db/async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py)
+- [app/db/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/base.py)
+- [app/db/models/__init__.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/__init__.py)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py)
+- [app/db/models/chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py)
+- [app/db/models/transaction.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py)
+- [alembic/env.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/env.py)
+- [alembic.ini](https://github.com/rakibhossain72/ctrip/blob/main/alembic.ini)
+- [migrate.py](https://github.com/rakibhossain72/ctrip/blob/main/migrate.py)
+- [MIGRATIONS.md](https://github.com/rakibhossain72/ctrip/blob/main/MIGRATIONS.md)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml)
 </cite>
 
 ## Table of Contents
@@ -88,33 +88,33 @@ DC --> CFG
 ```
 
 **Diagram sources**
-- [app/core/config.py](file://app/core/config.py#L1-L126)
-- [app/db/engine.py](file://app/db/engine.py#L1-L32)
-- [app/db/session.py](file://app/db/session.py#L1-L17)
-- [app/db/async_session.py](file://app/db/async_session.py#L1-L15)
-- [app/db/base.py](file://app/db/base.py#L1-L5)
-- [app/db/models/__init__.py](file://app/db/models/__init__.py#L1-L12)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L1-L74)
-- [app/db/models/chain.py](file://app/db/models/chain.py#L1-L17)
-- [app/db/models/token.py](file://app/db/models/token.py#L1-L15)
-- [app/db/models/transaction.py](file://app/db/models/transaction.py#L1-L40)
-- [alembic/env.py](file://alembic/env.py#L1-L142)
-- [alembic.ini](file://alembic.ini#L1-L151)
-- [migrate.py](file://migrate.py#L1-L112)
-- [docker-compose.yml](file://docker-compose.yml#L1-L54)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [app/db/session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L1-L17)
+- [app/db/async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L1-L15)
+- [app/db/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/base.py#L1-L5)
+- [app/db/models/__init__.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/__init__.py#L1-L12)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L1-L74)
+- [app/db/models/chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L1-L17)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L1-L15)
+- [app/db/models/transaction.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py#L1-L40)
+- [alembic/env.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/env.py#L1-L142)
+- [alembic.ini](https://github.com/rakibhossain72/ctrip/blob/main/alembic.ini#L1-L151)
+- [migrate.py](https://github.com/rakibhossain72/ctrip/blob/main/migrate.py#L1-L112)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L1-L54)
 
 **Section sources**
-- [app/core/config.py](file://app/core/config.py#L1-L126)
-- [app/db/engine.py](file://app/db/engine.py#L1-L32)
-- [app/db/session.py](file://app/db/session.py#L1-L17)
-- [app/db/async_session.py](file://app/db/async_session.py#L1-L15)
-- [app/db/base.py](file://app/db/base.py#L1-L5)
-- [app/db/models/__init__.py](file://app/db/models/__init__.py#L1-L12)
-- [alembic/env.py](file://alembic/env.py#L1-L142)
-- [alembic.ini](file://alembic.ini#L1-L151)
-- [migrate.py](file://migrate.py#L1-L112)
-- [MIGRATIONS.md](file://MIGRATIONS.md#L1-L283)
-- [docker-compose.yml](file://docker-compose.yml#L1-L54)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [app/db/session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L1-L17)
+- [app/db/async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L1-L15)
+- [app/db/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/base.py#L1-L5)
+- [app/db/models/__init__.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/__init__.py#L1-L12)
+- [alembic/env.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/env.py#L1-L142)
+- [alembic.ini](https://github.com/rakibhossain72/ctrip/blob/main/alembic.ini#L1-L151)
+- [migrate.py](https://github.com/rakibhossain72/ctrip/blob/main/migrate.py#L1-L112)
+- [MIGRATIONS.md](https://github.com/rakibhossain72/ctrip/blob/main/MIGRATIONS.md#L1-L283)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L1-L54)
 
 ## Core Components
 - Settings and environment-aware database URLs:
@@ -135,13 +135,13 @@ DC --> CFG
   - Wraps common Alembic commands with defaults and error handling
 
 **Section sources**
-- [app/core/config.py](file://app/core/config.py#L10-L92)
-- [app/db/engine.py](file://app/db/engine.py#L5-L32)
-- [app/db/session.py](file://app/db/session.py#L5-L17)
-- [app/db/async_session.py](file://app/db/async_session.py#L6-L15)
-- [alembic/env.py](file://alembic/env.py#L20-L136)
-- [alembic.ini](file://alembic.ini#L86-L91)
-- [migrate.py](file://migrate.py#L22-L112)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L92)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L5-L32)
+- [app/db/session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L5-L17)
+- [app/db/async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L6-L15)
+- [alembic/env.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/env.py#L20-L136)
+- [alembic.ini](https://github.com/rakibhossain72/ctrip/blob/main/alembic.ini#L86-L91)
+- [migrate.py](https://github.com/rakibhossain72/ctrip/blob/main/migrate.py#L22-L112)
 
 ## Architecture Overview
 The runtime database architecture integrates configuration-driven URLs, engine creation, and session factories. Alembic orchestrates migrations using the same URL resolution logic.
@@ -166,11 +166,11 @@ Alembic-->>App : Apply migrations
 ```
 
 **Diagram sources**
-- [app/core/config.py](file://app/core/config.py#L10-L92)
-- [app/db/engine.py](file://app/db/engine.py#L5-L32)
-- [app/db/session.py](file://app/db/session.py#L5-L17)
-- [app/db/async_session.py](file://app/db/async_session.py#L6-L15)
-- [alembic/env.py](file://alembic/env.py#L20-L136)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L92)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L5-L32)
+- [app/db/session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L5-L17)
+- [app/db/async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L6-L15)
+- [alembic/env.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/env.py#L20-L136)
 
 ## Detailed Component Analysis
 
@@ -199,14 +199,14 @@ BuildAsync --> Ready
 ```
 
 **Diagram sources**
-- [app/core/config.py](file://app/core/config.py#L10-L92)
-- [app/db/engine.py](file://app/db/engine.py#L5-L32)
-- [docker-compose.yml](file://docker-compose.yml#L26-L29)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L92)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L5-L32)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L26-L29)
 
 **Section sources**
-- [app/core/config.py](file://app/core/config.py#L10-L92)
-- [app/db/engine.py](file://app/db/engine.py#L5-L32)
-- [docker-compose.yml](file://docker-compose.yml#L26-L29)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L92)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L5-L32)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L26-L29)
 
 ### Alembic Migration Configuration and Version Management
 - Alembic configuration:
@@ -236,14 +236,14 @@ Apply --> AEnd(["Done"])
 ```
 
 **Diagram sources**
-- [alembic/env.py](file://alembic/env.py#L20-L136)
-- [alembic.ini](file://alembic.ini#L8-L91)
+- [alembic/env.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/env.py#L20-L136)
+- [alembic.ini](https://github.com/rakibhossain72/ctrip/blob/main/alembic.ini#L8-L91)
 
 **Section sources**
-- [alembic/env.py](file://alembic/env.py#L1-L142)
-- [alembic.ini](file://alembic.ini#L1-L151)
-- [migrate.py](file://migrate.py#L1-L112)
-- [MIGRATIONS.md](file://MIGRATIONS.md#L1-L283)
+- [alembic/env.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/env.py#L1-L142)
+- [alembic.ini](https://github.com/rakibhossain72/ctrip/blob/main/alembic.ini#L1-L151)
+- [migrate.py](https://github.com/rakibhossain72/ctrip/blob/main/migrate.py#L1-L112)
+- [MIGRATIONS.md](https://github.com/rakibhossain72/ctrip/blob/main/MIGRATIONS.md#L1-L283)
 
 ### Async Database Session Configuration and Connection Pooling
 - Synchronous sessions:
@@ -285,15 +285,15 @@ EngineFactory --> AsyncSessionFactory : "binds async_engine"
 ```
 
 **Diagram sources**
-- [app/core/config.py](file://app/core/config.py#L10-L92)
-- [app/db/engine.py](file://app/db/engine.py#L5-L32)
-- [app/db/session.py](file://app/db/session.py#L5-L17)
-- [app/db/async_session.py](file://app/db/async_session.py#L6-L15)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L92)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L5-L32)
+- [app/db/session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L5-L17)
+- [app/db/async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L6-L15)
 
 **Section sources**
-- [app/db/session.py](file://app/db/session.py#L1-L17)
-- [app/db/async_session.py](file://app/db/async_session.py#L1-L15)
-- [app/db/engine.py](file://app/db/engine.py#L22-L32)
+- [app/db/session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L1-L17)
+- [app/db/async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L1-L15)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L22-L32)
 
 ### Database Initialization Procedures, Migration Execution, and Rollback Strategies
 - Initialization:
@@ -323,12 +323,12 @@ Alembic->>DB : rollback migration
 ```
 
 **Diagram sources**
-- [migrate.py](file://migrate.py#L30-L68)
-- [MIGRATIONS.md](file://MIGRATIONS.md#L7-L43)
+- [migrate.py](https://github.com/rakibhossain72/ctrip/blob/main/migrate.py#L30-L68)
+- [MIGRATIONS.md](https://github.com/rakibhossain72/ctrip/blob/main/MIGRATIONS.md#L7-L43)
 
 **Section sources**
-- [migrate.py](file://migrate.py#L1-L112)
-- [MIGRATIONS.md](file://MIGRATIONS.md#L70-L171)
+- [migrate.py](https://github.com/rakibhossain72/ctrip/blob/main/migrate.py#L1-L112)
+- [MIGRATIONS.md](https://github.com/rakibhossain72/ctrip/blob/main/MIGRATIONS.md#L70-L171)
 
 ### Environment-Specific Configuration and Security Considerations
 - Environments:
@@ -344,9 +344,9 @@ Alembic->>DB : rollback migration
   - Application connects using asyncpg driver
 
 **Section sources**
-- [app/core/config.py](file://app/core/config.py#L10-L122)
-- [docker-compose.yml](file://docker-compose.yml#L4-L13)
-- [docker-compose.yml](file://docker-compose.yml#L26-L29)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L122)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L4-L13)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L26-L29)
 
 ### Examples of Custom Database Configurations and Connection Tuning
 - Custom PostgreSQL:
@@ -360,9 +360,9 @@ Alembic->>DB : rollback migration
   - Compare types and server defaults for strictness
 
 **Section sources**
-- [app/db/engine.py](file://app/db/engine.py#L12-L32)
-- [alembic.ini](file://alembic.ini#L10-L16)
-- [alembic/env.py](file://alembic/env.py#L63-L74)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L12-L32)
+- [alembic.ini](https://github.com/rakibhossain72/ctrip/blob/main/alembic.ini#L10-L16)
+- [alembic/env.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/env.py#L63-L74)
 
 ### Database Schema Overview
 The models define the core entities for payments, transactions, tokens, and chain state. They inherit from a shared declarative base and are imported into Alembic’s metadata for migration detection.
@@ -407,18 +407,18 @@ PAYMENTS ||--o{ TRANSACTIONS : "generates"
 ```
 
 **Diagram sources**
-- [app/db/models/payment.py](file://app/db/models/payment.py#L41-L58)
-- [app/db/models/transaction.py](file://app/db/models/transaction.py#L29-L40)
-- [app/db/models/token.py](file://app/db/models/token.py#L6-L15)
-- [app/db/models/chain.py](file://app/db/models/chain.py#L9-L17)
-- [app/db/base.py](file://app/db/base.py#L1-L5)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L58)
+- [app/db/models/transaction.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py#L29-L40)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15)
+- [app/db/models/chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L9-L17)
+- [app/db/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/base.py#L1-L5)
 
 **Section sources**
-- [app/db/models/__init__.py](file://app/db/models/__init__.py#L1-L12)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L1-L74)
-- [app/db/models/transaction.py](file://app/db/models/transaction.py#L1-L40)
-- [app/db/models/token.py](file://app/db/models/token.py#L1-L15)
-- [app/db/models/chain.py](file://app/db/models/chain.py#L1-L17)
+- [app/db/models/__init__.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/__init__.py#L1-L12)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L1-L74)
+- [app/db/models/transaction.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py#L1-L40)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L1-L15)
+- [app/db/models/chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L1-L17)
 
 ## Dependency Analysis
 The following diagram shows how configuration, engines, sessions, and Alembic interrelate.
@@ -436,26 +436,26 @@ Helper["Migration Helper (migrate.py)"] --> AlembicEnv
 ```
 
 **Diagram sources**
-- [app/core/config.py](file://app/core/config.py#L10-L92)
-- [app/db/engine.py](file://app/db/engine.py#L5-L32)
-- [app/db/session.py](file://app/db/session.py#L5-L17)
-- [app/db/async_session.py](file://app/db/async_session.py#L6-L15)
-- [app/db/base.py](file://app/db/base.py#L1-L5)
-- [app/db/models/__init__.py](file://app/db/models/__init__.py#L1-L12)
-- [alembic/env.py](file://alembic/env.py#L9-L29)
-- [alembic.ini](file://alembic.ini#L8-L91)
-- [migrate.py](file://migrate.py#L22-L68)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L92)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L5-L32)
+- [app/db/session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L5-L17)
+- [app/db/async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L6-L15)
+- [app/db/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/base.py#L1-L5)
+- [app/db/models/__init__.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/__init__.py#L1-L12)
+- [alembic/env.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/env.py#L9-L29)
+- [alembic.ini](https://github.com/rakibhossain72/ctrip/blob/main/alembic.ini#L8-L91)
+- [migrate.py](https://github.com/rakibhossain72/ctrip/blob/main/migrate.py#L22-L68)
 
 **Section sources**
-- [app/core/config.py](file://app/core/config.py#L10-L92)
-- [app/db/engine.py](file://app/db/engine.py#L5-L32)
-- [app/db/session.py](file://app/db/session.py#L5-L17)
-- [app/db/async_session.py](file://app/db/async_session.py#L6-L15)
-- [app/db/base.py](file://app/db/base.py#L1-L5)
-- [app/db/models/__init__.py](file://app/db/models/__init__.py#L1-L12)
-- [alembic/env.py](file://alembic/env.py#L9-L29)
-- [alembic.ini](file://alembic.ini#L8-L91)
-- [migrate.py](file://migrate.py#L22-L68)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L92)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L5-L32)
+- [app/db/session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L5-L17)
+- [app/db/async_session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/async_session.py#L6-L15)
+- [app/db/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/base.py#L1-L5)
+- [app/db/models/__init__.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/__init__.py#L1-L12)
+- [alembic/env.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/env.py#L9-L29)
+- [alembic.ini](https://github.com/rakibhossain72/ctrip/blob/main/alembic.ini#L8-L91)
+- [migrate.py](https://github.com/rakibhossain72/ctrip/blob/main/migrate.py#L22-L68)
 
 ## Performance Considerations
 - Connection pooling:
@@ -485,7 +485,7 @@ Common issues and resolutions:
   - Stamp the revision table to mark current without running migrations
 
 **Section sources**
-- [MIGRATIONS.md](file://MIGRATIONS.md#L172-L195)
+- [MIGRATIONS.md](https://github.com/rakibhossain72/ctrip/blob/main/MIGRATIONS.md#L172-L195)
 
 ## Conclusion
 The cTrip Payment Gateway employs environment-aware database configuration, robust Alembic migrations, and both sync and async session factories. Production deployments should use PostgreSQL with asyncpg, while development defaults to SQLite. Adhering to the documented migration workflow, security practices, and troubleshooting steps ensures reliable operation across environments.
@@ -504,8 +504,8 @@ The cTrip Payment Gateway employs environment-aware database configuration, robu
 - SECRET_KEY: Must be changed in production
 
 **Section sources**
-- [app/core/config.py](file://app/core/config.py#L10-L92)
-- [docker-compose.yml](file://docker-compose.yml#L26-L32)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L92)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L26-L32)
 
 ### Appendix B: Migration Commands Reference
 - Create migration: generate with autogenerate
@@ -515,8 +515,8 @@ The cTrip Payment Gateway employs environment-aware database configuration, robu
 - Stamp: mark database as current without running
 
 **Section sources**
-- [migrate.py](file://migrate.py#L30-L68)
-- [MIGRATIONS.md](file://MIGRATIONS.md#L7-L43)
+- [migrate.py](https://github.com/rakibhossain72/ctrip/blob/main/migrate.py#L30-L68)
+- [MIGRATIONS.md](https://github.com/rakibhossain72/ctrip/blob/main/MIGRATIONS.md#L7-L43)
 
 ### Appendix C: Backup, Recovery, and Maintenance
 - Backup:

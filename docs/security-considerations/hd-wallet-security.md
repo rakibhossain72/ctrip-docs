@@ -2,22 +2,22 @@
 
 <cite>
 **Referenced Files in This Document**
-- [crypto.py](file://app/utils/crypto.py)
-- [config.py](file://app/core/config.py)
-- [server.py](file://server.py)
-- [dependencies.py](file://app/api/dependencies.py)
-- [payments.py](file://app/api/v1/payments.py)
-- [payment.py](file://app/db/models/payment.py)
-- [transaction.py](file://app/db/models/transaction.py)
-- [manager.py](file://app/blockchain/manager.py)
-- [base.py](file://app/blockchain/base.py)
-- [w3.py](file://app/blockchain/w3.py)
-- [scanner.py](file://app/services/blockchain/scanner.py)
-- [sweeper.py](file://app/services/blockchain/sweeper.py)
-- [listener.py](file://app/workers/listener.py)
-- [sweeper_worker.py](file://app/workers/sweeper.py)
-- [requirements.txt](file://requirements.txt)
-- [2026_01_27_1807-5ec6405addd0_initial_database_schema.py](file://alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py)
+- [transaction.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py)
+- [sweeper_worker.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt)
+- [2026_01_27_1807-5ec6405addd0_initial_database_schema.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py)
 </cite>
 
 ## Table of Contents
@@ -77,38 +77,38 @@ Config --> API
 ```
 
 **Diagram sources**
-- [server.py](file://server.py#L21-L42)
-- [dependencies.py](file://app/api/dependencies.py#L1-L15)
-- [payments.py](file://app/api/v1/payments.py#L1-L62)
-- [config.py](file://app/core/config.py#L1-L126)
-- [crypto.py](file://app/utils/crypto.py#L1-L90)
-- [manager.py](file://app/blockchain/manager.py#L1-L33)
-- [base.py](file://app/blockchain/base.py#L1-L146)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
-- [payment.py](file://app/db/models/payment.py#L1-L74)
-- [transaction.py](file://app/db/models/transaction.py#L1-L40)
-- [listener.py](file://app/workers/listener.py#L1-L46)
-- [sweeper_worker.py](file://app/workers/sweeper.py#L1-L40)
-- [scanner.py](file://app/services/blockchain/scanner.py#L1-L134)
-- [sweeper.py](file://app/services/blockchain/sweeper.py#L1-L54)
-- [2026_01_27_1807-5ec6405addd0_initial_database_schema.py](file://alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py#L37-L56)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L42)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L1-L15)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L1-L62)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L90)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L146)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L1-L74)
+- [transaction.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py#L1-L40)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L1-L46)
+- [sweeper_worker.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L1-L40)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L1-L134)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L1-L54)
+- [2026_01_27_1807-5ec6405addd0_initial_database_schema.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py#L37-L56)
 
 **Section sources**
-- [server.py](file://server.py#L21-L42)
-- [dependencies.py](file://app/api/dependencies.py#L1-L15)
-- [payments.py](file://app/api/v1/payments.py#L1-L62)
-- [config.py](file://app/core/config.py#L1-L126)
-- [crypto.py](file://app/utils/crypto.py#L1-L90)
-- [manager.py](file://app/blockchain/manager.py#L1-L33)
-- [base.py](file://app/blockchain/base.py#L1-L146)
-- [w3.py](file://app/blockchain/w3.py#L1-L9)
-- [payment.py](file://app/db/models/payment.py#L1-L74)
-- [transaction.py](file://app/db/models/transaction.py#L1-L40)
-- [listener.py](file://app/workers/listener.py#L1-L46)
-- [sweeper_worker.py](file://app/workers/sweeper.py#L1-L40)
-- [scanner.py](file://app/services/blockchain/scanner.py#L1-L134)
-- [sweeper.py](file://app/services/blockchain/sweeper.py#L1-L54)
-- [2026_01_27_1807-5ec6405addd0_initial_database_schema.py](file://alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py#L37-L56)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L42)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L1-L15)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L1-L62)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L90)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L146)
+- [w3.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/w3.py#L1-L9)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L1-L74)
+- [transaction.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py#L1-L40)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L1-L46)
+- [sweeper_worker.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L1-L40)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L1-L134)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L1-L54)
+- [2026_01_27_1807-5ec6405addd0_initial_database_schema.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py#L37-L56)
 
 ## Core Components
 - HDWalletManager: Implements BIP-44 derivation for Ethereum addresses, mnemonic generation, seed derivation, and address derivation with checksum validation.
@@ -125,11 +125,11 @@ Key security-relevant responsibilities:
 - Production secrets validation
 
 **Section sources**
-- [crypto.py](file://app/utils/crypto.py#L5-L67)
-- [config.py](file://app/core/config.py#L58-L102)
-- [base.py](file://app/blockchain/base.py#L135-L139)
-- [payment.py](file://app/db/models/payment.py#L41-L74)
-- [2026_01_27_1807-5ec6405addd0_initial_database_schema.py](file://alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py#L37-L56)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L67)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L58-L102)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L135-L139)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
+- [2026_01_27_1807-5ec6405addd0_initial_database_schema.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py#L37-L56)
 
 ## Architecture Overview
 The HD wallet is initialized at application startup and exposed via a dependency for API endpoints. Payments requests derive a new payment address per request using BIP-44. Background workers scan for incoming payments and later sweep funds into an administrative wallet derived from a private key.
@@ -151,16 +151,16 @@ API-->>Client : "PaymentRead"
 ```
 
 **Diagram sources**
-- [payments.py](file://app/api/v1/payments.py#L18-L54)
-- [dependencies.py](file://app/api/dependencies.py#L11-L15)
-- [crypto.py](file://app/utils/crypto.py#L27-L46)
-- [payment.py](file://app/db/models/payment.py#L41-L58)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L18-L54)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L11-L15)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L27-L46)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L58)
 
 **Section sources**
-- [server.py](file://server.py#L21-L42)
-- [dependencies.py](file://app/api/dependencies.py#L1-L15)
-- [payments.py](file://app/api/v1/payments.py#L1-L62)
-- [crypto.py](file://app/utils/crypto.py#L1-L90)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L42)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L1-L15)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L1-L62)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L90)
 
 ## Detailed Component Analysis
 
@@ -190,10 +190,10 @@ class HDWalletManager {
 ```
 
 **Diagram sources**
-- [crypto.py](file://app/utils/crypto.py#L5-L67)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L67)
 
 **Section sources**
-- [crypto.py](file://app/utils/crypto.py#L5-L67)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L67)
 
 ### Settings and Secret Management
 - Mnemonic field: Stored as a configurable setting with a default placeholder in development.
@@ -216,10 +216,10 @@ ValidateSecretKey --> End(["Settings Ready"])
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L84-L112)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L84-L112)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L58-L112)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L58-L112)
 
 ### Blockchain Provider Integration
 - Provider abstraction supports POA networks and caches gas prices.
@@ -244,10 +244,10 @@ W3-->>BC : "Transaction receipt"
 ```
 
 **Diagram sources**
-- [base.py](file://app/blockchain/base.py#L34-L139)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L34-L139)
 
 **Section sources**
-- [base.py](file://app/blockchain/base.py#L1-L146)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L146)
 
 ### Payment Address Generation and Persistence
 - API endpoint derives a payment address using the HD wallet manager and persists the payment record with chain, amount, and expiration.
@@ -291,13 +291,13 @@ TOKEN ||--o{ PAYMENT : "references"
 ```
 
 **Diagram sources**
-- [payment.py](file://app/db/models/payment.py#L41-L74)
-- [2026_01_27_1807-5ec6405addd0_initial_database_schema.py](file://alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py#L37-L56)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
+- [2026_01_27_1807-5ec6405addd0_initial_database_schema.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py#L37-L56)
 
 **Section sources**
-- [payments.py](file://app/api/v1/payments.py#L18-L54)
-- [payment.py](file://app/db/models/payment.py#L1-L74)
-- [2026_01_27_1807-5ec6405addd0_initial_database_schema.py](file://alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py#L37-L56)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L18-L54)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L1-L74)
+- [2026_01_27_1807-5ec6405addd0_initial_database_schema.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py#L37-L56)
 
 ### Background Workers and Sweeping
 - Listener worker periodically scans blocks for incoming payments and updates statuses.
@@ -323,16 +323,16 @@ Sweeper->>Chain : "Transfer funds to admin address"
 ```
 
 **Diagram sources**
-- [sweeper_worker.py](file://app/workers/sweeper.py#L19-L40)
-- [sweeper.py](file://app/services/blockchain/sweeper.py#L11-L54)
-- [config.py](file://app/core/config.py#L74-L102)
-- [base.py](file://app/blockchain/base.py#L135-L139)
+- [sweeper_worker.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L19-L40)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L11-L54)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L74-L102)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L135-L139)
 
 **Section sources**
-- [listener.py](file://app/workers/listener.py#L21-L46)
-- [sweeper_worker.py](file://app/workers/sweeper.py#L1-L40)
-- [scanner.py](file://app/services/blockchain/scanner.py#L1-L134)
-- [sweeper.py](file://app/services/blockchain/sweeper.py#L1-L54)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [sweeper_worker.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L1-L40)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L1-L134)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L1-L54)
 
 ## Dependency Analysis
 External libraries and their roles:
@@ -351,15 +351,15 @@ SweeperWorker["Sweeper Worker<br/>sweeper_worker.py"] --> Dramatiq
 ```
 
 **Diagram sources**
-- [crypto.py](file://app/utils/crypto.py#L1-L2)
-- [base.py](file://app/blockchain/base.py#L8-L11)
-- [config.py](file://app/core/config.py#L1-L8)
-- [requirements.txt](file://requirements.txt#L27-L102)
-- [listener.py](file://app/workers/listener.py#L4)
-- [sweeper_worker.py](file://app/workers/sweeper.py#L4)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L2)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L8-L11)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L8)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt#L27-L102)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L4)
+- [sweeper_worker.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L4)
 
 **Section sources**
-- [requirements.txt](file://requirements.txt#L1-L106)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt#L1-L106)
 
 ## Performance Considerations
 - Gas price caching reduces repeated RPC calls.
@@ -372,8 +372,8 @@ Recommendations:
 - Use fee history for dynamic fee estimation under EIP-1559 networks.
 
 **Section sources**
-- [base.py](file://app/blockchain/base.py#L65-L133)
-- [scanner.py](file://app/services/blockchain/scanner.py#L15-L96)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L65-L133)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L15-L96)
 
 ## Troubleshooting Guide
 Common issues and remediations:
@@ -388,11 +388,11 @@ Operational checks:
 - Review worker logs for recurring errors and schedule adjustments.
 
 **Section sources**
-- [server.py](file://server.py#L21-L42)
-- [dependencies.py](file://app/api/dependencies.py#L11-L15)
-- [config.py](file://app/core/config.py#L94-L112)
-- [payments.py](file://app/api/v1/payments.py#L26-L34)
-- [sweeper.py](file://app/services/blockchain/sweeper.py#L35-L51)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L42)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L11-L15)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L94-L112)
+- [payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L26-L34)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L35-L51)
 
 ## Conclusion
 The cTrip Payment Gateway implements a secure, deterministic HD wallet using BIP-44 for Ethereum payment addresses. The design separates operational mnemonics from administrative private keys, validates secrets at runtime, and persists only necessary data. By following the production deployment guidelines, key management best practices, and remediation strategies outlined here, the system can maintain strong security posture while remaining operationally robust.
@@ -406,8 +406,8 @@ The cTrip Payment Gateway implements a secure, deterministic HD wallet using BIP
 - Implications: Even if an attacker gains access to a derived public key, they cannot derive prior siblings without the seed.
 
 **Section sources**
-- [crypto.py](file://app/utils/crypto.py#L7-L8)
-- [crypto.py](file://app/utils/crypto.py#L37-L38)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L7-L8)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L37-L38)
 
 ### Mnemonic Generation, Storage, and Rotation
 - Generation: 12-word mnemonic generated securely when none is provided.
@@ -415,8 +415,8 @@ The cTrip Payment Gateway implements a secure, deterministic HD wallet using BIP
 - Rotation: Replace mnemonics during controlled maintenance windows; re-derive addresses and update backups.
 
 **Section sources**
-- [crypto.py](file://app/utils/crypto.py#L18-L22)
-- [config.py](file://app/core/config.py#L58-L61)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L18-L22)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L58-L61)
 
 ### Private Key Derivation and Seed Protection
 - Derivation: Seed derived from mnemonic; private keys derived deterministically from seed and path.
@@ -424,15 +424,15 @@ The cTrip Payment Gateway implements a secure, deterministic HD wallet using BIP
 - Entropy: Rely on the library’s secure randomness for mnemonic generation.
 
 **Section sources**
-- [crypto.py](file://app/utils/crypto.py#L24-L25)
-- [crypto.py](file://app/utils/crypto.py#L40-L41)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L24-L25)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L40-L41)
 
 ### Address Generation Security and Checksum Validation
 - Derivation: Addresses derived via private keys and validated with checksums.
 - Validation: Ensure checksummed addresses are used consistently across the system.
 
 **Section sources**
-- [crypto.py](file://app/utils/crypto.py#L43-L46)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L43-L46)
 
 ### Secure Initialization Patterns
 - Application lifespan: Initialize blockchain providers and HD wallet manager during startup.
@@ -440,17 +440,17 @@ The cTrip Payment Gateway implements a secure, deterministic HD wallet using BIP
 - Configuration: Load settings from environment and validate secrets.
 
 **Section sources**
-- [server.py](file://server.py#L21-L42)
-- [dependencies.py](file://app/api/dependencies.py#L1-L15)
-- [config.py](file://app/core/config.py#L1-L126)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L42)
+- [dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L1-L15)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
 
 ### Backup and Disaster Recovery
 - Backup strategies: Maintain offline, encrypted backups of mnemonics and administrative private keys.
 - Recovery procedures: Test restoration in isolated environments; rotate keys after breach discovery.
 
 **Section sources**
-- [crypto.py](file://app/utils/crypto.py#L64-L66)
-- [config.py](file://app/core/config.py#L74-L102)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L64-L66)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L74-L102)
 
 ### Production Deployment Guidelines
 - Secrets management: Use environment variables and secret stores; never embed in code.
@@ -458,16 +458,16 @@ The cTrip Payment Gateway implements a secure, deterministic HD wallet using BIP
 - Monitoring: Log security-relevant events without sensitive data; alert on failures.
 
 **Section sources**
-- [config.py](file://app/core/config.py#L94-L112)
-- [requirements.txt](file://requirements.txt#L27-L102)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L94-L112)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt#L27-L102)
 
 ### Vulnerability Assessment for Wallet Components
 - Risk areas: Mnemonic exposure, insecure storage, weak entropy, improper key separation, insufficient validation.
 - Controls: Enforce secret validation, encrypt at rest, restrict access, audit logs, and regular penetration testing.
 
 **Section sources**
-- [config.py](file://app/core/config.py#L94-L112)
-- [crypto.py](file://app/utils/crypto.py#L18-L22)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L94-L112)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L18-L22)
 
 ### Common Security Pitfalls and Remediation
 - Pitfall: Storing plaintext mnemonics or private keys.
@@ -480,5 +480,5 @@ The cTrip Payment Gateway implements a secure, deterministic HD wallet using BIP
   - Remediation: Separate HD wallet for payments and administrative private key for sweeping.
 
 **Section sources**
-- [config.py](file://app/core/config.py#L94-L112)
-- [sweeper.py](file://app/services/blockchain/sweeper.py#L20-L22)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L94-L112)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L20-L22)

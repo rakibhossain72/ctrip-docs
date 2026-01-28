@@ -2,20 +2,20 @@
 
 <cite>
 **Referenced Files in This Document**
-- [server.py](file://server.py)
-- [app/api/v1/payments.py](file://app/api/v1/payments.py)
-- [app/api/dependencies.py](file://app/api/dependencies.py)
-- [app/schemas/payment.py](file://app/schemas/payment.py)
-- [app/schemas/base.py](file://app/schemas/base.py)
-- [app/db/models/payment.py](file://app/db/models/payment.py)
-- [app/db/models/token.py](file://app/db/models/token.py)
-- [app/db/models/chain.py](file://app/db/models/chain.py)
-- [app/db/session.py](file://app/db/session.py)
-- [app/utils/crypto.py](file://app/utils/crypto.py)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py)
-- [app/blockchain/base.py](file://app/blockchain/base.py)
-- [app/core/config.py](file://app/core/config.py)
-- [chains.yaml](file://chains.yaml)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py)
+- [app/api/dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py)
+- [app/schemas/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/schemas/payment.py)
+- [app/schemas/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/schemas/base.py)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py)
+- [app/db/models/chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py)
+- [app/db/session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml)
 </cite>
 
 ## Update Summary
@@ -65,16 +65,16 @@ Lifespan --> HDInit["HDWalletManager"]
 ```
 
 **Diagram sources**
-- [server.py](file://server.py#L21-L47)
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L12-L74)
-- [app/schemas/payment.py](file://app/schemas/payment.py#L20-L41)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L41-L74)
-- [app/utils/crypto.py](file://app/utils/crypto.py#L5-L46)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L32)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L12-L74)
+- [app/schemas/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/schemas/payment.py#L20-L41)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L46)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
 
 **Section sources**
-- [server.py](file://server.py#L21-L47)
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L12-L74)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L21-L47)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L12-L74)
 
 ## Core Components
 - Endpoint: POST /api/v1/payments
@@ -86,11 +86,11 @@ Lifespan --> HDInit["HDWalletManager"]
 - Chain Support: Blockchain manager resolves supported chains from configuration
 
 **Section sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L12-L74)
-- [app/schemas/payment.py](file://app/schemas/payment.py#L20-L41)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L41-L74)
-- [app/utils/crypto.py](file://app/utils/crypto.py#L5-L46)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L32)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L12-L74)
+- [app/schemas/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/schemas/payment.py#L20-L41)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L46)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
 
 ## Architecture Overview
 The payment creation flow integrates several layers with enhanced sequential HD wallet address generation:
@@ -125,11 +125,11 @@ A-->>C : JSON payload
 ```
 
 **Diagram sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L18-L66)
-- [app/api/dependencies.py](file://app/api/dependencies.py#L5-L14)
-- [app/utils/crypto.py](file://app/utils/crypto.py#L27-L46)
-- [app/db/session.py](file://app/db/session.py#L11-L16)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L32)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L18-L66)
+- [app/api/dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L5-L14)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L27-L46)
+- [app/db/session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L11-L16)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
 
 ## Detailed Component Analysis
 
@@ -143,7 +143,7 @@ A-->>C : JSON payload
   - 400 Bad Request on validation errors or unsupported chains/tokens
 
 **Section sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L12-L17)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L12-L17)
 
 ### Request Schema: PaymentCreate
 The PaymentCreate schema defines the incoming request body for payment creation.
@@ -188,10 +188,10 @@ PaymentRead --|> PaymentBase
 ```
 
 **Diagram sources**
-- [app/schemas/payment.py](file://app/schemas/payment.py#L20-L41)
+- [app/schemas/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/schemas/payment.py#L20-L41)
 
 **Section sources**
-- [app/schemas/payment.py](file://app/schemas/payment.py#L20-L24)
+- [app/schemas/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/schemas/payment.py#L20-L24)
 
 ### Response Schema: PaymentRead
 The PaymentRead schema defines the outgoing response body.
@@ -233,12 +233,12 @@ PaymentRead --> PaymentStatus : "status"
 ```
 
 **Diagram sources**
-- [app/schemas/payment.py](file://app/schemas/payment.py#L35-L41)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L21-L38)
+- [app/schemas/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/schemas/payment.py#L35-L41)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L21-L38)
 
 **Section sources**
-- [app/schemas/payment.py](file://app/schemas/payment.py#L35-L41)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L21-L38)
+- [app/schemas/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/schemas/payment.py#L35-L41)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L21-L38)
 
 ### Database Models
 The Payment model persists payment records with the following attributes:
@@ -304,12 +304,12 @@ HDWALLET_ADDRESSES ||--o{ PAYMENTS : "address"
 ```
 
 **Diagram sources**
-- [app/db/models/payment.py](file://app/db/models/payment.py#L41-L74)
-- [app/db/models/token.py](file://app/db/models/token.py#L6-L14)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L14)
 
 **Section sources**
-- [app/db/models/payment.py](file://app/db/models/payment.py#L41-L74)
-- [app/db/models/token.py](file://app/db/models/token.py#L6-L14)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L14)
 
 ### HD Wallet Integration
 **Updated** The HD wallet manager now supports sequential address generation with automatic index calculation and persistence tracking.
@@ -343,12 +343,12 @@ HDWalletManager --> HDWalletAddress : "generates & tracks"
 ```
 
 **Diagram sources**
-- [app/utils/crypto.py](file://app/utils/crypto.py#L5-L46)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L65-L74)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L46)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L65-L74)
 
 **Section sources**
-- [app/utils/crypto.py](file://app/utils/crypto.py#L27-L46)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L65-L74)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L27-L46)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L65-L74)
 
 ### Chain Support and Validation
 Chain support is determined by the blockchain manager, which reads chain configurations from settings and constructs blockchain instances. The payment endpoint validates that the requested chain is supported before proceeding.
@@ -383,14 +383,14 @@ Rollback --> End(["Return 400 Bad Request"])
 ```
 
 **Diagram sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L25-L66)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L32)
-- [app/db/models/token.py](file://app/db/models/token.py#L6-L14)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L25-L66)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [app/db/models/token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L14)
 
 **Section sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L25-L66)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L32)
-- [chains.yaml](file://chains.yaml#L12-L23)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L25-L66)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L12-L23)
 
 ### Transaction Management
 **Updated** The endpoint now manages two entities in a single transaction: Payment and HDWalletAddress.
@@ -417,12 +417,12 @@ end
 ```
 
 **Diagram sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L36-L66)
-- [app/db/session.py](file://app/db/session.py#L11-L16)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L36-L66)
+- [app/db/session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L11-L16)
 
 **Section sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L36-L66)
-- [app/db/session.py](file://app/db/session.py#L11-L16)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L36-L66)
+- [app/db/session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L11-L16)
 
 ### Expiration Logic
 The payment record is set to expire 30 minutes after creation. The expiration timestamp is computed using UTC time.
@@ -432,8 +432,8 @@ Behavior:
 - Subsequent scanning and status updates should reflect expired state accordingly
 
 **Section sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L51-L52)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L52-L55)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L51-L52)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L52-L55)
 
 ## Dependency Analysis
 The payment endpoint depends on:
@@ -458,21 +458,21 @@ Config --> ChainsYaml["chains.yaml"]
 ```
 
 **Diagram sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L1-L11)
-- [app/api/dependencies.py](file://app/api/dependencies.py#L1-L15)
-- [app/schemas/payment.py](file://app/schemas/payment.py#L1-L10)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L1-L18)
-- [app/utils/crypto.py](file://app/utils/crypto.py#L1-L9)
-- [app/db/session.py](file://app/db/session.py#L1-L9)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L1-L6)
-- [app/blockchain/base.py](file://app/blockchain/base.py#L1-L13)
-- [app/core/config.py](file://app/core/config.py#L1-L7)
-- [chains.yaml](file://chains.yaml#L1-L24)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L1-L11)
+- [app/api/dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L1-L15)
+- [app/schemas/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/schemas/payment.py#L1-L10)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L1-L18)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L9)
+- [app/db/session.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/session.py#L1-L9)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L6)
+- [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L1-L13)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L7)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
 
 **Section sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L1-L11)
-- [app/api/dependencies.py](file://app/api/dependencies.py#L1-L15)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L32)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L1-L11)
+- [app/api/dependencies.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/dependencies.py#L1-L15)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
 
 ## Performance Considerations
 - Address generation is deterministic and lightweight; cost scales with number of addresses generated
@@ -497,8 +497,8 @@ Error handling specifics:
 - Index calculation errors fall back to index 0 for the first payment
 
 **Section sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L27-L34)
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L68-L74)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L27-L34)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L68-L74)
 
 ## Conclusion
 The payment creation endpoint provides a robust mechanism for generating blockchain payment addresses with strict validation, deterministic sequential indexing, and comprehensive address tracking. It integrates seamlessly with HD wallet management and chain configuration, while maintaining clear separation of concerns across the API, validation, persistence, and infrastructure layers. The enhanced sequential address generation ensures predictable address derivation and reliable tracking of all generated payment addresses.
@@ -512,7 +512,7 @@ The payment creation endpoint provides a robust mechanism for generating blockch
 - Response: 201 Created with PaymentRead payload
 
 **Section sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L12-L17)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L12-L17)
 
 ### Request Schema Details
 - chain: string, required, length 3–20
@@ -524,8 +524,8 @@ Validation:
 - token_id must exist and match chain
 
 **Section sources**
-- [app/schemas/payment.py](file://app/schemas/payment.py#L20-L24)
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L25-L34)
+- [app/schemas/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/schemas/payment.py#L20-L24)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L25-L34)
 
 ### Response Schema Details
 - id: UUID
@@ -539,8 +539,8 @@ Validation:
 - expires_at: datetime (+30 minutes)
 
 **Section sources**
-- [app/schemas/payment.py](file://app/schemas/payment.py#L35-L41)
-- [app/db/models/payment.py](file://app/db/models/payment.py#L41-L57)
+- [app/schemas/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/schemas/payment.py#L35-L41)
+- [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L57)
 
 ### Example Requests and Responses
 Request (JSON):
@@ -569,8 +569,8 @@ Error Response (JSON):
 }
 
 **Section sources**
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L27-L28)
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L68-L74)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L27-L28)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L68-L74)
 
 ### Client Implementation Guidelines
 - Validate chain against supported list before sending requests
@@ -587,7 +587,7 @@ Error Response (JSON):
 - HDWalletAddress table is automatically created during database migration
 
 **Section sources**
-- [chains.yaml](file://chains.yaml#L12-L23)
-- [app/core/config.py](file://app/core/config.py#L58-L61)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L32)
-- [alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py](file://alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py#L37-L44)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L12-L23)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L58-L61)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py](https://github.com/rakibhossain72/ctrip/blob/main/alembic/versions/2026_01_27_1807-5ec6405addd0_initial_database_schema.py#L37-L44)

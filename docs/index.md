@@ -2,21 +2,21 @@
 
 <cite>
 **Referenced Files in This Document**
-- [README.md](file://README.md)
-- [docker-compose.yml](file://docker-compose.yml)
-- [Dockerfile](file://Dockerfile)
-- [chains.yaml](file://chains.yaml)
-- [requirements.txt](file://requirements.txt)
-- [pyproject.toml](file://pyproject.toml)
-- [app/core/config.py](file://app/core/config.py)
-- [server.py](file://server.py)
-- [migrate.py](file://migrate.py)
-- [app/db/engine.py](file://app/db/engine.py)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py)
-- [app/utils/crypto.py](file://app/utils/crypto.py)
-- [app/workers/__init__.py](file://app/workers/__init__.py)
-- [app/api/health.py](file://app/api/health.py)
-- [app/api/v1/payments.py](file://app/api/v1/payments.py)
+- [README.md](https://github.com/rakibhossain72/ctrip/blob/main/README.md)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml)
+- [Dockerfile](https://github.com/rakibhossain72/ctrip/blob/main/Dockerfile)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt)
+- [pyproject.toml](https://github.com/rakibhossain72/ctrip/blob/main/pyproject.toml)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py)
+- [migrate.py](https://github.com/rakibhossain72/ctrip/blob/main/migrate.py)
+- [app/db/engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py)
+- [app/workers/__init__.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/__init__.py)
+- [app/api/health.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/health.py)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py)
 </cite>
 
 ## Table of Contents
@@ -54,9 +54,9 @@ Before installing cTrip Payment Gateway, ensure you have the following prerequis
 These requirements are essential for both Docker deployment and local development setups. The project includes comprehensive configuration for both environments.
 
 **Section sources**
-- [README.md](file://README.md#L24-L30)
-- [requirements.txt](file://requirements.txt#L1-L106)
-- [pyproject.toml](file://pyproject.toml#L10-L32)
+- [README.md](https://github.com/rakibhossain72/ctrip/blob/main/README.md#L24-L30)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt#L1-L106)
+- [pyproject.toml](https://github.com/rakibhossain72/ctrip/blob/main/pyproject.toml#L10-L32)
 
 ## Quick Start
 Choose one of the two recommended installation approaches:
@@ -104,9 +104,9 @@ For development, follow these steps:
    ```
 
 **Section sources**
-- [README.md](file://README.md#L37-L70)
-- [docker-compose.yml](file://docker-compose.yml#L1-L54)
-- [Dockerfile](file://Dockerfile#L1-L33)
+- [README.md](https://github.com/rakibhossain72/ctrip/blob/main/README.md#L37-L70)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L1-L54)
+- [Dockerfile](https://github.com/rakibhossain72/ctrip/blob/main/Dockerfile#L1-L33)
 
 ## Environment Configuration
 The application uses environment-based configuration managed through Pydantic Settings. Configuration is loaded from a `.env` file located at the project root.
@@ -134,8 +134,8 @@ The application supports three environments:
 Configuration is loaded from the `.env` file with automatic validation and type conversion. The system validates Ethereum private keys and enforces production security requirements.
 
 **Section sources**
-- [app/core/config.py](file://app/core/config.py#L10-L126)
-- [server.py](file://server.py#L18-L47)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L18-L47)
 
 ## Chains Configuration
 Configure supported blockchain networks in `chains.yaml`. This file defines RPC endpoints and token configurations for each chain.
@@ -159,9 +159,9 @@ Each chain requires:
 The default configuration includes BSC mainnet with USDT token and Anvil local testing network. Remove comments to enable additional chains.
 
 **Section sources**
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [app/blockchain/manager.py](file://app/blockchain/manager.py#L8-L33)
-- [app/core/config.py](file://app/core/config.py#L44-L56)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L56)
 
 ## HD Wallet Mnemonic
 The system uses Hierarchical Deterministic (HD) Wallets for secure address generation following BIP-44 standards.
@@ -188,8 +188,8 @@ The HDWalletManager class provides:
 - Limit mnemonic exposure in logs and error messages
 
 **Section sources**
-- [app/utils/crypto.py](file://app/utils/crypto.py#L5-L67)
-- [app/core/config.py](file://app/core/config.py#L58-L61)
+- [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L67)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L58-L61)
 
 ## Installation Methods
 
@@ -229,7 +229,7 @@ API -.-> Worker
 ```
 
 **Diagram sources**
-- [docker-compose.yml](file://docker-compose.yml#L3-L54)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L3-L54)
 
 #### Container Configuration
 - **App Service**: Builds from Dockerfile, exposes port 8000, mounts code volume
@@ -238,8 +238,8 @@ API -.-> Worker
 - **Cache Service**: Redis 7 for task queue and caching
 
 **Section sources**
-- [docker-compose.yml](file://docker-compose.yml#L1-L54)
-- [Dockerfile](file://Dockerfile#L1-L33)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L1-L54)
+- [Dockerfile](https://github.com/rakibhossain72/ctrip/blob/main/Dockerfile#L1-L33)
 
 ### Local Development Setup
 For development and testing, set up the environment locally with Python dependencies.
@@ -286,9 +286,9 @@ For development and testing, set up the environment locally with Python dependen
    ```
 
 **Section sources**
-- [README.md](file://README.md#L47-L70)
-- [requirements.txt](file://requirements.txt#L1-L106)
-- [migrate.py](file://migrate.py#L1-L112)
+- [README.md](https://github.com/rakibhossain72/ctrip/blob/main/README.md#L47-L70)
+- [requirements.txt](https://github.com/rakibhossain72/ctrip/blob/main/requirements.txt#L1-L106)
+- [migrate.py](https://github.com/rakibhossain72/ctrip/blob/main/migrate.py#L1-L112)
 
 ## Verification Steps
 After installation, verify the system is functioning correctly using these steps:
@@ -350,9 +350,9 @@ docker-compose ps
 Expected status: All services should show "Up" status
 
 **Section sources**
-- [app/api/health.py](file://app/api/health.py#L1-L7)
-- [app/api/v1/payments.py](file://app/api/v1/payments.py#L1-L62)
-- [migrate.py](file://migrate.py#L50-L57)
+- [app/api/health.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/health.py#L1-L7)
+- [app/api/v1/payments.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L1-L62)
+- [migrate.py](https://github.com/rakibhossain72/ctrip/blob/main/migrate.py#L50-L57)
 
 ## Troubleshooting Guide
 
@@ -469,9 +469,9 @@ pip install -r requirements.txt
 - Track API response times and error rates
 
 **Section sources**
-- [docker-compose.yml](file://docker-compose.yml#L1-L54)
-- [app/core/config.py](file://app/core/config.py#L94-L112)
-- [migrate.py](file://migrate.py#L22-L27)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L1-L54)
+- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L94-L112)
+- [migrate.py](https://github.com/rakibhossain72/ctrip/blob/main/migrate.py#L22-L27)
 
 ## Conclusion
 cTrip Payment Gateway provides a robust foundation for building multi-chain cryptocurrency payment solutions. The recommended Docker deployment approach ensures consistent environments and simplified dependency management. For development, the local setup offers flexibility and debugging capabilities.

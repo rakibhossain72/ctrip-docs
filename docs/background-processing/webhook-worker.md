@@ -2,15 +2,15 @@
 
 <cite>
 **Referenced Files in This Document**
-- [webhook.py](file://app/workers/webhook.py)
-- [webhook.py](file://app/services/webhook.py)
-- [scanner.py](file://app/services/blockchain/scanner.py)
-- [config.py](file://app/core/config.py)
-- [__init__.py](file://app/workers/__init__.py)
-- [listener.py](file://app/workers/listener.py)
-- [sweeper.py](file://app/workers/sweeper.py)
-- [payment.py](file://app/api/v1/payments.py)
-- [README.md](file://README.md)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py)
+- [__init__.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/__init__.py)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py)
+- [README.md](https://github.com/rakibhossain72/ctrip/blob/main/README.md)
 </cite>
 
 ## Table of Contents
@@ -68,18 +68,18 @@ A1 -. unrelated .-> W1
 ```
 
 **Diagram sources**
-- [webhook.py](file://app/workers/webhook.py#L1-L37)
-- [webhook.py](file://app/services/webhook.py#L1-L45)
-- [scanner.py](file://app/services/blockchain/scanner.py#L1-L134)
-- [config.py](file://app/core/config.py#L1-L126)
-- [__init__.py](file://app/workers/__init__.py#L1-L8)
-- [listener.py](file://app/workers/listener.py#L1-L46)
-- [sweeper.py](file://app/workers/sweeper.py#L1-L40)
-- [payment.py](file://app/api/v1/payments.py#L1-L62)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L1-L37)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L1-L45)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L1-L134)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
+- [__init__.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/__init__.py#L1-L8)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L1-L46)
+- [sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L1-L40)
+- [payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/v1/payments.py#L1-L62)
 
 **Section sources**
-- [README.md](file://README.md#L71-L78)
-- [__init__.py](file://app/workers/__init__.py#L1-L8)
+- [README.md](https://github.com/rakibhossain72/ctrip/blob/main/README.md#L71-L78)
+- [__init__.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/__init__.py#L1-L8)
 
 ## Core Components
 - Webhook Actor: a Dramatiq actor that sends webhooks asynchronously and participates in the retry mechanism.
@@ -96,11 +96,11 @@ Key responsibilities:
 - Batch processing through periodic scanning and confirmation cycles
 
 **Section sources**
-- [webhook.py](file://app/workers/webhook.py#L13-L37)
-- [webhook.py](file://app/services/webhook.py#L10-L45)
-- [scanner.py](file://app/services/blockchain/scanner.py#L97-L134)
-- [config.py](file://app/core/config.py#L63-L71)
-- [__init__.py](file://app/workers/__init__.py#L6-L7)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L45)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L97-L134)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L63-L71)
+- [__init__.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/__init__.py#L6-L7)
 
 ## Architecture Overview
 The webhook delivery pipeline is event-driven and asynchronous:
@@ -129,10 +129,10 @@ WA-->>L : "task completion"
 ```
 
 **Diagram sources**
-- [listener.py](file://app/workers/listener.py#L21-L46)
-- [scanner.py](file://app/services/blockchain/scanner.py#L97-L134)
-- [webhook.py](file://app/workers/webhook.py#L13-L37)
-- [webhook.py](file://app/services/webhook.py#L10-L45)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L97-L134)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L45)
 
 ## Detailed Component Analysis
 
@@ -155,11 +155,11 @@ Retry --> Done
 ```
 
 **Diagram sources**
-- [webhook.py](file://app/workers/webhook.py#L13-L37)
-- [webhook.py](file://app/services/webhook.py#L10-L45)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L45)
 
 **Section sources**
-- [webhook.py](file://app/workers/webhook.py#L13-L37)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
 
 ### Webhook Service
 The Webhook Service performs:
@@ -175,7 +175,7 @@ Security and formatting:
 - Timeout configured to bound network latency
 
 **Section sources**
-- [webhook.py](file://app/services/webhook.py#L10-L45)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L45)
 
 ### Payload Structure and Event Categorization
 The payload delivered upon confirmation includes:
@@ -192,7 +192,7 @@ Event categorization:
 - Filtering occurs implicitly by selecting only confirmed payments
 
 **Section sources**
-- [scanner.py](file://app/services/blockchain/scanner.py#L117-L131)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L117-L131)
 
 ### Retry Logic and Exponential Backoff
 - The actor is configured with a finite number of retries
@@ -201,7 +201,7 @@ Event categorization:
 - Consider adding jitter and backoff configuration for production hardening
 
 **Section sources**
-- [webhook.py](file://app/workers/webhook.py#L13-L13)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L13)
 
 ### Dead Letter Queue (DLQ) Handling
 - The code does not configure a DLQ for failed tasks
@@ -209,7 +209,7 @@ Event categorization:
 - Production deployments should consider configuring a DLQ for failed messages
 
 **Section sources**
-- [webhook.py](file://app/workers/webhook.py#L13-L37)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
 
 ### Signature Verification and Security Measures
 - The service optionally signs payloads using HMAC-SHA256 with a shared secret
@@ -222,8 +222,8 @@ Event categorization:
   - Validate endpoint URLs before enqueueing tasks
 
 **Section sources**
-- [webhook.py](file://app/services/webchain/webhook.py#L25-L31)
-- [config.py](file://app/core/config.py#L63-L71)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webchain/webhook.py#L25-L31)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L63-L71)
 
 ### Authentication Methods
 - Shared secret-based HMAC signature for payload integrity
@@ -231,7 +231,7 @@ Event categorization:
 - No built-in HTTP authentication (e.g., Basic/Digest) in the worker
 
 **Section sources**
-- [webhook.py](file://app/services/webhook.py#L25-L31)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L25-L31)
 
 ### Rate Limiting and Endpoint Validation
 - Built-in rate limiting is not implemented in the worker
@@ -241,8 +241,8 @@ Event categorization:
   - Consider validating endpoint reachability or using circuit breaker patterns at the service level
 
 **Section sources**
-- [config.py](file://app/core/config.py#L63-L71)
-- [webhook.py](file://app/services/webhook.py#L33-L35)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L63-L71)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L33-L35)
 
 ### Monitoring and Observability
 - Logging is used for success and failure events
@@ -253,7 +253,7 @@ Event categorization:
   - Monitor queue depth and backlog
 
 **Section sources**
-- [webhook.py](file://app/services/webhook.py#L36-L42)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L36-L42)
 
 ### Resubmission Workflows and Manual Intervention
 - Resubmission:
@@ -284,15 +284,15 @@ DB["Database"] --> Scanner
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L63-L71)
-- [webhook.py](file://app/workers/webhook.py#L13-L37)
-- [webhook.py](file://app/services/webhook.py#L10-L45)
-- [__init__.py](file://app/workers/__init__.py#L6-L7)
-- [scanner.py](file://app/services/blockchain/scanner.py#L97-L134)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L63-L71)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L45)
+- [__init__.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/__init__.py#L6-L7)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L97-L134)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L63-L71)
-- [__init__.py](file://app/workers/__init__.py#L6-L7)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L63-L71)
+- [__init__.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/__init__.py#L6-L7)
 
 ## Performance Considerations
 - Asynchronous I/O reduces blocking during outbound HTTP calls
@@ -322,9 +322,9 @@ Common issues and resolutions:
   - Use health checks for endpoints
 
 **Section sources**
-- [webhook.py](file://app/services/webhook.py#L39-L44)
-- [webhook.py](file://app/workers/webhook.py#L34-L36)
-- [config.py](file://app/core/config.py#L63-L71)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L39-L44)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L34-L36)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L63-L71)
 
 ## Conclusion
 The Webhook Worker provides a robust, asynchronous delivery mechanism for payment status notifications. It leverages Dramatiq for reliability, supports optional payload signing for security, and integrates cleanly with the payment confirmation pipeline. Production deployments should consider adding configurable retry backoff, DLQ handling, rate limiting, and comprehensive observability to ensure high delivery success rates and operability.
@@ -337,11 +337,11 @@ The Webhook Worker provides a robust, asynchronous delivery mechanism for paymen
 - Signature header (when secret configured): standardized name for HMAC-SHA256
 
 **Section sources**
-- [scanner.py](file://app/services/blockchain/scanner.py#L117-L131)
-- [webhook.py](file://app/services/webhook.py#L22-L31)
+- [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L117-L131)
+- [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L22-L31)
 
 ### Running Workers
 - Start the Dramatiq workers to process webhook tasks alongside listener and sweeper.
 
 **Section sources**
-- [README.md](file://README.md#L66-L69)
+- [README.md](https://github.com/rakibhossain72/ctrip/blob/main/README.md#L66-L69)

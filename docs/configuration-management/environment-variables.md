@@ -2,17 +2,17 @@
 
 <cite>
 **Referenced Files in This Document**
-- [config.py](file://app/core/config.py)
-- [server.py](file://server.py)
-- [docker-compose.yml](file://docker-compose.yml)
-- [Dockerfile](file://Dockerfile)
-- [chains.yaml](file://chains.yaml)
-- [crypto.py](file://app/utils/crypto.py)
-- [base.py](file://app/blockchain/base.py)
-- [manager.py](file://app/blockchain/manager.py)
-- [engine.py](file://app/db/engine.py)
-- [listener.py](file://app/workers/listener.py)
-- [README.md](file://README.md)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml)
+- [Dockerfile](https://github.com/rakibhossain72/ctrip/blob/main/Dockerfile)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py)
+- [base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py)
+- [README.md](https://github.com/rakibhossain72/ctrip/blob/main/README.md)
 </cite>
 
 ## Table of Contents
@@ -57,18 +57,18 @@ C -. "loads from" .-> E
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L10-L126)
-- [server.py](file://server.py#L18-L47)
-- [engine.py](file://app/db/engine.py#L1-L32)
-- [docker-compose.yml](file://docker-compose.yml#L26-L50)
-- [chains.yaml](file://chains.yaml#L1-L24)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L18-L47)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L26-L50)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L10-L126)
-- [server.py](file://server.py#L18-L47)
-- [engine.py](file://app/db/engine.py#L1-L32)
-- [docker-compose.yml](file://docker-compose.yml#L26-L50)
-- [chains.yaml](file://chains.yaml#L1-L24)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L18-L47)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L26-L50)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
 
 ## Core Components
 This section enumerates all environment variables recognized by the application, their roles, and whether they are required or optional. Defaults are documented where applicable.
@@ -92,9 +92,9 @@ Notes:
 - The application selects the appropriate database URL based on the environment setting.
 
 **Section sources**
-- [config.py](file://app/core/config.py#L11-L122)
-- [docker-compose.yml](file://docker-compose.yml#L26-L50)
-- [engine.py](file://app/db/engine.py#L5-L11)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L11-L122)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L26-L50)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L5-L11)
 
 ## Architecture Overview
 The configuration loading pipeline and runtime usage are illustrated below.
@@ -115,9 +115,9 @@ Worker->>Settings : "Access env, database_url, rpc_url, mnemonic"
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L115-L122)
-- [server.py](file://server.py#L18-L47)
-- [listener.py](file://app/workers/listener.py#L21-L46)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L115-L122)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L18-L47)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
 
 ## Detailed Component Analysis
 
@@ -145,12 +145,12 @@ Validate --> Ready(["Settings ready for use"])
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L115-L122)
-- [config.py](file://app/core/config.py#L94-L112)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L115-L122)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L94-L112)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L115-L122)
-- [config.py](file://app/core/config.py#L94-L112)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L115-L122)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L94-L112)
 
 ### Sensitive Data Management
 - Private key handling:
@@ -189,13 +189,13 @@ Settings --> HDWalletManager : "uses mnemonic"
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L10-L126)
-- [crypto.py](file://app/utils/crypto.py#L5-L67)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L67)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L74-L82)
-- [config.py](file://app/core/config.py#L94-L112)
-- [crypto.py](file://app/utils/crypto.py#L5-L67)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L74-L82)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L94-L112)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L67)
 
 ### Database Configuration
 - Dynamic selection:
@@ -215,14 +215,14 @@ U --> Conn["Create engines and sessions"]
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L84-L92)
-- [engine.py](file://app/db/engine.py#L5-L17)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L84-L92)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L5-L17)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L18-L26)
-- [config.py](file://app/core/config.py#L84-L92)
-- [engine.py](file://app/db/engine.py#L5-L17)
-- [docker-compose.yml](file://docker-compose.yml#L27-L28)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L18-L26)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L84-L92)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L5-L17)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L27-L28)
 
 ### Blockchain RPC Configuration
 - Chain definitions:
@@ -243,15 +243,15 @@ BC-->>Manager : "Map of chain_name -> BlockchainBase"
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L44-L56)
-- [manager.py](file://app/blockchain/manager.py#L8-L32)
-- [chains.yaml](file://chains.yaml#L1-L24)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L56)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L39-L42)
-- [config.py](file://app/core/config.py#L44-L56)
-- [manager.py](file://app/blockchain/manager.py#L8-L32)
-- [chains.yaml](file://chains.yaml#L1-L24)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L39-L42)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L44-L56)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
 
 ### Redis and Background Workers
 - Redis URL:
@@ -260,9 +260,9 @@ BC-->>Manager : "Map of chain_name -> BlockchainBase"
   - Workers are started separately and inherit the same environment configuration.
 
 **Section sources**
-- [config.py](file://app/core/config.py#L34-L37)
-- [docker-compose.yml](file://docker-compose.yml#L42-L50)
-- [listener.py](file://app/workers/listener.py#L21-L46)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L34-L37)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L42-L50)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
 
 ### Webhook Configuration
 - Optional webhook URL and secret:
@@ -270,7 +270,7 @@ BC-->>Manager : "Map of chain_name -> BlockchainBase"
 - Not enforced as required; absence disables webhook features.
 
 **Section sources**
-- [config.py](file://app/core/config.py#L63-L71)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L63-L71)
 
 ### Development vs Production Differences
 - Environment mode:
@@ -283,10 +283,10 @@ BC-->>Manager : "Map of chain_name -> BlockchainBase"
   - MNEMONIC defaults to a test phrase.
 
 **Section sources**
-- [config.py](file://app/core/config.py#L12-L15)
-- [config.py](file://app/core/config.py#L84-L92)
-- [config.py](file://app/core/config.py#L104-L112)
-- [engine.py](file://app/db/engine.py#L5-L11)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L12-L15)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L84-L92)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L104-L112)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L5-L11)
 
 ## Dependency Analysis
 The following diagram shows how configuration is consumed across the system.
@@ -303,22 +303,22 @@ Settings --> DB["PostgreSQL/SQLite<br/>compose env"]
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L10-L126)
-- [engine.py](file://app/db/engine.py#L1-L32)
-- [manager.py](file://app/blockchain/manager.py#L1-L33)
-- [crypto.py](file://app/utils/crypto.py#L1-L90)
-- [server.py](file://server.py#L18-L47)
-- [listener.py](file://app/workers/listener.py#L1-L46)
-- [docker-compose.yml](file://docker-compose.yml#L26-L50)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L90)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L18-L47)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L1-L46)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L26-L50)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L10-L126)
-- [engine.py](file://app/db/engine.py#L1-L32)
-- [manager.py](file://app/blockchain/manager.py#L1-L33)
-- [crypto.py](file://app/utils/crypto.py#L1-L90)
-- [server.py](file://server.py#L18-L47)
-- [listener.py](file://app/workers/listener.py#L1-L46)
-- [docker-compose.yml](file://docker-compose.yml#L26-L50)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L1-L32)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L1-L33)
+- [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L90)
+- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L18-L47)
+- [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L1-L46)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L26-L50)
 
 ## Performance Considerations
 - Keep RPC endpoints responsive; consider multiple RPC URLs for redundancy.
@@ -357,10 +357,10 @@ Common issues and resolutions:
   - Resolution: Set ENV to "development", "production", or "testing" appropriately.
 
 **Section sources**
-- [config.py](file://app/core/config.py#L94-L112)
-- [engine.py](file://app/db/engine.py#L5-L11)
-- [manager.py](file://app/blockchain/manager.py#L28-L32)
-- [docker-compose.yml](file://docker-compose.yml#L26-L50)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L94-L112)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L5-L11)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L28-L32)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L26-L50)
 
 ## Conclusion
 The cTrip Payment Gateway centralizes configuration through a validated settings class that reads from .env and environment variables, with sensible defaults and strict validation for production safety. By following the guidance here—securing secrets, validating configuration, and using environment-specific overrides—you can reliably operate the system across development and production.
@@ -380,8 +380,8 @@ The cTrip Payment Gateway centralizes configuration through a validated settings
 - SECRET_KEY: Application cryptography secret (must change in production)
 
 **Section sources**
-- [config.py](file://app/core/config.py#L11-L122)
-- [docker-compose.yml](file://docker-compose.yml#L26-L50)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L11-L122)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L26-L50)
 
 ### Configuration Loading Flow
 ```mermaid
@@ -394,7 +394,7 @@ E --> F["Settings ready"]
 ```
 
 **Diagram sources**
-- [config.py](file://app/core/config.py#L115-L122)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L115-L122)
 
 ### Example Scenarios
 - Development with local services
@@ -409,8 +409,8 @@ E --> F["Settings ready"]
   - Define chains in chains.yaml with names and RPC URLs; if empty, the manager falls back to RPC_URL.
 
 **Section sources**
-- [docker-compose.yml](file://docker-compose.yml#L26-L50)
-- [manager.py](file://app/blockchain/manager.py#L28-L32)
-- [chains.yaml](file://chains.yaml#L1-L24)
-- [engine.py](file://app/db/engine.py#L5-L11)
-- [config.py](file://app/core/config.py#L84-L92)
+- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L26-L50)
+- [manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L28-L32)
+- [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
+- [engine.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/engine.py#L5-L11)
+- [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L84-L92)
