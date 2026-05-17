@@ -44,7 +44,7 @@ The system is organized around:
 - API layer (FastAPI) with health and payment endpoints
 - Blockchain abstraction supporting multiple chains
 - Asynchronous database operations with SQLAlchemy 2.0 and Alembic migrations
-- Background workers powered by Dramatiq and Redis
+- Background workers powered by ARQ and Redis
 - Services for scanning, sweeping, and webhook delivery
 
 ```mermaid
@@ -69,7 +69,7 @@ WHSVC["WebhookService (services/webhook.py)"]
 end
 subgraph "Workers"
 LSTN["listen_for_payments (listener.py)"]
-SWEE["sweep_payments (sweeper.py)"]
+SWEE["sweep_funds (sweeper.py)"]
 WHAK["send_webhook_task (webhook.py)"]
 end
 subgraph "Database"
@@ -123,7 +123,7 @@ ENG --> BASE
 - Database engine and models: async/sync engines, Base declarative, and ORM models for payments, transactions, tokens, and chain states.
 - Blockchain manager and provider: dynamic chain selection and Web3 provider retrieval.
 - Services: ScannerService for detecting and confirming payments; SweeperService for settling confirmed payments.
-- Workers: Dramatiq actors for continuous scanning, sweeping, and webhook dispatch.
+- Workers: ARQ tasks for continuous scanning, sweeping, and webhook dispatch.
 - Health and API: FastAPI endpoints and lifecycle hooks.
 
 Key responsibilities and failure points:
@@ -229,13 +229,13 @@ Failure scenarios:
 - [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L21-L58)
 
 ### Webhook Delivery
-- WebhookService sends notifications asynchronously; Dramatiq actor handles retries and error logging.
+- WebhookService sends notifications asynchronously; ARQ task handles retries and error logging.
 - Payload includes payment metadata; optional signature verification supported by configuration.
 
 Failure scenarios:
 - Destination endpoint unreachable or slow
 - Signature mismatch or invalid secret
-- Dramatiq retry exhaustion
+- ARQ retry exhaustion
 
 **Section sources**
 - [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L13-L37)
@@ -352,13 +352,13 @@ Symptoms:
 
 Checklist:
 - Validate webhook_url and webhook_secret
-- Inspect Dramatiq broker connectivity (Redis)
+- Inspect ARQ Redis backend connectivity (Redis)
 - Review webhook service logs and payload structure
 - Confirm destination endpoint availability and response codes
 
 Remediation:
 - Fix endpoint URL and secret
-- Increase Dramatiq max_retries cautiously
+- Increase ARQ max_retries cautiously
 - Add circuit breaker or dead-letter handling
 
 **Section sources**
@@ -413,7 +413,7 @@ Symptoms:
 
 Checklist:
 - Confirm Redis connectivity and queue health
-- Validate Dramatiq actor decorators and scheduling
+- Validate ARQ task decorators and scheduling
 - Inspect worker logs for exceptions and retry counts
 - Ensure each actor uses its own event loop
 
@@ -456,7 +456,7 @@ Remediation:
 ### Log Interpretation Strategies
 - Use structured logs emitted by workers and services
 - Correlate timestamps with ChainState last_scanned_block and payment detected_in_block
-- Filter by actor names (listen_for_payments, sweep_payments, send_webhook_task)
+- Filter by actor names (listen_for_payments, sweep_funds, send_webhook_task)
 - Track database commit points and error boundaries
 
 **Section sources**
@@ -476,7 +476,7 @@ Remediation:
 ### Diagnostic Commands and Tools
 - Health checks: use FastAPI health endpoints
 - Database migrations: use helper script to inspect and apply migrations
-- Worker status: monitor Dramatiq broker queues and actor logs
+- Worker status: monitor ARQ Redis backend queues and actor logs
 - Blockchain health: query latest block number and estimate gas
 
 **Section sources**

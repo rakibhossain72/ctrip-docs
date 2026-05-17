@@ -47,7 +47,7 @@ cTrip aims to lower the barrier to adopting cryptocurrency payments by providing
 
 Differentiators:
 - Native multi-chain support with a single configuration model
-- Asynchronous, scalable architecture using FastAPI, SQLAlchemy 2.0, and Dramatiq
+- Asynchronous, scalable architecture using FastAPI, SQLAlchemy 2.0, and ARQ
 - HD wallet-backed address generation for secure, deterministic payment addresses
 - Built-in confirmation monitoring and webhook-driven automation
 - Extensible base class for blockchain providers and pluggable chain implementations
@@ -61,7 +61,7 @@ The repository follows a clean, feature-oriented layout:
 - app/blockchain/: Multi-chain implementations and base Web3 utilities
 - app/db/: SQLAlchemy models, sessions, and migrations
 - app/services/: Business logic for scanning and sweeping
-- app/workers/: Dramatiq actors orchestrating background tasks
+- app/workers/: ARQ tasks orchestrating background tasks
 - app/utils/: Cryptographic helpers (HD wallet)
 - app/core/: Application settings and configuration
 - Root configs: chains.yaml, Docker, migrations, and server entrypoint
@@ -127,7 +127,7 @@ D1 --> D2
 - Real-time scanning: Scans recent blocks for native and ERC20 transfers to known payment addresses, marking detections and confirmations.
 - Confirmation monitoring: Advances payments to confirmed state after sufficient block confirmations and triggers optional webhooks.
 - Fund sweeping: Prepares confirmed payments for settlement; placeholder logic indicates future integration with private key management and transaction broadcasting.
-- Background workers: Dramatiq actors schedule continuous scanning and sweeping loops with retry and delay mechanisms.
+- Background workers: ARQ tasks schedule continuous scanning and sweeping loops with retry and delay mechanisms.
 - Webhook delivery: Asynchronously dispatches payment status updates to merchant endpoints with optional signature verification.
 
 **Section sources**
@@ -309,12 +309,12 @@ Any --> |No more| SweepEnd
 ### Webhook Delivery Pipeline
 - On confirmation, the scanner enqueues a webhook task
 - The webhook actor sends the payload to the configured URL with optional secret signing
-- Retries are managed by Dramatiq
+- Retries are managed by ARQ
 
 ```mermaid
 sequenceDiagram
 participant Scan as "ScannerService"
-participant Task as "Dramatiq send_webhook_task"
+participant Task as "ARQ send_webhook_task"
 participant Hook as "WebhookService"
 participant Merchant as "Merchant Endpoint"
 Scan->>Task : "Enqueue webhook with payload"

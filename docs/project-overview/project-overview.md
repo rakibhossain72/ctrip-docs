@@ -56,7 +56,7 @@ The project follows a layered architecture:
 - API layer: FastAPI routers and endpoints for payment creation and health checks.
 - Blockchain layer: Adapters for Ethereum, BSC, and Anvil (local testing), with a manager coordinating chain configurations.
 - Database layer: SQLAlchemy 2.0 ORM models and async engine configuration.
-- Worker layer: Dramatiq actors orchestrating background tasks (listener and sweeper).
+- Worker layer: ARQ tasks orchestrating background tasks (listener and sweeper).
 - Services layer: Business logic for scanning, confirming, sweeping, and webhook delivery.
 - Utilities: HD Wallet management and cryptographic helpers.
 
@@ -159,7 +159,7 @@ SV3 --> D2
 - [app/utils/crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L5-L67)
 
 ## Architecture Overview
-The system integrates FastAPI, PostgreSQL/SQLite, SQLAlchemy 2.0, Dramatiq with Redis, Web3.py, and Alembic. The runtime lifecycle initializes blockchain adapters and HD wallet, seeds chain states, and triggers background workers. Payments are created via API, scanned for detection and confirmation, and settled via sweeping with optional webhook notifications.
+The system integrates FastAPI, PostgreSQL/SQLite, SQLAlchemy 2.0, ARQ with Redis, Web3.py, and Alembic. The runtime lifecycle initializes blockchain adapters and HD wallet, seeds chain states, and triggers background workers. Payments are created via API, scanned for detection and confirmation, and settled via sweeping with optional webhook notifications.
 
 ```mermaid
 graph TB
@@ -282,31 +282,32 @@ API-->>Client : "201 Created Payment"
 - [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L58)
 
 ### Automated Detection and Confirmation
-- The listener actor periodically runs a ScannerService that:
-  - Reads chain state and scans recent blocks in batches.
-  - Detects native and ERC20 transfers matching pending payments.
-  - Updates payment status to detected and records block number.
-- Confirmation logic compares detected block height to latest block to meet required confirmations.
+- **Real-time detection**: ChainSniper WebSocket listeners are started once on worker startup via `ScannerService.start_listeners()`. Each chain with a `ws://` or `wss://` RPC URL gets its own listener task.
+  - `_on_block()`: Detects native currency transfers to pending payment addresses.
+  - `_on_log()`: Detects ERC20 Transfer events matching pending token payments.
+  - Matching payments are immediately updated to `DETECTED`.
+- **Periodic confirmation**: ARQ cron task `listen_for_payments` runs every second.
+  - Calls `confirm_payments()` for each chain: checks if `(latest_block - detected_in_block + 1) >= confirmations_required`.
+  - Calls `check_expired_payments()`: marks stale payments as `EXPIRED`.
 
 ```mermaid
 flowchart TD
-Tick["Actor Tick (every 5s)"] --> Scan["ScannerService.scan_chain(chain)"]
-Scan --> FetchState["Fetch ChainState (last_scanned_block)"]
-FetchState --> Batch["Compute block batch window"]
-Batch --> LoopBlocks["Iterate blocks in batch"]
-LoopBlocks --> Native["Match native transfers to pending payments"]
-LoopBlocks --> ERC20["Fetch logs and match ERC20 transfers"]
-Native --> UpdateDetected["Set status=detected"]
-ERC20 --> UpdateDetected
-UpdateDetected --> Commit["Commit state"]
-Commit --> Confirm["ScannerService.confirm_payments(chain)"]
-Confirm --> CheckConf["Compare latest block - detected block + 1"]
-CheckConf --> Met{"Confirmations >= required?"}
-Met --> |Yes| MarkPaid["Set status=confirmed"]
-Met --> |No| Skip["Skip"]
-MarkPaid --> Webhook["Send webhook if configured"]
-Skip --> End["Next tick"]
-Webhook --> End
+Startup["Worker Startup"] --> StartListeners["ScannerService.start_listeners()"]
+StartListeners --> Sniper["ChainSniper WebSocket Task (per chain)"]
+Sniper --> OnBlock["_on_block(block, chain)"]
+Sniper --> OnLog["_on_log(log, chain)"]
+OnBlock --> MatchNative["Match tx.to to PENDING native payments"]
+OnLog --> MatchERC20["Match ERC20 Transfer log to PENDING token payments"]
+MatchNative --> SetDetected["status = DETECTED"]
+MatchERC20 --> SetDetected
+SetDetected --> Webhook["_dispatch_webhook(payment)"]
+
+Cron["ARQ Cron (every second)"] --> Confirm["confirm_payments(chain)"]
+Confirm --> CheckConf["latest_block - detected_in_block + 1 >= required?"]
+CheckConf --> |Yes| SetConfirmed["status = CONFIRMED + webhook"]
+CheckConf --> |No| Skip["Skip"]
+Cron --> Expire["check_expired_payments()"]
+Expire --> SetExpired["status = EXPIRED + webhook"]
 ```
 
 **Diagram sources**
@@ -318,22 +319,25 @@ Webhook --> End
 - [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L134)
 
 ### Background Workers and Task Queue
-- Dramatiq actors are used for long-running tasks:
-  - listen_for_payments: Runs periodic scanning and confirmation cycles.
-  - sweep_payments: Periodically sweeps confirmed payments using HD wallet credentials.
-- Redis serves as the broker for Dramatiq.
+- ARQ tasks are used for long-running background work:
+  - `listen_for_payments`: ARQ cron task (every second) that runs confirmation and expiry checks. Real-time detection is handled by ChainSniper WebSocket listeners started at worker startup.
+  - `sweep_funds`: ARQ cron task (every 30 seconds, currently disabled) that sweeps confirmed payments using HD wallet credentials.
+- Redis serves as the backend for ARQ.
+- Worker started via `python run_worker.py`.
 
 ```mermaid
 sequenceDiagram
-participant Scheduler as "Dramatiq Broker (Redis)"
-participant Listener as "listen_for_payments"
+participant Startup as "Worker Startup"
+participant Sniper as "ChainSniper (WebSocket)"
+participant Cron as "ARQ Cron (every second)"
 participant Scanner as "ScannerService"
 participant DB as "Database"
-Scheduler->>Listener : "Trigger actor"
-Listener->>Scanner : "scan_chain(chain)"
-Scanner->>DB : "Read ChainState/Payments"
-Scanner-->>DB : "Update statuses"
-Listener->>Scheduler : "Schedule next run (5s)"
+Startup->>Scanner : "start_listeners()"
+Scanner->>Sniper : "Create WebSocket task per chain"
+Sniper->>DB : "Detect payments → DETECTED"
+Cron->>Scanner : "confirm_payments(chain)"
+Scanner->>DB : "Read DETECTED payments"
+Scanner-->>DB : "Update to CONFIRMED"
 ```
 
 **Diagram sources**
@@ -419,7 +423,8 @@ Technology stack and relationships:
 - SQLAlchemy 2.0: ORM for database modeling and async engine support.
 - PostgreSQL/SQLite: Storage backends with environment-aware selection.
 - Alembic: Migration system orchestrated via a helper script.
-- Dramatiq + Redis: Task queue for background processing.
+- ARQ + Redis: Async task queue for background processing (cron jobs and on-demand tasks).
+- ChainSniper: WebSocket-based real-time block detection library.
 - Web3.py: Interaction with EVM-compatible blockchains.
 - Pydantic + Pydantic-Settings: Strongly-typed configuration and validation.
 - YAML: Chain configuration file.
@@ -427,11 +432,12 @@ Technology stack and relationships:
 ```mermaid
 graph LR
 FastAPI["FastAPI"] --> SQLAlchemy["SQLAlchemy 2.0"]
-FastAPI --> Dramatiq["Dramatiq"]
-Dramatiq --> Redis["Redis"]
+FastAPI --> ARQ["ARQ"]
+ARQ --> Redis["Redis"]
 SQLAlchemy --> Postgres["PostgreSQL"]
 SQLAlchemy --> SQLite["SQLite"]
 FastAPI --> Web3["Web3.py"]
+FastAPI --> ChainSniper["ChainSniper"]
 FastAPI --> Alembic["Alembic"]
 FastAPI --> Pydantic["Pydantic + Settings"]
 FastAPI --> YAML["YAML (chains.yaml)"]
@@ -454,7 +460,7 @@ FastAPI --> YAML["YAML (chains.yaml)"]
 - Minimal retries: Actors set conservative retry policies to avoid thundering herds.
 - Connection pooling: Engine configuration includes pre-ping and sizing for stability.
 - Recommendations:
-  - Scale Redis and Dramatiq workers horizontally for throughput.
+  - Scale Redis and ARQ workers horizontally for throughput.
   - Tune block batch sizes and confirmation thresholds per chain characteristics.
   - Monitor webhook delivery latency and configure exponential backoff at the consumer.
 
@@ -473,7 +479,7 @@ Common issues and diagnostics:
 - [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L39-L44)
 
 ## Conclusion
-cTrip delivers a pragmatic, high-performance solution for multi-chain cryptocurrency payments. Its modular design, asynchronous foundations, and robust background processing enable reliable payment detection, confirmation, and settlement. By combining FastAPI, SQLAlchemy 2.0, Dramatiq, Web3.py, and Alembic, it provides a solid foundation for merchants and developers to integrate seamless crypto payments across EVM-compatible networks.
+cTrip delivers a pragmatic, high-performance solution for multi-chain cryptocurrency payments. Its modular design, asynchronous foundations, and robust background processing enable reliable payment detection, confirmation, and settlement. By combining FastAPI, SQLAlchemy 2.0, ARQ, Web3.py, and Alembic, it provides a solid foundation for merchants and developers to integrate seamless crypto payments across EVM-compatible networks.
 
 [No sources needed since this section summarizes without analyzing specific files]
 
@@ -483,8 +489,8 @@ cTrip delivers a pragmatic, high-performance solution for multi-chain cryptocurr
 - Framework: FastAPI
 - Database: PostgreSQL / SQLite (dev)
 - ORM: SQLAlchemy 2.0
-- Task Queue: Dramatiq with Redis
-- Blockchain: Web3.py
+- Task Queue: ARQ with Redis
+- Blockchain: Web3.py + ChainSniper (WebSocket detection)
 - Migrations: Alembic
 
 **Section sources**

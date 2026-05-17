@@ -34,7 +34,12 @@
 10. [Appendices](#appendices)
 
 ## Introduction
-This document describes the Listener Worker responsible for blockchain payment monitoring in the cTrip Payment Gateway. It explains how the worker scans blockchain networks for incoming payments, detects transactions, verifies amounts, and transitions payments through internal statuses. It also covers integration with blockchain managers, scanner services, and payment processing workflows; task scheduling patterns; polling intervals and scan frequency configurations; error handling and retry mechanisms; interaction with external blockchain APIs; rate-limiting considerations; network timeout handling; and performance monitoring and logging patterns.
+This document describes the Listener Worker responsible for blockchain payment monitoring in the cTrip Payment Gateway. It explains the two-part detection architecture:
+
+1. **Real-time detection** via ChainSniper WebSocket listeners (started on worker startup) — these push new blocks and ERC20 logs directly to handler functions, updating payment status to `DETECTED` immediately.
+2. **Periodic confirmation and expiry** via the `listen_for_payments` ARQ cron task (runs every second) — this promotes `DETECTED` payments to `CONFIRMED` once enough blocks have passed, and marks stale payments as `EXPIRED`.
+
+It also covers integration with blockchain managers, scanner services, and payment processing workflows; ARQ cron scheduling; error handling; and interaction with external blockchain APIs via WebSocket.
 
 ## Project Structure
 The Listener Worker resides in the workers package and orchestrates scanning via a service layer that interacts with blockchain providers and the database. Key modules include:
@@ -124,16 +129,17 @@ W --> WH
 - [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
 
 ## Core Components
-- Listener Worker (Dramatiq actor): Triggers scanning cycles for configured chains, schedules next run, and handles errors.
-- Scanner Service: Scans blocks for native and ERC20 transfers, updates detected payments, and confirms payments after required confirmations.
+- ChainSniper WebSocket Listeners: Started once on worker startup via `ScannerService.start_listeners()`. One listener per chain with a `ws://` or `wss://` RPC URL. Calls `_on_block()` for native transfers and `_on_log()` for ERC20 Transfer events.
+- `listen_for_payments` ARQ cron task: Runs every second. Calls `ScannerService.confirm_payments()` for each chain and `ScannerService.check_expired_payments()` globally.
+- Scanner Service: Handles both real-time detection callbacks and periodic confirmation/expiry logic.
 - Blockchain Provider Abstraction: AsyncWeb3-backed clients per chain with POA support, gas estimation, and transaction building.
 - Database Models: Payment, ChainState, Token; used to track pending payments, last scanned block, and token metadata.
-- Webhook Integration: Asynchronous webhook sender via Dramatiq with retries and HMAC signing.
+- Webhook Integration: Dispatched directly from `ScannerService` when a payment is detected or confirmed.
 
-Key configuration and constants:
-- Confirmation threshold and block batch size are defined in the listener worker.
-- Chains are loaded from a YAML file and mapped to provider instances.
-- Webhook URL and secret are configurable.
+Key configuration:
+- `CONFIRMATIONS_REQUIRED = 1` in `app/workers/listener.py` (configurable)
+- Chains loaded from `chains.yaml` via `get_enabled_chains()` in `app/workers/utils.py`
+- WebSocket RPC URLs required in `chains.yaml` for detection to work
 
 **Section sources**
 - [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L15-L16)
@@ -147,7 +153,7 @@ The Listener Worker runs periodically, invoking the Scanner Service for each con
 
 ```mermaid
 sequenceDiagram
-participant Broker as "Dramatiq Broker"
+participant Broker as "ARQ Redis backend"
 participant Listener as "listen_for_payments"
 participant Scanner as "ScannerService"
 participant DB as "AsyncSession"
@@ -200,7 +206,7 @@ Listener->>Broker : "schedule next run (5s delay)"
 
 ### Listener Worker
 Responsibilities:
-- Periodic execution via Dramatiq actor.
+- Periodic execution via ARQ task.
 - Builds ScannerService with configuration constants.
 - Iterates over configured chains, scanning and confirming payments.
 - Schedules the next run with a fixed delay.
@@ -289,7 +295,7 @@ Timeouts and reliability:
 
 ### Webhook Integration
 - WebhookService sends asynchronous HTTP requests with optional HMAC signature.
-- send_webhook_task is a Dramatiq actor that invokes WebhookService and raises on failure to trigger retries.
+- send_webhook_task is a ARQ task that invokes WebhookService and raises on failure to trigger retries.
 - ScannerService conditionally enqueues a webhook task upon confirmation.
 
 **Section sources**
@@ -336,7 +342,7 @@ Complexity considerations:
 
 ### Error Handling, Retry Mechanisms, and Failure Recovery
 - Listener catches exceptions, logs them, and still schedules the next run.
-- Webhook actor raises on failure to enable Dramatiq retries with a small backoff.
+- Webhook actor raises on failure to enable ARQ retries with a small backoff.
 - WebhookService logs HTTP errors and generic exceptions, returning failure status.
 - BlockchainBase logs connection failures and warns on gas estimation fallbacks.
 

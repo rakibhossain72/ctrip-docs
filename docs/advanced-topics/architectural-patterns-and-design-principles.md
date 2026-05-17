@@ -46,7 +46,7 @@ This document analyzes the cTrip Payment Gateway codebase to extract and explain
 The system follows a layered architecture:
 - API layer (FastAPI routers) handles HTTP requests and delegates to services
 - Service layer encapsulates business logic (scanning, sweeping, webhook delivery)
-- Workers layer runs background tasks using Dramatiq actors
+- Workers layer runs background tasks using ARQ tasks
 - Blockchain abstraction layer manages multiple chains via a factory-style initializer
 - Persistence layer uses SQLAlchemy ORM models
 - Utilities and configuration provide cryptographic and environment utilities
@@ -62,7 +62,7 @@ S2["WebhookService<br/>services/webhook.py"]
 end
 subgraph "Workers Layer"
 W1["listen_for_payments<br/>workers/listener.py"]
-W2["sweep_payments<br/>workers/sweeper.py"]
+W2["sweep_funds<br/>workers/sweeper.py"]
 W3["send_webhook_task<br/>workers/webhook.py"]
 end
 subgraph "Blockchain Abstraction"
@@ -126,8 +126,8 @@ C1 --> W3
   - ScannerService scans blocks for incoming payments and confirms them after required confirmations, emitting webhooks.
   - WebhookService sends signed webhook payloads asynchronously.
 - Workers:
-  - listen_for_payments and sweep_payments are Dramatiq actors that run periodic scanning and sweeping cycles.
-  - send_webhook_task is a Dramatiq actor that delivers webhooks asynchronously.
+  - listen_for_payments and sweep_funds are ARQ tasks that run periodic scanning and sweeping cycles.
+  - send_webhook_task is a ARQ task that delivers webhooks asynchronously.
 - API and DI:
   - FastAPI lifespan initializes global state (blockchains, HD wallet) and seeds chain states.
   - get_blockchains() and get_hdwallet() are dependency providers that inject shared resources.
@@ -155,7 +155,7 @@ C1 --> W3
 The system employs a layered, event-driven design:
 - API layer orchestrates request handling and delegates to services.
 - Service layer encapsulates domain logic and coordinates persistence and blockchain interactions.
-- Workers run periodic tasks independently using Dramatiq actors, decoupling long-running work from request latency.
+- Workers run periodic tasks independently using ARQ tasks, decoupling long-running work from request latency.
 - Blockchain abstraction centralizes chain-specific concerns behind a unified interface.
 - Configuration drives chain selection and runtime behavior.
 
@@ -166,7 +166,7 @@ participant API as "FastAPI Router<br/>payments.py"
 participant DI as "Dependencies<br/>dependencies.py"
 participant DB as "SQLAlchemy Session"
 participant HDW as "HDWalletManager<br/>crypto.py"
-participant BG as "Dramatiq Actors<br/>listener/sweeper"
+participant BG as "ARQ Tasks<br/>listener/sweeper"
 Client->>API : "POST /api/v1/payments/"
 API->>DI : "get_blockchains(), get_hdwallet()"
 DI-->>API : "blockchains, hdwallet"
@@ -260,9 +260,9 @@ Obs-->>Scan : "retry on failure"
 - [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L45)
 
 ### Worker Pattern in Background Task Processing
-Background tasks are implemented as Dramatiq actors:
+Background tasks are implemented as ARQ tasks:
 - listen_for_payments periodically scans for incoming payments and updates statuses
-- sweep_payments periodically sweeps confirmed payments
+- sweep_funds periodically sweeps confirmed payments
 - send_webhook_task asynchronously delivers webhook notifications
 
 ```mermaid
@@ -275,7 +275,7 @@ Persist --> Schedule["Schedule next run"]
 Schedule --> End(["Exit"])
 subgraph "Actors"
 L["listen_for_payments"]
-S["sweep_payments"]
+S["sweep_funds"]
 W["send_webhook_task"]
 end
 ```
@@ -301,7 +301,7 @@ sequenceDiagram
 participant Lifespan as "FastAPI lifespan"
 participant DI as "get_blockchains/get_hdwallet"
 participant API as "API Handler"
-participant Worker as "Dramatiq Actor"
+participant Worker as "ARQ Task"
 Lifespan->>Lifespan : "initialize blockchains and hdwallet"
 Lifespan-->>API : "inject via dependencies"
 Lifespan-->>Worker : "trigger actors"
@@ -345,12 +345,12 @@ WKR --> DB
 - Asynchronous blockchain operations are implemented with AsyncWeb3 and awaited in services and workers
 - Error propagation:
   - ScannerService logs detection and confirmation outcomes; exceptions are handled per-chain iteration
-  - WebhookService returns booleans and logs failures; send_webhook_task raises to trigger Dramatiq retries
+  - WebhookService returns booleans and logs failures; send_webhook_task raises to trigger ARQ retries
   - BlockchainBase wraps connection and gas estimation in try/catch blocks
 - Graceful degradation:
   - Gas estimation falls back to defaults when provider calls fail
   - Missing chain configuration falls back to a default chain
-  - Webhook delivery is retried by Dramatiq; absence of webhook URL does not block confirmation
+  - Webhook delivery is retried by ARQ; absence of webhook URL does not block confirmation
 
 ```mermaid
 flowchart TD
@@ -384,7 +384,7 @@ G --> I["Signal Failure Upward"]
   - Chosen: separate actor for delivery to decouple from confirmation logic
   - Trade-off: adds operational complexity; mitigated by retries and logging
 - Worker pattern:
-  - Chosen: Dramatiq actors for periodic tasks to avoid blocking API threads
+  - Chosen: ARQ tasks for periodic tasks to avoid blocking API threads
   - Trade-off: requires Redis; increases deployment complexity
 - Gas estimation fallback:
   - Chosen: conservative defaults to keep flows moving

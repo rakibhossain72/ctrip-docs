@@ -31,7 +31,7 @@
 9. [Conclusion](#conclusion)
 
 ## Introduction
-This document describes the technology stack and system architecture of cTrip, a multi-chain cryptocurrency payment gateway. The system is built on FastAPI as the web framework foundation, with PostgreSQL and SQLite for data persistence and SQLAlchemy 2.0 for async ORM operations. Background tasks are processed using Dramatiq with Redis, blockchain interactions leverage Web3.py, and Alembic manages database migrations. The architecture follows a layered pattern separating API, service, blockchain, and database layers. Async/await patterns are used throughout, and the system is containerized with Docker. Background workers are decomposed into microservice-like actors for payment listening, sweeping, and webhook dispatch.
+This document describes the technology stack and system architecture of cTrip, a multi-chain cryptocurrency payment gateway. The system is built on FastAPI as the web framework foundation, with PostgreSQL and SQLite for data persistence and SQLAlchemy 2.0 for async ORM operations. Background tasks are processed using ARQ with Redis, blockchain interactions leverage Web3.py, and Alembic manages database migrations. The architecture follows a layered pattern separating API, service, blockchain, and database layers. Async/await patterns are used throughout, and the system is containerized with Docker. Background workers are decomposed into microservice-like actors for payment listening, sweeping, and webhook dispatch.
 
 ## Project Structure
 The repository is organized into feature-focused packages:
@@ -39,7 +39,7 @@ The repository is organized into feature-focused packages:
 - app/services: Business logic and orchestration
 - app/blockchain: Blockchain abstraction and chain-specific implementations
 - app/db: SQLAlchemy models, async engines, and sessions
-- app/workers: Dramatiq actors for background jobs
+- app/workers: ARQ tasks for background jobs
 - alembic: Database migration scripts and configuration
 - Root configuration and deployment files for Docker and project metadata
 
@@ -50,7 +50,7 @@ API["API Layer<br/>FastAPI Routers"]
 Services["Service Layer<br/>Business Logic"]
 Blockchain["Blockchain Layer<br/>Web3 Integrations"]
 DB["Database Layer<br/>SQLAlchemy ORM"]
-Workers["Background Workers<br/>Dramatiq Actors"]
+Workers["Background Workers<br/>ARQ Tasks"]
 end
 subgraph "External Systems"
 Postgres["PostgreSQL"]
@@ -82,8 +82,8 @@ DB --> Postgres
 - Web Framework: FastAPI with lifespan for startup initialization and router composition
 - Configuration: Centralized settings with environment-aware database and RPC configuration
 - Database: SQLAlchemy 2.0 async engine with asyncpg for PostgreSQL and aiosqlite for SQLite
-- Blockchain: Web3.py-based async client with POA middleware support and caching
-- Background Tasks: Dramatiq actors orchestrated via Redis broker
+- Blockchain: Web3.py-based async client with POA middleware support and caching; ChainSniper for WebSocket-based real-time block detection
+- Background Tasks: ARQ (async task queue) with Redis for cron jobs and on-demand tasks
 - Migration Tooling: Alembic for schema evolution
 - Containerization: Docker Compose for local development with Postgres, Redis, and worker processes
 
@@ -146,7 +146,7 @@ DBEngine --> Postgres
 ### FastAPI Application Lifecycle and Entrypoint
 - Lifespan initializes blockchain clients, HD wallet manager, and seeds chain states
 - Registers health and payment routers
-- Triggers background workers via Dramatiq on startup
+- Triggers background workers via ARQ on startup
 
 ```mermaid
 sequenceDiagram
@@ -156,14 +156,14 @@ participant Life as "Lifespan"
 participant BC as "Blockchain Manager"
 participant HD as "HDWalletManager"
 participant Seed as "Seed Chain States"
-participant Worker as "Dramatiq Workers"
+participant Worker as "ARQ Workers"
 Proc->>App : Start
 App->>Life : Initialize lifespan
 Life->>BC : get_blockchains()
 Life->>HD : Create HD wallet manager
 Life->>Seed : add_chain_states()
 Life->>Worker : listen_for_payments.send()
-Life->>Worker : sweep_payments.send()
+Life->>Worker : sweep_funds.send()
 App-->>Proc : Ready
 ```
 
@@ -319,27 +319,26 @@ Commit --> End(["Complete"])
 **Section sources**
 - [app/services/blockchain/scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L1-L134)
 
-### Background Workers: Dramatiq Actors
-- Worker actors run continuously, scanning chains and confirming payments at intervals
-- Use async sessions and schedule themselves for periodic execution
-- Redis serves as the message broker for Dramatiq
+### Background Workers: ARQ Tasks
+- Worker tasks run in a separate process started via `python run_worker.py`.
+- On startup, ChainSniper WebSocket listeners are launched for real-time block detection.
+- ARQ cron jobs handle periodic confirmation checks and sweeping.
+- Redis serves as the task queue backend for ARQ.
 
 ```mermaid
 sequenceDiagram
-participant Scheduler as "Dramatiq Broker"
-participant Listener as "listen_for_payments Actor"
+participant Startup as "Worker Startup"
+participant Sniper as "ChainSniper (WebSocket)"
+participant Cron as "ARQ Cron"
 participant Scanner as "ScannerService"
 participant DB as "Async Session"
 participant Chain as "BlockchainBase"
-Scheduler->>Listener : Trigger
-Listener->>DB : Open async session
-Listener->>Scanner : Create ScannerService
-loop For each chain
-Listener->>Scanner : scan_chain(chain_name)
-Scanner->>Chain : get logs / block data
-Scanner->>DB : Update payment status
-end
-Listener->>Scheduler : Schedule next run (5s)
+Startup->>Scanner : "start_listeners()"
+Scanner->>Sniper : "Create task per chain (ws:// URL)"
+Sniper->>DB : "Detect payments → DETECTED"
+Cron->>Scanner : "confirm_payments(chain_name)"
+Scanner->>Chain : "get latest block number"
+Scanner->>DB : "Update DETECTED → CONFIRMED"
 ```
 
 **Diagram sources**
@@ -388,7 +387,7 @@ PAYMENTS }o--|| TOKENS : "optional token reference"
 - [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L1-L74)
 
 ## Dependency Analysis
-- Runtime dependencies include FastAPI, SQLAlchemy 2.0, Web3.py, Dramatiq, Redis, Alembic, and Pydantic settings
+- Runtime dependencies include FastAPI, SQLAlchemy 2.0, Web3.py, ARQ, Redis, Alembic, and Pydantic settings
 - Project metadata declares optional dev dependencies for testing and linting
 - Alembic configuration references the project’s env to resolve database URLs
 
@@ -397,8 +396,9 @@ graph LR
 FastAPI["fastapi"] --> App["Application"]
 SQLAlchemy["sqlalchemy>=2.0.45"] --> App
 Web3["web3>=7.14.0"] --> App
-Dramatiq["dramatiq>=2.0.1"] --> App
-RedisLib["redis>=7.1.0"] --> App
+ARQ["arq>=0.27.0"] --> App
+ChainSniper["chain-sniper>=0.1.1"] --> App
+RedisLib["redis>=5.3.1"] --> App
 Alembic["alembic>=1.18.1"] --> App
 Pydantic["pydantic>=2.12.5"]
 Settings["pydantic-settings>=2.12.0"] --> App
@@ -406,9 +406,7 @@ Uvicorn["uvicorn>=0.40.0"] --> App
 AsyncPG["asyncpg>=0.31.0"] --> App
 AioSQLite["aiosqlite>=0.22.1"] --> App
 YAML["pyyaml>=6.0.3"] --> App
-Requests["requests>=2.32.5"] --> App
 HTTPX["httpx>=0.28.1"] --> App
-SlowAPI["slowapi>=0.1.9"] --> App
 ```
 
 **Diagram sources**
@@ -423,14 +421,14 @@ SlowAPI["slowapi>=0.1.9"] --> App
 ## Performance Considerations
 - Async ORM and engines reduce blocking I/O and improve throughput under concurrent loads
 - Gas price caching and batched block scanning minimize RPC calls and network latency
-- Redis-backed Dramatiq actors enable decoupled, scalable background processing
+- Redis-backed ARQ tasks enable decoupled, scalable background processing
 - Environment-aware database selection allows lightweight SQLite for development and robust asyncpg for production
 - Containerization simplifies scaling and resource isolation
 
 ## Troubleshooting Guide
 - Health endpoint: Verify application readiness via the root endpoint and blockchain connectivity
 - Database migrations: Use Alembic to upgrade/downgrade schemas; ensure DATABASE_URL is set correctly
-- Worker scheduling: Confirm Redis availability and that Dramatiq actors are started with the correct broker URL
+- Worker scheduling: Confirm Redis availability and that ARQ tasks are started with the correct broker URL
 - Chain configuration: Validate chains.yaml and RPC URLs; ensure POA middleware is enabled when required
 - Secrets: Ensure private keys and secret keys meet validation criteria for production environments
 
@@ -441,4 +439,4 @@ SlowAPI["slowapi>=0.1.9"] --> App
 - [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L94-L112)
 
 ## Conclusion
-cTrip’s architecture leverages modern asynchronous technologies to deliver a scalable, maintainable payment infrastructure across multiple blockchains. FastAPI and SQLAlchemy 2.0 provide a responsive API and robust ORM, while Web3.py and Dramatiq enable efficient blockchain interactions and background processing. Alembic ensures safe schema evolution, and Docker facilitates reproducible deployments. The layered design and microservice-like workers promote separation of concerns and operational flexibility.
+cTrip’s architecture leverages modern asynchronous technologies to deliver a scalable, maintainable payment infrastructure across multiple blockchains. FastAPI and SQLAlchemy 2.0 provide a responsive API and robust ORM, while Web3.py and ARQ enable efficient blockchain interactions and background processing. Alembic ensures safe schema evolution, and Docker facilitates reproducible deployments. The layered design and microservice-like workers promote separation of concerns and operational flexibility.

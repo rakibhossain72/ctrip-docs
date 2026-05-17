@@ -37,7 +37,7 @@ The configuration system centers around a single settings class that loads value
 graph TB
 subgraph "Runtime"
 S["FastAPI App<br/>server.py"]
-W["Dramatiq Workers<br/>listener.py"]
+W["ARQ Workers<br/>listener.py"]
 end
 subgraph "Config Layer"
 C["Settings (pydantic-settings)<br/>app/core/config.py"]
@@ -104,7 +104,7 @@ participant Env as "Environment Variables"
 participant DotEnv as ".env file"
 participant Settings as "Settings (pydantic-settings)"
 participant App as "FastAPI App"
-participant Worker as "Dramatiq Worker"
+participant Worker as "ARQ Worker"
 Env-->>DotEnv : "Compose/runtime sets variables"
 DotEnv-->>Settings : "Loaded via env_file"
 Settings-->>App : "Expose validated fields"
@@ -253,9 +253,10 @@ BC-->>Manager : "Map of chain_name -> BlockchainBase"
 
 ### Redis and Background Workers
 - Redis URL:
-  - Provided via environment variable and used by Dramatiq workers.
+  - Provided via `REDIS_URL` environment variable and used by ARQ workers.
 - Worker startup:
-  - Workers are started separately and inherit the same environment configuration.
+  - Workers are started separately via `python run_worker.py` and inherit the same environment configuration.
+  - In Docker Compose, the `worker` service runs `python run_worker.py`.
 
 **Section sources**
 - [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L34-L37)
@@ -295,7 +296,7 @@ Settings["Settings<br/>app/core/config.py"] --> Engine["DB Engines<br/>app/db/en
 Settings --> Manager["Blockchains Factory<br/>app/blockchain/manager.py"]
 Settings --> Crypto["HDWalletManager<br/>app/utils/crypto.py"]
 Settings --> App["FastAPI App<br/>server.py"]
-Settings --> Worker["Dramatiq Workers<br/>app/workers/*.py"]
+Settings --> Worker["ARQ Workers<br/>app/workers/*.py"]
 Settings --> Redis["Redis URL<br/>compose env"]
 Settings --> DB["PostgreSQL/SQLite<br/>compose env"]
 ```

@@ -104,7 +104,7 @@ S --> C
 - Webhook Delivery
   - Optional HMAC-SHA256 signing for payload integrity and authenticity.
 - Asynchronous Workers
-  - Dramatiq actors for background webhook delivery with retry logic.
+  - ARQ tasks for background webhook delivery with retry logic.
 
 **Section sources**
 - [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L1-L126)
@@ -201,7 +201,7 @@ Security recommendations:
 
 ### Webhook Delivery and Payload Integrity
 - Optional HMAC-SHA256 signing using a shared secret header.
-- Asynchronous delivery via Dramatiq actors with retries.
+- Asynchronous delivery via ARQ tasks with retries.
 
 Security recommendations:
 - Use HTTPS endpoints for webhook receivers.

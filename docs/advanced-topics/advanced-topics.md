@@ -231,7 +231,7 @@ BlockchainBase <|-- BSCBlockchain
   - Block batching limits per-iteration work
   - Confirmation thresholds prevent premature settlement
 - Async operation tuning:
-  - Dramatiq actors schedule periodic scanning cycles
+  - ARQ tasks schedule periodic scanning cycles
   - Event loops and asyncio.run used within actors for isolated execution
 
 ```mermaid

@@ -122,8 +122,10 @@ LST --> PM
 - [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L10-L126)
 
 ## Core Components
-- Health check endpoint: GET /health
-- Payment creation endpoint: POST /api/v1/payments/
+- Health check endpoint: `GET /health`
+- Payment creation endpoint: `POST /api/v1/payments/`
+- Payment retrieval endpoint: `GET /api/v1/payments/{payment_id}`
+- Admin endpoints: `POST /admin/scan-now`, `POST /admin/sweep-now`, `POST /admin/sweep-address`, `POST /admin/process-payment`, `POST /admin/send-webhook`, `POST /admin/custom-webhook`
 
 Authentication and authorization:
 - No explicit authentication middleware is present in the documented files. Authentication and rate limiting should be enforced at the reverse proxy or API gateway level.
@@ -309,7 +311,7 @@ Expired --> Failed : "No payment"
 
 ### Webhook Integration Patterns
 Webhook delivery:
-- Asynchronous via Dramatiq actors
+- Asynchronous via ARQ tasks
 - Signed with HMAC-SHA256 when a secret is configured
 - Payload delivered as JSON with X-Webhook-Signature header
 
@@ -351,10 +353,25 @@ WHS-->>WHA : "Success"
 Chain configuration:
 - Chains are loaded from a YAML file and injected into application state
 - Supported chains include at least bsc and anvil in the provided sample
+- **WebSocket RPC URLs (`ws://` or `wss://`) are required for real-time payment detection**
 
 RPC interactions:
 - Generic base class supports balance queries, gas price estimation, transaction building, and receipt polling
 - POA support and caching of gas prices are included
+
+### Admin Endpoints
+The admin router (`/admin/*`) provides endpoints for manually triggering background tasks. These use `WorkerClient` to enqueue ARQ tasks.
+
+| Method | Path | Description |
+|--------|------|-------------|
+| POST | `/admin/scan-now` | Trigger immediate payment confirmation scan |
+| POST | `/admin/sweep-now` | Trigger immediate fund sweep |
+| POST | `/admin/sweep-address` | Sweep a specific address on a specific chain |
+| POST | `/admin/process-payment` | Manually process a specific payment |
+| POST | `/admin/send-webhook` | Send webhook notification for a payment |
+| POST | `/admin/custom-webhook` | Send a custom webhook to any URL |
+
+All admin endpoints return a `JobResponse` with `job_id`, `status`, and `message`.
 
 **Section sources**
 - [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L12-L24)
@@ -454,19 +471,32 @@ The cTrip Payment Gateway exposes a clean REST interface for payment creation an
 - Health Check
   - Method: GET
   - Path: /health
-  - Response: 200 OK with {"status":"ok"}
+  - Response: 200 OK with {"status": "ok"}
 
 - Payment Creation
   - Method: POST
   - Path: /api/v1/payments
   - Request JSON fields:
-    - amount: integer > 0
-    - chain: string (3–20 chars)
-    - token_id: UUID (optional)
+    - amount: integer > 0 (in smallest unit: wei for native, base unit for ERC20)
+    - chain: string (3–20 chars, must match a configured chain)
+    - token_id: UUID (optional, must exist on the same chain)
   - Response JSON fields:
     - id, chain, token_id, address, amount, status, confirmations, created_at, expires_at
   - Success: 201 Created
   - Errors: 400 Bad Request with {"detail": "..."} on validation or processing failure
+
+- Payment Retrieval
+  - Method: GET
+  - Path: /api/v1/payments/{payment_id}
+  - Response: 200 OK with PaymentRead, or 404 Not Found
+
+- Admin Endpoints (all return JobResponse with job_id, status, message)
+  - POST /admin/scan-now
+  - POST /admin/sweep-now
+  - POST /admin/sweep-address (body: address, chain_name)
+  - POST /admin/process-payment (body: payment_id, chain_name)
+  - POST /admin/send-webhook (query: payment_id, event_type)
+  - POST /admin/custom-webhook (body: url, payload, secret)
 
 **Section sources**
 - [app/api/health.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/health.py#L4-L7)

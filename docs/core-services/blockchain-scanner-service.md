@@ -31,7 +31,15 @@
 10. [Appendices](#appendices)
 
 ## Introduction
-This document describes the Blockchain Scanner Service responsible for real-time detection of incoming payments across multiple blockchain networks. It explains the scanning algorithm that monitors new blocks for pending payments, the dual-mode detection system for native currency transfers and ERC20 token transfers via event logs, the block batch processing mechanism, confirmation threshold checking, and payment status updates. It also covers integration with Web3 providers, database session management, concurrent payment processing, configuration parameters, performance optimization techniques, error handling strategies, and monitoring approaches.
+This document describes the Blockchain Scanner Service responsible for real-time detection of incoming payments across multiple blockchain networks. 
+
+The scanner uses a **two-phase approach**:
+
+1. **Real-time detection** via ChainSniper WebSocket listeners — `ScannerService.start_listeners()` is called once on worker startup and creates one `asyncio.Task` per chain that has a `ws://` or `wss://` RPC URL. These listeners push new full blocks and ERC20 Transfer logs directly to handler functions (`_on_block`, `_on_log`), updating payment status to `DETECTED` immediately without polling.
+
+2. **Periodic confirmation and expiry** via ARQ cron — `confirm_payments()` runs every second to promote `DETECTED` payments to `CONFIRMED` once enough blocks have passed. `check_expired_payments()` marks stale payments as `EXPIRED`.
+
+It also covers integration with Web3 providers, database session management, concurrent payment processing, configuration parameters, performance optimization techniques, error handling strategies, and monitoring approaches.
 
 ## Project Structure
 The scanner service is part of a modular Python application with distinct layers:
@@ -110,14 +118,14 @@ C --> Y
 - [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
 
 ## Core Components
-- ScannerService: Implements scanning and confirmation logic for pending payments, including dual-mode detection for native and ERC20 transfers, block batching, and confirmation thresholds.
-- Web3 Provider Abstraction: Centralized provider retrieval via a chain registry, enabling per-chain provider configuration and POA support.
+- ScannerService: Provides real-time detection via ChainSniper WebSocket listeners and periodic confirmation/expiry logic.
+- Web3 Provider Abstraction: Centralized provider retrieval via a chain registry, enabling per-chain provider configuration and POA support. Used for confirmation checks (getting latest block number).
 - Database Models: Payments, ChainState, and Tokens define the persistence layer for pending transactions, last scanned block tracking, and token metadata.
-- Worker Orchestration: Dramatiq actors schedule periodic scanning and sweeping cycles, manage async sessions, and trigger webhooks upon confirmation.
+- Worker Orchestration: ARQ cron jobs schedule periodic confirmation and expiry checks. ChainSniper listeners are started once on worker startup.
 
 Key configuration parameters:
-- confirmations_required: Minimum number of confirmations needed to mark a detected payment as confirmed.
-- block_batch_size: Number of blocks processed in a single scanning cycle per chain.
+- `CONFIRMATIONS_REQUIRED`: Minimum number of confirmations needed to mark a detected payment as confirmed (default: 1 in `app/workers/listener.py`).
+- WebSocket RPC URLs in `chains.yaml`: Required for ChainSniper detection. Chains without a `ws://` or `wss://` URL will be skipped for detection.
 
 **Section sources**
 - [scanner.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/scanner.py#L14-L18)
@@ -126,44 +134,53 @@ Key configuration parameters:
 - [listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L15-L16)
 
 ## Architecture Overview
-The scanner operates in two phases per cycle:
-1. Scanning phase: Retrieve pending payments, fetch a block range, and detect native and ERC20 transfers.
-2. Confirmation phase: Evaluate detected payments against the current block height and the configured confirmation threshold.
+The scanner operates in two independent phases:
+
+**Phase 1 — Real-time detection (ChainSniper WebSocket):**
+- On worker startup, `start_listeners()` creates one ChainSniper task per chain with a WebSocket URL.
+- Each new block triggers `_on_block()` which checks native transfers against pending payments.
+- Each ERC20 Transfer log triggers `_on_log()` which checks the recipient against pending ERC20 payments.
+- Matching payments are immediately updated to `DETECTED`.
+
+**Phase 2 — Periodic confirmation (ARQ cron, every second):**
+- `confirm_payments()` queries `DETECTED` payments and checks if `(latest_block - detected_in_block + 1) >= confirmations_required`.
+- Confirmed payments are updated to `CONFIRMED` and a webhook is dispatched.
+- `check_expired_payments()` marks `PENDING`/`DETECTED` payments past their `expires_at` as `EXPIRED`.
 
 ```mermaid
 sequenceDiagram
-participant Actor as "Dramatiq Listener"
+participant Startup as "Worker Startup"
+participant Sniper as "ChainSniper (WebSocket)"
 participant Session as "Async DB Session"
 participant Scanner as "ScannerService"
 participant W3 as "Web3 Provider"
-participant Chain as "Chain State"
 participant Payments as "Payments"
-Actor->>Session : "Open async session"
-Actor->>Scanner : "Instantiate with confirmations_required, block_batch_size"
-loop For each chain
-Actor->>Scanner : "scan_chain(chain)"
+participant Webhook as "WebhookService"
+
+Startup->>Scanner : "start_listeners()"
+Scanner->>Sniper : "Create task per chain (ws:// URL)"
+
+Note over Sniper : "Real-time detection"
+Sniper->>Scanner : "_on_block(block, chain_name)"
+Scanner->>Payments : "Match tx.to against PENDING native payments"
+Payments-->>Scanner : "Update status to DETECTED"
+Scanner->>Webhook : "_dispatch_webhook(payment)"
+
+Sniper->>Scanner : "_on_log(log, chain_name)"
+Scanner->>Payments : "Match ERC20 Transfer log against PENDING token payments"
+Payments-->>Scanner : "Update status to DETECTED"
+Scanner->>Webhook : "_dispatch_webhook(payment)"
+
+Note over Scanner : "ARQ cron (every second)"
 Scanner->>W3 : "eth.block_number"
-Scanner->>Chain : "select ChainState with_for_update()"
-Chain-->>Scanner : "last_scanned_block"
-Scanner->>W3 : "get_block(from..to, full_transactions=true)"
-alt Native transfer detection
-Scanner->>Payments : "match tx.to against pending native payments"
-Payments-->>Scanner : "update status to detected"
+Scanner->>Payments : "Select DETECTED payments"
+Scanner->>Scanner : "confirmations = latest - detected_in_block + 1"
+alt confirmations >= required
+Scanner->>Payments : "Update status to CONFIRMED"
+Scanner->>Webhook : "_dispatch_webhook(payment)"
 end
-alt ERC20 transfer detection
-Scanner->>W3 : "eth.get_logs(Transfer topic)"
-Scanner->>Payments : "match log topics against pending ERC20 payments"
-Payments-->>Scanner : "update status to detected"
-end
-Scanner->>Chain : "update last_scanned_block"
-Actor->>Scanner : "confirm_payments(chain)"
-Scanner->>W3 : "eth.block_number"
-Scanner->>Payments : "check confirmations vs threshold"
-alt Confirmed
-Scanner->>Actor : "trigger webhook if configured"
-end
-end
-Actor->>Session : "commit and close"
+Scanner->>Payments : "Check PENDING/DETECTED past expires_at"
+Scanner->>Payments : "Update status to EXPIRED"
 ```
 
 **Diagram sources**
@@ -198,30 +215,29 @@ Confirmation algorithm:
 
 ```mermaid
 flowchart TD
-Start(["scan_chain(chain)"]) --> GetState["Lock ChainState<br/>Read last_scanned_block"]
-GetState --> ComputeRange["Compute from_block<br/>and to_block using block_batch_size"]
-ComputeRange --> HasRange{"from <= to?"}
-HasRange --> |No| End(["Exit"])
-HasRange --> |Yes| LoadPayments["Load pending payments<br/>Split native vs ERC20"]
-LoadPayments --> LoopBlocks["For each block in range"]
-LoopBlocks --> NativeCheck["Iterate tx.to<br/>Compare to pending native addresses"]
-NativeCheck --> ERC20Check{"Has ERC20 payments?"}
-ERC20Check --> |No| NextBlock["Next block"]
-ERC20Check --> |Yes| Logs["eth.get_logs(Transfer topic)"]
-Logs --> MatchLogs["Match topics and token address"]
-MatchLogs --> NextBlock
-NextBlock --> UpdateState["Set last_scanned_block = to_block"]
-UpdateState --> Commit["Commit session"]
-Commit --> End
-ConfirmStart(["confirm_payments(chain)"]) --> LoadDetected["Load detected payments"]
-LoadDetected --> CheckConf["Compute confirmations<br/>latest - detected + 1"]
+WorkerStart(["Worker Startup"]) --> StartListeners["start_listeners()"]
+StartListeners --> CreateSniper["Create ChainSniper task per chain (ws:// URL)"]
+CreateSniper --> OnBlock["_on_block(block, chain_name)"]
+CreateSniper --> OnLog["_on_log(log, chain_name)"]
+OnBlock --> MatchNative["Match tx.to to PENDING native payments"]
+OnLog --> MatchERC20["Match ERC20 Transfer log to PENDING token payments"]
+MatchNative --> SetDetected["status = DETECTED, detected_in_block = block_number"]
+MatchERC20 --> SetDetected
+SetDetected --> DispatchWebhook["_dispatch_webhook(payment)"]
+
+ConfirmStart(["ARQ Cron: confirm_payments(chain)"]) --> LoadDetected["Load DETECTED payments"]
+LoadDetected --> CheckConf["confirmations = latest_block - detected_in_block + 1"]
 CheckConf --> Threshold{">= confirmations_required?"}
 Threshold --> |No| ConfirmEnd(["Exit"])
-Threshold --> |Yes| MarkConfirmed["Mark as confirmed<br/>Set confirmations count"]
+Threshold --> |Yes| MarkConfirmed["Mark as CONFIRMED, set confirmations count"]
 MarkConfirmed --> Webhook{"webhook_url configured?"}
-Webhook --> |Yes| SendHook["send_webhook_task"]
+Webhook --> |Yes| SendHook["_dispatch_webhook(payment)"]
 Webhook --> |No| ConfirmEnd
 SendHook --> ConfirmEnd
+
+ExpireStart(["ARQ Cron: check_expired_payments()"]) --> LoadExpired["Load PENDING/DETECTED past expires_at"]
+LoadExpired --> MarkExpired["Mark as EXPIRED"]
+MarkExpired --> DispatchExpiredWebhook["_dispatch_webhook(payment)"]
 ```
 
 **Diagram sources**
@@ -335,36 +351,30 @@ PAYMENTS }o--|| CHAIN_STATES : "chain"
 - [token.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/token.py#L6-L15)
 
 ### Worker Orchestration and Webhook Integration
-The listener actor:
-- Loads configured chains from settings
-- Creates an async database session
-- Instantiates ScannerService with configurable parameters
-- Iterates chains, invoking scan_chain and confirm_payments
-- Schedules the next run after a fixed delay
+The ARQ worker:
+- On startup, calls `ScannerService.start_listeners()` which creates one ChainSniper WebSocket task per chain with a `ws://` or `wss://` URL.
+- The `listen_for_payments` cron task (every second) calls `confirm_payments()` for each chain and `check_expired_payments()` globally.
+- Webhooks are dispatched directly from `ScannerService._dispatch_webhook()` — no separate webhook actor is needed for detection/confirmation events.
 
-The webhook actor:
-- Sends asynchronous webhooks with retry logic
-- Integrates with the global webhook configuration
+The `send_webhook_notification` ARQ task is available for manual webhook delivery via the admin API.
 
 ```mermaid
 sequenceDiagram
-participant Scheduler as "Dramatiq Broker"
-participant Listener as "listen_for_payments"
+participant Startup as "Worker Startup"
+participant Sniper as "ChainSniper (WebSocket)"
 participant DB as "Async Session"
 participant Scanner as "ScannerService"
-participant Webhook as "send_webhook_task"
-Scheduler->>Listener : "Trigger actor"
-Listener->>DB : "Open async session"
-Listener->>Scanner : "Instantiate with confirmations_required, block_batch_size"
-loop For each chain
-Listener->>Scanner : "scan_chain(chain)"
-Listener->>Scanner : "confirm_payments(chain)"
-alt Payment confirmed and webhook configured
-Scanner->>Webhook : "send_webhook_task(url, payload, secret)"
-end
-end
-Listener->>DB : "Commit and close"
-Scheduler->>Listener : "Schedule next run (5s)"
+participant Webhook as "WebhookService"
+Startup->>Scanner : "start_listeners()"
+Scanner->>Sniper : "Create task per chain (ws:// URL)"
+Sniper->>Scanner : "_on_block / _on_log"
+Scanner->>DB : "Update PENDING → DETECTED"
+Scanner->>Webhook : "_dispatch_webhook(payment)"
+Note over Scanner : "ARQ cron (every second)"
+Scanner->>DB : "Select DETECTED payments"
+Scanner->>Scanner : "Check confirmations"
+Scanner->>DB : "Update DETECTED → CONFIRMED"
+Scanner->>Webhook : "_dispatch_webhook(payment)"
 ```
 
 **Diagram sources**

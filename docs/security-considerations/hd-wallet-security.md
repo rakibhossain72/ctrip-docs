@@ -339,15 +339,15 @@ External libraries and their roles:
 - eth-account: Provides mnemonic generation, seed derivation, and private/public key/account operations.
 - web3: Ethereum JSON-RPC client and transaction utilities.
 - pydantic/pydantic-settings: Configuration loading and validation.
-- dramatiq: Background task processing.
+- arq: Background task processing.
 
 ```mermaid
 graph TB
 Crypto["HDWalletManager<br/>crypto.py"] --> EthAccount["eth-account"]
 Base["BlockchainBase<br/>base.py"] --> Web3["web3"]
 Config["Settings<br/>config.py"] --> Pydantic["pydantic/pydantic-settings"]
-Listener["Listener Worker<br/>listener.py"] --> Dramatiq["dramatiq"]
-SweeperWorker["Sweeper Worker<br/>sweeper_worker.py"] --> Dramatiq
+Listener["Listener Worker<br/>listener.py"] --> ARQ["arq"]
+SweeperWorker["Sweeper Worker<br/>sweeper_worker.py"] --> ARQ
 ```
 
 **Diagram sources**

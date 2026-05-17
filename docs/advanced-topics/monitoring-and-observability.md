@@ -120,7 +120,7 @@ WS --> LOG
 - Health Endpoint: Minimalist health check returning a simple status payload.
 - Database Engine: Sync and async engines with connection pooling and pre-ping enabled.
 - Blockchain Manager: Dynamic chain registry based on configuration.
-- Workers: Dramatiq actors for periodic scanning and sweeping with scheduled retries.
+- Workers: ARQ tasks for periodic scanning and sweeping with scheduled retries.
 - Webhook Service: Asynchronous webhook sender with HMAC signing support.
 
 **Section sources**
@@ -134,7 +134,7 @@ WS --> LOG
 - [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L45)
 
 ## Architecture Overview
-The cTrip Payment Gateway integrates FastAPI, SQLAlchemy, Web3, Dramatiq, Redis, PostgreSQL, and optional external webhooks. The runtime spans:
+The cTrip Payment Gateway integrates FastAPI, SQLAlchemy, Web3, ARQ, Redis, PostgreSQL, and optional external webhooks. The runtime spans:
 - API requests for payment creation
 - Background scanning of blockchain events
 - Confirmation and settlement workflows
@@ -148,7 +148,7 @@ participant Pay as "Payments Router<br/>payments.py"
 participant DB as "DB Engine<br/>engine.py"
 participant Cfg as "Config<br/>config.py"
 participant Chains as "Blockchain Manager<br/>manager.py"
-participant Worker as "Dramatiq Actors<br/>listener/sweeper"
+participant Worker as "ARQ Tasks<br/>listener/sweeper"
 participant Scan as "Scanner Service<br/>scanner.py"
 participant Hook as "Webhook Service<br/>webhook.py"
 Client->>API : "POST /api/v1/payments/"
@@ -300,7 +300,7 @@ flowchart TD
 A["Actor Trigger"] --> L["listen_for_payments"]
 L --> Run["Run ScannerService"]
 Run --> Next["Schedule Next Run (5s)"]
-B["Actor Trigger"] --> S["sweep_payments"]
+B["Actor Trigger"] --> S["sweep_funds"]
 S --> Run2["Run SweeperService"]
 Run2 --> Next2["Schedule Next Run (30s)"]
 ```
@@ -376,7 +376,7 @@ API-->>Client : "201 Created"
 External dependencies relevant to observability:
 - Sentry SDK: Available for error tracking and performance monitoring.
 - structlog: Structured logging library present for advanced logging.
-- redis: Used by Dramatiq for message queuing.
+- redis: Used by ARQ for message queuing.
 - SQLAlchemy and asyncpg: Database connectivity and async drivers.
 - web3: Blockchain interaction library.
 
@@ -422,7 +422,7 @@ Common operational issues and diagnostics:
   - Confirm RPC endpoint reachability and rate limits.
   - Review chain configuration and fallback provider.
 - Worker not processing jobs:
-  - Validate Redis connectivity and Dramatiq broker configuration.
+  - Validate Redis connectivity and ARQ Redis backend configuration.
   - Inspect actor logs for exceptions and retry behavior.
 - Webhook failures:
   - Check signature secret and payload formatting.

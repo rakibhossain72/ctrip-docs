@@ -41,7 +41,7 @@ The Sweeper Service is implemented as a worker actor that periodically triggers 
 ```mermaid
 graph TB
 subgraph "Workers"
-SWW["app/workers/sweeper.py<br/>Dramatiq actor"]
+SWW["app/workers/sweeper.py<br/>ARQ task"]
 end
 subgraph "Services"
 SWS["app/services/blockchain/sweeper.py<br/>SweeperService"]
@@ -116,7 +116,7 @@ CFG --> SWS
 
 ## Core Components
 - SweeperService orchestrates the sweeping of confirmed payments per chain. It retrieves payments marked as confirmed, prepares transactions, signs them, broadcasts to the network, and marks payments as settled upon success. It currently contains placeholder logic and is intended to integrate with the blockchain layer for transaction construction and submission.
-- Worker actor sweep_payments schedules periodic sweeping runs across configured chains, instantiates the SweeperService with an HD wallet manager, and retries itself after each cycle.
+- Worker actor sweep_funds schedules periodic sweeping runs across configured chains, instantiates the SweeperService with an HD wallet manager, and retries itself after each cycle.
 - BlockchainBase provides gas estimation, EIP-1559 fee calculation, transaction building, signing, and broadcast capabilities. It caches gas prices and supports POA middleware for specific chains.
 - ScannerService advances payments from pending/detected to confirmed by scanning blocks and validating confirmations, enabling the sweeper to operate on finalized funds.
 - HDWalletManager manages mnemonic-based HD derivation for Ethereum addresses using BIP-44 and exposes methods to derive addresses and retrieve mnemonics.
@@ -136,13 +136,13 @@ The Sweeper Service operates as a periodic job that depends on ScannerService to
 ```mermaid
 sequenceDiagram
 participant Cron as "Scheduler"
-participant Actor as "sweep_payments (Dramatiq)"
+participant Actor as "sweep_funds (ARQ)"
 participant DB as "Database Session"
 participant Sweeper as "SweeperService"
 participant Scanner as "ScannerService"
 participant Chain as "BlockchainBase"
 participant Net as "EVM Network"
-Cron->>Actor : "Trigger sweep_payments"
+Cron->>Actor : "Trigger sweep_funds"
 Actor->>DB : "Open async session"
 Actor->>Sweeper : "Instantiate with HDWalletManager"
 loop For each chain
@@ -232,7 +232,7 @@ SweeperService --> Token : "token support"
 **Section sources**
 - [app/services/blockchain/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/blockchain/sweeper.py#L11-L54)
 
-### Worker Actor: sweep_payments
+### Worker Actor: sweep_funds
 Responsibilities:
 - Periodically trigger sweeping across configured chains.
 - Instantiate SweeperService with an HDWalletManager built from the mnemonic.
@@ -246,7 +246,7 @@ Operational details:
 ```mermaid
 sequenceDiagram
 participant Timer as "Actor Timer"
-participant Actor as "sweep_payments"
+participant Actor as "sweep_funds"
 participant DB as "AsyncSession"
 participant HD as "HDWalletManager"
 participant SW as "SweeperService"
@@ -377,7 +377,7 @@ Sweep->>DB : "Mark settled"
 
 ```mermaid
 graph LR
-SWW["sweep_payments"] --> SWS["SweeperService"]
+SWW["sweep_funds"] --> SWS["SweeperService"]
 SWS --> W3["get_w3"]
 W3 --> BM["get_blockchains"]
 BM --> BB["BlockchainBase"]

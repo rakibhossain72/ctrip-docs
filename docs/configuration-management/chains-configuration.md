@@ -70,8 +70,9 @@ F --> G["tokens table"]
 
 Key behaviors:
 - Unknown networks fall back to the base client class.
-- If chains.yaml is missing or unreadable, the system still initializes with a default Anvil client using the global RPC endpoint.
+- If chains.yaml is missing or unreadable, the system still initializes with a default Anvil client.
 - Token entries without an address are treated as native tokens (e.g., ETH).
+- **WebSocket RPC URLs (`ws://` or `wss://`) are required for real-time payment detection via ChainSniper.** Chains with only HTTP URLs will be skipped for detection — payments won't be detected automatically for those chains.
 
 **Section sources**
 - [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)

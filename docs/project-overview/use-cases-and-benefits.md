@@ -342,7 +342,7 @@ WebhookActor["Worker: Webhook"] --> External["External Receiver"]
 
 ## Performance Considerations
 - Asynchronous Operations: The API and services leverage asynchronous patterns to improve throughput and reduce latency under concurrent load.
-- Background Workers: Dramatiq actors process scanning and sweeping independently, preventing blocking of the main API and enabling horizontal scaling.
+- Background Workers: ARQ tasks process scanning and sweeping independently, preventing blocking of the main API and enabling horizontal scaling.
 - Gas Estimation and Caching: The base blockchain client caches gas prices and uses buffered gas limits to optimize transaction costs and reduce RPC calls.
 - Batch Scanning: The scanner processes blocks in batches to balance responsiveness and resource usage.
 - Confirmation Thresholds: Adjustable confirmations reduce false positives while minimizing settlement delays.

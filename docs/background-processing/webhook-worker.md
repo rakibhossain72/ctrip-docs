@@ -30,7 +30,7 @@ This document describes the Webhook Worker responsible for delivering payment st
 
 ## Project Structure
 The webhook system spans several modules:
-- Workers: background task actors powered by Dramatiq and Redis
+- Workers: background task actors powered by ARQ and Redis
 - Services: core logic for sending webhooks and blockchain scanning
 - Configuration: global settings for webhook URL and secret
 - API: payment creation endpoints (unrelated to webhook delivery)
@@ -41,7 +41,7 @@ graph TB
 subgraph "Workers"
 W1["app/workers/webhook.py<br/>send_webhook_task"]
 W2["app/workers/listener.py<br/>listen_for_payments"]
-W3["app/workers/sweeper.py<br/>sweep_payments"]
+W3["app/workers/sweeper.py<br/>sweep_funds"]
 end
 subgraph "Services"
 S1["app/services/webhook.py<br/>WebhookService"]
@@ -82,16 +82,16 @@ A1 -. unrelated .-> W1
 - [__init__.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/__init__.py#L1-L8)
 
 ## Core Components
-- Webhook Actor: a Dramatiq actor that sends webhooks asynchronously and participates in the retry mechanism.
+- Webhook Actor: a ARQ task that sends webhooks asynchronously and participates in the retry mechanism.
 - Webhook Service: encapsulates HTTP posting, JSON serialization, optional HMAC-SHA256 signing, and logging.
 - Scanner Service: detects and confirms payments, then triggers webhook delivery via the actor.
 - Configuration: exposes webhook_url and webhook_secret used by the actor and service.
-- Broker Initialization: wires Redis as the Dramatiq broker for reliable task delivery.
+- Broker Initialization: wires Redis as the ARQ Redis backend for reliable task delivery.
 
 Key responsibilities:
 - Asynchronous webhook delivery with structured logging
 - Optional payload signing for authenticity verification
-- Retry handling via Dramatiq’s built-in retry policy
+- Retry handling via ARQ’s built-in retry policy
 - Event categorization by payment status transitions
 - Batch processing through periodic scanning and confirmation cycles
 
@@ -107,7 +107,7 @@ The webhook delivery pipeline is event-driven and asynchronous:
 - Listener periodically scans for detected payments and confirms them
 - On confirmation, the system constructs a webhook payload and enqueues a task
 - The Webhook Actor executes the task, signs the payload if configured, and posts to the merchant endpoint
-- Delivery outcomes are logged; failures trigger Dramatiq retries
+- Delivery outcomes are logged; failures trigger ARQ retries
 
 ```mermaid
 sequenceDiagram
@@ -137,11 +137,11 @@ WA-->>L : "task completion"
 ## Detailed Component Analysis
 
 ### Webhook Actor
-The Webhook Actor wraps the asynchronous sending logic and integrates with Dramatiq’s retry mechanism. It:
+The Webhook Actor wraps the asynchronous sending logic and integrates with ARQ’s retry mechanism. It:
 - Receives the merchant URL, payload, and optional secret
 - Runs an internal async loop to call the Webhook Service
 - Raises exceptions on failure to trigger retries
-- Logs errors and forwards them to Dramatiq
+- Logs errors and forwards them to ARQ
 
 ```mermaid
 flowchart TD
@@ -150,7 +150,7 @@ Run --> CallService["Call WebhookService.send_webhook(url, payload, secret)"]
 CallService --> Success{"Success?"}
 Success --> |Yes| Done(["Exit"])
 Success --> |No| Raise["Raise Exception"]
-Raise --> Retry["Dramatiq handles retries"]
+Raise --> Retry["ARQ handles retries"]
 Retry --> Done
 ```
 
@@ -196,8 +196,8 @@ Event categorization:
 
 ### Retry Logic and Exponential Backoff
 - The actor is configured with a finite number of retries
-- On failure, the actor raises an exception to signal failure to Dramatiq
-- Dramatiq’s default retry policy applies; explicit exponential backoff is not implemented in code
+- On failure, the actor raises an exception to signal failure to ARQ
+- ARQ’s default retry policy applies; explicit exponential backoff is not implemented in code
 - Consider adding jitter and backoff configuration for production hardening
 
 **Section sources**
@@ -268,7 +268,7 @@ Event categorization:
 
 ## Dependency Analysis
 The webhook system depends on:
-- Dramatiq with Redis for task queuing and retries
+- ARQ with Redis for task queuing and retries
 - Async HTTP client for outbound requests
 - Configuration for webhook URL and secret
 - Database for payment state transitions
@@ -327,7 +327,7 @@ Common issues and resolutions:
 - [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L63-L71)
 
 ## Conclusion
-The Webhook Worker provides a robust, asynchronous delivery mechanism for payment status notifications. It leverages Dramatiq for reliability, supports optional payload signing for security, and integrates cleanly with the payment confirmation pipeline. Production deployments should consider adding configurable retry backoff, DLQ handling, rate limiting, and comprehensive observability to ensure high delivery success rates and operability.
+The Webhook Worker provides a robust, asynchronous delivery mechanism for payment status notifications. It leverages ARQ for reliability, supports optional payload signing for security, and integrates cleanly with the payment confirmation pipeline. Production deployments should consider adding configurable retry backoff, DLQ handling, rate limiting, and comprehensive observability to ensure high delivery success rates and operability.
 
 ## Appendices
 
@@ -341,7 +341,7 @@ The Webhook Worker provides a robust, asynchronous delivery mechanism for paymen
 - [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L22-L31)
 
 ### Running Workers
-- Start the Dramatiq workers to process webhook tasks alongside listener and sweeper.
+- Start the ARQ workers to process webhook tasks alongside listener and sweeper.
 
 **Section sources**
 - [README.md](https://github.com/rakibhossain72/ctrip/blob/main/README.md#L66-L69)

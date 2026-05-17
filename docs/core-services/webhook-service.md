@@ -27,15 +27,15 @@
 10. [Appendices](#appendices)
 
 ## Introduction
-This document describes the Webhook Service that notifies external systems about payment status changes. It covers the webhook delivery mechanism, payload formatting, HMAC signature verification, integration with Dramatiq workers for asynchronous processing, retry behavior, configuration of webhook URLs and secrets, and payload validation. It also documents supported events, error handling strategies, and operational guidance for testing and security.
+This document describes the Webhook Service that notifies external systems about payment status changes. It covers the webhook delivery mechanism, payload formatting, HMAC signature verification, integration with ARQ workers for asynchronous processing, retry behavior, configuration of webhook URLs and secrets, and payload validation. It also documents supported events, error handling strategies, and operational guidance for testing and security.
 
 ## Project Structure
 The webhook capability spans several modules:
 - Service layer for outbound webhook delivery
-- Dramatiq actor for asynchronous processing
+- ARQ task for asynchronous processing
 - Blockchain scanner that triggers webhooks upon payment confirmation
 - Configuration for webhook URL and secret
-- Worker broker initialization for Dramatiq
+- Worker broker initialization for ARQ
 
 ```mermaid
 graph TB
@@ -43,7 +43,7 @@ subgraph "Configuration"
 CFG["Settings<br/>webhook_url, webhook_secret"]
 end
 subgraph "Workers"
-BROKER["Dramatiq Broker<br/>Redis"]
+BROKER["ARQ Redis backend<br/>Redis"]
 ACTOR["Actor send_webhook_task"]
 end
 subgraph "Services"
@@ -76,14 +76,14 @@ SVC --> ENDPT
 
 ## Core Components
 - WebhookService: Asynchronous HTTP client that sends JSON payloads and optional HMAC signatures.
-- Dramatiq Actor: Background task that invokes WebhookService and leverages built-in retries.
+- ARQ Task: Background task that invokes WebhookService and leverages built-in retries.
 - ScannerService: Detects and confirms payments; emits webhooks when a payment reaches the confirmed state.
 - Configuration: Provides webhook URL and secret for signing.
 
 Key responsibilities:
 - Delivery: Async HTTP POST with JSON body and optional X-Webhook-Signature header.
 - Signing: HMAC-SHA256 over the JSON payload using the configured secret.
-- Retry: Dramatiq actor configured with a fixed number of retries.
+- Retry: ARQ task configured with a fixed number of retries.
 - Trigger: Webhook emission occurs when a payment transitions to confirmed.
 
 **Section sources**
@@ -93,13 +93,13 @@ Key responsibilities:
 - [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L63-L71)
 
 ## Architecture Overview
-The webhook pipeline integrates blockchain scanning, internal state transitions, and asynchronous delivery via Dramatiq.
+The webhook pipeline integrates blockchain scanning, internal state transitions, and asynchronous delivery via ARQ.
 
 ```mermaid
 sequenceDiagram
 participant Scanner as "ScannerService"
 participant DB as "Database"
-participant Actor as "Dramatiq Actor"
+participant Actor as "ARQ Task"
 participant Service as "WebhookService"
 participant Endpoint as "External Webhook Endpoint"
 Scanner->>DB : "Update payment status to confirmed"
@@ -155,10 +155,13 @@ LogEx --> End
 **Section sources**
 - [webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L44)
 
-### Dramatiq Actor: send_webhook_task
+### ARQ Task: send_webhook_notification
 Responsibilities:
-- Wrap async operation in a synchronous actor loop.
-- Invoke WebhookService and raise on failure to trigger Dramatiq retries.
+- Send webhook notification for a specific payment event (used by admin API).
+- Wraps `WebhookService.send_webhook()` for on-demand delivery.
+
+Note: For automatic webhook delivery during payment detection and confirmation, `ScannerService._dispatch_webhook()` calls `WebhookService.send_webhook()` directly — no separate task is enqueued for these events.
+- Invoke WebhookService and raise on failure to trigger ARQ retries.
 - Log actor-level errors and re-raise to allow broker retry policy.
 
 Notes:
@@ -167,7 +170,7 @@ Notes:
 
 ```mermaid
 sequenceDiagram
-participant Broker as "Dramatiq Broker"
+participant Broker as "ARQ Redis backend"
 participant Actor as "send_webhook_task"
 participant Loop as "Event Loop"
 participant Service as "WebhookService"
@@ -195,7 +198,7 @@ end
 Responsibilities:
 - Transition payments to confirmed after sufficient confirmations.
 - Build a standardized payload for the webhook.
-- Enqueue the Dramatiq task with configured URL and secret.
+- Enqueue the ARQ task with configured URL and secret.
 
 Payload fields emitted:
 - payment_id
@@ -283,10 +286,10 @@ Operational guidance:
 **Section sources**
 - [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L63-L71)
 
-### Integration with Dramatiq Workers
+### Integration with ARQ Workers
 Worker startup:
 - Redis broker is initialized from settings.
-- Workers are started with dramatiq CLI pointing to the webhook module.
+- Workers are started with arq CLI pointing to the webhook module.
 
 Actor configuration:
 - send_webhook_task is decorated with max_retries to enable automatic retries.
@@ -299,7 +302,7 @@ Actor configuration:
 ### Error Handling Strategies
 - HTTP errors: Logged with status code; returns failure.
 - Exceptions: Logged; returns failure.
-- Actor-level failures: Raise to trigger Dramatiq retries.
+- Actor-level failures: Raise to trigger ARQ retries.
 
 Recommended improvements (not currently implemented):
 - Exponential backoff with jitter for retries.
@@ -350,7 +353,7 @@ High-level dependencies:
 - ScannerService depends on Settings for webhook configuration and enqueues the actor.
 - Actor depends on WebhookService for delivery.
 - WebhookService depends on httpx for HTTP operations.
-- Dramatiq broker is initialized from settings and used by the actor.
+- ARQ Redis backend is initialized from settings and used by the actor.
 
 ```mermaid
 graph LR
@@ -359,7 +362,7 @@ Settings --> Scanner["ScannerService"]
 Scanner --> Actor
 Actor --> Service["WebhookService"]
 Service --> HTTP["httpx.AsyncClient"]
-Settings --> Broker["Dramatiq Redis Broker"]
+Settings --> Broker["ARQ Redis Broker"]
 Broker <- --> Actor
 ```
 
@@ -406,7 +409,7 @@ Common issues and resolutions:
 - [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L63-L71)
 
 ## Conclusion
-The Webhook Service provides a focused, asynchronous notification mechanism for payment confirmations. It supports HMAC-signed payloads, integrates with Dramatiq for reliable delivery, and can be extended to support additional events and improved retry strategies. Proper configuration of webhook URL and secret, combined with consumer-side signature verification, ensures secure and reliable integrations.
+The Webhook Service provides a focused, asynchronous notification mechanism for payment confirmations. It supports HMAC-signed payloads, integrates with ARQ for reliable delivery, and can be extended to support additional events and improved retry strategies. Proper configuration of webhook URL and secret, combined with consumer-side signature verification, ensures secure and reliable integrations.
 
 [No sources needed since this section summarizes without analyzing specific files]
 
@@ -428,7 +431,7 @@ The Webhook Service provides a focused, asynchronous notification mechanism for 
 - [config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L63-L71)
 
 ### Appendix C: Worker Startup and Commands
-- Start workers using the dramatiq command with the webhook module.
+- Start workers using the arq command with the webhook module.
 
 **Section sources**
 - [README.md](https://github.com/rakibhossain72/ctrip/blob/main/README.md#L66-L69)

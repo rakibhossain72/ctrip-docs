@@ -55,7 +55,7 @@ The project is organized around a FastAPI application with modular components:
 - API layer: endpoints for payments and health checks
 - Blockchain layer: multi-chain implementations and Web3 integration
 - Services: scanning and sweeping logic
-- Workers: background tasks orchestrated by Dramatiq and Redis
+- Workers: background tasks orchestrated by ARQ and Redis
 - Database: SQLAlchemy ORM models and Alembic migrations
 - Utilities: HD wallet management
 
@@ -158,7 +158,7 @@ M2 --> M4
 - Multi-chain support across BSC, Ethereum, and Anvil test networks
 - Automated payment detection and confirmation monitoring
 - Async FastAPI and SQLAlchemy architecture
-- Background workers via Dramatiq and Redis
+- Background workers via ARQ and Redis
 - HD wallet for unique address generation
 - Webhook notifications for payment status updates
 - Alembic-based database migrations
@@ -188,7 +188,7 @@ participant WK2 as "Worker Sweeper"
 Boot->>BC : get_blockchains()
 Boot->>Cfg : load settings (mnemonic, chains, RPC)
 Boot->>WK1 : listen_for_payments.send()
-Boot->>WK2 : sweep_payments.send()
+Boot->>WK2 : sweep_funds.send()
 WK1->>Scan : scan_chain(chain)
 Scan->>Scan : detect native/ERC20 transfers
 Scan->>Scan : update payment status to "detected"
@@ -359,8 +359,8 @@ DB2-->>Scan : commit/rollback
 - [app/db/models/payment.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/payment.py#L41-L74)
 - [app/db/models/transaction.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py#L29-L40)
 
-### Background Worker System (Dramatiq + Redis)
-- Dramatiq actors handle listening for payments, sweeping confirmed payments, and sending webhooks.
+### Background Worker System (ARQ + Redis)
+- ARQ tasks handle listening for payments, sweeping confirmed payments, and sending webhooks.
 - Redis serves as the broker; workers are started via the container command.
 - Scalability: Multiple worker containers can be deployed behind the same Redis instance.
 

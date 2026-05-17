@@ -32,16 +32,17 @@
 10. [Conclusion](#conclusion)
 
 ## Introduction
-cTrip Payment Gateway is a high-performance, multi-chain cryptocurrency payment gateway built with FastAPI. It supports automated payment detection, confirmation monitoring, and funds sweeping across multiple EVM-compatible blockchains. The system uses an asynchronous architecture with PostgreSQL/SQLite for persistence, Redis for background task processing via Dramatiq, and Web3.py for blockchain interactions.
+cTrip Payment Gateway is a high-performance, multi-chain cryptocurrency payment gateway built with FastAPI. It supports automated payment detection, confirmation monitoring, and funds sweeping across multiple EVM-compatible blockchains. The system uses an asynchronous architecture with PostgreSQL/SQLite for persistence, Redis for background task processing via ARQ, and Web3.py for blockchain interactions.
 
 Key capabilities include:
-- Multi-chain support for BSC, Ethereum, and local testing environments
-- Real-time blockchain scanning for incoming payments
+- Multi-chain support for BSC, Ethereum, and local testing environments (Anvil)
+- Real-time payment detection via WebSocket listeners using chain-sniper
 - Asynchronous API and database operations
-- Background workers for distributed task processing
-- HD Wallet integration for secure address management
-- Webhook notifications for payment status changes
+- Background workers powered by ARQ (async task queue) with Redis
+- HD Wallet integration for secure address generation (BIP-44)
+- Webhook notifications for payment status changes (HMAC-SHA256 signed)
 - Robust database migration system using Alembic
+- Admin API endpoints for manual task triggering
 
 ## Prerequisites
 Before installing cTrip Payment Gateway, ensure you have the following prerequisites:
@@ -100,7 +101,7 @@ For development, follow these steps:
 
 5. **Start background workers:**
    ```bash
-   dramatiq app.workers.listener app.workers.sweeper app.workers.webhook
+   python run_worker.py
    ```
 
 **Section sources**
@@ -117,11 +118,12 @@ Set these variables in your `.env` file:
 - `DATABASE_URL` - Production database connection string
 - `DATABASE_URL_DEV` - Development database connection string (defaults to SQLite)
 - `REDIS_URL` - Redis connection URL for background tasks
-- `PRIVATE_KEY` - Ethereum private key for wallet operations
+- `PRIVATE_KEY` - Ethereum private key for wallet operations (required)
 - `MNEMONIC` - HD Wallet mnemonic phrase (defaults to test phrase)
-- `WEBHOOK_URL` - Global webhook URL for payment notifications
-- `WEBHOOK_SECRET` - Secret key for signing webhook payloads
+- `WEBHOOK_URL` - Global webhook URL for payment notifications (optional)
+- `WEBHOOK_SECRET` - Secret key for signing webhook payloads (optional)
 - `SECRET_KEY` - Application secret key for cryptography
+- `ENV` - Environment mode: `development`, `production`, or `testing`
 
 ### Environment-Specific Settings
 The application supports three environments:
@@ -141,21 +143,23 @@ Configure supported blockchain networks in `chains.yaml`. This file defines RPC 
 
 ### Supported Chains
 The system currently supports:
-- **BSC (Binance Smart Chain)** - Mainnet RPC endpoint with USDT token
-- **Ethereum** - Placeholder for mainnet configuration
-- **Anvil** - Local development/testing RPC endpoint
+- **BSC (Binance Smart Chain)** - Mainnet RPC endpoint with USDT token (commented out by default)
+- **Ethereum** - Mainnet configuration (commented out by default)
+- **Anvil** - Local development/testing WebSocket endpoint (active by default)
 
 ### Chain Configuration Format
 Each chain requires:
 - `name` - Chain identifier (ethereum, bsc, anvil)
-- `rpc_url` - RPC endpoint URL
+- `rpc_url` - RPC endpoint URL — **must be a WebSocket URL (`ws://` or `wss://`) for real-time payment detection via chain-sniper**
 - `tokens` - Array of supported tokens with:
   - `symbol` - Token symbol
-  - `address` - Contract address (for mainnet tokens)
+  - `address` - Contract address (for ERC20 tokens; omit for native tokens)
   - `decimals` - Token decimal precision
 
 ### Default Configuration
-The default configuration includes BSC mainnet with USDT token and Anvil local testing network. Remove comments to enable additional chains.
+The default configuration uses Anvil local testing with a WebSocket endpoint (`ws://localhost:8545`). Ethereum and BSC are commented out as examples. To enable mainnet chains, uncomment and set valid WebSocket RPC URLs.
+
+> **Important**: Payment detection requires WebSocket RPC URLs. If only an HTTP URL is provided, the chain-sniper listener will be skipped for that chain and payments won't be detected automatically.
 
 **Section sources**
 - [chains.yaml](https://github.com/rakibhossain72/ctrip/blob/main/chains.yaml#L1-L24)
@@ -232,7 +236,7 @@ API -.-> Worker
 
 #### Container Configuration
 - **App Service**: Builds from Dockerfile, exposes port 8000, mounts code volume
-- **Worker Service**: Runs Dramatiq workers for background processing
+- **Worker Service**: Runs ARQ workers for background processing
 - **Database Service**: PostgreSQL 15 with persistent volume storage
 - **Cache Service**: Redis 7 for task queue and caching
 
@@ -280,8 +284,8 @@ For development and testing, set up the environment locally with Python dependen
    # Start API server
    uvicorn server:app --reload
    
-   # Start background workers
-   dramatiq app.workers.listener app.workers.sweeper app.workers.webhook
+   # Start ARQ background worker
+   python run_worker.py
    ```
 
 **Section sources**
@@ -324,8 +328,8 @@ Verify background workers are processing tasks:
 redis-cli ping
 # Should return: PONG
 
-# Monitor Dramatiq worker logs
-dramatiq app.workers.listener app.workers.sweeper app.workers.webhook
+# Start the ARQ worker
+python run_worker.py
 ```
 
 ### Basic API Functionality

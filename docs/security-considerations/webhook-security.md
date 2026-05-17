@@ -43,7 +43,7 @@ CFG["Settings<br/>webhook_url, webhook_secret"]
 end
 subgraph "Webhook Delivery"
 SVC["WebhookService.send_webhook"]
-ACT["Dramatiq Actor send_webhook_task"]
+ACT["ARQ Task send_webhook_task"]
 end
 subgraph "Blockchain Layer"
 SCN["ScannerService.confirm_payments"]
@@ -78,13 +78,13 @@ PAY --> PM
 ## Core Components
 - Settings: Defines webhook_url and webhook_secret for outbound webhook delivery.
 - WebhookService: Implements HMAC-SHA256 signing and sends HTTP requests with X-Webhook-Signature header.
-- Dramatiq Actor: Asynchronous task runner for webhook delivery with retry configuration.
+- ARQ Task: Asynchronous task runner for webhook delivery with retry configuration.
 - ScannerService: Triggers webhook delivery upon payment confirmation events.
 - Payment API and Models: Define payment lifecycle and data structures used in webhook payloads.
 
 Key security-relevant behaviors:
 - Outbound webhooks are signed using HMAC-SHA256 when a secret is configured.
-- Webhook delivery is asynchronous and retried via Dramatiq.
+- Webhook delivery is asynchronous and retried via ARQ.
 - Webhook URL and secret are loaded from configuration.
 
 **Section sources**
@@ -104,7 +104,7 @@ participant Client as "Client"
 participant API as "Payment API"
 participant DB as "Payment Model"
 participant Scanner as "ScannerService"
-participant Actor as "Dramatiq Actor"
+participant Actor as "ARQ Task"
 participant Service as "WebhookService"
 participant Dest as "External Webhook Endpoint"
 Client->>API : "Create Payment"
@@ -162,7 +162,7 @@ Resp --> |No| LogErr["Log error and return failure"]
 - [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L10-L44)
 
 ### Webhook Delivery Worker
-- Uses Dramatiq actor with a fixed number of retries.
+- Uses ARQ task with a fixed number of retries.
 - Raises exceptions to trigger retry logic.
 - Runs within an event loop to support async operations.
 

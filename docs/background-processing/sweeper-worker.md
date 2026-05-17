@@ -36,7 +36,7 @@ This document describes the Sweeper Worker responsible for automatic fund collec
 
 ## Project Structure
 The sweeper spans several modules:
-- Worker entrypoint and scheduling via Dramatiq actors
+- Worker entrypoint and scheduling via ARQ tasks
 - Sweeper service orchestrating per-chain settlement
 - Blockchain abstraction and transaction building
 - Configuration and chain discovery
@@ -46,7 +46,7 @@ The sweeper spans several modules:
 ```mermaid
 graph TB
 subgraph "Workers"
-W1["app/workers/sweeper.py<br/>Dramatiq actor"]
+W1["app/workers/sweeper.py<br/>ARQ task"]
 end
 subgraph "Services"
 S1["app/services/blockchain/sweeper.py<br/>SweeperService"]
@@ -113,7 +113,7 @@ C1 --> Y1
 - [crypto.py](https://github.com/rakibhossain72/ctrip/blob/main/app/utils/crypto.py#L1-L90)
 
 ## Core Components
-- Sweeper Worker Actor: A scheduled Dramatiq actor that triggers sweeping cycles, initializes sessions, and iterates chains to settle confirmed payments.
+- Sweeper Worker Actor: A scheduled ARQ task that triggers sweeping cycles, initializes sessions, and iterates chains to settle confirmed payments.
 - SweeperService: Orchestrates per-chain settlement by fetching confirmed payments, preparing transactions, and marking them as settled.
 - Blockchain Abstraction: Provides AsyncWeb3-backed clients per chain, gas estimation, fee calculation, and transaction signing/send/receipt retrieval.
 - Configuration: Centralized settings including chains, RPC endpoints, and secrets for private key and mnemonic.
@@ -145,7 +145,7 @@ The sweeper follows a modular architecture:
 
 ```mermaid
 sequenceDiagram
-participant Scheduler as "Dramatiq Actor<br/>sweep_payments()"
+participant Scheduler as "ARQ Task<br/>sweep_funds()"
 participant Session as "DB Session"
 participant Sweeper as "SweeperService"
 participant ChainMgr as "get_w3(chain)"
@@ -184,7 +184,7 @@ Scheduler->>Scheduler : "Schedule next run (30s)"
 
 ### Sweeper Worker Actor
 - Role: Periodic trigger for sweeping confirmed payments across configured chains.
-- Scheduling: Uses Dramatiq with a fixed delay to schedule the next run after each cycle.
+- Scheduling: Uses ARQ with a fixed delay to schedule the next run after each cycle.
 - Initialization: Builds an async database session, instantiates HDWalletManager from settings, and iterates chains from configuration.
 - Error handling: Logs exceptions and ensures the next run is scheduled regardless of errors.
 
@@ -276,9 +276,9 @@ Note: The sweeper’s current placeholder logic does not derive per-payment priv
 - [transaction_model.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/transaction.py#L17-L40)
 
 ### Sweep Triggers, Scheduling, and Retry Policies
-- Trigger: The Dramatiq actor is invoked periodically with a fixed delay between runs.
+- Trigger: The ARQ task is invoked periodically with a fixed delay between runs.
 - Retry policy: The actor is configured without retries; the worker schedules the next run in the finally block.
-- Manual intervention: The actor can be triggered manually via the Dramatiq broker; logs provide visibility into failures.
+- Manual intervention: The actor can be triggered manually via the ARQ Redis backend; logs provide visibility into failures.
 
 Recommendations:
 - Add explicit retry with backoff for transient failures.

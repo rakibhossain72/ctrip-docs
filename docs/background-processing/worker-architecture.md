@@ -29,45 +29,44 @@
 10. [Appendices](#appendices)
 
 ## Introduction
-This document describes the Dramatiq worker architecture used in the cTrip Payment Gateway. It covers Redis broker configuration, worker initialization, message queue setup, actor definitions, task routing, lifecycle management, health monitoring, deployment patterns, isolation, and performance optimization. The system integrates Dramatiq actors with Redis for asynchronous task execution, orchestrated by a dedicated worker process launched via Docker Compose.
+This document describes the ARQ worker architecture used in the cTrip Payment Gateway. It covers Redis connection configuration, worker initialization, task scheduling via ARQ cron jobs, lifecycle hooks, and the three main task modules: listener (confirmation/expiry), sweeper (fund settlement), and webhook dispatch. The system uses ARQ (async task queue) with Redis for background processing, orchestrated by a dedicated worker process launched via `python run_worker.py` or Docker Compose.
 
 ## Project Structure
 The worker architecture spans several modules:
-- Workers: Redis broker initialization and three actors for payment listening, sweeping, and webhook dispatch.
+- Workers: ARQ `WorkerSettings`, Redis connection helpers, and task functions for payment confirmation, sweeping, and webhook dispatch.
 - Core configuration: Centralized settings including Redis URL, chains configuration, and secrets.
-- Application entrypoint: FastAPI server that triggers recurring tasks via Dramatiq.
+- Application entrypoint: FastAPI server that seeds chain states on startup; workers run as a separate process.
 - Deployment: Docker Compose defines the database, Redis, API server, and worker service.
 
 ```mermaid
 graph TB
 subgraph "Workers"
-WInit["app/workers/__init__.py<br/>RedisBroker + set_broker"]
-WListener["app/workers/listener.py<br/>listen_for_payments actor"]
-WSweeper["app/workers/sweeper.py<br/>sweep_payments actor"]
-WWebhook["app/workers/webhook.py<br/>send_webhook_task actor"]
+WInit["app/workers/__init__.py<br/>get_redis_settings()"]
+WWorker["app/workers/worker.py<br/>WorkerSettings + cron jobs"]
+WListener["app/workers/listener.py<br/>listen_for_payments task"]
+WSweeper["app/workers/sweeper.py<br/>sweep_funds task"]
+WWebhook["app/workers/webhook.py<br/>send_webhook_notification task"]
+WClient["app/workers/client.py<br/>WorkerClient (enqueue from API)"]
 end
 subgraph "Core"
 Cfg["app/core/config.py<br/>Settings + redis_url + chains"]
 Chains["chains.yaml<br/>Chain configs"]
 end
 subgraph "App"
-Srv["server.py<br/>FastAPI lifespan triggers actors"]
+Srv["server.py<br/>FastAPI lifespan seeds chain states"]
 end
 subgraph "Deployment"
 Dc["docker-compose.yml<br/>db + redis + app + worker"]
-Req["requirements.txt<br/>dramatiq + redis"]
-Pj["pyproject.toml<br/>project deps"]
+RunW["run_worker.py<br/>arq.run_worker(WorkerSettings)"]
 end
 WInit --> Cfg
-WListener --> Cfg
-WSweeper --> Cfg
-WWebhook --> Cfg
-WListener --> Chains
-WSweeper --> Chains
-Srv --> WListener
-Srv --> WSweeper
-Dc --> Req
-Dc --> Pj
+WWorker --> WListener
+WWorker --> WSweeper
+WWorker --> WWebhook
+WClient --> WInit
+Srv --> Cfg
+Dc --> RunW
+RunW --> WWorker
 ```
 
 **Diagram sources**
@@ -89,21 +88,23 @@ Dc --> Pj
 - [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L1-L54)
 
 ## Core Components
-- Redis broker initialization: Creates a Redis-backed Dramatiq broker and sets it globally.
-- Actors:
-  - listen_for_payments: Scans chains and confirms payments, reschedules itself periodically.
-  - sweep_payments: Sweeps confirmed payments per chain, reschedules itself periodically.
-  - send_webhook_task: Sends webhooks asynchronously with retry support.
-- Configuration:
-  - redis_url: Used to connect to Redis.
-  - chains: Loads chain configurations from chains.yaml for runtime chain enumeration.
-- Server lifecycle: On startup, triggers both recurring actors to begin work.
+- ARQ Redis connection: `get_redis_settings()` parses `REDIS_URL` and returns `RedisSettings` for ARQ.
+- `WorkerSettings`: Defines all task functions, cron schedules, lifecycle hooks, and worker parameters.
+- Tasks:
+  - `listen_for_payments`: Cron task (every second) that confirms detected payments and expires stale ones. Block detection is handled by always-on ChainSniper WebSocket listeners.
+  - `sweep_funds`: Cron task (every 30 seconds, currently commented out) that sweeps confirmed payments to the admin wallet.
+  - `send_webhook_notification`: Task for sending webhook notifications for payment events.
+  - `retry_failed_webhooks`: Cron task for retrying failed webhooks (placeholder).
+  - `send_custom_webhook`: Task for sending custom webhooks.
+- Lifecycle hooks:
+  - `startup`: Launches ChainSniper WebSocket listeners via `ScannerService.start_listeners()`.
+  - `shutdown`: Cancels running ChainSniper tasks.
+- `WorkerClient`: Used by FastAPI admin endpoints to enqueue tasks on demand.
 
 Key implementation references:
-- Broker setup and global broker assignment
-- Actor definitions and scheduling
-- Chain configuration loading
-- Server-triggered actor invocation
+- ARQ `WorkerSettings` class in `app/workers/worker.py`
+- Redis settings parsing in `app/workers/__init__.py`
+- ChainSniper startup in `app/services/blockchain/scanner.py`
 
 **Section sources**
 - [app/workers/__init__.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/__init__.py#L1-L8)
@@ -115,34 +116,39 @@ Key implementation references:
 - [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L36-L41)
 
 ## Architecture Overview
-The Dramatiq worker architecture uses a single Redis broker shared by the application and worker processes. The server initializes the broker and triggers recurring actors on startup. Workers consume messages from Redis queues and execute actor functions. Webhooks are dispatched asynchronously with retries.
+The ARQ worker architecture uses Redis as the task queue backend. The worker process is started separately from the API and runs ARQ's event loop. On startup, it launches ChainSniper WebSocket listeners for real-time block detection. Cron jobs handle periodic confirmation checks, sweeping, and webhook retries.
 
 ```mermaid
 graph TB
 subgraph "Runtime"
-Broker["Redis Broker"]
-Server["FastAPI Server<br/>server.py lifespan"]
-Worker["Dramatiq Worker<br/>docker-compose worker service"]
+Redis["Redis (ARQ backend)"]
+API["FastAPI Server<br/>server.py"]
+Worker["ARQ Worker<br/>python run_worker.py"]
 end
-subgraph "Actors"
-LFP["listen_for_payments"]
-SWP["sweep_payments"]
-WHT["send_webhook_task"]
+subgraph "Worker Tasks"
+LFP["listen_for_payments<br/>(cron: every second)"]
+SWP["sweep_funds<br/>(cron: every 30s, disabled)"]
+WHT["send_webhook_notification"]
+end
+subgraph "Startup"
+Sniper["ChainSniper WebSocket Listeners<br/>(one per chain with ws:// URL)"]
 end
 subgraph "External Services"
 DB["PostgreSQL"]
 CHAINS["Chains Config<br/>chains.yaml"]
 end
-Server --> LFP
-Server --> SWP
-LFP --> Broker
-SWP --> Broker
-WHT --> Broker
-Worker --> Broker
+Worker --> Redis
+Worker --> Sniper
+LFP --> Redis
+SWP --> Redis
+WHT --> Redis
+Worker --> LFP
+Worker --> SWP
+Worker --> WHT
 LFP --> DB
 SWP --> DB
-LFP --> CHAINS
-SWP --> CHAINS
+Sniper --> DB
+Sniper --> CHAINS
 ```
 
 **Diagram sources**
@@ -156,50 +162,50 @@ SWP --> CHAINS
 
 ## Detailed Component Analysis
 
-### Redis Broker Configuration and Initialization
-- The broker is instantiated using the Redis URL from settings and set globally for Dramatiq.
-- This ensures all actors enqueue and dequeue messages against the same Redis instance.
+### ARQ Redis Connection and WorkerSettings
+- `get_redis_settings()` in `app/workers/__init__.py` parses `REDIS_URL` and returns an ARQ `RedisSettings` object.
+- `WorkerSettings` in `app/workers/worker.py` is the central ARQ configuration class defining:
+  - `functions`: list of task functions available to the worker
+  - `cron_jobs`: scheduled tasks using ARQ's `cron()` helper
+  - `on_startup` / `on_shutdown`: lifecycle hooks
+  - `redis_settings`: connection to Redis
+  - `max_jobs`, `job_timeout`, `keep_result`, `max_tries`: operational parameters
 
-Implementation highlights:
-- Broker creation from settings.redis_url
-- Global broker assignment for the process
-
-**Section sources**
-- [app/workers/__init__.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/__init__.py#L6-L7)
-- [app/core/config.py](https://github.com/rakibhossain72/ctrip/blob/main/app/core/config.py#L34-L37)
-
-### Worker Initialization Patterns
-- The worker process is started via the Docker Compose command that invokes Dramatiq with module paths for each actor module.
-- This pattern loads the modules and registers their actors with the global Redis broker.
+### Worker Initialization and Startup
+- The worker process is started via `python run_worker.py`, which calls `arq.run_worker(WorkerSettings)`.
+- In Docker Compose, the `worker` service runs `python run_worker.py`.
+- On startup, the `startup` hook calls `ScannerService.start_listeners()` which launches one ChainSniper WebSocket listener per chain that has a `ws://` or `wss://` RPC URL.
+- References to running tasks are stored in `_sniper_tasks` to prevent garbage collection.
 
 Operational flow:
-- Docker Compose builds the image and runs the worker command.
-- Dramatiq loads the modules and registers actors.
-- Workers consume tasks from Redis queues.
+- Docker Compose builds the image and runs `python run_worker.py`.
+- ARQ loads `WorkerSettings`, connects to Redis, and starts the event loop.
+- `startup` hook fires, launching ChainSniper listeners.
+- Cron jobs begin executing on their schedules.
 
-**Section sources**
-- [docker-compose.yml](https://github.com/rakibhossain72/ctrip/blob/main/docker-compose.yml#L37-L50)
-- [pyproject.toml](https://github.com/rakibhossain72/ctrip/blob/main/pyproject.toml#L26-L27)
+### Task Scheduling and Cron Jobs
+- ARQ uses `cron()` to schedule tasks at specific second/minute intervals.
+- `listen_for_payments` runs every second (`second=set(range(60))`).
+- `sweep_funds` is defined but commented out in the current `WorkerSettings`.
+- Tasks are enqueued by ARQ's scheduler and consumed by the same worker process.
 
-### Message Queue Setup and Task Routing
-- Tasks are enqueued implicitly when actors are invoked (e.g., server triggers actors on startup).
-- Actors schedule themselves for periodic execution using send_with_options(delay=...).
-- Webhook actor uses a local event loop to run asynchronous tasks synchronously within the actor.
+### Payment Detection vs Confirmation Split
+- **Detection** (real-time): ChainSniper WebSocket listeners call `ScannerService._on_block()` and `ScannerService._on_log()` for every new block/log. These update payment status to `DETECTED` immediately.
+- **Confirmation** (cron): `listen_for_payments` calls `ScannerService.confirm_payments()` every second to promote `DETECTED` payments to `CONFIRMED` once enough blocks have passed.
+- **Expiry** (cron): `listen_for_payments` also calls `ScannerService.check_expired_payments()` to mark stale payments as `EXPIRED`.
 
-Routing characteristics:
-- Single Redis broker routes tasks to worker processes.
-- Actor names correspond to function names; Dramatiq uses these names for routing.
-
-**Section sources**
-- [server.py](https://github.com/rakibhossain72/ctrip/blob/main/server.py#L36-L41)
-- [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L42-L46)
-- [app/workers/sweeper.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/sweeper.py#L36-L40)
-- [app/workers/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/webhook.py#L10-L11)
-
-### Actor Definitions and Execution Semantics
+### Admin API and WorkerClient
+- `app/workers/client.py` provides `WorkerClient`, which uses `arq.create_pool()` to enqueue tasks from FastAPI endpoints.
+- `app/api/admin.py` exposes `/admin/*` endpoints for manual task triggering:
+  - `POST /admin/scan-now` — triggers `listen_for_payments`
+  - `POST /admin/sweep-now` — triggers `sweep_funds`
+  - `POST /admin/sweep-address` — triggers `sweep_specific_address`
+  - `POST /admin/process-payment` — triggers `process_single_payment`
+  - `POST /admin/send-webhook` — triggers `send_webhook_notification`
+  - `POST /admin/custom-webhook` — triggers `send_custom_webhook`
 - listen_for_payments: Scans chains and confirms payments; schedules next run after completion.
-- sweep_payments: Iterates chains and performs sweeping actions; schedules next run after completion.
-- send_webhook_task: Sends webhooks asynchronously with retries; raises exceptions to trigger Dramatiq retries.
+- sweep_funds: Iterates chains and performs sweeping actions; schedules next run after completion.
+- send_webhook_task: Sends webhooks asynchronously with retries; raises exceptions to trigger ARQ retries.
 
 Execution patterns:
 - Periodic rescheduling via send_with_options(delay=...)
@@ -243,7 +249,7 @@ Behavioral notes:
 - [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L32)
 
 ### Webhook Actor and Retry Strategy
-- The webhook actor runs on a dedicated event loop and raises exceptions to trigger Dramatiq retries.
+- The webhook actor runs on a dedicated event loop and raises exceptions to trigger ARQ retries.
 - WebhookService signs payloads when a secret is provided and handles HTTP errors.
 
 ```mermaid
@@ -253,7 +259,7 @@ Validate --> RunTask["Run async webhook task"]
 RunTask --> Success{"HTTP success?"}
 Success --> |Yes| Done(["Exit"])
 Success --> |No| RaiseErr["Raise exception"]
-RaiseErr --> Retry["Dramatiq retries up to max_retries"]
+RaiseErr --> Retry["ARQ retries up to max_retries"]
 Retry --> Done
 ```
 
@@ -266,14 +272,14 @@ Retry --> Done
 - [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L1-L45)
 
 ## Dependency Analysis
-- Dramatiq and Redis are declared as dependencies in both requirements and pyproject.
+- ARQ and Redis are declared as dependencies in both requirements and pyproject.
 - The worker initialization module depends on settings for Redis URL.
 - Actors depend on settings for chain configuration and on external services for blockchain and webhook operations.
 - The server depends on worker modules to trigger initial tasks.
 
 ```mermaid
 graph LR
-Dramatiq["dramatiq (requirements.txt)"]
+ARQ["arq (requirements.txt)"]
 RedisDep["redis (requirements.txt)"]
 PjDeps["pyproject.toml deps"]
 WInit["workers/__init__.py"]
@@ -282,7 +288,7 @@ Srv["server.py"]
 WList["workers/listener.py"]
 WSwp["workers/sweeper.py"]
 WWeb["workers/webhook.py"]
-Dramatiq --> PjDeps
+ARQ --> PjDeps
 RedisDep --> PjDeps
 WInit --> Cfg
 Srv --> WList
@@ -323,7 +329,7 @@ Common issues and remedies:
 - Redis connectivity failures: Verify REDIS_URL and network reachability; check Redis service status.
 - Missing chains.yaml: If chains.yaml is missing or invalid, actors fall back to default chain behavior; ensure the file exists and is valid.
 - Webhook failures: Inspect webhook actor logs and WebhookService error handling; verify signatures and timeouts.
-- Actor not running: Confirm the worker service is started with the correct Dramatiq command and that modules are importable.
+- Actor not running: Confirm the worker service is started with the correct ARQ command and that modules are importable.
 - Health checks: Use the /health endpoint to validate API availability.
 
 **Section sources**
@@ -333,7 +339,7 @@ Common issues and remedies:
 - [app/api/health.py](https://github.com/rakibhossain72/ctrip/blob/main/app/api/health.py#L1-L7)
 
 ## Conclusion
-The cTrip Payment Gateway employs a straightforward Dramatiq worker architecture centered on a Redis broker. Workers are deployed as a separate service and consume tasks enqueued by the FastAPI server. Actors encapsulate distinct responsibilities—payment scanning, sweeping, and webhook dispatch—with built-in scheduling and retry mechanisms. Configuration is centralized via settings and chains.yaml, enabling flexible chain support. The architecture supports horizontal scaling by running multiple worker instances against the same broker.
+The cTrip Payment Gateway employs a straightforward ARQ worker architecture centered on a Redis broker. Workers are deployed as a separate service and consume tasks enqueued by the FastAPI server. Actors encapsulate distinct responsibilities—payment scanning, sweeping, and webhook dispatch—with built-in scheduling and retry mechanisms. Configuration is centralized via settings and chains.yaml, enabling flexible chain support. The architecture supports horizontal scaling by running multiple worker instances against the same broker.
 
 [No sources needed since this section summarizes without analyzing specific files]
 

@@ -33,18 +33,21 @@
 
 ## Introduction
 This document describes the core services powering the cTrip Payment Gateway business logic. It focuses on:
-- Blockchain scanner service for real-time payment detection and confirmation monitoring across multiple chains
-- Sweeper service for automated fund transfer to admin wallets after successful payments
+- Blockchain scanner service for real-time payment detection via ChainSniper WebSocket listeners and periodic confirmation monitoring across multiple chains
+- Sweeper service for automated fund transfer to admin wallets after successful payments (currently a placeholder — marks payments as settled without broadcasting transactions)
 - Webhook service for notifying external systems about payment status changes
 - Crypto utilities for HD wallet management, address generation, and cryptographic operations
+
 It also covers initialization patterns, dependency injection, error handling strategies, service interfaces, integration patterns, performance considerations, retry logic, and monitoring approaches.
+
+> **Note on Worker System**: The background processing layer uses **ARQ** (not Dramatiq). Workers are started with `python run_worker.py`. The `WorkerSettings` class in `app/workers/worker.py` defines all cron jobs and task functions.
 
 ## Project Structure
 The core services are organized around domain-driven boundaries:
 - Services: business logic for scanning, sweeping, and webhook delivery
 - Blockchain: chain abstraction and RPC integration via AsyncWeb3
 - Utils: cryptographic helpers and HD wallet management
-- Workers: scheduled actors orchestrated by Dramatiq
+- Workers: scheduled actors orchestrated by ARQ
 - API: payment creation and dependency injection points
 - DB Models: persistence schema for payments and chain state
 - Config: centralized settings and validation
@@ -53,11 +56,14 @@ The core services are organized around domain-driven boundaries:
 graph TB
 subgraph "API Layer"
 API["FastAPI Router<br/>/api/v1/payments"]
+Admin["FastAPI Router<br/>/admin/*"]
 end
-subgraph "Workers"
-Listener["Dramatiq Actor: listen_for_payments"]
-SweeperActor["Dramatiq Actor: sweep_payments"]
-WebhookActor["Dramatiq Actor: send_webhook_task"]
+subgraph "Workers (ARQ)"
+Listener["ARQ Cron: listen_for_payments<br/>(every second)"]
+SweeperActor["ARQ Cron: sweep_funds<br/>(every 30s, disabled)"]
+end
+subgraph "ChainSniper (WebSocket)"
+Sniper["ScannerService.start_listeners()<br/>(started on worker startup)"]
 end
 subgraph "Services"
 Scanner["ScannerService"]
@@ -78,9 +84,11 @@ ChainStateModel["ChainState Model"]
 end
 API --> HD
 API --> PaymentModel
+Admin --> Listener
+Admin --> SweeperActor
+Sniper --> Scanner
 Listener --> Scanner
 SweeperActor --> Sweeper
-WebhookActor --> WebhookSvc
 Scanner --> W3
 Sweeper --> W3
 W3 --> Manager
@@ -88,6 +96,7 @@ Manager --> Base
 Scanner --> PaymentModel
 Scanner --> ChainStateModel
 Sweeper --> PaymentModel
+Scanner --> WebhookSvc
 ```
 
 **Diagram sources**
@@ -121,17 +130,18 @@ Sweeper --> PaymentModel
 - [app/db/models/chain.py](https://github.com/rakibhossain72/ctrip/blob/main/app/db/models/chain.py#L1-L17)
 
 ## Core Components
-- ScannerService: Scans blocks for native and ERC20 transfers, updates detection and confirmation statuses, and triggers webhooks upon confirmation.
-- SweeperService: Transfers funds from payment addresses to an admin wallet after confirmation and marks payments as settled.
+- ScannerService: Provides real-time detection via ChainSniper WebSocket listeners (`start_listeners()`), handles native and ERC20 transfer callbacks, and runs periodic confirmation/expiry checks.
+- SweeperService: Transfers funds from payment addresses to the admin wallet after confirmation and marks payments as settled. **Currently a placeholder** — logs sweep attempts and marks as settled without broadcasting actual transactions.
 - WebhookService: Sends signed webhook notifications to external systems with HMAC-SHA256 when a secret is provided.
 - HDWalletManager: Generates deterministic payment addresses using BIP-44 derivation from a mnemonic.
 - BlockchainBase: Provides AsyncWeb3 integration, gas estimation, transaction building, and receipt polling.
-- Worker orchestration: Dramatiq actors schedule periodic scanning, sweeping, and webhook delivery.
+- Worker orchestration: ARQ cron jobs schedule periodic confirmation checks, sweeping, and webhook delivery.
 
 Key interfaces and responsibilities:
-- ScannerService.scan_chain(chain_name): Scans a chain within a block range and detects incoming payments.
+- ScannerService.start_listeners(): Starts one ChainSniper WebSocket listener per chain with a ws:// URL.
 - ScannerService.confirm_payments(chain_name): Confirms detected payments based on required confirmations and emits webhooks.
-- SweeperService.sweep_confirmed_payments(chain_name): Sweeps confirmed payments to the admin wallet.
+- ScannerService.check_expired_payments(): Marks PENDING/DETECTED payments as EXPIRED past their deadline.
+- SweeperService.sweep_confirmed_payments(chain_name): Sweeps confirmed payments to the admin wallet (placeholder).
 - WebhookService.send_webhook(url, payload, secret): Asynchronously posts signed webhook payloads.
 - HDWalletManager.get_address(index): Derives a checksummed address for a payment index.
 - BlockchainBase.build_transaction(...) and send_transaction(...): Constructs and submits transactions with dynamic gas pricing.
@@ -144,7 +154,7 @@ Key interfaces and responsibilities:
 - [app/blockchain/base.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/base.py#L22-L146)
 
 ## Architecture Overview
-The system integrates FastAPI for payment creation, Dramatiq for background jobs, SQLAlchemy for persistence, and AsyncWeb3 for blockchain interactions. Configuration is centralized via Settings with validation and environment-aware defaults.
+The system integrates FastAPI for payment creation, ARQ for background jobs, SQLAlchemy for persistence, and AsyncWeb3 for blockchain interactions. Configuration is centralized via Settings with validation and environment-aware defaults.
 
 ```mermaid
 sequenceDiagram
@@ -152,11 +162,10 @@ participant Client as "Client"
 participant API as "FastAPI Payments API"
 participant DB as "SQLAlchemy ORM"
 participant HD as "HDWalletManager"
-participant Listener as "Dramatiq Scanner Actor"
+participant Sniper as "ChainSniper (WebSocket)"
 participant Scanner as "ScannerService"
 participant W3 as "AsyncWeb3 via get_w3"
 participant Chain as "BlockchainBase"
-participant WebhookActor as "Dramatiq Webhook Actor"
 participant WebhookSvc as "WebhookService"
 Client->>API : "POST /api/v1/payments"
 API->>HD : "get_address(index)"
@@ -164,16 +173,17 @@ HD-->>API : "checksummed address"
 API->>DB : "create Payment record"
 DB-->>API : "Payment persisted"
 API-->>Client : "PaymentRead"
-Note over Listener : "Periodic job"
-Listener->>Scanner : "scan_chain(chain)"
-Scanner->>W3 : "get_block(number, full_transactions)"
-Scanner->>W3 : "get_logs(ERC20 Transfer)"
-Scanner->>DB : "update Payment.status to detected"
-Scanner->>Scanner : "confirm_payments(chain)"
+Note over Sniper : "Always-on WebSocket listener"
+Sniper->>Scanner : "_on_block(block, chain)"
+Scanner->>DB : "match tx.to → update Payment.status to detected"
+Sniper->>Scanner : "_on_log(log, chain)"
+Scanner->>DB : "match ERC20 Transfer → update Payment.status to detected"
+Note over Scanner : "ARQ cron (every second)"
+Scanner->>W3 : "get latest block_number"
+Scanner->>DB : "select DETECTED payments"
 Scanner->>DB : "update Payment.status to confirmed"
-Scanner->>WebhookActor : "send_webhook_task(url, payload, secret)"
-WebhookActor->>WebhookSvc : "send_webhook(url, payload, secret)"
-WebhookSvc-->>WebhookActor : "success/failure"
+Scanner->>WebhookSvc : "send_webhook(url, payload, secret)"
+WebhookSvc-->>Scanner : "success/failure"
 ```
 
 **Diagram sources**
@@ -199,30 +209,31 @@ Key behaviors:
 - Filters pending payments by chain and address
 - Compares received amounts against required amounts
 - Applies configurable confirmations threshold before marking confirmed
-- Emits webhooks asynchronously via Dramatiq
+- Emits webhooks asynchronously via ARQ
 
 ```mermaid
 flowchart TD
-Start(["scan_chain(chain_name)"]) --> LoadState["Load ChainState with lock"]
-LoadState --> CheckState{"ChainState exists?"}
-CheckState --> |No| Skip["Log and return"]
-CheckState --> |Yes| ComputeRange["Compute from/to block range"]
-ComputeRange --> HasPayments{"Any pending payments?"}
-HasPayments --> |No| SaveLast["Save last_scanned_block and commit"]
-HasPayments --> |Yes| LoopBlocks["Iterate blocks in range"]
-LoopBlocks --> NativeLoop["Check native transfers to payment addresses"]
-NativeLoop --> ERC20Logs["Fetch ERC20 Transfer logs"]
-ERC20Logs --> MatchERC20["Match log topics to payment addresses"]
-MatchERC20 --> UpdateDetected["Set status=detected and detected_in_block"]
-NativeLoop --> UpdateDetected
-UpdateDetected --> ConfirmStep["confirm_payments(chain_name)"]
-ConfirmStep --> CheckConfirm{"Confirmations >= required?"}
-CheckConfirm --> |Yes| MarkConfirmed["Set status=confirmed and emit webhook"]
-CheckConfirm --> |No| NextPayment["Next payment"]
+WorkerStart(["Worker Startup"]) --> StartListeners["ScannerService.start_listeners()"]
+StartListeners --> CreateSniper["Create ChainSniper task per chain (ws:// URL)"]
+CreateSniper --> OnBlock["_on_block(block, chain_name)"]
+CreateSniper --> OnLog["_on_log(log, chain_name)"]
+OnBlock --> MatchNative["Match tx.to to PENDING native payments"]
+OnLog --> MatchERC20["Match ERC20 Transfer log to PENDING token payments"]
+MatchNative --> SetDetected["status = DETECTED, detected_in_block = block_number"]
+MatchERC20 --> SetDetected
+SetDetected --> DispatchWebhook["_dispatch_webhook(payment)"]
+
+Cron(["ARQ Cron (every second)"]) --> ConfirmStep["confirm_payments(chain_name)"]
+ConfirmStep --> GetLatest["get latest block_number via Web3"]
+GetLatest --> CheckConf{"confirmations >= required?"}
+CheckConf --> |Yes| MarkConfirmed["status = CONFIRMED, dispatch webhook"]
+CheckConf --> |No| NextPayment["Next payment"]
 MarkConfirmed --> Commit["Commit session"]
-SaveLast --> End(["Exit"])
-Commit --> End
-Skip --> End
+
+Cron --> ExpireStep["check_expired_payments()"]
+ExpireStep --> CheckExpiry{"expires_at <= now?"}
+CheckExpiry --> |Yes| MarkExpired["status = EXPIRED, dispatch webhook"]
+CheckExpiry --> |No| Skip["Skip"]
 ```
 
 **Diagram sources**
@@ -238,13 +249,15 @@ Skip --> End
 ### SweeperService
 Responsibilities:
 - Sweep confirmed payments to an admin wallet
-- Placeholder for transaction construction and submission
 - Marks payments as settled after sweeping
 
-Current implementation highlights:
-- Loads admin account from a configured private key
-- Iterates confirmed payments per chain
-- Logs sweep attempts and marks as settled (placeholder for actual transfer)
+**Current implementation status: Placeholder**
+The sweeper currently logs sweep attempts and marks payments as `settled` without broadcasting actual blockchain transactions. The code includes comments describing the intended full implementation:
+1. Get private key for `payment.address` from HD wallet
+2. Check balance (native or token)
+3. If native: send all minus gas to admin address
+4. If token: send native for gas if needed, then send all tokens to admin address
+5. Mark as "settled"
 
 ```mermaid
 flowchart TD
@@ -254,7 +267,7 @@ FetchConfirmed --> Any{"Any confirmed payments?"}
 Any --> |No| SEnd["Log and exit"]
 Any --> |Yes| ForEach["For each payment"]
 ForEach --> LogSweep["Log sweep attempt"]
-LogSweep --> MarkSettled["Mark status=settled"]
+LogSweep --> MarkSettled["Mark status=settled (placeholder)"]
 MarkSettled --> Next{"More payments?"}
 Next --> |Yes| ForEach
 Next --> |No| Commit["Commit session"]
@@ -277,7 +290,7 @@ Responsibilities:
 
 Integration pattern:
 - Called by ScannerService on confirmation
-- Wrapped in a Dramatiq actor with retry policy
+- Wrapped in a ARQ task with retry policy
 
 ```mermaid
 sequenceDiagram
@@ -377,14 +390,16 @@ class BlockchainBase {
 - [app/blockchain/manager.py](https://github.com/rakibhossain72/ctrip/blob/main/app/blockchain/manager.py#L8-L33)
 
 ### Worker Orchestration
-- listen_for_payments: Periodic actor that scans and confirms payments across configured chains
-- sweep_payments: Periodic actor that sweeps confirmed payments to admin wallet
-- send_webhook_task: Retriable actor that sends signed webhooks
+- `listen_for_payments`: ARQ cron task (every second) that confirms detected payments and expires stale ones. Block detection is handled by always-on ChainSniper WebSocket listeners started at worker startup.
+- `sweep_funds`: ARQ cron task (every 30 seconds, currently commented out in `WorkerSettings`) that sweeps confirmed payments to admin wallet.
+- `send_webhook_notification`: ARQ task that sends signed webhooks for payment events.
+- `process_single_payment`: ARQ task for manually triggering confirmation check for a specific payment.
 
 Initialization and scheduling:
-- Actors are decorated with time limits and retry policies
-- Chains are loaded from settings and used to iterate work
-- Sessions are scoped per actor run
+- Worker started via `python run_worker.py` which calls `arq.run_worker(WorkerSettings)`
+- `WorkerSettings.on_startup` calls `ScannerService.start_listeners()` to launch ChainSniper WebSocket listeners
+- Cron jobs defined in `WorkerSettings.cron_jobs` using ARQ's `cron()` helper
+- Sessions are scoped per task run
 
 **Section sources**
 - [app/workers/listener.py](https://github.com/rakibhossain72/ctrip/blob/main/app/workers/listener.py#L21-L46)
@@ -476,8 +491,11 @@ The cTrip Payment Gateway implements a modular, asynchronous architecture for pa
 
 ### Service Interfaces and Method Signatures
 - ScannerService
-  - scan_chain(chain_name: str) -> None
+  - start_listeners() -> list[asyncio.Task]
   - confirm_payments(chain_name: str) -> None
+  - check_expired_payments() -> None
+  - _on_block(block: dict, chain_name: str) -> None (WebSocket callback)
+  - _on_log(log: dict, chain_name: str) -> None (WebSocket callback)
 - SweeperService
   - sweep_confirmed_payments(chain_name: str) -> None
 - WebhookService

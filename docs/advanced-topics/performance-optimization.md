@@ -38,7 +38,7 @@ This document provides a comprehensive performance optimization guide for the cT
 ## Project Structure
 The application follows a layered architecture:
 - API layer: FastAPI endpoints for payment creation and health checks
-- Worker layer: Dramatiq actors orchestrating scanning and sweeping tasks
+- Worker layer: ARQ tasks orchestrating scanning and sweeping tasks
 - Service layer: Business logic for scanning, confirming, and webhook dispatch
 - Blockchain layer: Web3 providers abstraction with per-chain configuration
 - Database layer: SQLAlchemy ORM models and async engines with connection pooling
@@ -49,9 +49,9 @@ subgraph "API Layer"
 API["FastAPI Payments Endpoint"]
 end
 subgraph "Workers"
-Listener["Dramatiq Listener Actor"]
-Sweeper["Dramatiq Sweeper Actor"]
-WebhookActor["Dramatiq Webhook Actor"]
+Listener["ARQ Listener Actor"]
+Sweeper["ARQ Sweeper Actor"]
+WebhookActor["ARQ Webhook Actor"]
 end
 subgraph "Services"
 Scanner["ScannerService"]
@@ -118,7 +118,7 @@ Base --> AsyncEngine
 - Database connection pooling: synchronous and asynchronous engines configured with pre-ping and tuned pool sizes
 - Asynchronous session management: scoped async sessions for worker tasks
 - Blockchain abstraction: per-chain providers with gas price caching and fee history support
-- Worker orchestration: Dramatiq actors for scanning, sweeping, and webhook dispatch
+- Worker orchestration: ARQ tasks for scanning, sweeping, and webhook dispatch
 - Query optimization: targeted queries with explicit joins and minimal scans
 - Caching: gas price caching with short TTL to reduce RPC overhead
 - Async/await best practices: structured concurrency with proper event loops and timeouts
@@ -136,7 +136,7 @@ Base --> AsyncEngine
 - [app/services/webhook.py](https://github.com/rakibhossain72/ctrip/blob/main/app/services/webhook.py#L1-L45)
 
 ## Architecture Overview
-The system integrates FastAPI endpoints, Dramatiq workers, and blockchain providers with a robust database layer. The key performance levers are:
+The system integrates FastAPI endpoints, ARQ workers, and blockchain providers with a robust database layer. The key performance levers are:
 - Connection pooling for PostgreSQL and SQLite
 - Async session reuse in worker tasks
 - Gas price caching in blockchain providers
@@ -298,13 +298,13 @@ Base-->>Svc : "Gas Price"
 
 ### Async/Await Best Practices Throughout the Application
 - Workers use asyncio.run within actors to execute async tasks
-- Proper event loop management ensures compatibility with Dramatiq
+- Proper event loop management ensures compatibility with ARQ
 - Webhook actor wraps async execution and raises exceptions for retries
 - Timeout configuration for HTTP clients prevents hanging requests
 
 ```mermaid
 sequenceDiagram
-participant Actor as "Dramatiq Actor"
+participant Actor as "ARQ Task"
 participant Loop as "Event Loop"
 participant Runner as "Async Runner"
 participant Service as "Service Layer"
@@ -417,7 +417,7 @@ UvLoop --> Web3
   - Validate RPC URLs and chain IDs
   - Check gas price cache staleness and fallback behavior
 - Worker failures
-  - Inspect Dramatiq actor logs and retry policies
+  - Inspect ARQ task logs and retry policies
   - Ensure proper event loop setup in actors
 - Webhook delivery problems
   - Confirm timeout settings and signatures
